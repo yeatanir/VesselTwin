@@ -1,0 +1,43 @@
+{
+ "text": "First, SiO2 particles (2 g) were placed in a 250 mL round‐bottom flask with a stirring bar, and 95 mL of ethanol and 5 mL of APTES were added. After stirring at room temperature for 12 h, the particles were separated by centrifugation at 12 000 rpm for 10 min, washed with ethanol 5 times, and vacuum dried at 60°C overnight.",
+ "vessel": "flask",
+ "gold": {
+  "volume_mL": {
+   "value": 250,
+   "unit": "mL"
+  },
+  "solvent": {
+   "value": "ethanol",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Electrochemical Biosensor Based on Hairy Core–Shell Particles: Effect of Core Conductivity",
+  "authors": [
+   "Pavel Milkin",
+   "Anila Antony",
+   "Hongtao Cai",
+   "Ceyda Topal",
+   "Antonia Debevc",
+   "Anne Linhardt",
+   "Alla Synytska",
+   "Leonid Ionov"
+  ],
+  "journal": "Small Science",
+  "year": 2026,
+  "DOI": "10.1002/smsc.202500550",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13063792/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "stir_time: 12 h",
+  "precursor_mass: 2 g SiO2, 5 mL APTES",
+  "other: separation by centrifugation at 12 000 rpm (not a stir rate), drying at 60 C"
+ ],
+ "ambiguous": [
+  "T_C: 'room temperature' (no number)",
+  "stir_rpm: only centrifuge speed 12 000 rpm present - must not be extracted",
+  "solvent: ethanol 95 mL + APTES 5 mL"
+ ]
+}

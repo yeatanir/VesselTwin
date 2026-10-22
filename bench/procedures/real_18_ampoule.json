@@ -1,0 +1,50 @@
+{
+ "text": "In addition, 0.3 g of iodine (I2) was adopted as a transport agent. Sn, S, and I2 were placed in a quartz ampoule along with the high-purity Zn doping element. The designed doping concentration was 2%. The quartz ampoule was evacuated to 1–2 × 10−5 Torr before being sealed and then placed in a three-zone furnace for 300 h. The temperature at one end of the quartz ampoule was set to 780 °C, and the temperature at the other end was set to 650 °C. The temperature gradient was approximately 4.3 °C/cm. The raw materials were initially located at the high-temperature end of the quartz ampoule.",
+ "vessel": "ampoule",
+ "gold": {
+  "gas": {
+   "value": "I2",
+   "unit": ""
+  },
+  "T_source_C": {
+   "value": 780,
+   "unit": "C"
+  },
+  "T_sink_C": {
+   "value": 650,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Enhanced Optical Response of Zinc-Doped Tin Disulfide Layered Crystals Grown with the Chemical Vapor Transport Method",
+  "authors": [
+   "Yu-Tai Shih",
+   "Der-Yuh Lin",
+   "Yu-Cheng Li",
+   "Bo-Chang Tseng",
+   "Sheng-Beng Hwang",
+   "Ruifeng Lu",
+   "Jian Zhou",
+   "Jianing Chen",
+   "Bin Yang",
+   "Kun Zhao",
+   "Gian Andrea Rizzi"
+  ],
+  "journal": "Nanomaterials",
+  "year": 2022,
+  "DOI": "10.3390/nano12091442",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9105956/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "agent_amount: 0.3 g iodine (mass, not per volume; ampoule volume not given)",
+  "base_pressure: evacuated to 1-2e-5 Torr",
+  "hold_time: 300 h",
+  "gradient: approx. 4.3 C/cm",
+  "other: temperatures of the ends reversed once per day"
+ ],
+ "ambiguous": [
+  "T_source_C: raw materials 'initially located at the high-temperature end' so 780 C is the source, but ends are reversed daily"
+ ]
+}

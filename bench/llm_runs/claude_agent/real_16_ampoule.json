@@ -1,0 +1,17 @@
+{
+ "vessel": "ampoule",
+ "fields": [
+  {
+   "key": "D_mm",
+   "value": "1/2",
+   "unit": "inch",
+   "span": "1/2 inch"
+  },
+  {
+   "key": "agent_mg_per_cm3",
+   "value": "2",
+   "unit": "mg/cm3",
+   "span": "2 mg/cm3"
+  }
+ ]
+}

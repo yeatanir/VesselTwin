@@ -1,0 +1,23 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "flow_sccm",
+   "value": "5",
+   "unit": "sccm",
+   "span": "5 sccm"
+  },
+  {
+   "key": "T_boat_S_C",
+   "value": "250",
+   "unit": "°C",
+   "span": "250 °C"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "Ar gas flow rate is reduced to 5"
+  }
+ ]
+}

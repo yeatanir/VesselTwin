@@ -1,0 +1,7 @@
+# FAKE FIXTURE (synthetic): format-correct, hand-written, NOT solver output
+# Region type : patch sink
+# Faces       : 10
+# Area        : 1.0e-4
+# Time          areaNormalAverage(sink) of grad(Y_AIn)
+0 0
+600 -5.0

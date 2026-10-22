@@ -1,0 +1,583 @@
+{
+ "summary": {
+  "n_total": 14,
+  "n_modellable": 8,
+  "n_not_modellable": 6,
+  "correct": 5,
+  "correct_strict_uncertain_wrong": 4,
+  "n_uncertain": 1,
+  "majority_class": "increase",
+  "majority_baseline_correct": 4,
+  "chance_note": "5 direction classes; uniform chance 20%",
+  "blind_correct_all14": 8,
+  "blind_correct_on_modellable8": 6,
+  "majority_all14": "decrease",
+  "majority_all14_correct": 5
+ },
+ "predictions": [
+  {
+   "id": "s01",
+   "parameter": "flow_sccm",
+   "sweep": [
+    10,
+    160
+   ],
+   "proxy": "supersaturation_MoO3",
+   "expected_logic": "nucleation density ~ supersaturation. Prior: more carrier dilutes MoO3 vapour (SS down) but model is transport-limited so wall flux may rise; no confident sign. Paper's later decline above 160 not tested.",
+   "status": "modelled",
+   "values": [
+    10.0,
+    47.5,
+    85.0,
+    122.5,
+    160.0
+   ],
+   "proxy_p05_p50_p95": [
+    [
+     1.645733539972695,
+     1.836853291782504,
+     3.0393873811086785
+    ],
+    [
+     4.991033808854526,
+     12.194657676584804,
+     31.304600121469065
+    ],
+    [
+     13.294113255636091,
+     23.686454172785957,
+     46.180892254950756
+    ],
+    [
+     14.24816610152879,
+     27.546663280776542,
+     49.61719465042983
+    ],
+    [
+     13.707137226227387,
+     28.007527807584502,
+     54.58851506707862
+    ]
+   ],
+   "regime": [
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited"
+   ],
+   "direction": "increase",
+   "band_overlap_endpoints": false,
+   "uncertain": false,
+   "observed": "increase",
+   "outcome_quantity": "nucleation density",
+   "confidence": "medium",
+   "parameter_obs": "carrier gas flow rate",
+   "change": "10 sccm to 160 sccm (then higher)",
+   "match": true,
+   "match_strict": true,
+   "blind": "increase",
+   "blind_match": true
+  },
+  {
+   "id": "s02",
+   "status": "not_modellable",
+   "reason": "substrate lateral position in a flow-velocity profile; model is 1-D along the tube axis, no transverse coordinate",
+   "observed": "increase",
+   "outcome_quantity": "domain size (largest triangle side)",
+   "confidence": "low",
+   "parameter_obs": "substrate position (transverse gas-flow position, x)",
+   "change": "x = 1 mm to x = 1.5 mm",
+   "blind": "decrease",
+   "blind_match": false
+  },
+  {
+   "id": "s03",
+   "parameter": "flow_sccm",
+   "sweep": [
+    50,
+    300
+   ],
+   "proxy": "supersaturation_MoO3",
+   "expected_logic": "domain size ~ -supersaturation. Prior: unclear (same as s01); more flow -> less residence/dilution -> expect SS down -> bigger domains (opposite to observed) if dilution dominates.",
+   "status": "modelled",
+   "values": [
+    50.0,
+    112.5,
+    175.0,
+    237.5,
+    300.0
+   ],
+   "proxy_p05_p50_p95": [
+    [
+     -32.55484547607315,
+     -13.282970864429426,
+     -5.445340448456492
+    ],
+    [
+     -48.544745197732595,
+     -26.20253344839391,
+     -14.270633517193644
+    ],
+    [
+     -54.718650230120105,
+     -27.95096415184608,
+     -13.053536286466148
+    ],
+    [
+     -50.53216942160359,
+     -25.629189910540024,
+     -11.222341495532438
+    ],
+    [
+     -45.81265480483313,
+     -22.606090030355986,
+     -9.380754157986585
+    ]
+   ],
+   "regime": [
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited"
+   ],
+   "direction": "non_monotonic",
+   "band_overlap_endpoints": true,
+   "uncertain": false,
+   "observed": "decrease",
+   "outcome_quantity": "domain (crystallite) size",
+   "confidence": "medium",
+   "parameter_obs": "Ar flow rate",
+   "change": "50 sccm to 300 sccm",
+   "match": false,
+   "match_strict": false,
+   "blind": "non_monotonic",
+   "blind_match": false
+  },
+  {
+   "id": "s04",
+   "parameter": "flow_sccm",
+   "sweep": [
+    50,
+    150
+   ],
+   "proxy": "flux_MoO3_mol_m2_s",
+   "expected_logic": "coverage ~ MoO3 flux to substrate. Prior: transport-limited, flux up with flow.",
+   "status": "modelled",
+   "values": [
+    50.0,
+    75.0,
+    100.0,
+    125.0,
+    150.0
+   ],
+   "proxy_p05_p50_p95": [
+    [
+     1.2258330375693256e-11,
+     5.639774167664571e-07,
+     1.7046369923629819e-06
+    ],
+    [
+     2.176874495790855e-11,
+     8.996061775576095e-07,
+     2.4420142250628997e-06
+    ],
+    [
+     2.517930885558827e-11,
+     1.1117781549164488e-06,
+     2.7545751558734778e-06
+    ],
+    [
+     2.4958111910458448e-11,
+     1.176687997251863e-06,
+     2.910547949326895e-06
+    ],
+    [
+     2.6749535339450494e-11,
+     1.1349520017218402e-06,
+     2.899062148654377e-06
+    ]
+   ],
+   "regime": [
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited"
+   ],
+   "direction": "non_monotonic",
+   "band_overlap_endpoints": true,
+   "uncertain": false,
+   "observed": "increase",
+   "outcome_quantity": "coverage",
+   "confidence": "medium",
+   "parameter_obs": "Ar flow rate",
+   "change": "50 sccm to 100 sccm to 150 sccm",
+   "match": false,
+   "match_strict": false,
+   "blind": "non_monotonic",
+   "blind_match": false
+  },
+  {
+   "id": "s05",
+   "status": "not_modellable",
+   "reason": "MoO3 charge mass / layer number: model is steady-state (no source depletion) and has no layer-number output",
+   "observed": "class_change",
+   "outcome_quantity": "layer number (monolayer vs multilayer)",
+   "confidence": "high",
+   "parameter_obs": "MoO3 amount",
+   "change": "10 mg to 15 mg to 30 mg",
+   "blind": "increase",
+   "blind_match": false
+  },
+  {
+   "id": "s06",
+   "status": "not_modellable",
+   "reason": "sulfur charge mass: model has S boat T and area but no S amount; domain size from S amount has no proxy",
+   "observed": "class_change",
+   "outcome_quantity": "domain size",
+   "confidence": "medium",
+   "parameter_obs": "sulfur amount",
+   "change": "100 mg to 200 mg to 400 mg",
+   "blind": "non_monotonic",
+   "blind_match": true
+  },
+  {
+   "id": "s07",
+   "status": "not_modellable",
+   "reason": "coverage/layer-number/3D-island sequence vs growth T: no layer-number or coalescence output, outcome mixes several quantities",
+   "observed": "class_change",
+   "outcome_quantity": "coverage / layer number",
+   "confidence": "medium",
+   "parameter_obs": "growth temperature",
+   "change": "650 C to 700, 750, 800 C",
+   "blind": "increase",
+   "blind_match": false
+  },
+  {
+   "id": "s08",
+   "status": "not_modellable",
+   "reason": "vertical source-substrate gap: model is 1-D, no vertical coordinate; layer number not modelled",
+   "observed": "decrease",
+   "outcome_quantity": "layer number / uniformity",
+   "confidence": "medium",
+   "parameter_obs": "source-to-substrate vertical gap",
+   "change": "2 mm to 5 mm to 10 mm",
+   "blind": "non_monotonic",
+   "blind_match": false
+  },
+  {
+   "id": "s09",
+   "parameter": "T_boat_Mo_C",
+   "sweep": [
+    300,
+    400
+   ],
+   "proxy": "supersaturation_MoO3",
+   "expected_logic": "RANGE CLIPPED: paper 200-400 C, model lower bound is 300 C. nucleation density ~ SS. Prior: Psat(MoO3) rises steeply with T so SS up. (Absolute MoO3 vapour at 200-400 C is tiny; only the sign is tested.)",
+   "status": "modelled",
+   "values": [
+    300.0,
+    325.0,
+    350.0,
+    375.0,
+    400.0
+   ],
+   "proxy_p05_p50_p95": [
+    [
+     9.676705084818322e-13,
+     2.3733449545166655e-12,
+     5.91343913979241e-12
+    ],
+    [
+     1.0223271866876575e-11,
+     4.970251462177115e-11,
+     1.37726812348218e-10
+    ],
+    [
+     2.1068008065316072e-10,
+     9.155096674699288e-10,
+     2.530690518259008e-09
+    ],
+    [
+     3.3064867569595126e-09,
+     1.2951320408987166e-08,
+     3.6000740360961756e-08
+    ],
+    [
+     4.2297688729549245e-08,
+     1.5860728087599888e-07,
+     4.0957076448245006e-07
+    ]
+   ],
+   "regime": [
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited"
+   ],
+   "direction": "increase",
+   "band_overlap_endpoints": false,
+   "uncertain": false,
+   "observed": "increase",
+   "outcome_quantity": "nucleation density / grain size",
+   "confidence": "high",
+   "parameter_obs": "MoO3 heating temperature",
+   "change": "200 C to 400 C (growth temp fixed at 750 C)",
+   "match": true,
+   "match_strict": true,
+   "blind": "increase",
+   "blind_match": true
+  },
+  {
+   "id": "s10",
+   "parameter": "T_furnace_C",
+   "sweep": [
+    700,
+    850
+   ],
+   "proxy": "supersaturation_MoO3",
+   "expected_logic": "nucleation density ~ SS with T_boat_Mo fixed. Prior: hotter substrate -> Psat_eq(substrate) up -> SS down -> nucleation down. Range assumed (paper gave none).",
+   "status": "modelled",
+   "values": [
+    700.0,
+    737.5,
+    775.0,
+    812.5,
+    850.0
+   ],
+   "proxy_p05_p50_p95": [
+    [
+     32.49288130119621,
+     94.9068824501986,
+     230.0743221789832
+    ],
+    [
+     19.865670028998927,
+     37.006886614860264,
+     71.99646072567246
+    ],
+    [
+     6.850783973266365,
+     12.490170379483363,
+     21.869267185949447
+    ],
+    [
+     1.9976779550057135,
+     4.191917353816015,
+     7.070799009792806
+    ],
+    [
+     0.48074745023020093,
+     1.204332254408103,
+     2.1902548149972962
+    ]
+   ],
+   "regime": [
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited"
+   ],
+   "direction": "decrease",
+   "band_overlap_endpoints": false,
+   "uncertain": false,
+   "observed": "decrease",
+   "outcome_quantity": "nucleation density / domain size",
+   "confidence": "high",
+   "parameter_obs": "growth (substrate) temperature",
+   "change": "increase with MoO3 temperature fixed",
+   "match": true,
+   "match_strict": true,
+   "blind": "decrease",
+   "blind_match": true
+  },
+  {
+   "id": "s11",
+   "parameter": "T_boat_S_C",
+   "sweep": [
+    180,
+    300
+   ],
+   "proxy": "shape",
+   "expected_logic": "shape class (hex -> triangle) from Wulff shape_map via Mo:S ratio. Prior: more S vapour -> lower Mo:S -> shift toward S-rich (triangle_S/hexagon). Size peak not modelled; Mo boat T default, not 835 C.",
+   "status": "modelled",
+   "values": [
+    180.0,
+    210.0,
+    240.0,
+    270.0,
+    300.0
+   ],
+   "labels": [
+    "triangle",
+    "triangle",
+    "triangle",
+    "truncated_triangle",
+    "triangle"
+   ],
+   "abstain": [
+    null,
+    null,
+    null,
+    "band_spans_classes",
+    null
+   ],
+   "direction": "class_change",
+   "uncertain": true,
+   "band": "label bands from shape_score p05/p95 shape index",
+   "observed": "class_change",
+   "outcome_quantity": "flake size and shape",
+   "confidence": "high",
+   "parameter_obs": "sulfur source temperature",
+   "change": "180 C to 250/270 C to 300 C",
+   "match": true,
+   "match_strict": false,
+   "blind": "class_change",
+   "blind_match": true
+  },
+  {
+   "id": "s12",
+   "status": "not_modellable",
+   "reason": "MoO3 thin-film thickness (precursor amount): model has no source inventory",
+   "observed": "decrease",
+   "outcome_quantity": "crystal size",
+   "confidence": "medium",
+   "parameter_obs": "MoO3 film thickness (precursor amount)",
+   "change": "20 nm to 5 nm",
+   "blind": "decrease",
+   "blind_match": true
+  },
+  {
+   "id": "s13",
+   "parameter": "T_furnace_C",
+   "sweep": [
+    750,
+    850
+   ],
+   "proxy": "flux_MoO3_mol_m2_s",
+   "expected_logic": "coverage density ~ MoO3 flux to substrate. Prior: flux drops as substrate gets hotter (re-evaporation) -> decrease.",
+   "status": "modelled",
+   "values": [
+    750.0,
+    775.0,
+    800.0,
+    825.0,
+    850.0
+   ],
+   "proxy_p05_p50_p95": [
+    [
+     2.517930885558827e-11,
+     1.1117781549164488e-06,
+     2.7545751558734778e-06
+    ],
+    [
+     3.564359196411825e-11,
+     1.5804723044731872e-06,
+     3.987986476119682e-06
+    ],
+    [
+     4.800162856557759e-11,
+     1.8843619788509802e-06,
+     4.580427797865455e-06
+    ],
+    [
+     2.334226380235701e-11,
+     1.2557011365093937e-06,
+     4.424907560754924e-06
+    ],
+    [
+     0.0,
+     9.543912896224021e-08,
+     1.6598015162344358e-06
+    ]
+   ],
+   "regime": [
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited"
+   ],
+   "direction": "non_monotonic",
+   "band_overlap_endpoints": true,
+   "uncertain": false,
+   "observed": "decrease",
+   "outcome_quantity": "coverage density",
+   "confidence": "medium",
+   "parameter_obs": "growth temperature",
+   "change": "750 C to 800 C to 850 C",
+   "match": false,
+   "match_strict": false,
+   "blind": "decrease",
+   "blind_match": true
+  },
+  {
+   "id": "s14",
+   "parameter": "boat_area_MoO3_cm2",
+   "sweep": [
+    1,
+    4
+   ],
+   "proxy": "flux_MoO3_mol_m2_s",
+   "expected_logic": "coverage ~ MoO3 supply; boat area as stand-in for nanoribbon density (range assumed). Prior: more area -> more flux.",
+   "status": "modelled",
+   "values": [
+    1.0,
+    1.75,
+    2.5,
+    3.25,
+    4.0
+   ],
+   "proxy_p05_p50_p95": [
+    [
+     1.927141320216968e-11,
+     9.352441914344636e-07,
+     2.31126246924835e-06
+    ],
+    [
+     2.3908942952425365e-11,
+     1.076174986253515e-06,
+     2.666429597956215e-06
+    ],
+    [
+     2.6726933848034257e-11,
+     1.174267502300578e-06,
+     2.888118845760826e-06
+    ],
+    [
+     2.8418959435085584e-11,
+     1.2548643186692524e-06,
+     3.1206680058616535e-06
+    ],
+    [
+     2.986124744898806e-11,
+     1.3095682298542365e-06,
+     3.3266269107575927e-06
+    ]
+   ],
+   "regime": [
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited",
+    "transport_limited"
+   ],
+   "direction": "increase",
+   "band_overlap_endpoints": true,
+   "uncertain": false,
+   "observed": "increase",
+   "outcome_quantity": "coverage",
+   "confidence": "low",
+   "parameter_obs": "MoO3 source density (nanoribbon concentration)",
+   "change": "varied density of dispersed MoO3 nanoribbons, all else constant",
+   "match": true,
+   "match_strict": true,
+   "blind": "increase",
+   "blind_match": true
+  }
+ ]
+}

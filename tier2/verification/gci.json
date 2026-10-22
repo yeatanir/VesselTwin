@@ -1,0 +1,614 @@
+{
+ "method": "Roache GCI, Fs 1.25 (3 grids) / 3.0 fallback; see docs/prereg/track-b.md B4; levels listed coarse to fine; gci_fine and change are fractions",
+ "rows": [
+  {
+   "vessel": "ampoule",
+   "case": "diffusion",
+   "values": {
+    "D_mm": 10,
+    "tilt_deg": 0
+   },
+   "quantity": "f_cfd",
+   "levels": [
+    1.001591712270126,
+    1.0012715921135964,
+    1.0011937714995074
+   ],
+   "mesh": "L0 3/cm x 8, L1 6 x 16, L2 12 x 32 (axial cells per cm x cells across)",
+   "r": 2.0,
+   "p_obs": 2.0403892498789404,
+   "p_used": 2.0403892498789404,
+   "Fs": 1.25,
+   "gci_fine": 3.120531614977481e-05,
+   "change_medium_to_fine": 7.77278248270109e-05,
+   "flags": [],
+   "f_richardson": 1.001168777444974,
+   "osc_last_quarter": 8.964023252206669e-10,
+   "drift_last_quarter": 1.2313017695695255e-10
+  },
+  {
+   "vessel": "ampoule",
+   "case": "weak",
+   "values": {
+    "D_mm": 20,
+    "tilt_deg": 0
+   },
+   "quantity": "f_cfd",
+   "levels": [
+    1.3494469045424522,
+    1.2849254132348038,
+    1.2688805725502739
+   ],
+   "mesh": "L0 3/cm x 8, L1 6 x 16, L2 12 x 32 (axial cells per cm x cells across)",
+   "r": 2.0,
+   "p_obs": 2.0076703197806305,
+   "p_used": 2.0076703197806305,
+   "Fs": 1.25,
+   "gci_fine": 0.005231515032806893,
+   "change_medium_to_fine": 0.012644878510734887,
+   "flags": [],
+   "f_richardson": 1.2635700383181672,
+   "osc_last_quarter": 1.7499251681247863e-16,
+   "drift_last_quarter": 0.0
+  },
+  {
+   "vessel": "ampoule",
+   "case": "tilted",
+   "values": {
+    "D_mm": 25,
+    "tilt_deg": 30
+   },
+   "quantity": "f_cfd",
+   "levels": [
+    4.514093839217124,
+    4.09980155297191,
+    3.9634109276211107
+   ],
+   "mesh": "L0 3/cm x 8, L1 6 x 16, L2 12 x 32 (axial cells per cm x cells across)",
+   "r": 2.0,
+   "p_obs": 1.6029044730423756,
+   "p_used": 1.6029044730423756,
+   "Fs": 1.25,
+   "gci_fine": 0.021111486283891735,
+   "change_medium_to_fine": 0.034412436116651415,
+   "flags": [],
+   "f_richardson": 3.896472131272391,
+   "osc_last_quarter": 1.1204722850088386e-16,
+   "drift_last_quarter": 0.0
+  },
+  {
+   "vessel": "ampoule",
+   "case": "strong",
+   "values": {
+    "D_mm": 40,
+    "tilt_deg": 90
+   },
+   "quantity": "f_cfd",
+   "levels": [
+    2.519663056964671,
+    2.4319498739229086,
+    2.1489177492469325
+   ],
+   "mesh": "L0 3/cm x 8, L1 6 x 16, L2 12 x 32 (axial cells per cm x cells across)",
+   "r": 2.0,
+   "p_obs": -1.6901002139011334,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.1317091474418516,
+   "change_medium_to_fine": 0.1317091474418516,
+   "flags": [
+    "observed order -1.69 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2",
+    "unsteady: GCI not meaningful"
+   ],
+   "f_richardson": 2.0545737076882737,
+   "osc_last_quarter": 0.7505060923095985,
+   "drift_last_quarter": 0.1815791781249228
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "default",
+   "quantity": "p_MoO3_Pa",
+   "levels": [
+    1.00662985244959,
+    1.0149477733261945,
+    1.0064022548566822
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": null,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.008491155925250952,
+   "change_medium_to_fine": 0.008491155925250952,
+   "flags": [
+    "oscillatory (non-monotone) convergence",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 1.0035537487001782
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "default",
+   "quantity": "ratio_Mo_S",
+   "levels": [
+    0.0033138567909131197,
+    0.0032259807130344347,
+    0.0031117558687797906
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": -0.37833409008452723,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.0367075211139346,
+   "change_medium_to_fine": 0.0367075211139346,
+   "flags": [
+    "observed order -0.38 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.0030736809206949093
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "default",
+   "quantity": "supersaturation_MoO3_wallT",
+   "levels": [
+    21.634648268962255,
+    21.81341834224836,
+    21.629756705437252
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": null,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.008491155925250926,
+   "change_medium_to_fine": 0.008491155925250926,
+   "flags": [
+    "oscillatory (non-monotone) convergence",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 21.56853615983355
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "default",
+   "quantity": "MoO3_released_mol_s",
+   "levels": [
+    7.514649576798767e-09,
+    7.745273910715085e-09,
+    7.99968085549472e-09
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": -0.1415933093073777,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.03180213678210565,
+   "change_medium_to_fine": -0.03180213678210565,
+   "flags": [
+    "observed order -0.14 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 8.084483170421265e-09
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "boat650_flow200",
+   "quantity": "p_MoO3_Pa",
+   "levels": [
+    0.37065683665981786,
+    0.35175757674504676,
+    0.3797931877035867
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": null,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.07381809855004726,
+   "change_medium_to_fine": -0.07381809855004726,
+   "flags": [
+    "oscillatory (non-monotone) convergence",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.38913839135643336
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "boat650_flow200",
+   "quantity": "ratio_Mo_S",
+   "levels": [
+    0.0015386011307206079,
+    0.0013816077296976764,
+    0.0014255352815710394
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": null,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.030814777046382035,
+   "change_medium_to_fine": -0.03081477704638203,
+   "flags": [
+    "oscillatory (non-monotone) convergence",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.0014401777988621604
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "boat650_flow200",
+   "quantity": "supersaturation_MoO3_wallT",
+   "levels": [
+    7.9662154565627,
+    7.56002956826942,
+    8.16257536066519
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": null,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.07381809855004724,
+   "change_medium_to_fine": -0.07381809855004724,
+   "flags": [
+    "oscillatory (non-monotone) convergence",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 8.363423958130447
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "boat650_flow200",
+   "quantity": "MoO3_released_mol_s",
+   "levels": [
+    9.27670670694794e-10,
+    9.724061272360255e-10,
+    1.017531730917546e-09
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": -0.012527492549818218,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.04434810464419522,
+   "change_medium_to_fine": -0.04434810464419522,
+   "flags": [
+    "observed order -0.01 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 1.0325735988113861e-09
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "hot850_flow50_sub8",
+   "quantity": "p_MoO3_Pa",
+   "levels": [
+    104.23473633626779,
+    111.64308621113445,
+    116.8574609175792
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": 0.5066579754341087,
+   "p_used": 0.5066579754341087,
+   "Fs": 1.25,
+   "gci_fine": 0.13256422352944575,
+   "change_medium_to_fine": -0.044621666990715396,
+   "flags": [],
+   "f_richardson": 129.25035577370835
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "hot850_flow50_sub8",
+   "quantity": "ratio_Mo_S",
+   "levels": [
+    0.297372495987362,
+    0.31301124880312775,
+    0.3230904808236739
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": 0.633739744915799,
+   "p_used": 0.633739744915799,
+   "Fs": 1.25,
+   "gci_fine": 0.07069738930774094,
+   "change_medium_to_fine": -0.03119631378445623,
+   "flags": [],
+   "f_richardson": 0.3413638036272071
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "hot850_flow50_sub8",
+   "quantity": "supersaturation_MoO3_wallT",
+   "levels": [
+    0.11358659721650277,
+    0.1216596185801364,
+    0.12734182300003455
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": 0.506657975434111,
+   "p_used": 0.506657975434111,
+   "Fs": 1.25,
+   "gci_fine": 0.13256422352944483,
+   "change_medium_to_fine": -0.04462166699071532,
+   "flags": [],
+   "f_richardson": 0.1408465989110934
+  },
+  {
+   "vessel": "cvd_tube",
+   "case": "hot850_flow50_sub8",
+   "quantity": "MoO3_released_mol_s",
+   "levels": [
+    4.368034442137596e-08,
+    4.460087003709049e-08,
+    4.546096677813276e-08
+   ],
+   "mesh": "M1 1/cm x 8, M2 2 x 16, M3 4 x 32",
+   "r": 2.0,
+   "p_obs": 0.0979589295451063,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.018919455568111414,
+   "change_medium_to_fine": -0.018919455568111414,
+   "flags": [
+    "observed order 0.10 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 4.574766569181352e-08
+  },
+  {
+   "vessel": "flask",
+   "case": "water_400rpm_cells_per_cm_13.5-9-6",
+   "quantity": "Np_torque",
+   "levels": [
+    0.9871048846813987,
+    0.9045430147204202,
+    0.9558359519488066
+   ],
+   "n_cells": [
+    7080,
+    20942,
+    70018
+   ],
+   "r": 1.4653901534463358,
+   "Re": 4635.55733085801,
+   "iter_drift_last100": [
+    0.00030590519328765886,
+    0.000881225294019794,
+    0.013659102463875472
+   ],
+   "p_obs": null,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.14031128909395923,
+   "change_medium_to_fine": -0.053662908497852296,
+   "flags": [
+    "oscillatory (non-monotone) convergence",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 1.0005408101422362
+  },
+  {
+   "vessel": "flask",
+   "case": "water_400rpm_cells_per_cm_13.5-9-6",
+   "quantity": "Np_dissip",
+   "levels": [
+    0.3427889232394969,
+    0.4523854305799471,
+    0.7045409378263642
+   ],
+   "n_cells": [
+    7080,
+    20942,
+    70018
+   ],
+   "r": 1.4653901534463358,
+   "Re": 4635.55733085801,
+   "iter_drift_last100": [
+    0.00030590519328765886,
+    0.000881225294019794,
+    0.013659102463875472
+   ],
+   "p_obs": -2.1805641185493356,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.935794809360775,
+   "change_medium_to_fine": -0.35790043375529357,
+   "flags": [
+    "observed order -2.18 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.9243095220263922
+  },
+  {
+   "vessel": "flask",
+   "case": "water_400rpm_cells_per_cm_9-6-4",
+   "quantity": "Np_torque",
+   "levels": [
+    1.2496906519602045,
+    0.9871048846813987,
+    0.9045430147204202
+   ],
+   "n_cells": [
+    2150,
+    7080,
+    20942
+   ],
+   "r": 1.461614206559241,
+   "Re": 4635.55733085801,
+   "iter_drift_last100": [
+    0.000881225294019794,
+    0.013659102463875472,
+    0.012932908610346683
+   ],
+   "p_obs": 3.0484939720025492,
+   "p_used": 3.0484939720025492,
+   "Fs": 1.25,
+   "gci_fine": 0.05232505229094445,
+   "change_medium_to_fine": 0.09127467529722401,
+   "flags": [],
+   "f_richardson": 0.8666788062846966
+  },
+  {
+   "vessel": "flask",
+   "case": "water_400rpm_cells_per_cm_9-6-4",
+   "quantity": "Np_dissip",
+   "levels": [
+    0.2959210513344791,
+    0.3427889232394969,
+    0.4523854305799471
+   ],
+   "n_cells": [
+    2150,
+    7080,
+    20942
+   ],
+   "r": 1.461614206559241,
+   "Re": 4635.55733085801,
+   "iter_drift_last100": [
+    0.000881225294019794,
+    0.013659102463875472,
+    0.012932908610346683
+   ],
+   "p_obs": -2.2381563572151633,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.6396025747658933,
+   "change_medium_to_fine": -0.24226356538483163,
+   "flags": [
+    "observed order -2.24 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.5488343926417842
+  },
+  {
+   "vessel": "flask",
+   "case": "water_800rpm_cells_per_cm_13.5-9-6",
+   "quantity": "Np_torque",
+   "levels": [
+    0.9578431795736223,
+    0.8733589777336813,
+    0.8562873601815252
+   ],
+   "n_cells": [
+    7080,
+    20942,
+    70018
+   ],
+   "r": 1.4653901534463358,
+   "Re": 9271.11466171602,
+   "iter_drift_last100": [
+    0.0026227964352893984,
+    0.0010403596206165489,
+    0.010755842278973748
+   ],
+   "p_obs": 4.184918059830602,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.05212829816388825,
+   "change_medium_to_fine": 0.019936785646978497,
+   "flags": [
+    "observed order 4.18 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.8414084259063548
+  },
+  {
+   "vessel": "flask",
+   "case": "water_800rpm_cells_per_cm_13.5-9-6",
+   "quantity": "Np_dissip",
+   "levels": [
+    0.30567034963847795,
+    0.3911611437198802,
+    0.5633916257914215
+   ],
+   "n_cells": [
+    7080,
+    20942,
+    70018
+   ],
+   "r": 1.4653901534463358,
+   "Re": 9271.11466171602,
+   "iter_drift_last100": [
+    0.0026227964352893984,
+    0.0010403596206165489,
+    0.010755842278973748
+   ],
+   "p_obs": -1.832989900968383,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.7993151361044083,
+   "change_medium_to_fine": -0.30570295010970644,
+   "flags": [
+    "observed order -1.83 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.7135007771412729
+  },
+  {
+   "vessel": "flask",
+   "case": "water_800rpm_cells_per_cm_9-6-4",
+   "quantity": "Np_torque",
+   "levels": [
+    1.261992282803486,
+    0.9578431795736223,
+    0.8733589777336813
+   ],
+   "n_cells": [
+    2150,
+    7080,
+    20942
+   ],
+   "r": 1.461614206559241,
+   "Re": 9271.11466171602,
+   "iter_drift_last100": [
+    0.0010403596206165489,
+    0.010755842278973748,
+    0.011538011793031822
+   ],
+   "p_obs": 3.3750029403497286,
+   "p_used": 3.3750029403497286,
+   "Fs": 1.25,
+   "gci_fine": 0.0465058477151633,
+   "change_medium_to_fine": 0.09673479519174677,
+   "flags": [],
+   "f_richardson": 0.8408659380383587
+  },
+  {
+   "vessel": "flask",
+   "case": "water_800rpm_cells_per_cm_9-6-4",
+   "quantity": "Np_dissip",
+   "levels": [
+    0.2786053520712976,
+    0.30567034963847795,
+    0.3911611437198802
+   ],
+   "n_cells": [
+    2150,
+    7080,
+    20942
+   ],
+   "r": 1.461614206559241,
+   "Re": 9271.11466171602,
+   "iter_drift_last100": [
+    0.0010403596206165489,
+    0.010755842278973748,
+    0.011538011793031822
+   ],
+   "p_obs": -3.0304132016127965,
+   "p_used": 2.0,
+   "Fs": 3.0,
+   "gci_fine": 0.5770131924334879,
+   "change_medium_to_fine": -0.21855645800704643,
+   "flags": [
+    "observed order -3.03 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "f_richardson": 0.466396190484461
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+name: research   # existing env; only the extras below are missing
+dependencies:
+  - pip
+  - pip:
+      - streamlit        # dashboard
+      - CoolProp         # properties (never from the LLM)
+      - thermo
+      - cantera
+      - mlx-lm           # local extraction model (Apple silicon)

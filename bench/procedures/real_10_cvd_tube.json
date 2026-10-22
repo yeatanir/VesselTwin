@@ -1,0 +1,45 @@
+{
+ "text": "The one-inch quartz tube used for CVD is acetone-cleaned and dried via initial heating to 150 °C. [...] As the Ar fills the quartz tube, the pressure gauge reading will increase initially. After the quartz tube is filled, the pressure gauge reading stabilizes between 65 and 75 Torr. [...] Thus, once the pressure gauge reading stabilizes and the temperature reaches about 600 °C for MoO3, an Ar flow of 100–200 sccm is sufficient to cause the drift of sulfur to Mo.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "tube_id_in": {
+   "value": 1,
+   "unit": "inch"
+  },
+  "T_boat_Mo_C": {
+   "value": 600,
+   "unit": "C"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Towards Low-Temperature CVD Synthesis and Characterization of Mono- or Few-Layer Molybdenum Disulfide",
+  "authors": [
+   "Sachin Shendokar",
+   "Frederick Aryeetey",
+   "Moha Feroz Hossen",
+   "Tetyana Ignatova",
+   "Shyam Aravamudhan",
+   "Sadia Ameen"
+  ],
+  "journal": "Micromachines",
+  "year": 2023,
+  "DOI": "10.3390/mi14091758",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10537635/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "purge: Ar at 1000-3000 SCCM during pump-down/fill",
+  "geometry_other: ceramic cylindrical piece and dovetail collet end cap at the inlet",
+  "cleaning: tube pre-heated to 150 C"
+ ],
+ "ambiguous": [
+  "pressure_Pa: gauge reads 65-75 Torr (range)",
+  "flow_sccm: 'Ar flow of 100-200 sccm' (range)",
+  "T_boat_Mo_C: 'about 600 C for MoO3' (approximate)"
+ ]
+}

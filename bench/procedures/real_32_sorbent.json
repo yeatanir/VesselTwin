@@ -1,0 +1,55 @@
+{
+ "text": "Breakthrough experiments were performed in a custom-built fixed-bed reactor using dried resin samples (90–100 mg) packed in a 1/4″ stainless-steel tube (∼5 cm length, 4 mm i.d.), sealed with glass wool. [...] Breakthrough tests were then conducted with dry or humid (0% and 70% RH) 400 ppm CO2/N2 (40 sccm), with humidity regulated by a WETSYS/SETARAM humidifier and outlet CO2/H2O concentrations monitored using a LI-850 (LI-COR) infrared gas analyzer.",
+ "vessel": "sorbent",
+ "gold": {
+  "bed_id_cm": {
+   "value": 4,
+   "unit": "mm"
+  },
+  "bed_length_cm": {
+   "value": 5,
+   "unit": "cm"
+  },
+  "flow_sccm": {
+   "value": 40,
+   "unit": "sccm"
+  },
+  "y_feed": {
+   "value": 400,
+   "unit": "ppm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "In situ azetidine polymerization elevates the performance of commercial polymer resin sorbents in carbon dioxide capture",
+  "authors": [
+   "Arkaprabha Giri",
+   "UnJin Ryu",
+   "Jiaqi Zhang",
+   "Opeyemi Ojelade",
+   "Wenyang Zhao",
+   "Jacob Hoffman",
+   "Mark Robertson",
+   "Jordi Espín",
+   "Madison Nichols",
+   "Surya Parker",
+   "Omid Ghaffari Nik",
+   "Christopher W Jones"
+  ],
+  "journal": "Science Advances",
+  "year": 2026,
+  "DOI": "10.1126/sciadv.aeg5572",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13641014/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "adsorbent_mass: 90-100 mg resin",
+  "humidity: 0% and 70% RH",
+  "temperature: bath -20 to 80 C chiller range (no single value)",
+  "geometry_other: 1/4 inch outer tube diameter"
+ ],
+ "ambiguous": [
+  "bed_length_cm: written approx. 5 cm",
+  "flow_sccm: 60 sccm N2 pre-activation flow appears in the full paragraph but not in this excerpt"
+ ]
+}

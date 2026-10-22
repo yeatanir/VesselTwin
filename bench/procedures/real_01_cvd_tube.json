@@ -1,0 +1,47 @@
+{
+ "text": "Next, the first quartz boat with S powder was placed in the low temperature zone of the tube furnace, and then the second quartz boat with MoO3 powder and SiO2/Si substrate was placed in the middle position of the tube furnace, wherein the cleaned SiO2/Si substrate was placed face down on the downstream from the MoO3 powder for 5 cm, as shown in Figure 1a. [...] During the heating process, argon gas with a flow rate of 35 sccm was continuously supplied as the carrier gas. It can be observed from Figure 1c that the temperature of the SiO2/Si substrate rises from room temperature to 550 °C in 20 min initially, then rises to 720 °C in 10 min, and maintains the growth temperature 720 °C in 10 min, and then cools to room temperature naturally.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "x_substrate_cm": {
+   "value": 5,
+   "unit": "cm"
+  },
+  "flow_sccm": {
+   "value": 35,
+   "unit": "sccm"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Research on the Factors Affecting the Growth of Large-Size Monolayer MoS2 by APCVD",
+  "authors": [
+   "Tao Han",
+   "Hongxia Liu",
+   "Shulong Wang",
+   "Wei Li",
+   "Shupeng Chen",
+   "Xiaoli Yang",
+   "Ming Cai"
+  ],
+  "journal": "Materials",
+  "year": 2018,
+  "DOI": "10.3390/ma11122562",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6316495/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "ramp_rate: substrate 'rises from room temperature to 550 C in 20 min' then 'to 720 C in 10 min'",
+  "hold_time: growth temperature maintained 10 min",
+  "position: sulfur boat 'in the low temperature zone' (no distance or temperature)",
+  "position: MoO3 boat 'in the middle position of the tube furnace'",
+  "substrate: SiO2/Si face down"
+ ],
+ "ambiguous": [
+  "T_furnace_C: 'growth temperature 720 C' is the substrate temperature, not stated as plateau temperature",
+  "carrier: written 'argon', gold uses ParamDef choice 'Ar'"
+ ]
+}

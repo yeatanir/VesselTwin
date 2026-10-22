@@ -1,0 +1,1299 @@
+{
+ "p_eq_Pa_at_1000K": {
+  "default": {
+   "Mo": 7.053569352088756e-06,
+   "S": 0.0003250375244023409
+  },
+  "kink_mlip": {
+   "Mo": 5178208.024558829,
+   "S": 9.12871216267679e-06
+  },
+  "legacy_mlip_gamma": {
+   "Mo": 1625.4400238370413,
+   "S": 12.431880232994823
+  }
+ },
+ "map_default": {
+  "classes": {
+   "triangle_Mo": 29,
+   "triangle_S": 11
+  },
+  "boundary_cm_from_boat": 18.246794871794872,
+  "shape_index_first_mid_last": [
+   1.0,
+   1.0,
+   -1.0
+  ],
+  "mean_band_width_p95_minus_p05": 2.0,
+  "shape_vs_x": [
+   [
+    0.5,
+    "triangle_Mo"
+   ],
+   [
+    1.1,
+    "triangle_Mo"
+   ],
+   [
+    1.8,
+    "triangle_Mo"
+   ],
+   [
+    2.4,
+    "triangle_Mo"
+   ],
+   [
+    3.0,
+    "triangle_Mo"
+   ],
+   [
+    3.6,
+    "triangle_Mo"
+   ],
+   [
+    4.3,
+    "triangle_Mo"
+   ],
+   [
+    4.9,
+    "triangle_Mo"
+   ],
+   [
+    5.5,
+    "triangle_Mo"
+   ],
+   [
+    6.2,
+    "triangle_Mo"
+   ],
+   [
+    6.8,
+    "triangle_Mo"
+   ],
+   [
+    7.4,
+    "triangle_Mo"
+   ],
+   [
+    8.0,
+    "triangle_Mo"
+   ],
+   [
+    8.7,
+    "triangle_Mo"
+   ],
+   [
+    9.3,
+    "triangle_Mo"
+   ],
+   [
+    9.9,
+    "triangle_Mo"
+   ],
+   [
+    10.6,
+    "triangle_Mo"
+   ],
+   [
+    11.2,
+    "triangle_Mo"
+   ],
+   [
+    11.8,
+    "triangle_Mo"
+   ],
+   [
+    12.4,
+    "triangle_Mo"
+   ],
+   [
+    13.1,
+    "triangle_Mo"
+   ],
+   [
+    13.7,
+    "triangle_Mo"
+   ],
+   [
+    14.3,
+    "triangle_Mo"
+   ],
+   [
+    14.9,
+    "triangle_Mo"
+   ],
+   [
+    15.6,
+    "triangle_Mo"
+   ],
+   [
+    16.2,
+    "triangle_Mo"
+   ],
+   [
+    16.8,
+    "triangle_Mo"
+   ],
+   [
+    17.5,
+    "triangle_Mo"
+   ],
+   [
+    18.1,
+    "triangle_Mo"
+   ],
+   [
+    18.7,
+    "triangle_S"
+   ],
+   [
+    19.3,
+    "triangle_S"
+   ],
+   [
+    20.0,
+    "triangle_S"
+   ],
+   [
+    20.6,
+    "triangle_S"
+   ],
+   [
+    21.2,
+    "triangle_S"
+   ],
+   [
+    21.9,
+    "triangle_S"
+   ],
+   [
+    22.5,
+    "triangle_S"
+   ],
+   [
+    23.1,
+    "triangle_S"
+   ],
+   [
+    23.7,
+    "triangle_S"
+   ],
+   [
+    24.4,
+    "triangle_S"
+   ],
+   [
+    25.0,
+    "triangle_S"
+   ]
+  ]
+ },
+ "map_kink_mlip": {
+  "classes": {
+   "triangle_Mo": 40
+  },
+  "boundary_cm_from_boat": NaN,
+  "shape_index_first_mid_last": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "mean_band_width_p95_minus_p05": 1.0525143012345222,
+  "shape_vs_x": [
+   [
+    0.5,
+    "triangle_Mo"
+   ],
+   [
+    1.1,
+    "triangle_Mo"
+   ],
+   [
+    1.8,
+    "triangle_Mo"
+   ],
+   [
+    2.4,
+    "triangle_Mo"
+   ],
+   [
+    3.0,
+    "triangle_Mo"
+   ],
+   [
+    3.6,
+    "triangle_Mo"
+   ],
+   [
+    4.3,
+    "triangle_Mo"
+   ],
+   [
+    4.9,
+    "triangle_Mo"
+   ],
+   [
+    5.5,
+    "triangle_Mo"
+   ],
+   [
+    6.2,
+    "triangle_Mo"
+   ],
+   [
+    6.8,
+    "triangle_Mo"
+   ],
+   [
+    7.4,
+    "triangle_Mo"
+   ],
+   [
+    8.0,
+    "triangle_Mo"
+   ],
+   [
+    8.7,
+    "triangle_Mo"
+   ],
+   [
+    9.3,
+    "triangle_Mo"
+   ],
+   [
+    9.9,
+    "triangle_Mo"
+   ],
+   [
+    10.6,
+    "triangle_Mo"
+   ],
+   [
+    11.2,
+    "triangle_Mo"
+   ],
+   [
+    11.8,
+    "triangle_Mo"
+   ],
+   [
+    12.4,
+    "triangle_Mo"
+   ],
+   [
+    13.1,
+    "triangle_Mo"
+   ],
+   [
+    13.7,
+    "triangle_Mo"
+   ],
+   [
+    14.3,
+    "triangle_Mo"
+   ],
+   [
+    14.9,
+    "triangle_Mo"
+   ],
+   [
+    15.6,
+    "triangle_Mo"
+   ],
+   [
+    16.2,
+    "triangle_Mo"
+   ],
+   [
+    16.8,
+    "triangle_Mo"
+   ],
+   [
+    17.5,
+    "triangle_Mo"
+   ],
+   [
+    18.1,
+    "triangle_Mo"
+   ],
+   [
+    18.7,
+    "triangle_Mo"
+   ],
+   [
+    19.3,
+    "triangle_Mo"
+   ],
+   [
+    20.0,
+    "triangle_Mo"
+   ],
+   [
+    20.6,
+    "triangle_Mo"
+   ],
+   [
+    21.2,
+    "triangle_Mo"
+   ],
+   [
+    21.9,
+    "triangle_Mo"
+   ],
+   [
+    22.5,
+    "triangle_Mo"
+   ],
+   [
+    23.1,
+    "triangle_Mo"
+   ],
+   [
+    23.7,
+    "triangle_Mo"
+   ],
+   [
+    24.4,
+    "triangle_Mo"
+   ],
+   [
+    25.0,
+    "triangle_Mo"
+   ]
+  ]
+ },
+ "map_legacy_mlip_gamma": {
+  "classes": {
+   "hexagon": 40
+  },
+  "boundary_cm_from_boat": 0.5,
+  "shape_index_first_mid_last": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "mean_band_width_p95_minus_p05": 0.0,
+  "shape_vs_x": [
+   [
+    0.5,
+    "hexagon"
+   ],
+   [
+    1.1,
+    "hexagon"
+   ],
+   [
+    1.8,
+    "hexagon"
+   ],
+   [
+    2.4,
+    "hexagon"
+   ],
+   [
+    3.0,
+    "hexagon"
+   ],
+   [
+    3.6,
+    "hexagon"
+   ],
+   [
+    4.3,
+    "hexagon"
+   ],
+   [
+    4.9,
+    "hexagon"
+   ],
+   [
+    5.5,
+    "hexagon"
+   ],
+   [
+    6.2,
+    "hexagon"
+   ],
+   [
+    6.8,
+    "hexagon"
+   ],
+   [
+    7.4,
+    "hexagon"
+   ],
+   [
+    8.0,
+    "hexagon"
+   ],
+   [
+    8.7,
+    "hexagon"
+   ],
+   [
+    9.3,
+    "hexagon"
+   ],
+   [
+    9.9,
+    "hexagon"
+   ],
+   [
+    10.6,
+    "hexagon"
+   ],
+   [
+    11.2,
+    "hexagon"
+   ],
+   [
+    11.8,
+    "hexagon"
+   ],
+   [
+    12.4,
+    "hexagon"
+   ],
+   [
+    13.1,
+    "hexagon"
+   ],
+   [
+    13.7,
+    "hexagon"
+   ],
+   [
+    14.3,
+    "hexagon"
+   ],
+   [
+    14.9,
+    "hexagon"
+   ],
+   [
+    15.6,
+    "hexagon"
+   ],
+   [
+    16.2,
+    "hexagon"
+   ],
+   [
+    16.8,
+    "hexagon"
+   ],
+   [
+    17.5,
+    "hexagon"
+   ],
+   [
+    18.1,
+    "hexagon"
+   ],
+   [
+    18.7,
+    "hexagon"
+   ],
+   [
+    19.3,
+    "hexagon"
+   ],
+   [
+    20.0,
+    "hexagon"
+   ],
+   [
+    20.6,
+    "hexagon"
+   ],
+   [
+    21.2,
+    "hexagon"
+   ],
+   [
+    21.9,
+    "hexagon"
+   ],
+   [
+    22.5,
+    "hexagon"
+   ],
+   [
+    23.1,
+    "hexagon"
+   ],
+   [
+    23.7,
+    "hexagon"
+   ],
+   [
+    24.4,
+    "hexagon"
+   ],
+   [
+    25.0,
+    "hexagon"
+   ]
+  ]
+ },
+ "bench_before": {
+  "in_scope": {
+   "n": 8,
+   "acc": 0.5,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.375,
+   "answered_if_band": 7,
+   "defaults_only": 0.5,
+   "confusion": {
+    "triangle": {
+     "triangle": 4,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  },
+  "all": {
+   "n": 14,
+   "acc": 0.5,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.42857142857142855,
+   "answered_if_band": 12,
+   "defaults_only": 0.5,
+   "confusion": {
+    "triangle": {
+     "triangle": 7,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 3,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 2,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  }
+ },
+ "bench_before_rows": [
+  [
+   "S01",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S02",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S03",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S04",
+   "truncated_triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S05",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S06",
+   "hexagon",
+   "triangle",
+   null
+  ],
+  [
+   "S07",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S08",
+   "other",
+   "triangle",
+   null
+  ],
+  [
+   "S09",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S10",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S11",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S12",
+   "mixed",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S13",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S14",
+   "other",
+   "triangle",
+   null
+  ]
+ ],
+ "bench_after": {
+  "in_scope": {
+   "n": 8,
+   "acc": 0.5,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.0,
+   "answered_if_band": 0,
+   "defaults_only": 0.5,
+   "confusion": {
+    "triangle": {
+     "triangle": 4,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  },
+  "all": {
+   "n": 14,
+   "acc": 0.5,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.0,
+   "answered_if_band": 2,
+   "defaults_only": 0.5,
+   "confusion": {
+    "triangle": {
+     "triangle": 7,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 3,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 2,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  }
+ },
+ "bench_after_rows": [
+  [
+   "S01",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S02",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S03",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S04",
+   "truncated_triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S05",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S06",
+   "hexagon",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S07",
+   "mixed",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S08",
+   "other",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S09",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S10",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S11",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S12",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S13",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S14",
+   "other",
+   "triangle",
+   "band_spans_classes"
+  ]
+ ],
+ "bench_before_simnad": {
+  "in_scope": {
+   "n": 8,
+   "acc": 0.125,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.0,
+   "answered_if_band": 3,
+   "defaults_only": 0.125,
+   "confusion": {
+    "triangle": {
+     "triangle": 1,
+     "truncated_triangle": 3,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 0,
+     "truncated_triangle": 1,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  },
+  "all": {
+   "n": 14,
+   "acc": 0.21428571428571427,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.14285714285714285,
+   "answered_if_band": 7,
+   "defaults_only": 0.07142857142857142,
+   "confusion": {
+    "triangle": {
+     "triangle": 3,
+     "truncated_triangle": 4,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 0,
+     "truncated_triangle": 1,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 2,
+     "truncated_triangle": 1,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 2,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  }
+ },
+ "bench_before_simnad_rows": [
+  [
+   "S01",
+   "triangle",
+   "truncated_triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S02",
+   "triangle",
+   "truncated_triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S03",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S04",
+   "truncated_triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S05",
+   "triangle",
+   "truncated_triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S06",
+   "hexagon",
+   "truncated_triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S07",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S08",
+   "other",
+   "triangle",
+   null
+  ],
+  [
+   "S09",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S10",
+   "mixed",
+   "truncated_triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S11",
+   "triangle",
+   "truncated_triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S12",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S13",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S14",
+   "other",
+   "triangle",
+   null
+  ]
+ ],
+ "bench_after_simnad": {
+  "in_scope": {
+   "n": 8,
+   "acc": 0.5,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.125,
+   "answered_if_band": 1,
+   "defaults_only": 0.5,
+   "confusion": {
+    "triangle": {
+     "triangle": 4,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  },
+  "all": {
+   "n": 14,
+   "acc": 0.5,
+   "majority": "triangle",
+   "majority_baseline": 0.5,
+   "acc_abstain_if_band": 0.07142857142857142,
+   "answered_if_band": 3,
+   "defaults_only": 0.5,
+   "confusion": {
+    "triangle": {
+     "triangle": 7,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "truncated_triangle": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "hexagon": {
+     "triangle": 1,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "mixed": {
+     "triangle": 3,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    },
+    "other": {
+     "triangle": 2,
+     "truncated_triangle": 0,
+     "hexagon": 0,
+     "mixed": 0,
+     "other": 0,
+     "abstain": 0
+    }
+   }
+  }
+ },
+ "bench_after_simnad_rows": [
+  [
+   "S01",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S02",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S03",
+   "triangle",
+   "triangle",
+   null
+  ],
+  [
+   "S04",
+   "truncated_triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S05",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S06",
+   "hexagon",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S07",
+   "mixed",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S08",
+   "other",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S09",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S10",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S11",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S12",
+   "mixed",
+   "triangle",
+   null
+  ],
+  [
+   "S13",
+   "triangle",
+   "triangle",
+   "band_spans_classes"
+  ],
+  [
+   "S14",
+   "other",
+   "triangle",
+   "band_spans_classes"
+  ]
+ ]
+}

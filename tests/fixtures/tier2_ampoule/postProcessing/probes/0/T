@@ -1,0 +1,7 @@
+# FAKE FIXTURE (synthetic): format-correct, hand-written, NOT solver output
+# Probe 0 (0.0012 0.0075 0.0007)
+# Probe 1 (0.1488 0.0075 0.0007)
+#       Probe             0               1
+#        Time
+         0                 1173.15  1073.15
+         600               1170.1   1076.3

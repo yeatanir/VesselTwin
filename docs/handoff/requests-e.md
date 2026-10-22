@@ -1,0 +1,16 @@
+# Track E requests (files I do not own)
+
+## To Track C (dashboard): photon-flux-vs-depth plot
+`api.solve("photoreactor")["extras"]["photon_flux_vs_depth"]` is a dict:
+`{"x": [cm...], "x_label", "x_unit": "cm", "y_label", "y_unit": "umol s-1 cm-2", "p05": [...], "p50": [...], "p95": [...], "n_mc": 200, "note"}`.
+Plot p50 as a line and p05-p95 as a band against x. `extras["notes"]` is a list of strings to show under the plot (mixing cap UNSOURCED, dT upper bound, what was validated).
+New photoreactor params (schema picks them up automatically): `lamp_geom="measured"` + `E_meas_mW_cm2`, `illum` (collimated/diffuse), `n_wall`, `V_total_cm3`.
+
+## To Track F: presets and tiers.json text
+- Add presets (files in `presets/`, I do not own that dir). Setups with full source tags are in `bench/photoreactor/setups.json`; params of `saenz_qpb_cuvette` and `saenz_is_cuvette` can be copied as `photoreactor__saenz2024_QPB_cuvette.json` / `photoreactor__saenz2024_IS_cuvette.json` (meta source must not contain "synthetic" for the UI to mark them sourced; every parameter in them is stated in the paper except n_liq = 1.33 (assumption) and the stirring (irrelevant, photon-limited)).
+- tiers.json status text for photoreactor (suggested): "Optical chain (wall transmission, Beer-Lambert, quantum yield x absorbed photons) compared with two published ferrioxalate actinometry setups (Saenz 2024; phi from Hatchard & Parker 1956): predicted/measured = 0.88 (collimated) and 0.69 (diffuse), both inside the pre-registered tolerances. One paper, one lab. Lamp power -> irradiance, mixing cap (unsourced heuristic) and temperature rise (upper bound) are NOT validated."
+
+## Sorbent (Part 2) decisions left to the user / Track F
+- 13X `h_in`: NOT changed in `vessels/sorbent/sorbent_data.json` (pre-registered adoption rule failed by 0.6 percentage points, see report). The fitted effective value is 72.9 W m-2 K-1 (peak-temperature fit on y = 0.15); with it the 13X t50 error goes from -38 / -39 % to -9.5 / -15.6 %. If you want it shipped anyway, change `benchmarks.13X_Z1002ND_breakthrough_CO2_He.column.h_in` from 4.0 to 72.9, label it "effective, fitted to one peak temperature, d_p assumed", and relax the regression guard `-0.5 < err < -0.2` in `tests/test_sorbent_physics.py::test_published_isotherm_loadings_and_breakthrough_times`.
+- tiers.json (suggested sorbent text): "13X breakthrough still 38-39 % early with the thesis wall coefficient; a single effective h_in fitted on one peak temperature reduces this to 10-16 % on a held-out flow but is not adopted (missed the pre-registered 15 % threshold by 0.6 points). CO2/H2O competition: extended Langmuir under-predicts CO2 by 17 % and 41 %; IAST is worse (CO2 about 0, water +18 to +36 %), so it is not used. CALF-20 unchanged."
+- Solver note (my file, left unchanged): the sparsity-pattern cache `_PAT` in `vessels/sorbent/__init__.py` is shared across columns and, at RTOL = 3e-3, moves CALF-20 t50 errors by up to +2 percentage points depending on whether a 13X case ran first (clean: -3.3, +1.9, +9.8 %; after a 13X run: -2.4, +4.1, +10.8 %). The converged value (RTOL 1e-5) equals the clean one. 13X results are stable to 4 digits. Fix would be to key `_PAT` on the full parameter set or tighten RTOL; not done because it would shift published benchmark numbers.

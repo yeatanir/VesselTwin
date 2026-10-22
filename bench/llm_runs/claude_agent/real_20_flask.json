@@ -1,0 +1,23 @@
+{
+ "vessel": "flask",
+ "fields": [
+  {
+   "key": "volume_mL",
+   "value": "50",
+   "unit": "mL",
+   "span": "50 mL"
+  },
+  {
+   "key": "T_C",
+   "value": "60",
+   "unit": "°C",
+   "span": "60 °C"
+  },
+  {
+   "key": "stir_rpm",
+   "value": "300",
+   "unit": "rpm",
+   "span": "300 rpm"
+  }
+ ]
+}

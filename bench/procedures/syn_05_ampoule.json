@@ -1,0 +1,19 @@
+{
+ "synthetic": true,
+ "vessel": "ampoule",
+ "text": "The source zone was held at 950 \u00b0C and the sink zone at 850 \u00b0C for ten days in the two-zone furnace. The ampoule was 1.5 cm in diameter.",
+ "gold": {
+  "T_source_C": {
+   "value": 950,
+   "unit": "C"
+  },
+  "T_sink_C": {
+   "value": 850,
+   "unit": "C"
+  },
+  "D_mm": {
+   "value": 1.5,
+   "unit": "cm"
+  }
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "saenz_qpb_cuvette": {
+  "predicted_slope": 0.001414662583781054,
+  "measured_slope": 0.00161,
+  "measured_sigma": 3e-05,
+  "ratio": 0.8786724122863689,
+  "ratio_p05_p95": [
+   0.8382228161540649,
+   0.9171222895273753
+  ],
+  "tolerance_factor": 1.25,
+  "pass": true,
+  "wall_T": 0.9449358718801645,
+  "fraction_absorbed": 0.989953842097216,
+  "Da_mix": 0.0001376991145075747,
+  "uncertainty_one_sigma_dln": {
+   "phi": 0.024795057012097575,
+   "n_wall": 0.007641625843109601,
+   "n_liq": 0.001197511321227901,
+   "wall_mm": 4.999311599215622e-05,
+   "eps_A(333->1500)": 0.009608285117016906
+  },
+  "main_uncertainty": "phi",
+  "sensitivity_ratio": {
+   "phi=1.26": 0.9149759841148846,
+   "n_wall=1.485": 0.8906271285757218
+  }
+ },
+ "saenz_is_cuvette": {
+  "predicted_slope": 0.005366389539872055,
+  "measured_slope": 0.0078,
+  "measured_sigma": 0.0001,
+  "ratio": 0.6879986589579559,
+  "ratio_p05_p95": [
+   0.6558768208437684,
+   0.7183770273178023
+  ],
+  "tolerance_factor": 1.5,
+  "pass": true,
+  "wall_T": 0.8915158778018007,
+  "fraction_absorbed": 0.9950668662839024,
+  "Da_mix": 0.00012556305515070665,
+  "uncertainty_one_sigma_dln": {
+   "phi": 0.024795357826932877,
+   "n_wall": 0.008715351558133749,
+   "n_liq": 0.0013610650143567246,
+   "wall_mm": 5.6216589320288314e-05,
+   "eps_A(333->1500)": 0.00450265492305594
+  },
+  "main_uncertainty": "phi",
+  "sensitivity_ratio": {
+   "phi=1.26": 0.7164246388664397,
+   "n_wall=1.485": 0.699021036661115
+  }
+ }
+}

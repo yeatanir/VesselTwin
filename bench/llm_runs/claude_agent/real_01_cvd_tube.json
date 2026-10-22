@@ -1,0 +1,29 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "x_substrate_cm",
+   "value": "5",
+   "unit": "cm",
+   "span": "downstream from the MoO3 powder for 5 cm"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "35",
+   "unit": "sccm",
+   "span": "35 sccm"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "argon gas with a flow rate of 35 sccm"
+  },
+  {
+   "key": "T_furnace_C",
+   "value": "720",
+   "unit": "°C",
+   "span": "growth temperature 720 °C"
+  }
+ ]
+}

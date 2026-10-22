@@ -1,0 +1,44 @@
+{
+ "text": "Our CVD system consisted of a quartz tube with a diameter of 50 mm and a single heating zone, where MoS2 growth occurred at a set growth temperature, which ranged from 600 to 850 °C in this study. [...] Separately, a different quartz boat was loaded with the required amount of sulfur powder (99.5% purity Alfa Aesar, Haverhill, MA, USA) and placed at the edge of the heating zone (details in Figure S1). The tube was then purged with Ar gas (>99.9% purity) at a flow rate of 2000 standard cubic centimeters per minute (sccm) for 5 min at room temperature. Subsequently, the flow rate was adjusted to a low value of 10 sccm, and the temperature of the heating zone was increased at a ramp rate of 15 °C/min until the desired growth temperature was reached, and it was then maintained at this level for a short time of ~1 min.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "tube_id_in": {
+   "value": 50,
+   "unit": "mm"
+  },
+  "flow_sccm": {
+   "value": 10,
+   "unit": "sccm"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "CVD Synthesis of MoS2 Using a Direct MoO2 Precursor: A Study on the Effects of Growth Temperature on Precursor Diffusion and Morphology Evolutions",
+  "authors": [
+   "Ratchanok Somphonsane",
+   "Tinna Chiawchan",
+   "Waraporn Bootsa-ard",
+   "Harihara Ramamoorthy",
+   "Franz Faupel"
+  ],
+  "journal": "Materials",
+  "year": 2023,
+  "DOI": "10.3390/ma16134817",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10343541/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "ramp_rate: 15 C/min",
+  "hold_time: ~1 min at growth temperature",
+  "purge: 2000 sccm Ar for 5 min",
+  "position: sulfur boat 'at the edge of the heating zone'",
+  "atmosphere: atmospheric-pressure CVD named in the sentence before the excerpt, not numeric here"
+ ],
+ "ambiguous": [
+  "T_furnace_C: only a range '600 to 850 C' in this excerpt"
+ ]
+}

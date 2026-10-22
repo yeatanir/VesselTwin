@@ -1,0 +1,47 @@
+{
+ "text": "Prior to the breakthrough experiments, 0.3 g of activated 1 adsorbent was filled into the customized adsorption column (7.0 mm I.D. and 250 mm in length); glass wool was used to plug the two ends of the column. Then, the column was in situ heated at a temperature of 373 K for 12 h with a helium flow (5 sccm) to remove the adsorbed gas impurities. After the system was stabilized, the device was cooled to 298 K, and the gas mixtures of C3H6/C3H8/He (30/30/40, v/v/v) were introduced into the pipeline. The gas mixtures were passed through the column at a flow rate of 2 sccm and detected through GC.",
+ "vessel": "sorbent",
+ "gold": {
+  "bed_id_cm": {
+   "value": 7.0,
+   "unit": "mm"
+  },
+  "T_K": {
+   "value": 298,
+   "unit": "K"
+  },
+  "flow_sccm": {
+   "value": 2,
+   "unit": "sccm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Quasi-Orthogonal Configuration of Propylene within a Scalable Metal–Organic Framework Enables Its Purification from Quinary Propane Dehydrogenation Byproducts",
+  "authors": [
+   "Peng Hu",
+   "Jialang Hu",
+   "Hao Liu",
+   "Hao Wang",
+   "Jie Zhou",
+   "Rajamani Krishna",
+   "Hongbing Ji"
+  ],
+  "journal": "ACS Central Science",
+  "year": 2022,
+  "DOI": "10.1021/acscentsci.2c00554",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9413434/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "adsorbent_mass: 0.3 g",
+  "activation: 373 K for 12 h under 5 sccm He",
+  "composition: C3H6/C3H8/He 30/30/40 v/v/v"
+ ],
+ "ambiguous": [
+  "bed_length_cm: column length 250 mm, not the packed bed length (0.3 g sample)",
+  "T_K: 373 K activation vs 298 K measurement",
+  "flow_sccm: 5 sccm He activation vs 2 sccm feed",
+  "y_feed: three-component mixture, adsorbate ambiguous"
+ ]
+}

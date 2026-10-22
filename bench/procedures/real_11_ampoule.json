@@ -1,0 +1,65 @@
+{
+ "text": "Single crystals of Cr1/4TaS2 were grown from Cr (powder, 99.97%, Alfa Aesar), Ta (powder, 99.98%, Alfa Aesar), and S (powder, 99.999%, Acros Organics) using I2 (99.999%, Spectrum Chemicals) as a transport agent. The constituent elements in a 0.33:1:2.05 molar ratio were sealed in an evacuated fused quartz ampoule (14 mm inner diameter, 1 mm wall thickness, 25 cm long) along with 2 mg/cm3 of I2. The ampoule was placed in a two-zone furnace with the hot zone maintained at 1100 °C and the cold (growth) zone maintained at 1000 °C for 200 h, after which both zones were cooled down to room temperature over the course of 50 h (about 20 °C/h).",
+ "vessel": "ampoule",
+ "gold": {
+  "gas": {
+   "value": "I2",
+   "unit": ""
+  },
+  "agent_mg_per_cm3": {
+   "value": 2,
+   "unit": "mg/cm3"
+  },
+  "D_mm": {
+   "value": 14,
+   "unit": "mm"
+  },
+  "L_cm": {
+   "value": 25,
+   "unit": "cm"
+  },
+  "T_source_C": {
+   "value": 1100,
+   "unit": "C"
+  },
+  "T_sink_C": {
+   "value": 1000,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Anomalous Hall effect from inter-superlattice scattering in a noncollinear antiferromagnet",
+  "authors": [
+   "Lilia S. Xie",
+   "Shannon S. Fender",
+   "Cameron Mollazadeh",
+   "Wuzhang Fang",
+   "Matthias D. Frontzek",
+   "Samra Husremović",
+   "Kejun Li",
+   "Isaac M. Craig",
+   "Berit H. Goodge",
+   "Matthew P. Erodici",
+   "Oscar Gonzalez",
+   "Jonathan D. Denlinger",
+   "Yuan Ping",
+   "D. Kwabena Bediako"
+  ],
+  "journal": "Nature Communications",
+  "year": 2025,
+  "DOI": "10.1038/s41467-025-61211-4",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12216071/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "hold_time: 200 h at temperature",
+  "ramp_rate: cooled over 50 h (about 20 C/h)",
+  "geometry_other: wall thickness 1 mm",
+  "composition: molar ratio Cr:Ta:S 0.33:1:2.05",
+  "atmosphere: ampoule evacuated"
+ ],
+ "ambiguous": [
+  "T_source_C / T_sink_C: text names 'hot zone' and 'cold (growth) zone'"
+ ]
+}

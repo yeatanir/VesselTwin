@@ -1,0 +1,54 @@
+{
+ "text": "At first, sulfur and tungsten powders were mixed with I2 and transferred into the quartz ampoule with a length of 30 cm. The inner and outer diameter of the quartz ampoule is 1.3 and 1.6 cm, respectively. Later, the quartz ampoule was evacuated to 10−5 Torr and sealed at one end. Next, the sealed ampoule was kept in the two-zone horizontal furnace maintained at temperatures of 1020 and 960 °C. The precursor powder was kept at the higher temperature of 1020 °C zone; once the powder started to melt and vaporize, the I2 transported the vaporized precursor to the other end of the tube; the temperature was maintained at 960 °C.",
+ "vessel": "ampoule",
+ "gold": {
+  "gas": {
+   "value": "I2",
+   "unit": ""
+  },
+  "L_cm": {
+   "value": 30,
+   "unit": "cm"
+  },
+  "D_mm": {
+   "value": 1.3,
+   "unit": "cm"
+  },
+  "T_source_C": {
+   "value": 1020,
+   "unit": "C"
+  },
+  "T_sink_C": {
+   "value": 960,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Photoconduction Properties in Tungsten Disulfide Nanostructures",
+  "authors": [
+   "Hemanth Kumar Bangolla",
+   "Yueh-Chien Lee",
+   "Wei-Chu Shen",
+   "Rajesh Kumar Ulaganathan",
+   "Raman Sankar",
+   "He-Yun Du",
+   "Ruei-San Chen",
+   "Ion N. Mihailescu"
+  ],
+  "journal": "Nanomaterials",
+  "year": 2023,
+  "DOI": "10.3390/nano13152190",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10421469/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "base_pressure: evacuated to 1e-5 Torr",
+  "geometry_other: outer diameter 1.6 cm",
+  "other: two-zone horizontal furnace",
+  "agent_amount: I2 quantity not given"
+ ],
+ "ambiguous": [
+  "D_mm: inner (1.3 cm) vs outer (1.6 cm) diameter both given"
+ ]
+}

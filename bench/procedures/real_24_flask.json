@@ -1,0 +1,37 @@
+{
+ "text": "In a typical reaction, 103.8 g (0.6650 mol) of FDCA, 106.8 g (1.721 mol) of EG, 1.105 g (0.9383 mmol) of antioxidant and 0.192 g (0.676 mmol) of TTIP were loaded into a 2-neck 250 mL glass flask, equipped with a magnetic stir bar, a nitrogen inlet, and a distillation column. The stirrer was set to 500 rpm and the temperature to 180 °C, and the system was purged with N2.",
+ "vessel": "flask",
+ "gold": {
+  "volume_mL": {
+   "value": 250,
+   "unit": "mL"
+  },
+  "stir_rpm": {
+   "value": 500,
+   "unit": "rpm"
+  },
+  "T_C": {
+   "value": 180,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Chemical recycling and repolymerization of poly(ethylene terephthalate), poly(ethylene furanoate), and their copolyesters",
+  "authors": [
+   "Lauri Välinen",
+   "Hossein Baniasadi",
+   "Jukka Niskanen"
+  ],
+  "journal": "RSC Advances",
+  "year": 2026,
+  "DOI": "10.1039/d6ra02625g",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13335686/",
+  "licence": "CC BY 3.0"
+ },
+ "unannotatable": [
+  "precursor_mass: 103.8 g FDCA, 106.8 g ethylene glycol, antioxidant, catalyst",
+  "other: melt polymerisation, 2-neck flask with distillation column, N2 inlet (no solvent)"
+ ],
+ "ambiguous": []
+}

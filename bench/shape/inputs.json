@@ -1,0 +1,332 @@
+{
+ "S01": {
+  "values": {
+   "x_substrate_cm": 5.0,
+   "T_furnace_C": 720.0,
+   "flow_sccm": 35.0,
+   "carrier": "Ar"
+  },
+  "provenance": {
+   "x_substrate_cm": "stated",
+   "T_furnace_C": "stated",
+   "flow_sccm": "stated",
+   "carrier": "stated"
+  },
+  "completeness": 0.4,
+  "unknown": [
+   "T_boat_Mo_C",
+   "T_boat_S_C",
+   "tube_id_in",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S02": {
+  "values": {
+   "T_furnace_C": 850.0,
+   "T_boat_S_C": 180.0,
+   "flow_sccm": 30.0,
+   "carrier": "Ar",
+   "pressure_Pa": 74660.52631578947
+  },
+  "provenance": {
+   "T_furnace_C": "stated",
+   "T_boat_S_C": "stated",
+   "flow_sccm": "stated",
+   "carrier": "stated",
+   "pressure_Pa": "stated"
+  },
+  "completeness": 0.5,
+  "unknown": [
+   "T_boat_Mo_C",
+   "tube_id_in",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm"
+  ]
+ },
+ "S03": {
+  "values": {
+   "T_boat_Mo_C": 600.0,
+   "carrier": "Ar",
+   "tube_id_in": 1.0,
+   "T_furnace_C": 650.0
+  },
+  "provenance": {
+   "T_boat_Mo_C": "stated",
+   "carrier": "stated",
+   "tube_id_in": "manual",
+   "T_furnace_C": "manual"
+  },
+  "completeness": 0.4,
+  "unknown": [
+   "T_boat_S_C",
+   "flow_sccm",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S04": {
+  "values": {
+   "T_boat_Mo_C": 700.0,
+   "carrier": "Ar",
+   "flow_sccm": 27.0,
+   "T_boat_S_C": 150.0,
+   "T_furnace_C": 700.0,
+   "x_substrate_cm": 11.0
+  },
+  "provenance": {
+   "T_boat_Mo_C": "stated",
+   "carrier": "manual",
+   "flow_sccm": "manual",
+   "T_boat_S_C": "manual",
+   "T_furnace_C": "manual",
+   "x_substrate_cm": "manual"
+  },
+  "completeness": 0.6,
+  "unknown": [
+   "tube_id_in",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S05": {
+  "values": {
+   "T_furnace_C": 800.0
+  },
+  "provenance": {
+   "T_furnace_C": "manual"
+  },
+  "completeness": 0.1,
+  "unknown": [
+   "T_boat_Mo_C",
+   "T_boat_S_C",
+   "flow_sccm",
+   "carrier",
+   "tube_id_in",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S06": {
+  "values": {
+   "T_furnace_C": 800.0
+  },
+  "provenance": {
+   "T_furnace_C": "manual"
+  },
+  "completeness": 0.1,
+  "unknown": [
+   "T_boat_Mo_C",
+   "T_boat_S_C",
+   "flow_sccm",
+   "carrier",
+   "tube_id_in",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S07": {
+  "values": {
+   "T_furnace_C": 700.0,
+   "T_boat_S_C": 120.0,
+   "flow_sccm": 250.0,
+   "carrier": "N2",
+   "T_boat_Mo_C": 700.0,
+   "x_substrate_cm": 0.0
+  },
+  "provenance": {
+   "T_furnace_C": "manual",
+   "T_boat_S_C": "stated",
+   "flow_sccm": "stated",
+   "carrier": "stated",
+   "T_boat_Mo_C": "manual",
+   "x_substrate_cm": "manual"
+  },
+  "completeness": 0.6,
+  "unknown": [
+   "tube_id_in",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S08": {
+  "values": {
+   "carrier": "Ar",
+   "tube_id_in": 1.0,
+   "x_substrate_cm": 10.0,
+   "T_furnace_C": 770.0,
+   "T_boat_Mo_C": 687.0,
+   "T_boat_S_C": 115.0,
+   "flow_sccm": 100.0,
+   "pressure_Pa": 93000.0,
+   "boat_area_MoO3_cm2": 0.5,
+   "boat_area_S_cm2": 10.0
+  },
+  "provenance": {
+   "carrier": "stated",
+   "tube_id_in": "manual",
+   "x_substrate_cm": "manual",
+   "T_furnace_C": "manual",
+   "T_boat_Mo_C": "manual",
+   "T_boat_S_C": "manual",
+   "flow_sccm": "manual",
+   "pressure_Pa": "manual",
+   "boat_area_MoO3_cm2": "manual",
+   "boat_area_S_cm2": "manual"
+  },
+  "completeness": 0.8,
+  "unknown": [
+   "x_S_boat_cm",
+   "x_MoO3_cm"
+  ]
+ },
+ "S09": {
+  "values": {
+   "T_furnace_C": 820.0,
+   "T_boat_S_C": 180.0,
+   "carrier": "N2"
+  },
+  "provenance": {
+   "T_furnace_C": "stated",
+   "T_boat_S_C": "stated",
+   "carrier": "stated"
+  },
+  "completeness": 0.3,
+  "unknown": [
+   "T_boat_Mo_C",
+   "flow_sccm",
+   "tube_id_in",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S10": {
+  "values": {
+   "tube_id_in": 1.9685039370078743,
+   "flow_sccm": 10.0,
+   "carrier": "Ar",
+   "T_furnace_C": 760.0,
+   "x_substrate_cm": 1.0
+  },
+  "provenance": {
+   "tube_id_in": "stated",
+   "flow_sccm": "stated",
+   "carrier": "stated",
+   "T_furnace_C": "manual",
+   "x_substrate_cm": "manual"
+  },
+  "completeness": 0.5,
+  "unknown": [
+   "T_boat_Mo_C",
+   "T_boat_S_C",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S11": {
+  "values": {
+   "tube_id_in": 1.0,
+   "T_furnace_C": 780.0,
+   "flow_sccm": 50.0,
+   "carrier": "Ar"
+  },
+  "provenance": {
+   "tube_id_in": "stated",
+   "T_furnace_C": "stated",
+   "flow_sccm": "stated",
+   "carrier": "stated"
+  },
+  "completeness": 0.4,
+  "unknown": [
+   "T_boat_Mo_C",
+   "T_boat_S_C",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S12": {
+  "values": {
+   "T_boat_S_C": 250.0,
+   "flow_sccm": 5.0,
+   "carrier": "Ar"
+  },
+  "provenance": {
+   "T_boat_S_C": "stated",
+   "flow_sccm": "stated",
+   "carrier": "stated"
+  },
+  "completeness": 0.3,
+  "unknown": [
+   "T_boat_Mo_C",
+   "T_furnace_C",
+   "tube_id_in",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S13": {
+  "values": {
+   "flow_sccm": 300.0,
+   "carrier": "N2",
+   "T_boat_S_C": 140.0,
+   "T_furnace_C": 785.0
+  },
+  "provenance": {
+   "flow_sccm": "stated",
+   "carrier": "stated",
+   "T_boat_S_C": "manual",
+   "T_furnace_C": "manual"
+  },
+  "completeness": 0.4,
+  "unknown": [
+   "T_boat_Mo_C",
+   "tube_id_in",
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ },
+ "S14": {
+  "values": {
+   "tube_id_in": 2.0,
+   "T_boat_S_C": 170.0,
+   "T_boat_Mo_C": 460.0,
+   "T_furnace_C": 460.0,
+   "flow_sccm": 10.0,
+   "carrier": "N2"
+  },
+  "provenance": {
+   "tube_id_in": "manual",
+   "T_boat_S_C": "manual",
+   "T_boat_Mo_C": "manual",
+   "T_furnace_C": "manual",
+   "flow_sccm": "manual",
+   "carrier": "manual"
+  },
+  "completeness": 0.6,
+  "unknown": [
+   "x_substrate_cm",
+   "x_S_boat_cm",
+   "x_MoO3_cm",
+   "pressure_Pa"
+  ]
+ }
+}

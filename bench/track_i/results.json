@@ -1,0 +1,2197 @@
+{
+ "sens_before": {
+  "items": {
+   "s01": {
+    "id": "s01",
+    "set": "dev",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.25,
+     "D_p05": 0.5618847729194811,
+     "D_p50": 0.8656396950183658,
+     "D_p95": 1.086183434432693
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "set": "dev",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.28,
+     "D_p05": -0.195083938670967,
+     "D_p50": -0.03584655973016715,
+     "D_p95": 0.14515519140618713
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "set": "dev",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.32,
+     "D_p05": -0.2938543983922072,
+     "D_p50": 0.5601201738155117,
+     "D_p95": 1.2706899169383368
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "set": "dev",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "set": "dev",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "set": "dev",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.07,
+     "D_p05": 2.0354966095507816,
+     "D_p50": 3.88030754103496,
+     "D_p95": 5.125335400682204
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "set": "dev",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "decrease",
+     "2": "decrease",
+     "3": "decrease"
+    },
+    "call": "decrease",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6078566245100259,
+     "D_p50": -1.6059670015034273,
+     "D_p95": -1.5965619215631943
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "set": "dev",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "set": "dev",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -229.00707590402143,
+     "D_p50": -3.1974981047101085,
+     "D_p95": 0.5853784579166261
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "no_change",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "truncated_triangle",
+     "triangle"
+    ],
+    "abstain": [
+     null,
+     null,
+     null,
+     "band_spans_classes",
+     null
+    ],
+    "cfg": "M0",
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "set": "dev",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "non_monotonic",
+     "2": "non_monotonic",
+     "3": "non_monotonic"
+    },
+    "call": "non_monotonic",
+    "diag_i1": {
+     "nm_frac": 0.99
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "set": "dev",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.2335075174117854,
+     "D_p50": 0.3882214630312619,
+     "D_p95": 0.5519103218899538
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.0004585865068933437,
+     "D_p50": -1.017680626103079e-06,
+     "D_p95": -2.4083199878788277e-10
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.00042726454496261335,
+     "D_p50": -8.94471886336845e-07,
+     "D_p95": -1.6354688714415066e-10
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 3.270937742883007e-10,
+     "D_p50": 1.78894377267369e-06,
+     "D_p95": 0.0008545290899252267
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "tables": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.3333333333333333,
+     "n_confident": 6,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.3333333333333333
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 5,
+     "acc_confident": 0.4,
+     "abstain_rate": 0.375
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 3,
+     "acc_confident": 0.0,
+     "abstain_rate": 0.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 9,
+     "acc_confident": 0.3333333333333333,
+     "abstain_rate": 0.25
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "increase",
+     "correct": false
+    }
+   ]
+  }
+ },
+ "sens_after": {
+  "items": {
+   "s01": {
+    "id": "s01",
+    "set": "dev",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.23,
+     "D_p05": 0.6179644584877741,
+     "D_p50": 0.8739237211083779,
+     "D_p95": 1.132646264772143
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "set": "dev",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.3,
+     "D_p05": -0.2461703669695774,
+     "D_p50": -0.027702856148971833,
+     "D_p95": 0.1385588833983911
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "set": "dev",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.34,
+     "D_p05": -0.2759506231656609,
+     "D_p50": 0.5187112067341886,
+     "D_p95": 1.472764153913085
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "set": "dev",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "set": "dev",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "set": "dev",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.08,
+     "D_p05": 1.9223911016051183,
+     "D_p50": 3.7154593170765167,
+     "D_p95": 5.109112687275243
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "set": "dev",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "decrease",
+     "2": "decrease",
+     "3": "decrease"
+    },
+    "call": "decrease",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6076772738291703,
+     "D_p50": -1.6058536804867236,
+     "D_p95": -1.5944970257034674
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "set": "dev",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "set": "dev",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -228.89620785042135,
+     "D_p50": -3.3702681417303317,
+     "D_p95": 0.5731360638708399
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "uncertain",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "truncated_triangle",
+     "triangle"
+    ],
+    "abstain": [
+     "band_spans_classes",
+     null,
+     null,
+     "band_spans_classes",
+     "band_spans_classes"
+    ],
+    "cfg": {
+     "MoO3.psat_model": "smolik_liquid_cc"
+    },
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "set": "dev",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "non_monotonic",
+     "2": "non_monotonic",
+     "3": "non_monotonic"
+    },
+    "call": "non_monotonic",
+    "diag_i1": {
+     "nm_frac": 0.98
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "set": "dev",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.21504006672048376,
+     "D_p50": 0.39930259617663566,
+     "D_p95": 0.5456160408874723
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.004443139202578483,
+     "D_p50": -7.260842625567143e-05,
+     "D_p95": -1.8686183518301675e-07
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.008511051198884711,
+     "D_p50": -7.349983950022398e-05,
+     "D_p95": -1.4741071687751652e-07
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 2.9482143375503257e-07,
+     "D_p50": 0.00014699967900044797,
+     "D_p95": 0.01702210239776942
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "tables": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.3333333333333333,
+     "n_confident": 5,
+     "acc_confident": 0.6,
+     "abstain_rate": 0.4444444444444444
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 4,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.5
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 3,
+     "acc_confident": 0.0,
+     "abstain_rate": 0.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 8,
+     "acc_confident": 0.375,
+     "abstain_rate": 0.3333333333333333
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "increase",
+     "correct": false
+    }
+   ]
+  }
+ },
+ "s11_by_config": {
+  "M0_default_synthetic": "no_change",
+  "M1_MACE_kink": "uncertain",
+  "M2_A1_dft_rosen_Mo_MACE_S": "no_change",
+  "M0_default_syntheticL": "uncertain",
+  "M1_MACE_kinkL": "uncertain",
+  "M2_A1_dft_rosen_Mo_MACE_SL": "no_change",
+  "M3_momeni_eq_kT_PRIMARY": "uncertain",
+  "M4_momeni_eq_bridge": "no_change"
+ },
+ "shape_benchmark": {
+  "M0_default_synthetic": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.125,
+     "acc_abstain_wrong": 0.375,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.14285714285714285,
+     "acc_abstain_wrong": 0.42857142857142855,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    }
+   ]
+  },
+  "M1_MACE_kink": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 1.0,
+     "acc_abstain_wrong": 0.0,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.8571428571428571,
+     "acc_abstain_wrong": 0.0,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    }
+   ]
+  },
+  "M2_A1_dft_rosen_Mo_MACE_S": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.125,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.07142857142857142,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    }
+   ]
+  },
+  "M0_default_syntheticL": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.875,
+     "acc_abstain_wrong": 0.0,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.7142857142857143,
+     "acc_abstain_wrong": 0.07142857142857142,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    }
+   ]
+  },
+  "M1_MACE_kinkL": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.125,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.21428571428571427,
+     "acc_abstain_wrong": 0.42857142857142855,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    }
+   ]
+  },
+  "M2_A1_dft_rosen_Mo_MACE_SL": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.25,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.21428571428571427,
+     "acc_abstain_wrong": 0.42857142857142855,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    }
+   ]
+  },
+  "M3_momeni_eq_kT_PRIMARY": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.25,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.875,
+     "acc_abstain_wrong": 0.0,
+     "predicted_classes": {
+      "truncated_triangle": 7,
+      "triangle": 1
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.14285714285714285,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.9285714285714286,
+     "acc_abstain_wrong": 0.0,
+     "predicted_classes": {
+      "truncated_triangle": 11,
+      "triangle": 3
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "truncated_triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "truncated_triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    }
+   ]
+  },
+  "M4_momeni_eq_bridge": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.0,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.0,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    }
+   ]
+  }
+ },
+ "shape_map_collapse": {
+  "M0_default_synthetic": {
+   "classes": {
+    "triangle_Mo": 29,
+    "triangle_S": 11
+   },
+   "boundary_cm_from_boat": 18.246794871794872,
+   "mean_band": 2.0
+  },
+  "M1_MACE_kink": {
+   "classes": {
+    "triangle_Mo": 40
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 1.0524921444402966
+  },
+  "M2_A1_dft_rosen_Mo_MACE_S": {
+   "classes": {
+    "triangle_Mo": 40
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 0.5953417015863428
+  },
+  "M0_default_syntheticL": {
+   "classes": {
+    "triangle_Mo": 29,
+    "triangle_S": 11
+   },
+   "boundary_cm_from_boat": 18.246794871794872,
+   "mean_band": 1.606366112328102
+  },
+  "M1_MACE_kinkL": {
+   "classes": {
+    "triangle_Mo": 40
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 0.9925229683158119
+  },
+  "M2_A1_dft_rosen_Mo_MACE_SL": {
+   "classes": {
+    "triangle_Mo": 40
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 1.8199999999999998
+  },
+  "M3_momeni_eq_kT_PRIMARY": {
+   "classes": {
+    "truncated_triangle": 20,
+    "triangle_S": 20
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 0.8524889065529935
+  },
+  "M4_momeni_eq_bridge": {
+   "classes": {
+    "triangle_S": 40
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 0.0
+  }
+ }
+}

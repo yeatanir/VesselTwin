@@ -1,0 +1,16 @@
+[
+{"id":"s01","predicted_direction":"increase","mechanism":"Higher flow sweeps away Mo-S species faster, raising local supersaturation and nucleation density (nonlinear at very high flow).","confidence":0.4},
+{"id":"s02","predicted_direction":"decrease","mechanism":"Moving transversely into faster flow/lower precursor residence reduces Mo supply per site, giving smaller domains.","confidence":0.4},
+{"id":"s03","predicted_direction":"non_monotonic","mechanism":"Low flow gives insufficient transport while high flow dilutes/removes precursor, so domain size peaks at intermediate flow.","confidence":0.4},
+{"id":"s04","predicted_direction":"non_monotonic","mechanism":"Coverage peaks at intermediate Ar flow where MoO3 delivery is optimal; too high flow starves or blows away precursors.","confidence":0.4},
+{"id":"s05","predicted_direction":"increase","mechanism":"More MoO3 raises Mo vapor supersaturation, producing multilayer/thicker growth rather than monolayer.","confidence":0.6},
+{"id":"s06","predicted_direction":"non_monotonic","mechanism":"Insufficient S leaves suboptimal sulfurization, while excess S suppresses MoO3 reduction/transport; domain size peaks at intermediate S.","confidence":0.4},
+{"id":"s07","predicted_direction":"increase","mechanism":"Higher temperature boosts precursor flux and adatom diffusion, increasing coverage and eventually thicker multilayers.","confidence":0.5},
+{"id":"s08","predicted_direction":"non_monotonic","mechanism":"Small gap gives high local Mo concentration and multilayers/nonuniformity, large gap gives sparse growth; best uniform monolayer at intermediate gap.","confidence":0.35},
+{"id":"s09","predicted_direction":"increase","mechanism":"Higher MoO3 temperature raises vapor flux and supersaturation, increasing nucleation density and thereby reducing/altering grain size.","confidence":0.45},
+{"id":"s10","predicted_direction":"decrease","mechanism":"Higher substrate temperature lowers supersaturation and raises desorption, reducing nucleation density while enlarging domains via diffusion.","confidence":0.4},
+{"id":"s11","predicted_direction":"class_change","mechanism":"Changing S/Mo ratio shifts flake morphology from truncated/irregular shapes to triangles and alters size via edge-growth kinetics.","confidence":0.35},
+{"id":"s12","predicted_direction":"decrease","mechanism":"Thinner MoO3 film supplies less Mo, lowering nucleation and growth so crystals are smaller.","confidence":0.5},
+{"id":"s13","predicted_direction":"decrease","mechanism":"Higher temperature depletes the thin MoO3 faster and lowers supersaturation/raises desorption, reducing coverage density.","confidence":0.35},
+{"id":"s14","predicted_direction":"increase","mechanism":"More MoO3 nanoribbons provide more local Mo source, increasing coverage.","confidence":0.55}
+]

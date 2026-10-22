@@ -1,0 +1,41 @@
+{
+ "text": "Single crystals of NiI2 were grown by the chemical vapor transport technique. The starting materials were mixed in a stoichiometric ratio (Ni: I2 = 1: 1, 500 mg in total) and sealed in 7-inch long silica tubes under vacuum. The tubes were placed in a single-zone tube furnace, with one end at the center. The temperature of the furnace was set to 580 °C at 3 °C/minute, dwelt for 60 h, and then set to room temperature at the same rate. Black single crystals formed at the cold end of the tubes as hexagonal thin flakes.",
+ "vessel": "ampoule",
+ "gold": {
+  "L_cm": {
+   "value": 7,
+   "unit": "inch"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Field-resilient supercurrent diode in a multiferroic Josephson junction",
+  "authors": [
+   "Hung-Yu Yang",
+   "Joseph J Cuozzo",
+   "Anand Johnson Bokka",
+   "Gang Qiu",
+   "Christopher Eckberg",
+   "Yanfeng Lyu",
+   "Shuyuan Huyan",
+   "Ching-Wu Chu",
+   "Kenji Watanabe",
+   "Takashi Taniguchi",
+   "Kang L Wang"
+  ],
+  "journal": "Nature Communications",
+  "year": 2025,
+  "DOI": "10.1038/s41467-025-63698-3",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12540659/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "ramp_rate: 3 C/min up and down",
+  "hold_time: dwell 60 h",
+  "precursor_mass: 500 mg total, Ni:I2 = 1:1 (iodine is a reactant, not an added transport agent)",
+  "other: single-zone furnace with one end at the centre; tube material silica"
+ ],
+ "ambiguous": [
+  "T_source_C: single-zone furnace set to 580 C (no source/sink pair)"
+ ]
+}

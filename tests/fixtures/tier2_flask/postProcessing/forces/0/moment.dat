@@ -1,0 +1,6 @@
+// FAKE FIXTURE (synthetic): format-correct, hand-written, NOT solver output
+# Moment
+# CofR : (0 0 0)
+# Time   total_x total_y total_z pressure_x pressure_y pressure_z viscous_x viscous_y viscous_z
+1490 1e-9 1e-9 -8.0e-8 0 0 -6e-8 0 0 -2e-8
+1500 1e-9 1e-9 -9.0e-8 0 0 -7e-8 0 0 -2e-8

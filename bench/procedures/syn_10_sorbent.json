@@ -1,0 +1,27 @@
+{
+ "synthetic": true,
+ "vessel": "sorbent",
+ "text": "A breakthrough test on zeolite 13X used a bed of 10 cm in a 1 cm i.d. column at 25 \u00b0C with 100 sccm of 15% CO2 in N2.",
+ "gold": {
+  "bed_length_cm": {
+   "value": 10,
+   "unit": "cm"
+  },
+  "bed_id_cm": {
+   "value": 1,
+   "unit": "cm"
+  },
+  "flow_sccm": {
+   "value": 100,
+   "unit": "sccm"
+  },
+  "y_feed": {
+   "value": 15,
+   "unit": "percent"
+  },
+  "T_K": {
+   "value": 25,
+   "unit": "degC"
+  }
+ }
+}

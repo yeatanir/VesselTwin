@@ -1,0 +1,38 @@
+{
+ "text": "Firstly, 1 mL of CTAC and 0.54 mL of TEA were introduced into a round-bottom flask containing 18 mL of ultrapure water on a magnetic stirrer, and were stirred at 1000 rpm for one hour.",
+ "vessel": "flask",
+ "gold": {
+  "solvent": {
+   "value": "water",
+   "unit": ""
+  },
+  "stir_rpm": {
+   "value": 1000,
+   "unit": "rpm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Phosphate-Surface-Modified Silica Nanoparticles for 5-Fluorouracil as a Prolonged Drug Delivery System",
+  "authors": [
+   "Aleksandra Lis",
+   "Arkadiusz Surażyński",
+   "Przemysław Koźmiński",
+   "Paweł Szymański",
+   "Kelong Fan"
+  ],
+  "journal": "Pharmaceuticals",
+  "year": 2026,
+  "DOI": "10.3390/ph19050802",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13210604/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "stir_time: one hour",
+  "other: round-bottom flask size not stated",
+  "concentration: 1 mL CTAC, 0.54 mL TEA in 18 mL water"
+ ],
+ "ambiguous": [
+  "solvent: written 'ultrapure water'"
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "text": "Then, the small quartz tube is loaded into a 1-inch quartz tube and placed at the high-temperature range of the furnace. Another crucible containing 0.1 g S powder was placed around 12 cm upstream from the precursors. The CVD process is carried out under ambient pressure and high-purity Ar is used as the carrier gas to facilitate the growth. The tube was cleaned by the 600 sccm Ar for 10 min, and maintained in 50 sccm in the overall process. The temperature of the furnace was gradually increased to 780 °C at a rate of 30 °C/min and held there for 5 min.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "tube_id_in": {
+   "value": 1,
+   "unit": "inch"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  },
+  "flow_sccm": {
+   "value": 50,
+   "unit": "sccm"
+  },
+  "T_furnace_C": {
+   "value": 780,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Reconfiguring nucleation for CVD growth of twisted bilayer MoS2 with a wide range of twist angles",
+  "authors": [
+   "Manzhang Xu",
+   "Hongjia Ji",
+   "Lu Zheng",
+   "Weiwei Li",
+   "Jing Wang",
+   "Hanxin Wang",
+   "Lei Luo",
+   "Qianbo Lu",
+   "Xuetao Gan",
+   "Zheng Liu",
+   "Xuewen Wang",
+   "Wei Huang"
+  ],
+  "journal": "Nature Communications",
+  "year": 2024,
+  "DOI": "10.1038/s41467-023-44598-w",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10794196/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "ramp_rate: 30 C/min",
+  "hold_time: held 5 min",
+  "purge: 600 sccm Ar for 10 min",
+  "position: S crucible 12 cm upstream from the precursors (relative to MoO3, not inlet)",
+  "precursor_mass: 0.1 g S, 0.8 mg MoO3/NaCl",
+  "atmosphere: 'ambient pressure' (no number)",
+  "geometry_other: inner small quartz tube 12 mm diameter, substrates 40 mm x 9 mm"
+ ],
+ "ambiguous": [
+  "flow_sccm: 600 sccm is a purge, 50 sccm is the growth flow (annotated)"
+ ]
+}

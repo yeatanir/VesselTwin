@@ -1,0 +1,3 @@
+# Track M requests (files I do not own)
+1. app/ (optional): to expose the Monte Carlo over the reactive constants, wrap the Monte Carlo call in `vessels.cvd_tube.reactive.with_structural_sigma(vessel.defs)` when substrate_uptake_model or wall_uptake_model == "reactive". The ParamDef sigmas of the new constants are 0 on purpose (a non-zero sigma would shift every stored default MC stream).
+2. tiers.json status text (Track F): "cvd_tube: optional reactive substrate sink and wall-uptake variants (Track M, proposed reduced-order closure, not validated; all constants synthetic). Defaults unchanged."

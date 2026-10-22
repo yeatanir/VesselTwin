@@ -1,0 +1,297 @@
+{
+ "ramp_scale_factor": 0.7324081924454066,
+ "default": {
+  "legacy": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 1.2236030459301482e-06,
+   "supersaturation_MoO3": 27.36803616277859,
+   "T_K": 861.5841121551506,
+   "T_gas_K": 881.8458156138681,
+   "MoO3_to_substrate_frac": 0.036968066423774704
+  },
+  "furnace_matched_ramp_boat_input": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 1.1651894589683632e-06,
+   "supersaturation_MoO3": 39.933742892807544,
+   "T_K": 854.157134057342,
+   "T_gas_K": 875.5655594876478,
+   "MoO3_to_substrate_frac": 0.03522914331602031
+  },
+  "furnace_matched_ramp_boat_computed": {
+   "MoO3_supply_mol_s": 2.5931300815709204e-08,
+   "flux_MoO3_mol_m2_s": 3.964228672874902e-06,
+   "supersaturation_MoO3": 119.44978849545718,
+   "T_K": 855.8300444642271,
+   "T_gas_K": 875.5655594876478,
+   "MoO3_to_substrate_frac": 0.012522644920696921
+  },
+  "ratio_input_over_legacy": {
+   "MoO3_supply_mol_s": 1.0,
+   "flux_MoO3_mol_m2_s": 0.9522609990584154,
+   "supersaturation_MoO3": 1.4591380490471113,
+   "T_K": 0.9913798571804778,
+   "T_gas_K": 0.9928782832383816,
+   "MoO3_to_substrate_frac": 0.952961480651418
+  },
+  "ratio_computed_over_legacy": {
+   "MoO3_supply_mol_s": 9.611534875039863,
+   "flux_MoO3_mol_m2_s": 3.2397996115328467,
+   "supersaturation_MoO3": 4.364572882942648,
+   "T_K": 0.9933215253046734,
+   "T_gas_K": 0.9928782832383816,
+   "MoO3_to_substrate_frac": 0.3387422208439721
+  }
+ },
+ "flow50": {
+  "legacy": {
+   "MoO3_supply_mol_s": 2.3818392144949054e-09,
+   "flux_MoO3_mol_m2_s": 7.019037328262407e-07,
+   "supersaturation_MoO3": 13.445271973418638,
+   "T_K": 861.5841121551506,
+   "T_gas_K": 872.2787918158972,
+   "MoO3_to_substrate_frac": 0.021286201674226294
+  },
+  "furnace_matched_ramp_boat_input": {
+   "MoO3_supply_mol_s": 2.3818392144949054e-09,
+   "flux_MoO3_mol_m2_s": 6.426591874215933e-07,
+   "supersaturation_MoO3": 18.598420550323215,
+   "T_K": 854.157134057342,
+   "T_gas_K": 865.3688707103817,
+   "MoO3_to_substrate_frac": 0.019573601466247887
+  },
+  "furnace_matched_ramp_boat_computed": {
+   "MoO3_supply_mol_s": 2.2793377738258447e-08,
+   "flux_MoO3_mol_m2_s": 9.278731822962876e-07,
+   "supersaturation_MoO3": 24.61983354936417,
+   "T_K": 855.2044760768872,
+   "T_gas_K": 865.3688707103817,
+   "MoO3_to_substrate_frac": 0.0029707014981460557
+  },
+  "ratio_input_over_legacy": {
+   "MoO3_supply_mol_s": 1.0,
+   "flux_MoO3_mol_m2_s": 0.9155944859188921,
+   "supersaturation_MoO3": 1.3832684520694245,
+   "T_K": 0.9913798571804778,
+   "T_gas_K": 0.9920783112344959,
+   "MoO3_to_substrate_frac": 0.9195441143427644
+  },
+  "ratio_computed_over_legacy": {
+   "MoO3_supply_mol_s": 9.569654240112941,
+   "flux_MoO3_mol_m2_s": 1.3219379508927425,
+   "supersaturation_MoO3": 1.8311145805036662,
+   "T_K": 0.9925954576131801,
+   "T_gas_K": 0.9920783112344959,
+   "MoO3_to_substrate_frac": 0.13955996206420582
+  }
+ },
+ "flow200": {
+  "legacy": {
+   "MoO3_supply_mol_s": 2.8777526031521578e-09,
+   "flux_MoO3_mol_m2_s": 1.1119843573587532e-06,
+   "supersaturation_MoO3": 27.64071878367773,
+   "T_K": 861.5841121551506,
+   "T_gas_K": 897.9526056803371,
+   "MoO3_to_substrate_frac": 0.03397462908977704
+  },
+  "furnace_matched_ramp_boat_input": {
+   "MoO3_supply_mol_s": 2.8777526031521578e-09,
+   "flux_MoO3_mol_m2_s": 1.083076310160367e-06,
+   "supersaturation_MoO3": 41.16804408399094,
+   "T_K": 854.157134057342,
+   "T_gas_K": 893.0380800003114,
+   "MoO3_to_substrate_frac": 0.033048332550057104
+  },
+  "furnace_matched_ramp_boat_computed": {
+   "MoO3_supply_mol_s": 2.7724314053833746e-08,
+   "flux_MoO3_mol_m2_s": 6.609850254324048e-06,
+   "supersaturation_MoO3": 204.24949633565552,
+   "T_K": 857.0697903104647,
+   "T_gas_K": 893.0380800003114,
+   "MoO3_to_substrate_frac": 0.02101122973659675
+  },
+  "ratio_input_over_legacy": {
+   "MoO3_supply_mol_s": 1.0,
+   "flux_MoO3_mol_m2_s": 0.9740031889773609,
+   "supersaturation_MoO3": 1.4893984634112085,
+   "T_K": 0.9913798571804778,
+   "T_gas_K": 0.9945269654000256,
+   "MoO3_to_substrate_frac": 0.9727356393715964
+  },
+  "ratio_computed_over_legacy": {
+   "MoO3_supply_mol_s": 9.634015802284674,
+   "flux_MoO3_mol_m2_s": 5.944193558643334,
+   "supersaturation_MoO3": 7.389442291069073,
+   "T_K": 0.9947604397748308,
+   "T_gas_K": 0.9945269654000256,
+   "MoO3_to_substrate_frac": 0.6184388262510576
+  }
+ },
+ "furn700": {
+  "legacy": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 3.962154014976336e-07,
+   "supersaturation_MoO3": 95.06992186151966,
+   "T_K": 822.7265871789333,
+   "T_gas_K": 842.1081229099748,
+   "MoO3_to_substrate_frac": 0.01207863929730187
+  },
+  "furnace_matched_ramp_boat_input": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 4.1955897370584834e-07,
+   "supersaturation_MoO3": 157.11822692260222,
+   "T_K": 815.8118144671804,
+   "T_gas_K": 836.2977311604889,
+   "MoO3_to_substrate_frac": 0.012796196349490033
+  },
+  "furnace_matched_ramp_boat_computed": {
+   "MoO3_supply_mol_s": 2.6968741948213734e-09,
+   "flux_MoO3_mol_m2_s": 4.194159846758304e-07,
+   "supersaturation_MoO3": 140.68954095119324,
+   "T_K": 817.5141398598699,
+   "T_gas_K": 836.2977311604889,
+   "MoO3_to_substrate_frac": 0.01280492166499015
+  },
+  "ratio_input_over_legacy": {
+   "MoO3_supply_mol_s": 1.0,
+   "flux_MoO3_mol_m2_s": 1.058916367511156,
+   "supersaturation_MoO3": 1.6526596829590656,
+   "T_K": 0.9915952968829376,
+   "T_gas_K": 0.9931001832289569,
+   "MoO3_to_substrate_frac": 1.059407109900902
+  },
+  "ratio_computed_over_legacy": {
+   "MoO3_supply_mol_s": 0.9996066360626866,
+   "flux_MoO3_mol_m2_s": 1.0585554804040989,
+   "supersaturation_MoO3": 1.4798533352759438,
+   "T_K": 0.9936644233937589,
+   "T_gas_K": 0.9931001832289569,
+   "MoO3_to_substrate_frac": 1.060129485599468
+  }
+ },
+ "furn850": {
+  "legacy": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 2.8698620809019637e-07,
+   "supersaturation_MoO3": 1.1760769024195368,
+   "T_K": 939.2991621075852,
+   "T_gas_K": 961.2148057271216,
+   "MoO3_to_substrate_frac": 0.029539913794789686
+  },
+  "furnace_matched_ramp_boat_input": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 6.47377250435205e-07,
+   "supersaturation_MoO3": 1.7547368066070848,
+   "T_K": 930.847773237665,
+   "T_gas_K": 953.989161607751,
+   "MoO3_to_substrate_frac": 0.03701865199420568
+  },
+  "furnace_matched_ramp_boat_computed": {
+   "MoO3_supply_mol_s": 1.7348834598687333e-07,
+   "flux_MoO3_mol_m2_s": 7.316659049728571e-05,
+   "supersaturation_MoO3": 32.05824669964412,
+   "T_K": 932.4500811545108,
+   "T_gas_K": 953.989161607751,
+   "MoO3_to_substrate_frac": 0.03409019779587276
+  },
+  "ratio_input_over_legacy": {
+   "MoO3_supply_mol_s": 1.0,
+   "flux_MoO3_mol_m2_s": 2.2557782645490128,
+   "supersaturation_MoO3": 1.4920255665229663,
+   "T_K": 0.9910024524551294,
+   "T_gas_K": 0.9924827998109074,
+   "MoO3_to_substrate_frac": 1.253174002177864
+  },
+  "ratio_computed_over_legacy": {
+   "MoO3_supply_mol_s": 64.30411261341925,
+   "flux_MoO3_mol_m2_s": 254.94810703338857,
+   "supersaturation_MoO3": 27.25863133073259,
+   "T_K": 0.9927083071832977,
+   "T_gas_K": 0.9924827998109074,
+   "MoO3_to_substrate_frac": 1.1540384996616226
+  }
+ },
+ "sub6": {
+  "legacy": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 0.0,
+   "supersaturation_MoO3": 0.03907312718385206,
+   "T_K": 1012.9292089955765,
+   "T_gas_K": 1014.3383258042659,
+   "MoO3_to_substrate_frac": 0.0
+  },
+  "furnace_matched_ramp_boat_input": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 0.0,
+   "supersaturation_MoO3": 0.03090258601455533,
+   "T_K": 1018.3618052085261,
+   "T_gas_K": 1019.3797605106429,
+   "MoO3_to_substrate_frac": 0.0
+  },
+  "furnace_matched_ramp_boat_computed": {
+   "MoO3_supply_mol_s": 2.5931300815709204e-08,
+   "flux_MoO3_mol_m2_s": 0.0,
+   "supersaturation_MoO3": 0.2962093542614336,
+   "T_K": 1018.4230652743034,
+   "T_gas_K": 1019.3797605106429,
+   "MoO3_to_substrate_frac": 0.0
+  },
+  "ratio_input_over_legacy": {
+   "MoO3_supply_mol_s": 1.0,
+   "flux_MoO3_mol_m2_s": NaN,
+   "supersaturation_MoO3": 0.7908910353949502,
+   "T_K": 1.0053632535864343,
+   "T_gas_K": 1.0049701707784526,
+   "MoO3_to_substrate_frac": NaN
+  },
+  "ratio_computed_over_legacy": {
+   "MoO3_supply_mol_s": 9.611534875039863,
+   "flux_MoO3_mol_m2_s": NaN,
+   "supersaturation_MoO3": 7.580897041275198,
+   "T_K": 1.0054237317178114,
+   "T_gas_K": 1.0049701707784526,
+   "MoO3_to_substrate_frac": NaN
+  }
+ },
+ "sub20": {
+  "legacy": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 4.10877233707421e-09,
+   "supersaturation_MoO3": 1.7901311504449835e+19,
+   "T_K": 453.15,
+   "T_gas_K": 453.3618438657215,
+   "MoO3_to_substrate_frac": 0.00013502516918391245
+  },
+  "furnace_matched_ramp_boat_input": {
+   "MoO3_supply_mol_s": 2.6979354653386364e-09,
+   "flux_MoO3_mol_m2_s": 3.851815528387104e-09,
+   "supersaturation_MoO3": 1.6780939346130588e+19,
+   "T_K": 453.15,
+   "T_gas_K": 453.4103610890593,
+   "MoO3_to_substrate_frac": 0.0001265722398644361
+  },
+  "furnace_matched_ramp_boat_computed": {
+   "MoO3_supply_mol_s": 2.5931300815709204e-08,
+   "flux_MoO3_mol_m2_s": 1.2688758798436913e-08,
+   "supersaturation_MoO3": 7.3007955243525734e+19,
+   "T_K": 451.9529279932534,
+   "T_gas_K": 453.4103610890593,
+   "MoO3_to_substrate_frac": 4.334271421739875e-05
+  },
+  "ratio_input_over_legacy": {
+   "MoO3_supply_mol_s": 1.0,
+   "flux_MoO3_mol_m2_s": 0.9374614148443959,
+   "supersaturation_MoO3": 0.937413962209375,
+   "T_K": 1.0,
+   "T_gas_K": 1.0001070165564092,
+   "MoO3_to_substrate_frac": 0.9373973802768361
+  },
+  "ratio_computed_over_legacy": {
+   "MoO3_supply_mol_s": 9.611534875039863,
+   "flux_MoO3_mol_m2_s": 3.088211698648743,
+   "supersaturation_MoO3": 4.078357902736776,
+   "T_K": 0.9973583316633641,
+   "T_gas_K": 1.0001070165564092,
+   "MoO3_to_substrate_frac": 0.3209972961290154
+  }
+ }
+}

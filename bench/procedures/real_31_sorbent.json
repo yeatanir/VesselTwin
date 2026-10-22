@@ -1,0 +1,44 @@
+{
+ "text": "CO2 breakthrough experiments were conducted in a custom fixed‐bed reactor using cylindrical contactors of 18 mm diameter and 30 mm height. A 400 ppm CO2/N2 mixture was introduced at 1 or 2 L/min over a 3‐hour adsorption period, corresponding to superficial velocities of 0.066 and 0.131 m/s, respectively, based on the external cross‐sectional area of the contactor.",
+ "vessel": "sorbent",
+ "gold": {
+  "bed_id_cm": {
+   "value": 18,
+   "unit": "mm"
+  },
+  "bed_length_cm": {
+   "value": 30,
+   "unit": "mm"
+  },
+  "y_feed": {
+   "value": 400,
+   "unit": "ppm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Efficient Adsorption‐Based Direct Air Capture Via Triply Periodic Minimal Surface Architectures",
+  "authors": [
+   "Qingyang Shao",
+   "Zhuozhen Gan",
+   "Chengcheng Long",
+   "Man Zhang",
+   "Yihe Miao",
+   "Yuehui Li",
+   "Xuancan Zhu"
+  ],
+  "journal": "Advanced Science",
+  "year": 2026,
+  "DOI": "10.1002/advs.76487",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13344064/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "other: structured TPMS/monolith contactor, not a packed bed (no particle size or void fraction)",
+  "hold_time: 3 h adsorption",
+  "velocity: superficial velocity 0.066 and 0.131 m/s"
+ ],
+ "ambiguous": [
+  "flow_sccm: 'at 1 or 2 L/min' (two candidate values)"
+ ]
+}

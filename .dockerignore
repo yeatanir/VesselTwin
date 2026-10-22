@@ -1,0 +1,14 @@
+.git
+.github
+**/__pycache__
+.pytest_cache
+.venv
+*.pyc
+runs/*/scratch
+cache/dashboard
+tier2/foam
+tier2/cases
+*.pt
+*.zip
+*.whl
+.env

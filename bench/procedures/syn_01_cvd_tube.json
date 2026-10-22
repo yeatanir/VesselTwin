@@ -1,0 +1,23 @@
+{
+ "synthetic": true,
+ "vessel": "cvd_tube",
+ "text": "MoS2 was grown in a 1 inch quartz tube furnace. MoO3 powder in an alumina boat was held at 700 \u00b0C and sulfur at 180 \u00b0C upstream. Argon carrier flowed at 80 sccm.",
+ "gold": {
+  "tube_id_in": {
+   "value": 1,
+   "unit": "inch"
+  },
+  "T_boat_Mo_C": {
+   "value": 700,
+   "unit": "C"
+  },
+  "T_boat_S_C": {
+   "value": 180,
+   "unit": "C"
+  },
+  "flow_sccm": {
+   "value": 80,
+   "unit": "sccm"
+  }
+ }
+}

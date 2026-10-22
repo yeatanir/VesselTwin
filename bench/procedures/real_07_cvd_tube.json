@@ -1,0 +1,61 @@
+{
+ "text": "The MoO3 (2 mg) and sapphire substrate were placed separately in tiny tubes in the middle of the quartz tube, while the sulfur powder was inserted upstream. Initially, tube was pumped to a base pressure of 200 mTorr, before introducing argon (Ar, 30 sccm) to raise the working pressure to 560 Torr. Subsequently, the furnace was ramped up to 850 °C and maintained at this temperature for 40 min, with a continuous flow of 30 sccm of argon. Meanwhile, the sulfur source was heated independently using an external heating belt at a temperature of 180 °C.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "pressure_Pa": {
+   "value": 560,
+   "unit": "Torr"
+  },
+  "flow_sccm": {
+   "value": 30,
+   "unit": "sccm"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  },
+  "T_furnace_C": {
+   "value": 850,
+   "unit": "C"
+  },
+  "T_boat_S_C": {
+   "value": 180,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Improved Metal–Semiconductor Interface in Monolayer (1L)-MoS2 via Thermally-Driven Ag Filaments as Atomic Scale Edge Contacts Triggered by Selective Annealing Process Using Long Wavelength (1064 nm) Pulsed Laser",
+  "authors": [
+   "Sumayah-Shakil Wani",
+   "Yao-Ren Kuo",
+   "K.M.M.D.K. Kimbulapitiya",
+   "Ruei-Hong Cyu",
+   "Chieh-Ting Chen",
+   "Ming-Jin Liu",
+   "Huynh-Uyen-Phuong Nguyen",
+   "Bushra Rehman",
+   "Xin-Rui Liu",
+   "Feng-Chuan Chuang",
+   "Yen-Fu Lin",
+   "Chang-Hong Shen",
+   "Po-Wen Chiu",
+   "Yu-Lun Chueh"
+  ],
+  "journal": "ACS Applied Materials & Interfaces",
+  "year": 2025,
+  "DOI": "10.1021/acsami.4c20612",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12012742/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "base_pressure: pumped to base pressure of 200 mTorr before introducing Ar",
+  "hold_time: 850 C held 40 min; growth 10 min",
+  "precursor_mass: 2 mg MoO3",
+  "position: MoO3 and substrate in the middle of the tube, sulfur upstream (no distances)",
+  "substrate: sapphire"
+ ],
+ "ambiguous": [
+  "pressure_Pa: 200 mTorr base pressure vs 560 Torr working pressure (candidate values)"
+ ]
+}

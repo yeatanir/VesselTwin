@@ -1,0 +1,29 @@
+{
+ "vessel": "sorbent",
+ "fields": [
+  {
+   "key": "bed_id_cm",
+   "value": "7.0",
+   "unit": "mm",
+   "span": "7.0 mm"
+  },
+  {
+   "key": "bed_length_cm",
+   "value": "250",
+   "unit": "mm",
+   "span": "250 mm"
+  },
+  {
+   "key": "T_K",
+   "value": "298",
+   "unit": "K",
+   "span": "298 K"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "2",
+   "unit": "sccm",
+   "span": "2 sccm"
+  }
+ ]
+}

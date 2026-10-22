@@ -1,0 +1,214 @@
+{
+ "S01": {
+  "x_from_boat_cm": 5.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 12.089826294484123,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S02": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 13.849358974358974,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S03": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": NaN,
+  "label": "triangle",
+  "shape_index": -1.0,
+  "band_labels": [
+   "triangle",
+   "truncated_triangle"
+  ],
+  "abstain": "band_spans_classes",
+  "defaults_only": "triangle"
+ },
+ "S04": {
+  "x_from_boat_cm": 11.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 12.048012034527542,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S05": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 19.503205128205128,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S06": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 19.503205128205128,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S07": {
+  "x_from_boat_cm": 0.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 20.916666666666664,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S08": {
+  "x_from_boat_cm": 10.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 17.618589743589745,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S09": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 18.875,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S10": {
+  "x_from_boat_cm": 1.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 11.972929081281018,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S11": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 13.958344915422272,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S12": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": 10.257869384204328,
+  "label": "triangle",
+  "shape_index": -1.0,
+  "band_labels": [
+   "triangle",
+   "truncated_triangle"
+  ],
+  "abstain": "band_spans_classes",
+  "defaults_only": "triangle"
+ },
+ "S13": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": NaN,
+  "label": "triangle",
+  "shape_index": 1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ },
+ "S14": {
+  "x_from_boat_cm": 12.5,
+  "map_range_cm": [
+   0.5,
+   25.0
+  ],
+  "boundary_cm_from_boat": NaN,
+  "label": "triangle",
+  "shape_index": -1.0,
+  "band_labels": [
+   "triangle"
+  ],
+  "abstain": null,
+  "defaults_only": "triangle"
+ }
+}

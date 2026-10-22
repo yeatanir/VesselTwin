@@ -1,0 +1,17 @@
+{
+ "vessel": "ampoule",
+ "fields": [
+  {
+   "key": "T_source_C",
+   "value": "780",
+   "unit": "°C",
+   "span": "780 °C"
+  },
+  {
+   "key": "T_sink_C",
+   "value": "650",
+   "unit": "°C",
+   "span": "650 °C"
+  }
+ ]
+}

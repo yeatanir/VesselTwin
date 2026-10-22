@@ -1,0 +1,7 @@
+# FAKE FIXTURE (synthetic): format-correct, hand-written, NOT solver output
+# Probe 0..7 radial rows at release then substrate-centre station
+0  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3
+100  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3
+200  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3
+300  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3
+400  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3  1e-3

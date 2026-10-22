@@ -1,0 +1,95 @@
+"""Generates items.json (paper-stated geometry, Track L). Quotes are <=40 words, verbatim modulo subscript spacing (MoO 3 -> MoO3) from the opened full texts
+(Europe PMC XML / arXiv PDF / ACS page). python -m bench.track_l.make_items"""
+import json, os
+H = os.path.dirname(os.path.abspath(__file__))
+def e(key, printed, value, conv, loc, quote): return dict(model_key=key, printed=printed, value=value, conversion=conv, location=loc, quote=quote)
+PAPERS = {
+ "xu2018": dict(doi="10.3390/ma11060870", opened="Europe PMC PMC6025258 full text", params=[
+   e("m_MoO3_mg","0.1 mg",0.1,"none","2.1 Synthesis Precursor","MoO3 powder (0.1 mg) was grounded into four average parts by SiO2/Si substrates and placed in a double-open quartz boat"),
+   e("m_S_mg","10 mg",10,"none","2.1","Then, S powder (10 mg) was placed in another double-open quartz boat."),
+   e("x_substrate_cm","face-down on the MoO3 boat",0.0,"substrate directly above the source boat -> leading edge at the boat (rule R-Pos)","2.1","Another four pieces of clean SiO2/Si substrates were placed on the top of quartz boat, which were seated face-down to the MoO3 powder."),
+   e("x_S_boat_cm","24 cm between boats",26.0,"x_MoO3 (50) - 24","2.1","we set the distance between the two quartz boats at 24 cm."),
+   e("T_boat_Mo_C / T_furnace_C","700 C",700.0,"MoO3 and substrate share furnace 2 (rule R-T)","2.2 Synthesis Procedure","MoO3 was slowly heated to 700 °C (6.8 °C/min) and the temperature kept at 700 °C for 1 min."),
+   e("T_boat_S_C","180 C",180.0,"none","2.2","S power was heated rapidly to 180 °C in furnace 1. After 23 min of sulfurization, the furnaces were shut down"),
+   e("duration_min","23 min",23.0,"none","2.2","After 23 min of sulfurization, the furnaces were shut down and the samples were cooled down to room temperature."),
+   e("flow_sccm / carrier","100 sccm Ar (base)",100.0,"none; swept in s01","2.2","while keeping a flow rate of 100 sccm, MoO3 was heated to 550 °C ... in an Ar atmosphere"),
+   e("tube_id_in",None,None,"not stated: default","-","")]),
+ "prasad2023": dict(doi="10.1021/acsomega.2c07408", opened="ACS page (WebFetch) + Europe PMC PMC10061614 text", params=[
+   e("tube_id_in","4.5 cm",1.7717,"4.5/2.54","Experimental Details","a quartz tube of length of 120 cm and diameter of 4.5 cm was used."),
+   e("x_S_boat_cm","separated at 19 cm",31.0,"x_MoO3 (50) - 19; the 19 cm is read as S-to-MoO3 because the substrate faces down above the MoO3 powder (AMBIGUOUS: papers.json read it as source-substrate)","Experimental Details","Precursors and substrates were placed inside the CVD furnace, as schematically shown in Figure 1a, separated at 19 cm."),
+   e("x_substrate_cm","face-down above MoO3 powder",0.0,"rule R-Pos","Experimental Details","The polished surface of the substrate faces downward to the precursor above the MoO3 powder."),
+   e("T_furnace_C / T_boat_Mo_C","750 C, single zone",750.0,"rule R-T (source at the single-zone furnace)","Experimental Details","The growth was carried out at 750 °C for 5 min using a single zone CVD furnace at atmospheric pressure."),
+   e("duration_min","5 min",5.0,"none","Experimental Details","The growth was carried out at 750 °C for 5 min"),
+   e("m_MoO3_mg / m_S_mg","15 mg / 200 mg (base)",None,"swept in s05/s06","Results","precursor weights of MoO3 (15 mg) and sulfur (200 mg) constant"),
+   e("flow_sccm / carrier","100 sccm Ar (base)",100.0,"swept in s03/s04","Results","MoO3 (15 mg) and gas flow rate (100 sccm) fixed"),
+   e("T_boat_S_C",None,None,"numeric S temperature only in Fig. 1b: default","-","")]),
+ "tummala2020": dict(doi="10.3390/ma13122786", opened="Europe PMC PMC7344844 full text", params=[
+   e("m_MoO3_mg","0.001 g",1.0,"g->mg","2.2 Growth","The amounts of S and MoO3 powders were 0.2 g and 0.001 g, respectively, as weighed by a microbalance."),
+   e("m_S_mg","0.2 g",200.0,"g->mg","2.2 Growth","The amounts of S and MoO3 powders were 0.2 g and 0.001 g"),
+   e("x_S_boat_cm","24 cm between crucibles",26.0,"x_MoO3 (50) - 24","2.2 Growth","The distance between the two crucibles was kept fixed at 24 cm"),
+   e("x_substrate_cm","face down on top of the MoO3 crucible",0.0,"rule R-Pos (s07); s08 sweeps the stated vertical gap 2-10 mm","2.2 Growth","the Si/SiO2 substrate was positioned face down on top of the quartz crucible containing the MoO3 powder."),
+   e("T_furnace_C / T_boat_Mo_C","650-800 C (s07); 750 C (s08)",None,"rule R-T; swept in s07","3.2 Temperature / 3.4","By selecting the process parameters for growth temperature at 750 °C ... vertical height between the MoO3 source and substrate of h = 10 mm"),
+   e("pressure_Pa","760 torr",101325.0,"= default","3.2","Taking the ambient pressure (760 torr) as a fixed parameter"),
+   e("flow_sccm","30-1000 sccm in steps; growth-step value only in Fig. 1b",None,"not stated numerically: default","2.2","Ar flux rate from 30 sccm to 1000 sccm in multiple steps"),
+   e("duration_min",None,None,"temperature/gap series time not stated in text: default","-","")]),
+ "withanage2018": dict(doi="10.1021/acsomega.8b02978", opened="Europe PMC PMC6643554 full text", params=[
+   e("gap_mm","3-4 mm",3.5,"midpoint of printed range","Materials and Methods, Growth Process","bare target substrates were placed on the same boat facing down with the separation of 3–4 mm toward the source and placed at the center of the furnace."),
+   e("m_S_mg","600 mg",600.0,"none","Growth Process","Ceramic crucible containing 600 mg of S powder (99.5%, Sigma-Aldrich) was loaded in to a 1 in. quartz tube"),
+   e("tube_id_in","1 in.",1.0,"= default","Growth Process","loaded in to a 1 in. quartz tube placed at the edge of the tube furnace upstream."),
+   e("x_S_boat_cm","23.5 cm upstream from the furnace centre",26.5,"50 - 23.5 (MoO3 film at furnace centre, x_MoO3 = 50)","Results","S was placed at the edge of the furnace, 23.5 cm upstream from the center of the furnace, and the growth temperature was 750 °C."),
+   e("flow_sccm","10 sccm",10.0,"none","Growth Process","the flow rate was kept constant at 10 sccm."),
+   e("duration_min","10 min dwell",10.0,"none","Growth Process","held for 10 min (dwell time)"),
+   e("T_furnace_C / T_boat_Mo_C","750-850 C",None,"rule R-T; swept in s13","Growth Process","raised to the growth temperature of 750–850 °C at the rate of 20 °C/min"),
+   e("m_MoO3_mg","20 nm film on 1x1 cm",None,"film mass needs density (not sourced): default (unlimited); s12 stays excluded","Growth Process","MoO3 thin films with the thickness of 5–20 nm were deposited"),
+   e("T_boat_S_C",None,None,"not stated numerically: default","-","")]),
+ "jian2019": dict(doi="10.3390/ma12020198", opened="Europe PMC PMC6357088 full text", params=[
+   e("T_boat_Mo_C / T_furnace_C","1048-1123 K",None,"K-273.15; swept in j1-j3; rule R-T (MoO3 in the high-temperature zone)","Results","The effect of the MoO3 temperature (1048 K, 1073 K, 1098 K, 1123 K) on the growth of a single-layer MoS2 crystal is studied"),
+   e("m_MoO3_mg","0.02 g",20.0,"g->mg","Results","with a molybdenum source dosage of 0.02 g, a holding time of 30 min, a gas flow rate of 100 sccm"),
+   e("duration_min","30 min",30.0,"none","Results","a holding time of 30 min"),
+   e("flow_sccm / carrier","100 sccm, argon",100.0,"none","Results / 2.1.2","a gas flow rate of 100 sccm ... high-purity argon gas"),
+   e("T_boat_S_C","453 K",179.85,"K-273.15","Results","the temperature of the low temperature zone is set at 453 K."),
+   e("x_S_boat_cm","15 cm sulfur-to-Mo",35.0,"x_MoO3 (50) - 15","2.1.2","The sulfur source in the low temperature zone was 15 cm away from the molybdenum source in the high temperature zone"),
+   e("x_substrate_cm","5 cm (Methods); 4~5.5 cm (Results)",5.0,"Methods value used; results range 4-5.5 noted","2.1.2","the molybdenum source was 5 cm away from the sapphire substrate."),
+   e("tube_id_in",None,None,"not stated: default","-","")]),
+ "wang2025": dict(doi="arXiv:2502.04505", opened="arXiv PDF full text", params=[
+   e("m_MoO3_mg","1 mg",1.0,"none","Methods","MoO3 powders (Afla Aesar, 99.9%, 1 mg) were dispersed within a 1cm region in a quartz crucible which is placed at the centre of the furnace."),
+   e("m_S_mg","120 mg",120.0,"none","Methods","Sulphur powders (MaTecK, 99%, 120 mg) were used as the sulphur source and placed upstream in the tube."),
+   e("x_substrate_cm","0.5 cm downstream",0.5,"none","Methods","The substrate is positioned 0.5cm downstream from the MoO3 power and tilted at an angle of 120° relative to the tube axis."),
+   e("T_furnace_C / T_boat_Mo_C","835 C",835.0,"rule R-T","Results","the substrate/MoO3 temperature is maintained at 835 °C, and the sulphur temperature is kept at 250 °C for 5 minutes."),
+   e("duration_min","5 min",5.0,"none","Results","kept at 250 °C for 5 minutes"),
+   e("flow_sccm / carrier","20 sccm N2",20.0,"none","Results","Nitrogen gas is introduced as a protective and carrier gas at a flow rate of 20 sccm throughout the reaction period."),
+   e("x_S_boat_cm / tube_id_in",None,None,"S crucible position and tube diameter not stated: default","-","")]),
+ "najmaei2013": dict(doi="10.1038/nmat3673 (arXiv:1301.2812)", opened="arXiv PDF full text incl. SI", params=[
+   e("flow_sccm / carrier","200 sccm N2",200.0,"none","SI, CVD growth process","placed close to each other at the center of the furnace vented with nitrogen at 200 sccm"),
+   e("T_furnace_C / T_boat_Mo_C","850 C",850.0,"rule R-T (MoO3 substrate at the furnace centre)","SI, CVD growth process","the chamber was then heated to 850oC at a slower pace of ~5oC/min."),
+   e("duration_min","10-15 min",12.5,"midpoint of printed range","SI","After 10-15 minutes at this temperature, the furnace was naturally cooled back to room temperature."),
+   e("m_S_mg","0.8-1.2 g",1000.0,"midpoint, g->mg","SI","a container with 0.8 - 1.2 grams of sublimated sulfur was placed at a location reaching an approximate maximum temperature of 600oC"),
+   e("x_substrate_cm","'close to each other'",None,"qualitative only: default (12 cm) retained; flagged","SI","This MoO3-covered silicon substrate, along with several bare substrates designated for the growth of MoS2 were placed close to each other at the center of the furnace"),
+   e("T_boat_S_C","~600 C",None,"outside the model range (90-400 C) and S position unstated: default","SI","")]),
+ "wang2016": dict(doi="10.1088/0957-4484/27/8/085604", opened="NOT OPENED (not open access; ORA accepted manuscript not retrievable in this run)", params=[]),
+}
+# per item: paper, overrides (model values), tied (params that follow the swept one), geometry status
+ITEMS = {
+ "s01": dict(paper="xu2018", overrides=dict(carrier="Ar", T_furnace_C=700, T_boat_Mo_C=700, T_boat_S_C=180, x_S_boat_cm=26, x_substrate_cm=0.0, m_MoO3_mg=0.1, m_S_mg=10, duration_min=23), tied={}),
+ "s03": dict(paper="prasad2023", overrides=dict(carrier="Ar", T_furnace_C=750, T_boat_Mo_C=750, x_S_boat_cm=31, x_substrate_cm=0.0, tube_id_in=1.7717, m_MoO3_mg=15, m_S_mg=200, duration_min=5), tied={}),
+ "s04": dict(paper="prasad2023", overrides=dict(carrier="Ar", T_furnace_C=750, T_boat_Mo_C=750, x_S_boat_cm=31, x_substrate_cm=0.0, tube_id_in=1.7717, m_MoO3_mg=15, m_S_mg=200, duration_min=5), tied={}),
+ "s05": dict(paper="prasad2023", overrides=dict(carrier="Ar", T_furnace_C=750, T_boat_Mo_C=750, x_S_boat_cm=31, x_substrate_cm=0.0, tube_id_in=1.7717, m_S_mg=200, duration_min=5, flow_sccm=100), tied={}),
+ "s06": dict(paper="prasad2023", overrides=dict(carrier="Ar", T_furnace_C=750, T_boat_Mo_C=750, x_S_boat_cm=31, x_substrate_cm=0.0, tube_id_in=1.7717, m_MoO3_mg=15, duration_min=5, flow_sccm=100), tied={}),
+ "s07": dict(paper="tummala2020", overrides=dict(carrier="Ar", x_S_boat_cm=26, x_substrate_cm=0.0, m_MoO3_mg=1, m_S_mg=200), tied={"T_boat_Mo_C": "T_furnace_C"}),
+ "s08": dict(paper="tummala2020", overrides=dict(carrier="Ar", T_furnace_C=750, T_boat_Mo_C=750, x_S_boat_cm=26, x_substrate_cm=0.0, m_MoO3_mg=1, m_S_mg=200), tied={}),
+ "s09": dict(paper="wang2016", overrides={}, tied={}),
+ "s10": dict(paper="wang2016", overrides={}, tied={}),
+ "s11": dict(paper="wang2025", overrides=dict(carrier="N2", T_furnace_C=835, T_boat_Mo_C=835, x_substrate_cm=0.5, m_MoO3_mg=1, m_S_mg=120, duration_min=5, flow_sccm=20), tied={}),
+ "s13": dict(paper="withanage2018", overrides=dict(carrier="Ar", x_S_boat_cm=26.5, gap_mm=3.5, m_S_mg=600, tube_id_in=1.0, duration_min=10, flow_sccm=10), tied={"T_boat_Mo_C": "T_furnace_C"}),
+ "s14": dict(paper="najmaei2013", overrides=dict(carrier="N2", T_furnace_C=850, T_boat_Mo_C=850, m_S_mg=1000, duration_min=12.5, flow_sccm=200), tied={}),
+ "j1": dict(paper="jian2019", overrides=dict(carrier="Ar", T_boat_S_C=179.85, x_S_boat_cm=35, x_substrate_cm=5.0, m_MoO3_mg=20, duration_min=30, flow_sccm=100), tied={"T_furnace_C": "T_boat_Mo_C"}),
+ "j2": dict(paper="jian2019", overrides=dict(carrier="Ar", T_boat_S_C=179.85, x_S_boat_cm=35, x_substrate_cm=5.0, m_MoO3_mg=20, duration_min=30, flow_sccm=100), tied={"T_furnace_C": "T_boat_Mo_C"}),
+ "j3": dict(paper="jian2019", overrides=dict(carrier="Ar", T_boat_S_C=179.85, x_S_boat_cm=35, x_substrate_cm=5.0, m_MoO3_mg=20, duration_min=30, flow_sccm=100), tied={"T_furnace_C": "T_boat_Mo_C"}),
+}
+FLAGS = {"s09": "geometry not verified (paper not opened; default geometry kept)", "s10": "geometry not verified (paper not opened; default geometry kept)",
+         "s14": "x_substrate only qualitative ('close to each other'): default 12 cm kept; S temperature ~600 C outside model range: default",
+         "s03": "19 cm read as S-to-MoO3 (ambiguous)", "s04": "19 cm read as S-to-MoO3 (ambiguous)", "s05": "19 cm read as S-to-MoO3 (ambiguous)", "s06": "19 cm read as S-to-MoO3 (ambiguous)",
+         "s02": "excluded in Track A (transverse coordinate); unchanged", "s12": "excluded in Track A (film mass needs density); unchanged"}
+if __name__ == "__main__":
+    json.dump({"rules": "R-Pos: substrate face-down on/above the source boat -> x_substrate_cm = 0 (gap_mm only if a number is printed). R-T: source at the furnace centre/zone -> T_boat_Mo_C = T_furnace_C. Ranges -> midpoint. Unstated -> model default.",
+               "papers": PAPERS, "items": ITEMS, "flags": FLAGS}, open(f"{H}/items.json", "w"), indent=1)

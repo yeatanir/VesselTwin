@@ -1,0 +1,89 @@
+{
+ "name": "Np_stir_bar_rotating_zone",
+ "law": "const",
+ "status": "computed",
+ "synthetic": false,
+ "source": "VesselTwin OpenFOAM v2512 rotating-zone (MRF frozen rotor, simpleFoam kEpsilon wall functions), mesh study: tier2/verification/gci.json + tier2/verification/data/flask_np_raw.json, commit see docs/progress/track-b.md",
+ "statement": "single-point values at Re = 4636 and Re = 9271 (two points, water 25 C, 100 mL flask at fill 0.5 modelled as equal-volume cylinder, 25 mm square-section bar), NOT an Np(Re) curve. Validity range: exactly these two Re; do not interpolate or extrapolate.",
+ "caveats": [
+  "Np from bar torque (power balance); frozen rotor at one bar angle; equal-volume flat-bottom cylinder, not a round-bottom flask; wall functions on the bar",
+  "at 400 rpm the torque Np is non-monotone with refinement (1.25, 0.99, 0.90, 0.96), so GCI uses Fs = 3 with formal order 2 (14 %); the coarse triplet 4-6-9 alone would have claimed 5 % (misleading)",
+  "iteration convergence: <1 % over the last 100 SIMPLE iterations on the 9 and 13.5 cells/cm meshes, 1.1-1.4 % on the 4 and 6 meshes"
+ ],
+ "points": [
+  {
+   "Re": 4636,
+   "stir_rpm": 400,
+   "solvent": "water",
+   "T_C": 25.0,
+   "Np_torque": 0.9558359519488066,
+   "gci_fine": 0.14031128909395923,
+   "band": [
+    0.8217213773685178,
+    1.0899505265290954
+   ],
+   "gci_flags": [
+    "oscillatory (non-monotone) convergence",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "p_obs": null,
+   "mesh_levels_cells_per_cm": [
+    6,
+    9,
+    13.5
+   ],
+   "n_cells": [
+    7080,
+    20942,
+    70018
+   ],
+   "Np_by_mesh": [
+    0.9871048846813987,
+    0.9045430147204202,
+    0.9558359519488066
+   ],
+   "Np_tier1": 0.5151006653577604,
+   "ratio_cfd_over_tier1": 1.8556294259199524,
+   "iter_drift_last100_finest": 0.00030590519328765886,
+   "Np_dissip_finest": 0.7045409378263642,
+   "Np_dissip_note": "mean eps from kEpsilon + resolved gradients does not converge (rises 0.34 -> 0.45 -> 0.70 with refinement at 400 rpm); not used"
+  },
+  {
+   "Re": 9271,
+   "stir_rpm": 800,
+   "solvent": "water",
+   "T_C": 25.0,
+   "Np_torque": 0.8562873601815252,
+   "gci_fine": 0.05212829816388825,
+   "band": [
+    0.8116505573560139,
+    0.9009241630070365
+   ],
+   "gci_flags": [
+    "observed order 4.18 outside (0.5, 4)",
+    "Fs = 3.0 with formal order 2"
+   ],
+   "p_obs": 4.184918059830602,
+   "mesh_levels_cells_per_cm": [
+    6,
+    9,
+    13.5
+   ],
+   "n_cells": [
+    7080,
+    20942,
+    70018
+   ],
+   "Np_by_mesh": [
+    0.9578431795736223,
+    0.8733589777336813,
+    0.8562873601815252
+   ],
+   "Np_tier1": 0.5075503326788802,
+   "ratio_cfd_over_tier1": 1.6870984118205394,
+   "iter_drift_last100_finest": 0.0026227964352893984,
+   "Np_dissip_finest": 0.5633916257914215,
+   "Np_dissip_note": "mean eps from kEpsilon + resolved gradients does not converge (rises 0.34 -> 0.45 -> 0.70 with refinement at 400 rpm); not used"
+  }
+ ]
+}

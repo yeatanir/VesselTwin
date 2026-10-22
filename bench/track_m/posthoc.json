@@ -1,0 +1,254 @@
+{
+ "s09/A/liquid_law": {
+  "label": "increase",
+  "P_up": 0.5,
+  "P_down": 0.0,
+  "P_tie": 0.5,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "no_change",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "no_change",
+   "reactive/condensation": "increase",
+   "reactive/reflecting": "increase",
+   "reactive/sticking": "increase",
+   "reactive/reactive": "increase"
+  }
+ },
+ "s09/L/liquid_law": {
+  "label": "increase",
+  "P_up": 0.5,
+  "P_down": 0.0,
+  "P_tie": 0.5,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "no_change",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "no_change",
+   "reactive/condensation": "increase",
+   "reactive/reflecting": "increase",
+   "reactive/sticking": "increase",
+   "reactive/reactive": "increase"
+  }
+ },
+ "j1/A/liquid_law": {
+  "label": "increase",
+  "P_up": 0.0,
+  "P_down": 0.45125,
+  "P_tie": 0.54875,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "decrease",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "decrease",
+   "reactive/condensation": "no_change",
+   "reactive/reflecting": "decrease",
+   "reactive/sticking": "no_change",
+   "reactive/reactive": "decrease"
+  }
+ },
+ "j1/A/liquid_law_Tsub_minus50K": {
+  "label": "increase",
+  "P_up": 0.0,
+  "P_down": 0.45916666666666667,
+  "P_tie": 0.5408333333333334,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "decrease",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "decrease",
+   "reactive/condensation": "no_change",
+   "reactive/reflecting": "decrease",
+   "reactive/sticking": "no_change",
+   "reactive/reactive": "decrease"
+  }
+ },
+ "j1/L/liquid_law": {
+  "label": "increase",
+  "P_up": 0.45208333333333334,
+  "P_down": 0.2775,
+  "P_tie": 0.2704166666666667,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "unresolved",
+   "condensation/reflecting": "unresolved",
+   "condensation/sticking": "unresolved",
+   "condensation/reactive": "unresolved",
+   "reactive/condensation": "unresolved",
+   "reactive/reflecting": "unresolved",
+   "reactive/sticking": "unresolved",
+   "reactive/reactive": "unresolved"
+  }
+ },
+ "j1/L/liquid_law_Tsub_minus50K": {
+  "label": "increase",
+  "P_up": 0.55875,
+  "P_down": 0.3152083333333333,
+  "P_tie": 0.12604166666666666,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "unresolved",
+   "condensation/reflecting": "unresolved",
+   "condensation/sticking": "unresolved",
+   "condensation/reactive": "unresolved",
+   "reactive/condensation": "unresolved",
+   "reactive/reflecting": "unresolved",
+   "reactive/sticking": "unresolved",
+   "reactive/reactive": "unresolved"
+  }
+ },
+ "j2/A/liquid_law": {
+  "label": "decrease",
+  "P_up": 0.0,
+  "P_down": 0.44958333333333333,
+  "P_tie": 0.5504166666666667,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "decrease",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "decrease",
+   "reactive/condensation": "no_change",
+   "reactive/reflecting": "decrease",
+   "reactive/sticking": "no_change",
+   "reactive/reactive": "decrease"
+  }
+ },
+ "j2/A/liquid_law_Tsub_minus50K": {
+  "label": "decrease",
+  "P_up": 0.0,
+  "P_down": 0.4525,
+  "P_tie": 0.5475,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "decrease",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "decrease",
+   "reactive/condensation": "no_change",
+   "reactive/reflecting": "decrease",
+   "reactive/sticking": "no_change",
+   "reactive/reactive": "decrease"
+  }
+ },
+ "j2/L/liquid_law": {
+  "label": "decrease",
+  "P_up": 0.426875,
+  "P_down": 0.2733333333333333,
+  "P_tie": 0.2997916666666667,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "unresolved",
+   "condensation/reflecting": "unresolved",
+   "condensation/sticking": "unresolved",
+   "condensation/reactive": "unresolved",
+   "reactive/condensation": "unresolved",
+   "reactive/reflecting": "unresolved",
+   "reactive/sticking": "unresolved",
+   "reactive/reactive": "unresolved"
+  }
+ },
+ "j2/L/liquid_law_Tsub_minus50K": {
+  "label": "decrease",
+  "P_up": 0.5589583333333333,
+  "P_down": 0.29625,
+  "P_tie": 0.14479166666666668,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "unresolved",
+   "condensation/reflecting": "unresolved",
+   "condensation/sticking": "unresolved",
+   "condensation/reactive": "unresolved",
+   "reactive/condensation": "unresolved",
+   "reactive/reflecting": "unresolved",
+   "reactive/sticking": "unresolved",
+   "reactive/reactive": "unresolved"
+  }
+ },
+ "j3/A/liquid_law": {
+  "label": "increase",
+  "P_up": 0.49541666666666667,
+  "P_down": 0.0,
+  "P_tie": 0.5045833333333334,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "increase",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "increase",
+   "reactive/condensation": "no_change",
+   "reactive/reflecting": "increase",
+   "reactive/sticking": "no_change",
+   "reactive/reactive": "increase"
+  }
+ },
+ "j3/A/liquid_law_Tsub_minus50K": {
+  "label": "increase",
+  "P_up": 0.49916666666666665,
+  "P_down": 0.0,
+  "P_tie": 0.5008333333333334,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "no_change",
+   "condensation/reflecting": "increase",
+   "condensation/sticking": "no_change",
+   "condensation/reactive": "increase",
+   "reactive/condensation": "no_change",
+   "reactive/reflecting": "increase",
+   "reactive/sticking": "no_change",
+   "reactive/reactive": "increase"
+  }
+ },
+ "j3/L/liquid_law": {
+  "label": "increase",
+  "P_up": 0.289375,
+  "P_down": 0.44958333333333333,
+  "P_tie": 0.26104166666666667,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "unresolved",
+   "condensation/reflecting": "unresolved",
+   "condensation/sticking": "unresolved",
+   "condensation/reactive": "unresolved",
+   "reactive/condensation": "unresolved",
+   "reactive/reflecting": "unresolved",
+   "reactive/sticking": "unresolved",
+   "reactive/reactive": "unresolved"
+  }
+ },
+ "j3/L/liquid_law_Tsub_minus50K": {
+  "label": "increase",
+  "P_up": 0.311875,
+  "P_down": 0.5829166666666666,
+  "P_tie": 0.10520833333333333,
+  "ens_call": "unresolved",
+  "sign_flip_across_cells": false,
+  "by_cell_calls": {
+   "condensation/condensation": "unresolved",
+   "condensation/reflecting": "unresolved",
+   "condensation/sticking": "unresolved",
+   "condensation/reactive": "unresolved",
+   "reactive/condensation": "unresolved",
+   "reactive/reflecting": "unresolved",
+   "reactive/sticking": "unresolved",
+   "reactive/reactive": "unresolved"
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "flow_sccm",
+   "value": "200",
+   "unit": "sccm",
+   "span": "200 sccm"
+  },
+  {
+   "key": "T_furnace_C",
+   "value": "700",
+   "unit": "°C",
+   "span": "700 °C"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "Ar was let in for 10"
+  }
+ ]
+}

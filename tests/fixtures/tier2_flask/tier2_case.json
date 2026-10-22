@@ -1,0 +1,1 @@
+{"_FAKE": "hand-written fixture, not solver output", "model": "kEpsilon", "Re": 4000.0, "t_simple": 1500, "omega": 41.9, "nu": 1e-06, "N": 6.6667, "d": 0.025, "feed": [0.0, 0.01, 0.02], "blob_r": 0.002}

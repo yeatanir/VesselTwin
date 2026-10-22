@@ -1,0 +1,51 @@
+{
+ "_meta": "Inputs are copied from the stated setup of each paper and from Hatchard & Parker 1956; none is fitted to the measured actinometer slope. Short quotes only.",
+ "sources": {
+  "HP1956": "Hatchard & Parker, Proc. R. Soc. A 235, 518 (1956), doi 10.1098/rspa.1956.0102, read as page images",
+  "SAENZ2024": "Saenz, Hernandez, Sanz-Carrillo, Pellejero, Gandia, Heliyon 10, e31309 (2024), doi 10.1016/j.heliyon.2024.e31309, open access (PMC11145495)",
+  "ORE2024": "Uppinakudru et al., Open Res. Europe 4, 18 (2024), doi 10.12688/openreseurope.16812.2, Table 1 (quartz n = 1.485)"
+ },
+ "constants": {
+  "phi_365": {"value": 1.21, "src": "HP1956 p.526 Table 5, row 365/6 nm, column 'recommended value' = 1.21 (printed 1.21; column 'by reference to calibrated thermopile' prints 1.26)"},
+  "phi_alt": {"value": 1.26, "src": "SAENZ2024 Sec. 2.3: 'Phi = 1.26 +/- 0.03 at lambda = 365 nm' (equals HP1956 Table 5 thermopile column, 1.26)"},
+  "eps_A_min": {"value": 333.0, "unit": "1/M/cm", "src": "HP1956 p.533: 'A 1 cm depth of 0.006 M solution absorbs 99 % or more of the light of wavelengths up to 390 mu' => A >= 2 => eps >= 2/(0.006 M * 1 cm) = 333 M-1 cm-1 (derived bound, not a tabulated eps; HP1956 prints no eps table)"},
+  "n_quartz_alt": {"value": 1.485, "src": "ORE2024 Table 1, quartz tube 'Refractive Index 1.485' (manufacturer value, different quartz item)"},
+  "Fe_phen_calibration": {"value": "1.81e-6 mol Fe2+ in 20 mL gives OD 1.0/cm at 510 nm => eps510 = 11050 M-1 cm-1", "src": "HP1956 p.533 (derived: 1.0 / (1.81e-6 mol / 0.020 L)); not needed for these comparisons (the papers report conversion, not OD)"}
+ },
+ "setups": {
+  "saenz_qpb_cuvette": {
+   "title": "Saenz 2024, quasi-parallel-beam LED, 10x10 mm quartz cuvette, 6 mM ferrioxalate",
+   "params": {"lambda_nm": 365.0, "lamp_geom": "measured", "E_meas_mW_cm2": 0.52, "illum": "collimated", "wall_mat": "quartz", "wall_mm": 1.25,
+              "n_wall": 1.56, "n_liq": 1.33, "A_irr_cm2": 3.375, "path_cm": 1.0, "V_total_cm3": 4.5, "c0_M": 0.006,
+              "eps_A": 333.0, "eps_P": 0.0, "phi": 1.21, "Ea_phi_kJ_mol": 0.0, "stir_rpm": 3000.0, "mix_revs": 5.0, "f_heat": 0.0, "t_irr_s": 10.0},
+   "param_src": {
+    "lambda_nm": "SAENZ2024 Sec. 2.2: Thorlabs M365LP1, 'emission peaks at 365 nm', FWHM 9 nm",
+    "E_meas_mW_cm2": "SAENZ2024 Table 1, QPB cuvette E = 5.1-5.3 W m-2 (radiometer, cosine corrector); mid 5.2 W m-2 = 0.52 mW cm-2. The scored slope is per unit photon fluence, so this value does not enter the ratio",
+    "wall": "SAENZ2024 Sec. 2.1: Hellma 117F quartz cuvette, 1.25 mm wall; n = 1.56 'for quartz [in the UV]' (Sec. 1) and T = 0.947 at normal incidence (Sec. 2.4)",
+    "geometry": "SAENZ2024 Table 1: V = 4.50 cm3, S = 3.375 cm2 (illuminated face), internal cross-section 10 mm x 10 mm; Sec. 3: QPB max incidence angle 4.2 deg (normal incidence)",
+    "c0_M": "SAENZ2024 Sec. 2.3: 6 mM ferrioxalate",
+    "n_liq": "ASSUMPTION: water 1.33 (ParamDef default; no opened source). Effect on T < 0.5 %",
+    "eps_P": "SAENZ2024 Sec. 2.3: conversion < 12 %, product absorption neglected",
+    "stir": "not stated in the paper; set so that the mixing cap is far above the photon rate (the observable is photon-limited, margin reported)"},
+   "measured": {"observable": "a_QPB = slope of actinometer conversion X (percent) vs photon fluence Hp (umol m-2)", "value": 0.00161, "sigma": 0.00003, "unit": "percent / (umol m-2)",
+                "src": "SAENZ2024 Table 2, 'a QPB (umol-1 m2)' CV column = 0.00161 +/- 0.00003; consistency check: X 8.8 % at E_p = 9.8e18 m-2 s-1 x 340 s"},
+   "cross_check": {"epsilon_CV_QPB": 0.97, "sigma": 0.02, "src": "SAENZ2024 Table 4 (X = eps * X_ps + b, eps = 0.97 +/- 0.02); implies a = 0.97 * S/V * phi(1.26) * C0 * 100 %= 0.00153; Table 2 slope 0.00161 implies eps = 1.02: the paper's two tables differ by 5 %"}
+  },
+  "saenz_is_cuvette": {
+   "title": "Saenz 2024, integrating-sphere (isotropic) illumination of the same cuvette, four faces",
+   "params": {"lambda_nm": 365.0, "lamp_geom": "measured", "E_meas_mW_cm2": 0.5, "illum": "diffuse", "wall_mat": "quartz", "wall_mm": 1.25,
+              "n_wall": 1.56, "n_liq": 1.33, "A_irr_cm2": 13.5, "path_cm": 1.0, "V_total_cm3": 4.5, "c0_M": 0.006,
+              "eps_A": 333.0, "eps_P": 0.0, "phi": 1.21, "Ea_phi_kJ_mol": 0.0, "stir_rpm": 3000.0, "mix_revs": 5.0, "f_heat": 0.0, "t_irr_s": 10.0},
+   "param_src": {"geometry": "SAENZ2024 Table 1: S = 13.50 cm2 (four faces), V = 4.50 cm3, S/V = 300 m-1",
+                 "E": "scored slope is per photon fluence measured at the sphere wall by the cosine-corrected detector; irradiance at sample E_s = rho E_D (Eq. 3), rho ~ 1 (Sec. 2.5); other inputs as the QPB case"},
+   "measured": {"observable": "a_IS = slope of conversion X (percent) vs photon fluence Hp (umol m-2)", "value": 0.0078, "sigma": 0.0001, "unit": "percent / (umol m-2)",
+                "src": "SAENZ2024 Table 2, 'a IS' CV column = 0.0078 +/- 0.0001; same paper reports eta = (a_IS/a_QPB)/(S_IS/S_QPB) = 1.22 +/- 0.02 unexplained by their own calculation (Sec. 3)"}
+  }
+ },
+ "rejected_candidates": {
+  "Riddell2022": "doi 10.1063/5.0087107, opened (AIP page): actinometer concentration, LED optical power, vessel size and wall thickness are not stated",
+  "OpenResEurope2024": "doi 10.12688/openreseurope.16812.2, opened: 16-LED array inside a reflective aluminium fixture around a 23/20 mm quartz tube; Table 6 actinometry 34.97 +/- 5.51 mW cm-2 (265 nm) not representable by a flat slab, no reflector model",
+  "LiBJOC2024": "doi 10.3762/bjoc.20.9, opened: 495 mL 0.04 M loop reactor, 6 LEDs; geometry and LED power are only in the SI (not opened)",
+  "blocked_403": ["doi 10.1002/cptc.202200044", "doi 10.1039/c7pp00401j", "Thorlabs M365LP1 datasheet"]
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "text": "First, 1 g of sulfur and 0.003 g of MoO3 were prepared and placed in appropriate positions in the inner tube of the quartz tube. The substrate was set inverted on molybdenum trioxide (MoO3). The inert gas used during growth was Ar. Initially, 500 sccm of Ar was let in for 10 min to clean the internal cavity. More water and oxygen were removed in the quartz tube, after which, the Ar flow was reduced to 200 sccm. The heating rate was set to 20 °C/min. The maximum temperature was set to 700 °C, and the heating time was set to 35 min. After reaching the maximum temperature, the same was maintained for 50 min.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "flow_sccm": {
+   "value": 200,
+   "unit": "sccm"
+  },
+  "T_furnace_C": {
+   "value": 700,
+   "unit": "C"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Growth Mechanism of Periodic-Structured MoS2 by Transmission Electron Microscopy",
+  "authors": [
+   "Arvind Mukundan",
+   "Yu-Ming Tsao",
+   "Sofya B Artemkina",
+   "Vladimir E Fedorov",
+   "Hsiang-Chen Wang",
+   "Akinobu Yamaguchi"
+  ],
+  "journal": "Nanomaterials",
+  "year": 2021,
+  "DOI": "10.3390/nano12010135",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8796029/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "precursor_mass: 1 g sulfur, 0.003 g MoO3",
+  "purge: 500 sccm Ar for 10 min",
+  "ramp_rate: 20 C/min",
+  "hold_time: heating 35 min, maintained 50 min at maximum temperature",
+  "position: boat positions 'appropriate positions in the inner tube' (not numeric)"
+ ],
+ "ambiguous": [
+  "T_furnace_C: 'maximum temperature' of the programme; boat temperatures not separately given"
+ ]
+}

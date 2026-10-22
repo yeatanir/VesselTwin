@@ -1,0 +1,1 @@
+{"_meta": {"title": "Fast exothermic reaction, 250 mL, 1 M feed (illustrative)", "source": "synthetic"}, "volume_mL": 250, "bar_mm": 30, "k2_M_s": 100000.0, "C0_M": 0.5, "feed.c_M": 2.0, "feed.time_s": 120, "heat.dH_kJ_mol": -120}

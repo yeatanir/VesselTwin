@@ -1,0 +1,11 @@
+{
+ "vessel": "flask",
+ "fields": [
+  {
+   "key": "stir_rpm",
+   "value": "700",
+   "unit": "rpm",
+   "span": "700 rpm"
+  }
+ ]
+}

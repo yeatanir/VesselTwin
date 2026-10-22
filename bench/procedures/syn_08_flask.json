@@ -1,0 +1,26 @@
+{
+ "synthetic": true,
+ "vessel": "flask",
+ "text": "A 0.5 L flask with a 40 mm stir bar was charged with DMF and stirred at 800 rpm. Iodide stock was 0.1 M.",
+ "gold": {
+  "volume_mL": {
+   "value": 0.5,
+   "unit": "L"
+  },
+  "bar_mm": {
+   "value": 40,
+   "unit": "mm"
+  },
+  "solvent": {
+   "value": "DMF"
+  },
+  "stir_rpm": {
+   "value": 800,
+   "unit": "rpm"
+  },
+  "C0_M": {
+   "value": 0.1,
+   "unit": "M"
+  }
+ }
+}

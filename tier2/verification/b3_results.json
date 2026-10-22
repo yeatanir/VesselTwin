@@ -1,0 +1,614 @@
+{
+ "tube": {
+  "n": 40,
+  "cfd_counts": {
+   "heat_limited": 0,
+   "transport_limited": 17,
+   "reaction_limited": 23
+  },
+  "base": {
+   "acc": 0.65,
+   "confusion": {
+    "heat_limited": {
+     "heat_limited": 0,
+     "transport_limited": 0,
+     "reaction_limited": 0
+    },
+    "transport_limited": {
+     "heat_limited": 0,
+     "transport_limited": 17,
+     "reaction_limited": 0
+    },
+    "reaction_limited": {
+     "heat_limited": 0,
+     "transport_limited": 14,
+     "reaction_limited": 9
+    }
+   }
+  },
+  "new_threshold1": {
+   "acc": 0.925,
+   "confusion": {
+    "heat_limited": {
+     "heat_limited": 0,
+     "transport_limited": 0,
+     "reaction_limited": 0
+    },
+    "transport_limited": {
+     "heat_limited": 0,
+     "transport_limited": 15,
+     "reaction_limited": 2
+    },
+    "reaction_limited": {
+     "heat_limited": 0,
+     "transport_limited": 1,
+     "reaction_limited": 22
+    }
+   }
+  },
+  "base_fitted_threshold_halfsplit": {
+   "mean": 0.6947368421052631,
+   "sd": 0.03938586722919938,
+   "per_seed": [
+    {
+     "seed": 0,
+     "thr_log10": 0.36210675672131115,
+     "acc_test": 0.6842105263157895,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 6,
+       "reaction_limited": 5
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "thr_log10": 0.35679568578104326,
+     "acc_test": 0.7368421052631579,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 5,
+       "reaction_limited": 6
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "thr_log10": 0.2506211072048636,
+     "acc_test": 0.631578947368421,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 7,
+       "reaction_limited": 4
+      }
+     }
+    },
+    {
+     "seed": 3,
+     "thr_log10": 0.35679568578104326,
+     "acc_test": 0.6842105263157895,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 6,
+       "reaction_limited": 5
+      }
+     }
+    },
+    {
+     "seed": 4,
+     "thr_log10": 0.35679568578104326,
+     "acc_test": 0.7368421052631579,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 5,
+       "reaction_limited": 6
+      }
+     }
+    }
+   ]
+  },
+  "new_fitted_threshold_halfsplit": {
+   "mean": 0.9789473684210526,
+   "sd": 0.025784102555612427,
+   "per_seed": [
+    {
+     "seed": 0,
+     "thr_log10": -0.1462290723847894,
+     "acc_test": 1.0,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 0,
+       "reaction_limited": 11
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "thr_log10": -0.30712130813585903,
+     "acc_test": 0.9473684210526315,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 1,
+       "reaction_limited": 10
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "thr_log10": -0.09482334406505316,
+     "acc_test": 0.9473684210526315,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 1,
+       "reaction_limited": 10
+      }
+     }
+    },
+    {
+     "seed": 3,
+     "thr_log10": -0.13729154138268998,
+     "acc_test": 1.0,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 0,
+       "reaction_limited": 11
+      }
+     }
+    },
+    {
+     "seed": 4,
+     "thr_log10": -0.18882574840305746,
+     "acc_test": 1.0,
+     "n_test": 19,
+     "confusion": {
+      "transport_limited": {
+       "transport_limited": 8,
+       "reaction_limited": 0
+      },
+      "reaction_limited": {
+       "transport_limited": 0,
+       "reaction_limited": 11
+      }
+     }
+    }
+   ]
+  },
+  "Da_eff_log10_summary": {
+   "by_label": {
+    "transport_limited": [
+     0.588124829098437,
+     17
+    ],
+    "reaction_limited": [
+     -300.0,
+     23
+    ]
+   }
+  },
+  "misses_new": [
+   {
+    "id": "v5sweep_22",
+    "cfd": "transport_limited",
+    "new": "reaction_limited",
+    "Da_eff": 0.9006553462657572,
+    "frac_upstream_uptake": 0.6549241497527589
+   },
+   {
+    "id": "v5sweep_30",
+    "cfd": "transport_limited",
+    "new": "reaction_limited",
+    "Da_eff": 0.9384987387889575,
+    "frac_upstream_uptake": 0.7216762667101828
+   },
+   {
+    "id": "v5sweep_36",
+    "cfd": "reaction_limited",
+    "new": "transport_limited",
+    "Da_eff": 2.082518234104752,
+    "frac_upstream_uptake": 0.3758861047340405
+   }
+  ]
+ },
+ "ampoule": {
+  "n": 60,
+  "cfd_threshold_1.1": {
+   "n_cfd_convection": 41,
+   "fixed": {
+    "none@1.05": {
+     "acc": 0.8,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 41,
+       "transport_limited": 0
+      },
+      "transport_limited": {
+       "convection_assisted": 12,
+       "transport_limited": 7
+      }
+     }
+    },
+    "none@1.1": {
+     "acc": 0.8,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 41,
+       "transport_limited": 0
+      },
+      "transport_limited": {
+       "convection_assisted": 12,
+       "transport_limited": 7
+      }
+     }
+    },
+    "none@1.2": {
+     "acc": 0.8166666666666667,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 40,
+       "transport_limited": 1
+      },
+      "transport_limited": {
+       "convection_assisted": 10,
+       "transport_limited": 9
+      }
+     }
+    },
+    "legacy_L3@1.05": {
+     "acc": 0.65,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 26,
+       "transport_limited": 15
+      },
+      "transport_limited": {
+       "convection_assisted": 6,
+       "transport_limited": 13
+      }
+     }
+    },
+    "legacy_L3@1.1": {
+     "acc": 0.65,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 26,
+       "transport_limited": 15
+      },
+      "transport_limited": {
+       "convection_assisted": 6,
+       "transport_limited": 13
+      }
+     }
+    },
+    "legacy_L3@1.2": {
+     "acc": 0.65,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 26,
+       "transport_limited": 15
+      },
+      "transport_limited": {
+       "convection_assisted": 6,
+       "transport_limited": 13
+      }
+     }
+    },
+    "duct@1.05": {
+     "acc": 0.8,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 40,
+       "transport_limited": 1
+      },
+      "transport_limited": {
+       "convection_assisted": 11,
+       "transport_limited": 8
+      }
+     }
+    },
+    "duct@1.1": {
+     "acc": 0.8166666666666667,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 40,
+       "transport_limited": 1
+      },
+      "transport_limited": {
+       "convection_assisted": 10,
+       "transport_limited": 9
+      }
+     }
+    },
+    "duct@1.2": {
+     "acc": 0.8,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 38,
+       "transport_limited": 3
+      },
+      "transport_limited": {
+       "convection_assisted": 9,
+       "transport_limited": 10
+      }
+     }
+    }
+   },
+   "halfsplit": [
+    {
+     "seed": 0,
+     "chosen": "none@1.05",
+     "acc_train": 0.8387096774193549,
+     "acc_test": 0.7586206896551724,
+     "shipped_acc_test": 0.8275862068965517,
+     "legacy_acc_test": 0.7931034482758621,
+     "none_acc_test": 0.7586206896551724
+    },
+    {
+     "seed": 1,
+     "chosen": "duct@1.1",
+     "acc_train": 0.8064516129032258,
+     "acc_test": 0.8275862068965517,
+     "shipped_acc_test": 0.8275862068965517,
+     "legacy_acc_test": 0.6551724137931034,
+     "none_acc_test": 0.8275862068965517
+    },
+    {
+     "seed": 2,
+     "chosen": "duct@1.2",
+     "acc_train": 0.8709677419354839,
+     "acc_test": 0.7241379310344828,
+     "shipped_acc_test": 0.7931034482758621,
+     "legacy_acc_test": 0.5172413793103449,
+     "none_acc_test": 0.8275862068965517
+    },
+    {
+     "seed": 3,
+     "chosen": "duct@1.2",
+     "acc_train": 0.8064516129032258,
+     "acc_test": 0.7931034482758621,
+     "shipped_acc_test": 0.8620689655172413,
+     "legacy_acc_test": 0.7241379310344828,
+     "none_acc_test": 0.8275862068965517
+    },
+    {
+     "seed": 4,
+     "chosen": "duct@1.1",
+     "acc_train": 0.7741935483870968,
+     "acc_test": 0.8620689655172413,
+     "shipped_acc_test": 0.8620689655172413,
+     "legacy_acc_test": 0.7241379310344828,
+     "none_acc_test": 0.8275862068965517
+    }
+   ],
+   "acc_test_mean": 0.7931034482758621,
+   "acc_test_sd": 0.04876598490941706,
+   "shipped_acc_test_mean": 0.8344827586206895,
+   "shipped_acc_test_sd": 0.025804533701889218,
+   "legacy_acc_test_mean": 0.6827586206896552,
+   "legacy_acc_test_sd": 0.0935493790775899,
+   "none_acc_test_mean": 0.8137931034482758,
+   "none_acc_test_sd": 0.027586206896551738
+  },
+  "cfd_threshold_1.2": {
+   "n_cfd_convection": 37,
+   "fixed": {
+    "none@1.05": {
+     "acc": 0.7333333333333333,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 37,
+       "transport_limited": 0
+      },
+      "transport_limited": {
+       "convection_assisted": 16,
+       "transport_limited": 7
+      }
+     }
+    },
+    "none@1.1": {
+     "acc": 0.7333333333333333,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 37,
+       "transport_limited": 0
+      },
+      "transport_limited": {
+       "convection_assisted": 16,
+       "transport_limited": 7
+      }
+     }
+    },
+    "none@1.2": {
+     "acc": 0.7833333333333333,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 37,
+       "transport_limited": 0
+      },
+      "transport_limited": {
+       "convection_assisted": 13,
+       "transport_limited": 10
+      }
+     }
+    },
+    "legacy_L3@1.05": {
+     "acc": 0.7166666666666667,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 26,
+       "transport_limited": 11
+      },
+      "transport_limited": {
+       "convection_assisted": 6,
+       "transport_limited": 17
+      }
+     }
+    },
+    "legacy_L3@1.1": {
+     "acc": 0.7166666666666667,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 26,
+       "transport_limited": 11
+      },
+      "transport_limited": {
+       "convection_assisted": 6,
+       "transport_limited": 17
+      }
+     }
+    },
+    "legacy_L3@1.2": {
+     "acc": 0.7166666666666667,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 26,
+       "transport_limited": 11
+      },
+      "transport_limited": {
+       "convection_assisted": 6,
+       "transport_limited": 17
+      }
+     }
+    },
+    "duct@1.05": {
+     "acc": 0.7333333333333333,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 36,
+       "transport_limited": 1
+      },
+      "transport_limited": {
+       "convection_assisted": 15,
+       "transport_limited": 8
+      }
+     }
+    },
+    "duct@1.1": {
+     "acc": 0.75,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 36,
+       "transport_limited": 1
+      },
+      "transport_limited": {
+       "convection_assisted": 14,
+       "transport_limited": 9
+      }
+     }
+    },
+    "duct@1.2": {
+     "acc": 0.8,
+     "confusion": {
+      "convection_assisted": {
+       "convection_assisted": 36,
+       "transport_limited": 1
+      },
+      "transport_limited": {
+       "convection_assisted": 11,
+       "transport_limited": 12
+      }
+     }
+    }
+   },
+   "halfsplit": [
+    {
+     "seed": 0,
+     "chosen": "duct@1.2",
+     "acc_train": 0.8064516129032258,
+     "acc_test": 0.7931034482758621,
+     "shipped_acc_test": 0.7586206896551724,
+     "legacy_acc_test": 0.7241379310344828,
+     "none_acc_test": 0.7586206896551724
+    },
+    {
+     "seed": 1,
+     "chosen": "duct@1.2",
+     "acc_train": 0.8387096774193549,
+     "acc_test": 0.7586206896551724,
+     "shipped_acc_test": 0.7241379310344828,
+     "legacy_acc_test": 0.7586206896551724,
+     "none_acc_test": 0.6896551724137931
+    },
+    {
+     "seed": 2,
+     "chosen": "duct@1.2",
+     "acc_train": 0.8387096774193549,
+     "acc_test": 0.7586206896551724,
+     "shipped_acc_test": 0.7241379310344828,
+     "legacy_acc_test": 0.6206896551724138,
+     "none_acc_test": 0.6896551724137931
+    },
+    {
+     "seed": 3,
+     "chosen": "duct@1.2",
+     "acc_train": 0.8387096774193549,
+     "acc_test": 0.7586206896551724,
+     "shipped_acc_test": 0.6896551724137931,
+     "legacy_acc_test": 0.7241379310344828,
+     "none_acc_test": 0.6896551724137931
+    },
+    {
+     "seed": 4,
+     "chosen": "duct@1.2",
+     "acc_train": 0.8709677419354839,
+     "acc_test": 0.7241379310344828,
+     "shipped_acc_test": 0.6896551724137931,
+     "legacy_acc_test": 0.6896551724137931,
+     "none_acc_test": 0.6551724137931034
+    }
+   ],
+   "acc_test_mean": 0.7586206896551724,
+   "acc_test_sd": 0.021808811449437106,
+   "shipped_acc_test_mean": 0.7172413793103448,
+   "shipped_acc_test_sd": 0.025804533701889218,
+   "legacy_acc_test_mean": 0.7034482758620689,
+   "legacy_acc_test_sd": 0.046774689538794934,
+   "none_acc_test_mean": 0.6965517241379311,
+   "none_acc_test_sd": 0.033786065417699
+  }
+ }
+}

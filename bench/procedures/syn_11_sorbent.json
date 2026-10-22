@@ -1,0 +1,27 @@
+{
+ "synthetic": true,
+ "vessel": "sorbent",
+ "text": "The packed bed was 8 cm long and held 1 mm pellets of the MOF. Feed flow was 50 sccm at 1 bar and 313 K.",
+ "gold": {
+  "bed_length_cm": {
+   "value": 8,
+   "unit": "cm"
+  },
+  "particle_dp_mm": {
+   "value": 1,
+   "unit": "mm"
+  },
+  "flow_sccm": {
+   "value": 50,
+   "unit": "sccm"
+  },
+  "P_kPa": {
+   "value": 1,
+   "unit": "bar"
+  },
+  "T_K": {
+   "value": 313,
+   "unit": "K"
+  }
+ }
+}

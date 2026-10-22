@@ -1,0 +1,1 @@
+{"_meta": {"title": "365 nm LED strip, thin flow cell (illustrative)", "source": "synthetic"}, "lambda_nm": 365, "lamp_geom": "line", "lamp_len_cm": 20, "P_rad_W": 10, "dist_cm": 3, "wall_mat": "FEP", "wall_mm": 0.5, "path_cm": 0.2, "A_irr_cm2": 40, "c0_M": 0.05, "eps_A": 800, "phi": 0.3, "stir_rpm": 200}

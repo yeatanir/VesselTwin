@@ -1,0 +1,47 @@
+{
+ "text": "To a 500 mL round-bottom flask equipped with a magnetic stir bar and a reflux condenser were charged racemic amine 1 (10.000 g, 37.128 mmol, 1.000 equiv) and l-diprogulic acid monohydrate (2) (10.852 g, 37.128 mmol, 1.000 equiv). iPrOH (180 mL, 0.2 M solution) was then added to the reactor vessel, and the mixture was heated to 80 °C for 1 h with stirring at 1000 rpm.",
+ "vessel": "flask",
+ "gold": {
+  "volume_mL": {
+   "value": 500,
+   "unit": "mL"
+  },
+  "T_C": {
+   "value": 80,
+   "unit": "C"
+  },
+  "stir_rpm": {
+   "value": 1000,
+   "unit": "rpm"
+  },
+  "C0_M": {
+   "value": 0.2,
+   "unit": "M"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Heterogeneous Photochemical Process Intensification: Crystallization-Induced Dynamic Resolution of Amines",
+  "authors": [
+   "Jonathan M. Meinhardt",
+   "Jiang Wang",
+   "Yufei Wei",
+   "Daniel P. Walker",
+   "Robert R. Knowles"
+  ],
+  "journal": "Organic Process Research & Development",
+  "year": 2026,
+  "DOI": "10.1021/acs.oprd.6c00152",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13436618/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "solvent_other: iPrOH 180 mL (isopropanol not in solvent choices)",
+  "hold_time: 1 h at 80 C",
+  "other: reflux condenser, 12 h equilibration to room temperature",
+  "precursor_mass: 10.000 g amine, 10.852 g acid"
+ ],
+ "ambiguous": [
+  "C0_M: '0.2 M solution' refers to the reagent mixture in iPrOH"
+ ]
+}

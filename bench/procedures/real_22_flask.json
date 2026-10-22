@@ -1,0 +1,46 @@
+{
+ "text": "In the first method, FeCl3·6H2O (270.3 mg, 1 mmol), Na3C6H5O7·2H2O (882.3 mg, 3 mmol), and urea (360.4 mg, 6 mmol) were accurately weighed into a 100 mL round-bottom flask. Ultrapure water (40 mL) was added, and the mixture was stirred magnetically at 1000 rpm for 2 min to obtain a clear, bright yellow solution.",
+ "vessel": "flask",
+ "gold": {
+  "volume_mL": {
+   "value": 100,
+   "unit": "mL"
+  },
+  "solvent": {
+   "value": "water",
+   "unit": ""
+  },
+  "stir_rpm": {
+   "value": 1000,
+   "unit": "rpm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Novel Magnetic Covalent Organic Frameworks Fabricated Through In Situ Synthesis and Assembly for the Efficient Extraction and Enrichment of Six Amide Herbicides",
+  "authors": [
+   "Haiyue Sun",
+   "Yihan Luo",
+   "Jingyu Zhao",
+   "Jiaying Liu",
+   "Jingli Yu",
+   "Junhong Xin",
+   "Marcia G Ventura",
+   "Ines Matos",
+   "Maria Bernardo"
+  ],
+  "journal": "Molecules",
+  "year": 2026,
+  "DOI": "10.3390/molecules31111940",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13257943/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "fill_frac: derivable (40 mL water in 100 mL flask) but not stated",
+  "stir_time: 2 min",
+  "precursor_mass: FeCl3, citrate, urea masses"
+ ],
+ "ambiguous": [
+  "solvent: written 'Ultrapure water'"
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "_meta": {
+  "title": "Zeolite 13X Z10-02ND, CO2 (dual-site Langmuir)",
+  "source": "Wilkins MSc thesis, U Alberta 2017, Table 4.1"
+ },
+ "isotherm.qmax": 3.257,
+ "isotherm.b_ref": 251.9636336784,
+ "isotherm.Q": 45.1489570296,
+ "isotherm.qmax2": 3.24,
+ "isotherm.b2_ref": 1.8792507203,
+ "isotherm.Q2": 34.6889570296,
+ "isotherm_N2.qmax": 5.03,
+ "isotherm_N2.b_ref": 0.0445734815,
+ "isotherm_N2.Q": 17.5789570296,
+ "isotherm_H2O.qmax": 11.209,
+ "isotherm_H2O.b_ref": 54767.1982812173,
+ "isotherm_H2O.Q": 58.1989570296,
+ "isotherm_H2O.qmax2": 6.89,
+ "isotherm_H2O.b2_ref": 299.2464845829,
+ "isotherm_H2O.Q2": 47.9589570296,
+ "competition": "edsl",
+ "fit.T_lo_K": 273.15,
+ "fit.T_hi_K": 423.15,
+ "fit.p_CO2_hi_bar": 5.0,
+ "fit.RH_hi": 0.95,
+ "fit.y_CO2_lo": 0.99,
+ "bed.rho_kg_m3": 551.0,
+ "cp_solid": 1070.0,
+ "bed.epsilon": 0.4,
+ "particle.epsilon": 0.35,
+ "tortuosity": 3.0
+}

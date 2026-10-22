@@ -1,0 +1,999 @@
+{
+ "items": {
+  "s01": {
+   "id": "s01",
+   "set": "dev",
+   "param": "flow_sccm",
+   "sweep": [
+    10,
+    160
+   ],
+   "observable": "nucleation",
+   "label": "increase",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "increase",
+    "2": "increase",
+    "3": "increase"
+   },
+   "call": "increase",
+   "diag_i1": {
+    "nm_frac": 0.26,
+    "D_p05": 0.5670460440427714,
+    "D_p50": 0.8628740111882909,
+    "D_p95": 1.098569594389012
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "increase",
+   "always_increase": "increase",
+   "old_model": "increase",
+   "old_model_uncertain": false
+  },
+  "s03": {
+   "id": "s03",
+   "set": "dev",
+   "param": "flow_sccm",
+   "sweep": [
+    50,
+    300
+   ],
+   "observable": "domain",
+   "label": "decrease",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "uncertain",
+    "2": "uncertain",
+    "3": "uncertain"
+   },
+   "call": "uncertain",
+   "diag_i1": {
+    "nm_frac": 0.44,
+    "D_p05": -0.2052859163867425,
+    "D_p50": -0.008140686958504117,
+    "D_p95": 0.14495294258175603
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "non_monotonic",
+   "always_increase": "increase",
+   "old_model": "non_monotonic",
+   "old_model_uncertain": false
+  },
+  "s04": {
+   "id": "s04",
+   "set": "dev",
+   "param": "flow_sccm",
+   "sweep": [
+    50,
+    150
+   ],
+   "observable": "coverage",
+   "label": "increase",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "uncertain",
+    "2": "uncertain",
+    "3": "uncertain"
+   },
+   "call": "uncertain",
+   "diag_i1": {
+    "nm_frac": 0.37,
+    "D_p05": -0.2595174394088751,
+    "D_p50": 0.4326684424112246,
+    "D_p95": 1.2861808250126967
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "non_monotonic",
+   "always_increase": "increase",
+   "old_model": "non_monotonic",
+   "old_model_uncertain": false
+  },
+  "s05": {
+   "id": "s05",
+   "set": "dev",
+   "param": "m_MoO3_mg",
+   "sweep": [
+    10,
+    30
+   ],
+   "observable": "layers",
+   "label": "class_change",
+   "class": "secondary",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "call": "no_change",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": 0.0,
+    "D_p50": 0.0,
+    "D_p95": 0.0
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "increase",
+   "always_increase": "increase",
+   "old_model": null,
+   "old_model_uncertain": null
+  },
+  "s06": {
+   "id": "s06",
+   "set": "dev",
+   "param": "m_S_mg",
+   "sweep": [
+    100,
+    400
+   ],
+   "observable": "domain",
+   "label": "class_change",
+   "class": "secondary",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "call": "no_change",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": 0.0,
+    "D_p50": 0.0,
+    "D_p95": 0.0
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "non_monotonic",
+   "always_increase": "increase",
+   "old_model": null,
+   "old_model_uncertain": null
+  },
+  "s07": {
+   "id": "s07",
+   "set": "dev",
+   "param": "T_furnace_C",
+   "sweep": [
+    650,
+    800
+   ],
+   "observable": "coverage",
+   "label": "class_change",
+   "class": "secondary",
+   "calls_by_i": {
+    "1": "increase",
+    "2": "increase",
+    "3": "increase"
+   },
+   "call": "increase",
+   "diag_i1": {
+    "nm_frac": 0.08,
+    "D_p05": 2.0036807570910624,
+    "D_p50": 3.538754154115016,
+    "D_p95": 4.827578711798417
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "increase",
+   "always_increase": "increase",
+   "old_model": null,
+   "old_model_uncertain": null
+  },
+  "s08": {
+   "id": "s08",
+   "set": "dev",
+   "param": "gap_mm",
+   "sweep": [
+    2,
+    10
+   ],
+   "observable": "layers",
+   "label": "decrease",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "decrease",
+    "2": "decrease",
+    "3": "decrease"
+   },
+   "call": "decrease",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": -1.6079978680164302,
+    "D_p50": -1.6060329945868759,
+    "D_p95": -1.5937120603385924
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "non_monotonic",
+   "always_increase": "increase",
+   "old_model": null,
+   "old_model_uncertain": null
+  },
+  "s09": {
+   "id": "s09",
+   "set": "dev",
+   "param": "T_boat_Mo_C",
+   "sweep": [
+    200,
+    400
+   ],
+   "observable": "nucleation",
+   "label": "increase",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "call": "no_change",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": 0.0,
+    "D_p50": 0.0,
+    "D_p95": 0.0
+   },
+   "zero_flux": true,
+   "n_draws": 100,
+   "blind": "increase",
+   "always_increase": "increase",
+   "old_model": "increase",
+   "old_model_uncertain": false
+  },
+  "s10": {
+   "id": "s10",
+   "set": "dev",
+   "param": "T_furnace_C",
+   "sweep": [
+    700,
+    850
+   ],
+   "observable": "nucleation",
+   "label": "decrease",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "uncertain",
+    "2": "uncertain",
+    "3": "uncertain"
+   },
+   "call": "uncertain",
+   "diag_i1": {
+    "nm_frac": 0.5,
+    "D_p05": -228.9628280668882,
+    "D_p50": -3.4981600863744085,
+    "D_p95": 0.616108242954203
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "decrease",
+   "always_increase": "increase",
+   "old_model": "decrease",
+   "old_model_uncertain": false
+  },
+  "s11": {
+   "id": "s11",
+   "set": "dev",
+   "param": "T_boat_S_C",
+   "sweep": [
+    180,
+    300
+   ],
+   "observable": "shape",
+   "label": "class_change",
+   "class": "primary",
+   "call": "no_change",
+   "labels": [
+    "triangle",
+    "triangle",
+    "triangle",
+    "truncated_triangle",
+    "triangle"
+   ],
+   "abstain": [
+    null,
+    "band_spans_classes",
+    "band_spans_classes",
+    "band_spans_classes",
+    null
+   ],
+   "cfg": "M0",
+   "zero_flux": false,
+   "blind": "class_change",
+   "always_increase": "increase",
+   "old_model": "class_change",
+   "old_model_uncertain": true
+  },
+  "s13": {
+   "id": "s13",
+   "set": "dev",
+   "param": "T_furnace_C",
+   "sweep": [
+    750,
+    850
+   ],
+   "observable": "coverage",
+   "label": "decrease",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "non_monotonic",
+    "2": "non_monotonic",
+    "3": "non_monotonic"
+   },
+   "call": "non_monotonic",
+   "diag_i1": {
+    "nm_frac": 0.97
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "decrease",
+   "always_increase": "increase",
+   "old_model": "non_monotonic",
+   "old_model_uncertain": false
+  },
+  "s14": {
+   "id": "s14",
+   "set": "dev",
+   "param": "boat_area_MoO3_cm2",
+   "sweep": [
+    1,
+    4
+   ],
+   "observable": "coverage",
+   "label": "increase",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "increase",
+    "2": "increase",
+    "3": "increase"
+   },
+   "call": "increase",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": 0.23295926015535579,
+    "D_p50": 0.41067759587880914,
+    "D_p95": 0.5405356034516611
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "increase",
+   "always_increase": "increase",
+   "old_model": "increase",
+   "old_model_uncertain": false
+  },
+  "j1": {
+   "id": "j1",
+   "set": "heldout",
+   "param": "T_boat_Mo_C",
+   "sweep": [
+    800,
+    825
+   ],
+   "observable": "domain",
+   "label": "increase",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "call": "no_change",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": -0.00016715527622342962,
+    "D_p50": -2.552503292729824e-06,
+    "D_p95": -1.9174617005290894e-09
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "increase",
+   "always_increase": "increase",
+   "old_model": null,
+   "old_model_uncertain": null
+  },
+  "j2": {
+   "id": "j2",
+   "set": "heldout",
+   "param": "T_boat_Mo_C",
+   "sweep": [
+    825,
+    850
+   ],
+   "observable": "domain",
+   "label": "decrease",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "call": "no_change",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": -0.0001638318070840361,
+    "D_p50": -2.5284174987039165e-06,
+    "D_p95": -1.8786234567969027e-09
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "decrease",
+   "always_increase": "increase",
+   "old_model": null,
+   "old_model_uncertain": null
+  },
+  "j3": {
+   "id": "j3",
+   "set": "heldout",
+   "param": "T_boat_Mo_C",
+   "sweep": [
+    825,
+    850
+   ],
+   "observable": "nucleation",
+   "label": "increase",
+   "class": "primary",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "call": "no_change",
+   "diag_i1": {
+    "nm_frac": 0.0,
+    "D_p05": 3.757246913593804e-09,
+    "D_p50": 5.056834997407833e-06,
+    "D_p95": 0.0003276636141680721
+   },
+   "zero_flux": false,
+   "n_draws": 100,
+   "blind": "increase",
+   "always_increase": "increase",
+   "old_model": null,
+   "old_model_uncertain": null
+  }
+ },
+ "excluded": {
+  "s02": "transverse substrate coordinate; model is 1-D along the tube",
+  "s12": "MoO3 film thickness: needs film area and MoO3 density (no sourced values)"
+ },
+ "T1_dev_primary": {
+  "call": {
+   "n": 9,
+   "correct": 3,
+   "acc_uncertain_wrong": 0.3333333333333333,
+   "n_confident": 6,
+   "acc_confident": 0.5,
+   "abstain_rate": 0.3333333333333333
+  },
+  "blind": {
+   "n": 9,
+   "correct": 6,
+   "acc_uncertain_wrong": 0.6666666666666666,
+   "n_confident": 9,
+   "acc_confident": 0.6666666666666666,
+   "abstain_rate": 0.0
+  },
+  "always_increase": {
+   "n": 9,
+   "correct": 4,
+   "acc_uncertain_wrong": 0.4444444444444444,
+   "n_confident": 9,
+   "acc_confident": 0.4444444444444444,
+   "abstain_rate": 0.0
+  }
+ },
+ "T2_original8": {
+  "call": {
+   "n": 8,
+   "correct": 2,
+   "acc_uncertain_wrong": 0.25,
+   "n_confident": 5,
+   "acc_confident": 0.4,
+   "abstain_rate": 0.375
+  },
+  "blind": {
+   "n": 8,
+   "correct": 6,
+   "acc_uncertain_wrong": 0.75,
+   "n_confident": 8,
+   "acc_confident": 0.75,
+   "abstain_rate": 0.0
+  },
+  "always_increase": {
+   "n": 8,
+   "correct": 4,
+   "acc_uncertain_wrong": 0.5,
+   "n_confident": 8,
+   "acc_confident": 0.5,
+   "abstain_rate": 0.0
+  },
+  "old_model": {
+   "n": 8,
+   "correct": 5,
+   "acc_uncertain_wrong": 0.5,
+   "note": "from bench/sensitivity/predictions.json: 5/8, 4/8 counting its 1 uncertain flag as wrong"
+  }
+ },
+ "T3_secondary_class_change_nonshape": [
+  {
+   "id": "s05",
+   "call": "no_change",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "rule": "correct iff non_monotonic",
+   "correct": false
+  },
+  {
+   "id": "s06",
+   "call": "no_change",
+   "calls_by_i": {
+    "1": "no_change",
+    "2": "no_change",
+    "3": "no_change"
+   },
+   "rule": "correct iff non_monotonic",
+   "correct": false
+  },
+  {
+   "id": "s07",
+   "call": "increase",
+   "calls_by_i": {
+    "1": "increase",
+    "2": "increase",
+    "3": "increase"
+   },
+   "rule": "correct iff non_monotonic",
+   "correct": false
+  }
+ ],
+ "T4_heldout": {
+  "call": {
+   "n": 3,
+   "correct": 0,
+   "acc_uncertain_wrong": 0.0,
+   "n_confident": 3,
+   "acc_confident": 0.0,
+   "abstain_rate": 0.0
+  },
+  "blind": {
+   "n": 3,
+   "correct": 3,
+   "acc_uncertain_wrong": 1.0,
+   "n_confident": 3,
+   "acc_confident": 1.0,
+   "abstain_rate": 0.0
+  },
+  "always_increase": {
+   "n": 3,
+   "correct": 2,
+   "acc_uncertain_wrong": 0.6666666666666666,
+   "n_confident": 3,
+   "acc_confident": 0.6666666666666666,
+   "abstain_rate": 0.0
+  }
+ },
+ "s11_other_configs": {
+  "M1_MACE_kink": "no_change",
+  "M2_A1_dft_rosen_Mo_MACE_S": "no_change"
+ },
+ "shape_benchmark": {
+  "M0_default_synthetic": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.25,
+     "acc_abstain_wrong": 0.375,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.14285714285714285,
+     "acc_abstain_wrong": 0.42857142857142855,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    }
+   ]
+  },
+  "M1_MACE_kink": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.0,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.07142857142857142,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    }
+   ]
+  },
+  "M2_A1_dft_rosen_Mo_MACE_S": {
+   "scores": {
+    "in_scope": {
+     "n": 8,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.125,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 8
+     }
+    },
+    "all": {
+     "n": 14,
+     "accuracy": 0.5,
+     "majority_class": "triangle",
+     "majority_baseline": 0.5,
+     "always_triangle": 0.5,
+     "abstain_rate": 0.14285714285714285,
+     "acc_abstain_wrong": 0.5,
+     "predicted_classes": {
+      "triangle": 14
+     }
+    }
+   },
+   "cases": [
+    {
+     "id": "S01",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S02",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S03",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S04",
+     "in_scope": true,
+     "reported": "truncated_triangle",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S05",
+     "in_scope": true,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S06",
+     "in_scope": true,
+     "reported": "hexagon",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S07",
+     "in_scope": true,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S08",
+     "in_scope": true,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S09",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S10",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S11",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S12",
+     "in_scope": false,
+     "reported": "mixed",
+     "pred": "triangle",
+     "abstain": "band_spans_classes"
+    },
+    {
+     "id": "S13",
+     "in_scope": false,
+     "reported": "triangle",
+     "pred": "triangle",
+     "abstain": null
+    },
+    {
+     "id": "S14",
+     "in_scope": false,
+     "reported": "other",
+     "pred": "triangle",
+     "abstain": null
+    }
+   ]
+  }
+ },
+ "shape_map_collapse": {
+  "M0_default_synthetic": {
+   "classes": {
+    "triangle_Mo": 29,
+    "triangle_S": 11
+   },
+   "boundary_cm_from_boat": 18.246794871794872,
+   "mean_band": 0.8687679444618773
+  },
+  "M1_MACE_kink": {
+   "classes": {
+    "triangle_Mo": 40
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 0.4108698952049554
+  },
+  "M2_A1_dft_rosen_Mo_MACE_S": {
+   "classes": {
+    "triangle_Mo": 40
+   },
+   "boundary_cm_from_boat": NaN,
+   "mean_band": 0.4361992267724359
+  },
+  "diagnostic_dft_rosen_Mo_synthetic_S": {
+   "classes": {
+    "triangle_Mo": 29,
+    "triangle_S": 11
+   },
+   "boundary_cm_from_boat": 18.246794871794872,
+   "mean_band": 0.8687575116504241
+  }
+ }
+}

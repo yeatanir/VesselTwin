@@ -1,0 +1,23 @@
+{
+ "vessel": "sorbent",
+ "fields": [
+  {
+   "key": "bed_id_cm",
+   "value": "4",
+   "unit": "mm",
+   "span": "4 mm"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "40",
+   "unit": "sccm",
+   "span": "40 sccm"
+  },
+  {
+   "key": "y_feed",
+   "value": "400",
+   "unit": "ppm",
+   "span": "400 ppm"
+  }
+ ]
+}

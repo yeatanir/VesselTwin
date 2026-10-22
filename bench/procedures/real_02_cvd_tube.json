@@ -1,0 +1,48 @@
+{
+ "text": "The substrate is placed 20 cm away from an alumina boat containing 275 mg of a sulfur solid precursor (Sigma-Aldrich, 99.98%). The growth process is carried out at a temperature of 820 °C (heating rate of 40 °C/min), providing optimal growth conditions, while the low zone containing sulfur powders is independently heated to 180 °C (heating rate of 60 °C/min). The nitrogen carrier gas flow rate, selected for its inert nature and low cost, is kept constant within the range of 150 to 300 sccm during the growth process.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "T_furnace_C": {
+   "value": 820,
+   "unit": "C"
+  },
+  "T_boat_S_C": {
+   "value": 180,
+   "unit": "C"
+  },
+  "carrier": {
+   "value": "N2",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Influence of the Carrier Gas Flow in the CVD Synthesis of 2-Dimensional MoS2 Based on the Spin-Coating of Liquid Molybdenum Precursors",
+  "authors": [
+   "Fiorenza Esposito",
+   "Matteo Bosi",
+   "Giovanni Attolini",
+   "Francesca Rossi",
+   "Roberto Fornari",
+   "Filippo Fabbri",
+   "Luca Seravalli",
+   "Ki Chang Kwon"
+  ],
+  "journal": "Nanomaterials",
+  "year": 2024,
+  "DOI": "10.3390/nano14211749",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11547744/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "position: substrate 20 cm from the sulfur boat (ParamDefs measure substrate distance from MoO3 boat)",
+  "ramp_rate: 40 C/min (growth zone) and 60 C/min (sulfur zone)",
+  "precursor_mass: 275 mg sulfur",
+  "substrate: SiO2/Si, spin-coated liquid Mo precursor (no MoO3 boat; 3000 rpm 30 s)",
+  "precursor_other: ammonium heptamolybdate / NaOH solution volumes and concentrations"
+ ],
+ "ambiguous": [
+  "flow_sccm: stated as a range 'from 150 to 300 sccm'",
+  "carrier: written 'nitrogen'"
+ ]
+}

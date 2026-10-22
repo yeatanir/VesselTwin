@@ -1,0 +1,2414 @@
+{
+ "items_used": {
+  "s01": [
+   {
+    "carrier": "Ar",
+    "T_furnace_C": 700,
+    "T_boat_Mo_C": 700,
+    "T_boat_S_C": 180,
+    "x_S_boat_cm": 26,
+    "x_substrate_cm": 0.0,
+    "m_MoO3_mg": 0.1,
+    "m_S_mg": 10,
+    "duration_min": 23
+   },
+   {}
+  ],
+  "s03": [
+   {
+    "carrier": "Ar",
+    "T_furnace_C": 750,
+    "T_boat_Mo_C": 750,
+    "x_S_boat_cm": 31,
+    "x_substrate_cm": 0.0,
+    "tube_id_in": 1.7717,
+    "m_MoO3_mg": 15,
+    "m_S_mg": 200,
+    "duration_min": 5
+   },
+   {}
+  ],
+  "s04": [
+   {
+    "carrier": "Ar",
+    "T_furnace_C": 750,
+    "T_boat_Mo_C": 750,
+    "x_S_boat_cm": 31,
+    "x_substrate_cm": 0.0,
+    "tube_id_in": 1.7717,
+    "m_MoO3_mg": 15,
+    "m_S_mg": 200,
+    "duration_min": 5
+   },
+   {}
+  ],
+  "s05": [
+   {
+    "carrier": "Ar",
+    "T_furnace_C": 750,
+    "T_boat_Mo_C": 750,
+    "x_S_boat_cm": 31,
+    "x_substrate_cm": 0.0,
+    "tube_id_in": 1.7717,
+    "m_S_mg": 200,
+    "duration_min": 5,
+    "flow_sccm": 100
+   },
+   {}
+  ],
+  "s06": [
+   {
+    "carrier": "Ar",
+    "T_furnace_C": 750,
+    "T_boat_Mo_C": 750,
+    "x_S_boat_cm": 31,
+    "x_substrate_cm": 0.0,
+    "tube_id_in": 1.7717,
+    "m_MoO3_mg": 15,
+    "duration_min": 5,
+    "flow_sccm": 100
+   },
+   {}
+  ],
+  "s07": [
+   {
+    "carrier": "Ar",
+    "x_S_boat_cm": 26,
+    "x_substrate_cm": 0.0,
+    "m_MoO3_mg": 1,
+    "m_S_mg": 200
+   },
+   {
+    "T_boat_Mo_C": "T_furnace_C"
+   }
+  ],
+  "s08": [
+   {
+    "carrier": "Ar",
+    "T_furnace_C": 750,
+    "T_boat_Mo_C": 750,
+    "x_S_boat_cm": 26,
+    "x_substrate_cm": 0.0,
+    "m_MoO3_mg": 1,
+    "m_S_mg": 200
+   },
+   {}
+  ],
+  "s09": [
+   {},
+   {}
+  ],
+  "s10": [
+   {},
+   {}
+  ],
+  "s11": [
+   {
+    "carrier": "N2",
+    "T_furnace_C": 835,
+    "T_boat_Mo_C": 835,
+    "x_substrate_cm": 0.5,
+    "m_MoO3_mg": 1,
+    "m_S_mg": 120,
+    "duration_min": 5,
+    "flow_sccm": 20
+   },
+   {}
+  ],
+  "s13": [
+   {
+    "carrier": "Ar",
+    "x_S_boat_cm": 26.5,
+    "gap_mm": 3.5,
+    "m_S_mg": 600,
+    "tube_id_in": 1.0,
+    "duration_min": 10,
+    "flow_sccm": 10
+   },
+   {
+    "T_boat_Mo_C": "T_furnace_C"
+   }
+  ],
+  "s14": [
+   {
+    "carrier": "N2",
+    "T_furnace_C": 850,
+    "T_boat_Mo_C": 850,
+    "m_S_mg": 1000,
+    "duration_min": 12.5,
+    "flow_sccm": 200
+   },
+   {}
+  ],
+  "j1": [
+   {
+    "carrier": "Ar",
+    "T_boat_S_C": 179.85,
+    "x_S_boat_cm": 35,
+    "x_substrate_cm": 5.0,
+    "m_MoO3_mg": 20,
+    "duration_min": 30,
+    "flow_sccm": 100
+   },
+   {
+    "T_furnace_C": "T_boat_Mo_C"
+   }
+  ],
+  "j2": [
+   {
+    "carrier": "Ar",
+    "T_boat_S_C": 179.85,
+    "x_S_boat_cm": 35,
+    "x_substrate_cm": 5.0,
+    "m_MoO3_mg": 20,
+    "duration_min": 30,
+    "flow_sccm": 100
+   },
+   {
+    "T_furnace_C": "T_boat_Mo_C"
+   }
+  ],
+  "j3": [
+   {
+    "carrier": "Ar",
+    "T_boat_S_C": 179.85,
+    "x_S_boat_cm": 35,
+    "x_substrate_cm": 5.0,
+    "m_MoO3_mg": 20,
+    "duration_min": 30,
+    "flow_sccm": 100
+   },
+   {
+    "T_furnace_C": "T_boat_Mo_C"
+   }
+  ]
+ },
+ "default_smolik_hsc": {
+  "before": {
+   "s01": {
+    "id": "s01",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.25,
+     "D_p05": 0.5618847729194811,
+     "D_p50": 0.8656396950183658,
+     "D_p95": 1.086183434432693
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.28,
+     "D_p05": -0.195083938670967,
+     "D_p50": -0.03584655973016715,
+     "D_p95": 0.14515519140618713
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.32,
+     "D_p05": -0.2938543983922072,
+     "D_p50": 0.5601201738155117,
+     "D_p95": 1.2706899169383368
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.07,
+     "D_p05": 2.0354966095507816,
+     "D_p50": 3.88030754103496,
+     "D_p95": 5.125335400682204
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "decrease",
+     "2": "decrease",
+     "3": "decrease"
+    },
+    "call": "decrease",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6078566245100259,
+     "D_p50": -1.6059670015034273,
+     "D_p95": -1.5965619215631943
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -229.00707590402143,
+     "D_p50": -3.1974981047101085,
+     "D_p95": 0.5853784579166261
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "no_change",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "truncated_triangle",
+     "triangle"
+    ],
+    "abstain": [
+     null,
+     null,
+     null,
+     "band_spans_classes",
+     null
+    ],
+    "cfg": "M0",
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "non_monotonic",
+     "2": "non_monotonic",
+     "3": "non_monotonic"
+    },
+    "call": "non_monotonic",
+    "diag_i1": {
+     "nm_frac": 0.99
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.2335075174117854,
+     "D_p50": 0.3882214630312619,
+     "D_p95": 0.5519103218899538
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.0004585865068933437,
+     "D_p50": -1.017680626103079e-06,
+     "D_p95": -2.4083199878788277e-10
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.00042726454496261335,
+     "D_p50": -8.94471886336845e-07,
+     "D_p95": -1.6354688714415066e-10
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 3.270937742883007e-10,
+     "D_p50": 1.78894377267369e-06,
+     "D_p95": 0.0008545290899252267
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "after": {
+   "s01": {
+    "id": "s01",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.02,
+     "D_p05": -225.37765662687073,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -3.4774138314139464,
+     "D_p50": -2.6646681076896357,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6066771280241914,
+     "D_p50": -8.881784197001252e-16,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -229.00707590402143,
+     "D_p50": -3.1974981047101085,
+     "D_p95": 0.5853784579166261
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "uncertain",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle"
+    ],
+    "abstain": [
+     "band_spans_classes",
+     null,
+     null,
+     null,
+     null
+    ],
+    "cfg": "M0",
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 1.9012953527443062,
+     "D_p50": 1.9026645098476513,
+     "D_p95": 1.903773205502443
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.4010945502088921,
+     "D_p50": 0.5127587001797682,
+     "D_p95": 0.6346474086441263
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.12169451695022104,
+     "D_p95": 0.24989087759867842
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.11632918089095057,
+     "D_p95": 0.2387322756904183
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.4774645513808366,
+     "D_p50": -0.23265836178190114,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "tables_before": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.3333333333333333,
+     "n_confident": 6,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.3333333333333333
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 5,
+     "acc_confident": 0.4,
+     "abstain_rate": 0.375
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 3,
+     "acc_confident": 0.0,
+     "abstain_rate": 0.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 9,
+     "acc_confident": 0.3333333333333333,
+     "abstain_rate": 0.25
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "increase",
+     "correct": false
+    }
+   ]
+  },
+  "tables_after": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.1111111111111111,
+     "n_confident": 5,
+     "acc_confident": 0.2,
+     "abstain_rate": 0.4444444444444444
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.125,
+     "n_confident": 5,
+     "acc_confident": 0.2,
+     "abstain_rate": 0.375
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 0,
+     "acc_confident": null,
+     "abstain_rate": 1.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.08333333333333333,
+     "n_confident": 5,
+     "acc_confident": 0.2,
+     "abstain_rate": 0.5833333333333334
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "uncertain",
+     "correct": false
+    }
+   ]
+  }
+ },
+ "smolik_liquid_cc": {
+  "before": {
+   "s01": {
+    "id": "s01",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.23,
+     "D_p05": 0.6179644584877741,
+     "D_p50": 0.8739237211083779,
+     "D_p95": 1.132646264772143
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.3,
+     "D_p05": -0.2461703669695774,
+     "D_p50": -0.027702856148971833,
+     "D_p95": 0.1385588833983911
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.34,
+     "D_p05": -0.2759506231656609,
+     "D_p50": 0.5187112067341886,
+     "D_p95": 1.472764153913085
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.08,
+     "D_p05": 1.9223911016051183,
+     "D_p50": 3.7154593170765167,
+     "D_p95": 5.109112687275243
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "decrease",
+     "2": "decrease",
+     "3": "decrease"
+    },
+    "call": "decrease",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6076772738291703,
+     "D_p50": -1.6058536804867236,
+     "D_p95": -1.5944970257034674
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -228.89620785042135,
+     "D_p50": -3.3702681417303317,
+     "D_p95": 0.5731360638708399
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "uncertain",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "truncated_triangle",
+     "triangle"
+    ],
+    "abstain": [
+     "band_spans_classes",
+     null,
+     null,
+     "band_spans_classes",
+     "band_spans_classes"
+    ],
+    "cfg": {
+     "MoO3.psat_model": "smolik_liquid_cc"
+    },
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "non_monotonic",
+     "2": "non_monotonic",
+     "3": "non_monotonic"
+    },
+    "call": "non_monotonic",
+    "diag_i1": {
+     "nm_frac": 0.98
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.21504006672048376,
+     "D_p50": 0.39930259617663566,
+     "D_p95": 0.5456160408874723
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.004443139202578483,
+     "D_p50": -7.260842625567143e-05,
+     "D_p95": -1.8686183518301675e-07
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.008511051198884711,
+     "D_p50": -7.349983950022398e-05,
+     "D_p95": -1.4741071687751652e-07
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 2.9482143375503257e-07,
+     "D_p50": 0.00014699967900044797,
+     "D_p95": 0.01702210239776942
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "after": {
+   "s01": {
+    "id": "s01",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.07,
+     "D_p05": -225.34735145919143,
+     "D_p50": -221.62879211418843,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 113.0438788738028
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -678.2632732428168,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -3.585326693835634,
+     "D_p50": -2.650890366189685,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6064006108237296,
+     "D_p50": -8.881784197001252e-16,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -228.89620785042135,
+     "D_p50": -3.3702681417303317,
+     "D_p95": 0.5731360638708399
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "uncertain",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle"
+    ],
+    "abstain": [
+     "band_spans_classes",
+     "band_spans_classes",
+     "band_spans_classes",
+     "band_spans_classes",
+     "band_spans_classes"
+    ],
+    "cfg": {
+     "MoO3.psat_model": "smolik_liquid_cc"
+    },
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 2.3497678335920216,
+     "D_p50": 2.87498994993848,
+     "D_p95": 4.240635875583809
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.28146862376123344,
+     "D_p50": 0.45609412624969536,
+     "D_p95": 0.5913772549811509
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.12173688084190815,
+     "D_p95": 0.2493318331521394
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.11636877390510847,
+     "D_p95": 0.23821023707512196
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.4764204741502439,
+     "D_p50": -0.23273754781021694,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "tables_before": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.3333333333333333,
+     "n_confident": 5,
+     "acc_confident": 0.6,
+     "abstain_rate": 0.4444444444444444
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 4,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.5
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 3,
+     "acc_confident": 0.0,
+     "abstain_rate": 0.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 8,
+     "acc_confident": 0.375,
+     "abstain_rate": 0.3333333333333333
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "increase",
+     "correct": false
+    }
+   ]
+  },
+  "tables_after": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.1111111111111111,
+     "n_confident": 3,
+     "acc_confident": 0.3333333333333333,
+     "abstain_rate": 0.6666666666666666
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.125,
+     "n_confident": 3,
+     "acc_confident": 0.3333333333333333,
+     "abstain_rate": 0.625
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 0,
+     "acc_confident": null,
+     "abstain_rate": 1.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.08333333333333333,
+     "n_confident": 3,
+     "acc_confident": 0.3333333333333333,
+     "abstain_rate": 0.75
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "uncertain",
+     "correct": false
+    }
+   ]
+  }
+ },
+ "notes": {
+  "s01": "substrate 0 cm from the boat",
+  "s03": "substrate 0 cm from the boat; 19 cm read as S-to-MoO3 (ambiguous)",
+  "s04": "substrate 0 cm from the boat; 19 cm read as S-to-MoO3 (ambiguous)",
+  "s05": "substrate 0 cm from the boat; 19 cm read as S-to-MoO3 (ambiguous)",
+  "s06": "substrate 0 cm from the boat; 19 cm read as S-to-MoO3 (ambiguous)",
+  "s07": "substrate 0 cm from the boat",
+  "s08": "face-down gap model (not the tube march)",
+  "s09": "substrate 12 cm from the boat: farther than ~4 cm, boat-temperature response suppressed by construction (Track K); geometry not verified (paper not opened; default geometry kept)",
+  "s10": "substrate 12 cm from the boat: farther than ~4 cm, boat-temperature response suppressed by construction (Track K); geometry not verified (paper not opened; default geometry kept)",
+  "s11": "substrate 0.5 cm from the boat",
+  "s13": "face-down gap model (not the tube march)",
+  "s14": "substrate 12 cm from the boat: farther than ~4 cm, boat-temperature response suppressed by construction (Track K); x_substrate only qualitative ('close to each other'): default 12 cm kept; S temperature ~600 C outside model range: default",
+  "j1": "substrate 5 cm from the boat: farther than ~4 cm, boat-temperature response suppressed by construction (Track K)",
+  "j2": "substrate 5 cm from the boat: farther than ~4 cm, boat-temperature response suppressed by construction (Track K)",
+  "j3": "substrate 5 cm from the boat: farther than ~4 cm, boat-temperature response suppressed by construction (Track K)"
+ },
+ "before_matches_track_a": {
+  "s01": true,
+  "s03": true,
+  "s04": true,
+  "s05": true,
+  "s06": true,
+  "s07": true,
+  "s08": true,
+  "s09": true,
+  "s10": true,
+  "s11": true,
+  "s13": true,
+  "s14": true,
+  "j1": true,
+  "j2": true,
+  "j3": true
+ }
+}

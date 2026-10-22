@@ -1,0 +1,27 @@
+{
+ "_meta": {
+  "title": "WO2 + HgI2 transport (geometry, loading assumed)",
+  "source": "Schmidt, Binnewies, Glaum, Schmidt, InTech 2013, doi:10.5772/55547 (thermo, rates); geometry and loading assumed"
+ },
+ "L_cm": 15.0,
+ "D_mm": 15.0,
+ "tilt_deg": 0.0,
+ "T_source_C": 980,
+ "T_sink_C": 900,
+ "agent_mg_per_cm3": 4.505,
+ "gas": "I2",
+ "n_I_per_C": 2.0,
+ "agent_x_atoms": 2.0,
+ "agent_M_gmol": 454.399,
+ "M_X_gmol": 126.904,
+ "M_A_gmol": 215.839,
+ "nu_E": 1.0,
+ "E_M_gmol": 200.59,
+ "dH_kJmol": 249.6,
+ "dS_JmolK": 179.2,
+ "dissociation": "off",
+ "crystal_density_gcm3": 10.8,
+ "diff_model": "schafer",
+ "stefan": "stefan",
+ "conv_model": "calibrated"
+}

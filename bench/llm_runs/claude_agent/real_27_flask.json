@@ -1,0 +1,11 @@
+{
+ "vessel": "flask",
+ "fields": [
+  {
+   "key": "volume_mL",
+   "value": "250",
+   "unit": "mL",
+   "span": "250 mL"
+  }
+ ]
+}

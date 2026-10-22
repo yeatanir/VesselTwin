@@ -1,0 +1,44 @@
+{
+ "text": "For the growth step, the Ar gas flow rate is reduced to 5 sccm, and the temperature in the growth zone is increased to 780–860 °C, depending on the thickness of the Mo film. As the temperature approaches the intended growth temperature, the sulfur zone is heated up to 250 °C to vaporize the sulfur and allow it to flow into the growth zone. This step lasts 5–8 min to achieve a reaction between the sulfur fumes and the oxides of Mo, leading to the growth of a mono- to few-layer MoS2 on the bottom substrate.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "flow_sccm": {
+   "value": 5,
+   "unit": "sccm"
+  },
+  "T_boat_S_C": {
+   "value": 250,
+   "unit": "C"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Proximity-Assisted Synthesis of Large Area MoS2 on Different Target Substrates by Chemical Vapor Deposition Using a Mo Nanofilm Substrate",
+  "authors": [
+   "Muhammad Tariq",
+   "William Poston",
+   "Norah Aldosari",
+   "Gregory Jensen",
+   "Maryam Bizhani",
+   "Eric Stinaff",
+   "Henrich Frielinghaus"
+  ],
+  "journal": "Nanomaterials",
+  "year": 2026,
+  "DOI": "10.3390/nano16030159",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12899469/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "hold_time: growth step lasts 5-8 min",
+  "substrate: Mo nanofilm oxidised in situ (no MoO3 boat)"
+ ],
+ "ambiguous": [
+  "T_furnace_C: growth zone given as a range '780-860 C'",
+  "flow_sccm: 15 sccm purge/oxidation flow appears elsewhere, excerpt gives only 5 sccm"
+ ]
+}

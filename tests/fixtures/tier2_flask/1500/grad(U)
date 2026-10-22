@@ -1,0 +1,20 @@
+// FAKE FIXTURE (synthetic): format-correct, hand-written, NOT solver output
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class volTensorField;
+    object grad(U);
+}
+dimensions [0 0 -1 0 0 0 0];
+internalField nonuniform List<tensor> 4
+(
+(0 10 0 0 0 0 0 0 0)
+(0 0 0 0 0 0 0 0 0)
+(0 0 0 0 0 0 0 0 0)
+(0 0 0 0 0 0 0 0 0)
+)
+;
+boundaryField
+{
+}

@@ -1,0 +1,22 @@
+{
+ "synthetic": true,
+ "vessel": "ampoule",
+ "text": "Chemical vapor transport used I2 as the agent at 3 mg/cm3 in an 18 cm long ampoule, with the hot end at 1000 \u00b0C.",
+ "gold": {
+  "agent_mg_per_cm3": {
+   "value": 3,
+   "unit": "mg/cm3"
+  },
+  "L_cm": {
+   "value": 18,
+   "unit": "cm"
+  },
+  "T_source_C": {
+   "value": 1000,
+   "unit": "C"
+  },
+  "gas": {
+   "value": "I2"
+  }
+ }
+}

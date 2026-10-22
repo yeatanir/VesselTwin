@@ -1,0 +1,582 @@
+{
+ "key": "ab0914c2cb71f476",
+ "vessel": "ampoule",
+ "spec": {
+  "vessel": "ampoule",
+  "params": {
+   "L_cm": {
+    "value": 5.0,
+    "unit": "cm",
+    "span": "5 cm length",
+    "status": "stated",
+    "note": null
+   },
+   "D_mm": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "tilt_deg": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "T_source_C": {
+    "value": 850.0,
+    "unit": "C",
+    "span": "850 \u00b0C source",
+    "status": "stated",
+    "note": null
+   },
+   "T_sink_C": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "agent_mg_per_cm3": {
+    "value": 5.0,
+    "unit": "mg/cm3",
+    "span": "5 mg/cm3",
+    "status": "stated",
+    "note": null
+   },
+   "inert_Ar_mbar": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "T_profile": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "zone_frac": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "gas": {
+    "value": "I2",
+    "unit": null,
+    "span": "I2",
+    "status": "stated",
+    "note": null
+   },
+   "n_I_per_C": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "agent_x_atoms": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "agent_M_gmol": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "M_X_gmol": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "M_A_gmol": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "nu_E": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "E_M_gmol": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "dH_kJmol": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "dS_JmolK": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "dissociation": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "dH_diss_kJmol": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "dS_diss_JmolK": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "n2_I_per_C": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "dH2_kJmol": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "dS2_JmolK": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "diff_model": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "D0_cm2s": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "T_exp": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "agent_V_fuller": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "V_C_fuller": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "E_V_fuller": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "stefan": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "conv_model": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "conv_c": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "conv_fmax": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "conv_n": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "Ra_crit": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "conv_exp": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "Ra_c_vertical": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "conv_threshold": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "crystal_density_gcm3": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "sink_area_frac": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   },
+   "schafer_prefactor": {
+    "value": null,
+    "unit": null,
+    "span": null,
+    "status": "missing",
+    "note": null
+   }
+  },
+  "source_text": "Crystal growth occurred in sealed quartz ampoules (850 \u00b0C source, 5 mg/cm3 I2, 99.999%) where optimized ampoule geometry (5 cm length, controlled diameter/taper) and thermal gradients enabled defect-free, large-area crystals at >1 mm/h rates.",
+  "synthetic": false
+ },
+ "res": {
+  "vessel": "ampoule",
+  "values": {
+   "L_cm": 5.0,
+   "D_mm": 15.0,
+   "tilt_deg": 0.0,
+   "T_source_C": 850.0,
+   "T_sink_C": 800.0,
+   "agent_mg_per_cm3": 5.0,
+   "inert_Ar_mbar": 0.0,
+   "T_profile": "linear",
+   "zone_frac": 0.25,
+   "gas": "I2",
+   "n_I_per_C": 2.0,
+   "agent_x_atoms": 2.0,
+   "agent_M_gmol": 253.81,
+   "M_X_gmol": 126.904,
+   "M_A_gmol": 100.0,
+   "nu_E": 0.0,
+   "E_M_gmol": 64.13,
+   "dH_kJmol": 100.0,
+   "dS_JmolK": 60.0,
+   "dissociation": "on",
+   "dH_diss_kJmol": 153.874,
+   "dS_diss_JmolK": 105.796,
+   "n2_I_per_C": 0.0,
+   "dH2_kJmol": 150.0,
+   "dS2_JmolK": 80.0,
+   "diff_model": "schafer",
+   "D0_cm2s": 0.1,
+   "T_exp": 1.75,
+   "agent_V_fuller": 59.6,
+   "V_C_fuller": 80.0,
+   "E_V_fuller": 45.8,
+   "stefan": "stefan",
+   "conv_model": "calibrated",
+   "conv_c": 0.445,
+   "conv_fmax": 7.05,
+   "conv_n": 0.632,
+   "Ra_crit": 1000.0,
+   "conv_exp": 0.25,
+   "Ra_c_vertical": 1708.0,
+   "conv_threshold": 1.1,
+   "crystal_density_gcm3": 5.0,
+   "sink_area_frac": 1.0,
+   "schafer_prefactor": 0.00018
+  },
+  "provenance": {
+   "L_cm": "stated",
+   "T_source_C": "stated",
+   "agent_mg_per_cm3": "stated",
+   "gas": "stated",
+   "D_mm": "default",
+   "tilt_deg": "default",
+   "T_sink_C": "default",
+   "inert_Ar_mbar": "default",
+   "T_profile": "default",
+   "zone_frac": "default",
+   "n_I_per_C": "default",
+   "agent_x_atoms": "default",
+   "agent_M_gmol": "default",
+   "M_X_gmol": "default",
+   "M_A_gmol": "synthetic",
+   "nu_E": "default",
+   "E_M_gmol": "default",
+   "dH_kJmol": "synthetic",
+   "dS_JmolK": "synthetic",
+   "dissociation": "default",
+   "dH_diss_kJmol": "default",
+   "dS_diss_JmolK": "default",
+   "n2_I_per_C": "default",
+   "dH2_kJmol": "synthetic",
+   "dS2_JmolK": "synthetic",
+   "diff_model": "default",
+   "D0_cm2s": "default",
+   "T_exp": "default",
+   "agent_V_fuller": "default",
+   "V_C_fuller": "synthetic",
+   "E_V_fuller": "synthetic",
+   "stefan": "default",
+   "conv_model": "default",
+   "conv_c": "default",
+   "conv_fmax": "default",
+   "conv_n": "default",
+   "Ra_crit": "synthetic",
+   "conv_exp": "synthetic",
+   "Ra_c_vertical": "default",
+   "conv_threshold": "synthetic",
+   "crystal_density_gcm3": "synthetic",
+   "sink_area_frac": "default",
+   "schafer_prefactor": "default"
+  },
+  "regime": "convection_assisted",
+  "margin": 4.602935109748423,
+  "numbers": {
+   "Ra_s": 2385.296497184249,
+   "enhancement": 1.4602935109748427,
+   "dp_Pa": 1881.9623973937505,
+   "P_total_Pa": 188185.34183344693,
+   "convection_in_range": 1.0
+  },
+  "passport": {
+   "vessel": "ampoule",
+   "site": "sink_T=800C",
+   "T_K": {
+    "p05": 1092.7255138395958,
+    "p50": 1097.6113826379926,
+    "p95": 1103.8998729545667,
+    "unit": "K"
+   },
+   "species": {
+    "AIn_g": {
+     "p_source_Pa": {
+      "p05": 3710.226750848009,
+      "p50": 6846.1473424484775,
+      "p95": 20137.664639976712,
+      "unit": "Pa"
+     },
+     "p_sink_Pa": {
+      "p05": 2264.486651759285,
+      "p50": 4152.772181913397,
+      "p95": 14045.209493617518,
+      "unit": "Pa"
+     }
+    }
+   },
+   "derived": {
+    "dp_Pa": {
+     "p05": 1354.4284272289492,
+     "p50": 2693.3751605350812,
+     "p95": 6124.345415614629,
+     "unit": "Pa"
+    },
+    "flux_diffusion_mol_m2_s": {
+     "p05": 0.0001412796994810373,
+     "p50": 0.00028447436346872365,
+     "p95": 0.0010025678022065822,
+     "unit": "mol/m2/s"
+    },
+    "Ra": {
+     "p05": 1291.079845138352,
+     "p50": 2557.6105097373324,
+     "p95": 3703.22679515361,
+     "unit": ""
+    },
+    "convection_enhancement": {
+     "p05": 1.1582691398527343,
+     "p50": 1.516440343195098,
+     "p95": 1.9111916984629447,
+     "unit": ""
+    },
+    "transport_rate_mmol_h": {
+     "p05": 0.14023426440057096,
+     "p50": 0.3073798620796423,
+     "p95": 0.8004193897134061,
+     "unit": "mmol/h"
+    },
+    "P_total_Pa": {
+     "p05": 175409.0774790865,
+     "p50": 193104.82352182458,
+     "p95": 205561.25374687757,
+     "unit": "Pa"
+    },
+    "stefan_factor": {
+     "p05": 0.9999999999999954,
+     "p50": 1.0,
+     "p95": 1.0000000000000004,
+     "unit": ""
+    },
+    "mass_rate_mg_h": {
+     "p05": 14.023426440057095,
+     "p50": 30.737986207964234,
+     "p95": 80.04193897134061,
+     "unit": "mg/h"
+    },
+    "growth_rate_mm_day": {
+     "p05": 0.375018166748146,
+     "p50": 0.8372899835673375,
+     "p95": 2.122656327602213,
+     "unit": "mm/day"
+    },
+    "agent_balance_err": {
+     "p05": 3.9943058621495003e-16,
+     "p50": 6.97446932988898e-16,
+     "p95": 1.6847562860406953e-15,
+     "unit": ""
+    },
+    "convection_in_range": {
+     "p05": 1.0,
+     "p50": 1.0,
+     "p95": 1.0,
+     "unit": ""
+    },
+    "Sc": {
+     "p05": 0.11204591694131966,
+     "p50": 0.1622446203901681,
+     "p95": 0.23170508391465275,
+     "unit": ""
+    }
+   },
+   "source": "tier1:schafer-multispecies-stefan+buoyancy",
+   "tier": 1,
+   "synthetic": true
+  },
+  "profile": null,
+  "extras": null
+ },
+ "knobs": [
+  {
+   "knob": "T_source_C",
+   "name": "Source zone temperature T2 (\u00b125 C)",
+   "effect": 0.48645317421014345,
+   "lo": 0.305750838551427,
+   "hi": 0.5891489241696575
+  },
+  {
+   "knob": "T_sink_C",
+   "name": "Sink zone temperature T1 (\u00b125 C)",
+   "effect": -0.3972974890603798,
+   "lo": -0.4854256273073291,
+   "hi": -0.2538582394363223
+  },
+  {
+   "knob": "D_mm",
+   "name": "Ampoule inner diameter (\u00b110%)",
+   "effect": 0.2543802201677183,
+   "lo": 0.12505825571174967,
+   "hi": 0.31011619873853535
+  },
+  {
+   "knob": "L_cm",
+   "name": "Ampoule length (\u00b110%)",
+   "effect": -0.09503289651258284,
+   "lo": -0.11020439282450101,
+   "hi": -0.0465227000824934
+  },
+  {
+   "knob": "agent_mg_per_cm3",
+   "name": "Transport agent loading (\u00b110%)",
+   "effect": 0.06914549456821978,
+   "lo": 0.03110182305249959,
+   "hi": 0.0788026833118714
+  }
+ ],
+ "calcs": [
+  {
+   "rank": 1,
+   "calc": "DFT/JANAF thermochemistry of gas species",
+   "cost": "cheap",
+   "param": "dS_JmolK",
+   "label": "Reaction entropy dS",
+   "sigma": 5.0,
+   "unit": "J/mol/K",
+   "delta": 0.12968648811124991,
+   "outcome_unit": "mmol/h",
+   "rationale": "Pin down dS_JmolK (Reaction entropy dS) with DFT/JANAF thermochemistry of gas species [cheap]: its one-sigma uncertainty (5 J/mol/K) moves the transport rate by 0.13 mmol/h."
+  },
+  {
+   "rank": 3,
+   "calc": "ab initio collision integral / diffusivity",
+   "cost": "cheap",
+   "param": "D0_cm2s",
+   "label": "Diffusion coefficient at 273 K, 1 atm",
+   "sigma": 0.03,
+   "unit": "cm2/s",
+   "delta": 0.03397647450625946,
+   "outcome_unit": "mmol/h",
+   "rationale": "Pin down D0_cm2s (Diffusion coefficient at 273 K, 1 atm) with ab initio collision integral / diffusivity [cheap]: its one-sigma uncertainty (0.03 cm2/s) moves the transport rate by 0.034 mmol/h."
+  }
+ ]
+}

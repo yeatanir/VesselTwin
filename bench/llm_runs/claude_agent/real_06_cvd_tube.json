@@ -1,0 +1,29 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "tube_id_in",
+   "value": "2",
+   "unit": "inches",
+   "span": "2 inches"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "120",
+   "unit": "sccm",
+   "span": "120 sccm"
+  },
+  {
+   "key": "pressure_Pa",
+   "value": "750",
+   "unit": "Torr",
+   "span": "750 Torr"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "argon (Ar, 120 sccm)"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "synthetic": true,
+ "vessel": "flask",
+ "text": "Mixing was done in a 100 mL flask in water, 1200 rpm. Final concentration reached 50 mM after the addition.",
+ "gold": {
+  "volume_mL": {
+   "value": 100,
+   "unit": "mL"
+  },
+  "solvent": {
+   "value": "water"
+  },
+  "stir_rpm": {
+   "value": 1200,
+   "unit": "rpm"
+  },
+  "C0_M": {
+   "value": 50,
+   "unit": "mM"
+  }
+ }
+}

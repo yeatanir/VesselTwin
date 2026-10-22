@@ -1,0 +1,23 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "T_furnace_C",
+   "value": "820",
+   "unit": "°C",
+   "span": "820 °C"
+  },
+  {
+   "key": "T_boat_S_C",
+   "value": "180",
+   "unit": "°C",
+   "span": "180 °C"
+  },
+  {
+   "key": "carrier",
+   "value": "N2",
+   "unit": "",
+   "span": "nitrogen carrier gas flow rate, selected for its inert nature and low cost, is kept constant within the range of 150"
+  }
+ ]
+}

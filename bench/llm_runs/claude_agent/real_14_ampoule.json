@@ -1,0 +1,23 @@
+{
+ "vessel": "ampoule",
+ "fields": [
+  {
+   "key": "T_source_C",
+   "value": "850",
+   "unit": "°C",
+   "span": "850 °C"
+  },
+  {
+   "key": "agent_mg_per_cm3",
+   "value": "5",
+   "unit": "mg/cm3",
+   "span": "5 mg/cm3"
+  },
+  {
+   "key": "L_cm",
+   "value": "5",
+   "unit": "cm",
+   "span": "5 cm"
+  }
+ ]
+}

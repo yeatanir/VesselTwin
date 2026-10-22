@@ -1,0 +1,11 @@
+{
+ "vessel": "ampoule",
+ "fields": [
+  {
+   "key": "L_cm",
+   "value": "7",
+   "unit": "inch",
+   "span": "7-inch"
+  }
+ ]
+}

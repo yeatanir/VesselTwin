@@ -1,0 +1,1768 @@
+{
+ "note": "OpenFOAM v2512 buoyantPimpleFoam + passive scalars, axisymmetric wedge; Tier 1 = vessels.cvd_tube.solve with current sourced constants",
+ "mesh_levels": {
+  "M1": {
+   "cells_per_cm": 1.0,
+   "n_cross": 8
+  },
+  "M2": {
+   "cells_per_cm": 2.0,
+   "n_cross": 16
+  },
+  "M3": {
+   "cells_per_cm": 4.0,
+   "n_cross": 32
+  }
+ },
+ "mesh_common": {
+  "src_refine": 4.0,
+  "wall_grading": 0.4,
+  "max_co": 1.0
+ },
+ "mesh": {
+  "default": {
+   "M1": {
+    "p_MoO3_Pa": 1.00662985244959,
+    "ratio_Mo_S": 0.0033138567909131197,
+    "supersaturation_MoO3_wallT": 21.634648268962255,
+    "ss_gasT": 12.085474547129442,
+    "MoO3_released_mol_s": 7.514649576798767e-09,
+    "T_gas_K": 871.7581618435357,
+    "drift": 3.3361872653348e-06
+   },
+   "M2": {
+    "p_MoO3_Pa": 1.0149477733261945,
+    "ratio_Mo_S": 0.0032259807130344347,
+    "supersaturation_MoO3_wallT": 21.81341834224836,
+    "ss_gasT": 11.887418060834275,
+    "MoO3_released_mol_s": 7.745273910715085e-09,
+    "T_gas_K": 872.1909621351783,
+    "drift": 3.059025335483412e-06
+   },
+   "M3": {
+    "p_MoO3_Pa": 1.0064022548566822,
+    "ratio_Mo_S": 0.0031117558687797906,
+    "supersaturation_MoO3_wallT": 21.629756705437252,
+    "ss_gasT": 11.56996178447443,
+    "MoO3_released_mol_s": 7.99968085549472e-09,
+    "T_gas_K": 872.5166713871006,
+    "drift": 3.4268044706298184e-06
+   },
+   "change_M1_to_M2_pct": {
+    "p_MoO3_Pa": 0.8263137494247008,
+    "ratio_Mo_S": -2.6517765680052596,
+    "supersaturation_MoO3_wallT": 0.8263137494247008,
+    "ss_gasT": -1.6387977610875848,
+    "MoO3_released_mol_s": 3.068996518857814,
+    "T_gas_K": 0.04964682988770619
+   },
+   "change_M2_to_M3_pct": {
+    "p_MoO3_Pa": -0.841966325174226,
+    "ratio_Mo_S": -3.540778895333241,
+    "supersaturation_MoO3_wallT": -0.841966325174226,
+    "ss_gasT": -2.6705233612147827,
+    "MoO3_released_mol_s": 3.2846733080373003,
+    "T_gas_K": 0.03734380039033258
+   },
+   "pass_lt2pct_M2_to_M3": false
+  },
+  "boat650_flow200": {
+   "M1": {
+    "p_MoO3_Pa": 0.37065683665981786,
+    "ratio_Mo_S": 0.0015386011307206079,
+    "supersaturation_MoO3_wallT": 7.9662154565627,
+    "ss_gasT": 2.159094952109812,
+    "MoO3_released_mol_s": 9.27670670694794e-10,
+    "T_gas_K": 884.5712173356886,
+    "drift": 7.054665140948657e-08
+   },
+   "M2": {
+    "p_MoO3_Pa": 0.35175757674504676,
+    "ratio_Mo_S": 0.0013816077296976764,
+    "supersaturation_MoO3_wallT": 7.56002956826942,
+    "ss_gasT": 1.9846384799352355,
+    "MoO3_released_mol_s": 9.724061272360255e-10,
+    "T_gas_K": 885.1447821269122,
+    "drift": 2.647820223078412e-07
+   },
+   "M3": {
+    "p_MoO3_Pa": 0.3797931877035867,
+    "ratio_Mo_S": 0.0014255352815710394,
+    "supersaturation_MoO3_wallT": 8.16257536066519,
+    "ss_gasT": 2.0937778432679064,
+    "MoO3_released_mol_s": 1.017531730917546e-09,
+    "T_gas_K": 885.5612458053733,
+    "drift": 1.4946900384060768e-07
+   },
+   "change_M1_to_M2_pct": {
+    "p_MoO3_Pa": -5.098856420694187,
+    "ratio_Mo_S": -10.203645239062265,
+    "supersaturation_MoO3_wallT": -5.098856420694187,
+    "ss_gasT": -8.08007410716709,
+    "MoO3_released_mol_s": 4.822342449150208,
+    "T_gas_K": 0.0648409964040253
+   },
+   "change_M2_to_M3_pct": {
+    "p_MoO3_Pa": 7.97015126666627,
+    "ratio_Mo_S": 3.1794518030798358,
+    "supersaturation_MoO3_wallT": 7.97015126666627,
+    "ss_gasT": 5.499206250209987,
+    "MoO3_released_mol_s": 4.64061284864441,
+    "T_gas_K": 0.04705034553333931
+   },
+   "pass_lt2pct_M2_to_M3": false
+  },
+  "hot850_flow50_sub8": {
+   "M1": {
+    "p_MoO3_Pa": 104.23473633626779,
+    "ratio_Mo_S": 0.297372495987362,
+    "supersaturation_MoO3_wallT": 0.11358659721650277,
+    "ss_gasT": 0.11358659721650277,
+    "MoO3_released_mol_s": 4.368034442137596e-08,
+    "T_gas_K": 1092.0460759830457,
+    "drift": 0.00019573591646393496
+   },
+   "M2": {
+    "p_MoO3_Pa": 111.64308621113445,
+    "ratio_Mo_S": 0.31301124880312775,
+    "supersaturation_MoO3_wallT": 0.1216596185801364,
+    "ss_gasT": 0.1216596185801364,
+    "MoO3_released_mol_s": 4.460087003709049e-08,
+    "T_gas_K": 1092.2274828561697,
+    "drift": 0.00020199669665021958
+   },
+   "M3": {
+    "p_MoO3_Pa": 116.8574609175792,
+    "ratio_Mo_S": 0.3230904808236739,
+    "supersaturation_MoO3_wallT": 0.12734182300003455,
+    "ss_gasT": 0.12734182300003455,
+    "MoO3_released_mol_s": 4.546096677813276e-08,
+    "T_gas_K": 1092.3214447049882,
+    "drift": 0.00018026166539120148
+   },
+   "change_M1_to_M2_pct": {
+    "p_MoO3_Pa": 7.107371434189513,
+    "ratio_Mo_S": 5.258977554007016,
+    "supersaturation_MoO3_wallT": 7.107371434189513,
+    "ss_gasT": 7.107371434189513,
+    "MoO3_released_mol_s": 2.1074138217281435,
+    "T_gas_K": 0.0166116501046476
+   },
+   "change_M2_to_M3_pct": {
+    "p_MoO3_Pa": 4.670575566662105,
+    "ratio_Mo_S": 3.220086197887939,
+    "supersaturation_MoO3_wallT": 4.670575566662105,
+    "ss_gasT": 4.670575566662105,
+    "MoO3_released_mol_s": 1.9284304102745287,
+    "T_gas_K": 0.008602772800836433
+   },
+   "pass_lt2pct_M2_to_M3": false
+  }
+ },
+ "agreement": {
+  "default": {
+   "values": {},
+   "tier1": {
+    "p_MoO3_Pa": 1.2615835025375,
+    "p_S2_Pa": 48.500728359588344,
+    "ratio_Mo_S": 0.02601164034453292,
+    "ss_wallT": 27.1726836187196,
+    "ss_gasT": 8.503775926147766,
+    "T_gas_K": 881.9568528819715,
+    "supply_mol_s": 2.6979354653386364e-09,
+    "sub_frac": 0.03704827598375937
+   },
+   "cfd": {
+    "p_MoO3_Pa": 1.0149477733261945,
+    "p_S2_Pa": 314.61681380342486,
+    "ratio_Mo_S": 0.0032259807130344347,
+    "ss_wallT": 21.81341834224836,
+    "ss_gasT": 11.887418060834275,
+    "T_gas_K": 872.1909621351783,
+    "supply_mol_s": 7.745273910715085e-09
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 0.8045030481809313,
+    "p_S2_Pa": 6.486847196826205,
+    "ratio_Mo_S": 0.1240206565331996,
+    "ss_wallT": 0.8027701145874612,
+    "ss_gasT": 1.39789878802925,
+    "T_gas_K": 0.9889270198254244,
+    "supply_mol_s": 2.8708151140831393
+   },
+   "drift": 3.059025335483412e-06,
+   "frac_released_taken_before_substrate_cfd": 0.903834262593681,
+   "tier1_sub_frac": 0.03704827598375937
+  },
+  "boat650": {
+   "values": {
+    "T_boat_Mo_C": 650.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 0.22956303187420726,
+    "p_S2_Pa": 48.50089302428856,
+    "ratio_Mo_S": 0.004733171237883091,
+    "ss_wallT": 4.944455617186909,
+    "ss_gasT": 1.5473827773261875,
+    "T_gas_K": 881.9568528819715,
+    "supply_mol_s": 2.2480956905671903e-10,
+    "sub_frac": 0.05589437501129352
+   },
+   "cfd": {
+    "p_MoO3_Pa": 0.2860684538050212,
+    "p_S2_Pa": 314.61680338325453,
+    "ratio_Mo_S": 0.0009092599337631157,
+    "ss_wallT": 6.148228530931078,
+    "ss_gasT": 3.3505292912444684,
+    "T_gas_K": 872.1909778800015,
+    "supply_mol_s": 6.679708983094569e-10
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 1.246143385846973,
+    "p_S2_Pa": 6.486824958577544,
+    "ratio_Mo_S": 0.1921037477971707,
+    "ss_wallT": 1.2434591402863155,
+    "ss_gasT": 2.165287956115191,
+    "T_gas_K": 0.9889270376775712,
+    "supply_mol_s": 2.9712743150222805
+   },
+   "drift": 3.166359018313969e-06,
+   "frac_released_taken_before_substrate_cfd": 0.6857134004045564,
+   "tier1_sub_frac": 0.05589437501129352
+  },
+  "boat750": {
+   "values": {
+    "T_boat_Mo_C": 750.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 3.70698339535443,
+    "p_S2_Pa": 48.50033818225544,
+    "ratio_Mo_S": 0.07643211437875468,
+    "ss_wallT": 79.84305975721078,
+    "ss_gasT": 24.987134099835373,
+    "T_gas_K": 881.9568528819715,
+    "supply_mol_s": 2.5941297160477425e-08,
+    "sub_frac": 0.011835315317457457
+   },
+   "cfd": {
+    "p_MoO3_Pa": 1.500449718619966,
+    "p_S2_Pa": 314.61682074734415,
+    "ratio_Mo_S": 0.004769133815082683,
+    "ss_wallT": 32.247903068453816,
+    "ss_gasT": 17.573783456830224,
+    "T_gas_K": 872.1909628178403,
+    "supply_mol_s": 9.790966997353734e-08
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 0.4047629996131951,
+    "p_S2_Pa": 6.4868995256295205,
+    "ratio_Mo_S": 0.06239698919553018,
+    "ss_wallT": 0.4038911229919573,
+    "ss_gasT": 0.7033132886154402,
+    "T_gas_K": 0.9889270205994554,
+    "supply_mol_s": 3.7742781082939265
+   },
+   "drift": 3.1492790686371563e-06,
+   "frac_released_taken_before_substrate_cfd": 0.9887537113786952,
+   "tier1_sub_frac": 0.011835315317457457
+  },
+  "boat800": {
+   "values": {
+    "T_boat_Mo_C": 800.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 4.49437093200823,
+    "p_S2_Pa": 48.50021255012279,
+    "ratio_Mo_S": 0.09266703578594629,
+    "ss_wallT": 96.8022482499128,
+    "ss_gasT": 30.29456493202188,
+    "T_gas_K": 881.9568528819715,
+    "supply_mol_s": 1.68473949391725e-07,
+    "sub_frac": 0.0022181317499536434
+   },
+   "cfd": {
+    "p_MoO3_Pa": 1.5005192543777188,
+    "p_S2_Pa": 314.616785454136,
+    "ratio_Mo_S": 0.004769355367393329,
+    "ss_wallT": 32.24939754197598,
+    "ss_gasT": 17.57454845132652,
+    "T_gas_K": 872.1910120204186,
+    "supply_mol_s": 1.0180457648310287e-07
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 0.333866357957072,
+    "p_S2_Pa": 6.486915601225329,
+    "ratio_Mo_S": 0.05146765866570041,
+    "ss_wallT": 0.3331471957006436,
+    "ss_gasT": 0.580122160221219,
+    "T_gas_K": 0.9889270763874207,
+    "supply_mol_s": 0.6042748855278112
+   },
+   "drift": 3.06711904074497e-06,
+   "frac_released_taken_before_substrate_cfd": 0.9891834752186273,
+   "tier1_sub_frac": 0.0022181317499536434
+  },
+  "flow50": {
+   "values": {
+    "flow_sccm": 50.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 0.6106635655267049,
+    "p_S2_Pa": 91.06408926854023,
+    "ratio_Mo_S": 0.006705865840550056,
+    "ss_wallT": 13.152809806216665,
+    "ss_gasT": 7.070656400939245,
+    "T_gas_K": 872.391840928294,
+    "supply_mol_s": 2.3818392144949054e-09,
+    "sub_frac": 0.021177415220904078
+   },
+   "cfd": {
+    "p_MoO3_Pa": 0.6291490964752592,
+    "p_S2_Pa": 351.2005380175047,
+    "ratio_Mo_S": 0.0017914240679320966,
+    "ss_wallT": 13.521772057380213,
+    "ss_gasT": 11.177298220124122,
+    "T_gas_K": 864.9594496117444,
+    "supply_mol_s": 4.680969520568118e-09
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 1.0302712196897,
+    "p_S2_Pa": 3.8566304329014294,
+    "ratio_Mo_S": 0.26714284337444383,
+    "ss_wallT": 1.0280519719055892,
+    "ss_gasT": 1.580800647962382,
+    "T_gas_K": 0.9914804438007571,
+    "supply_mol_s": 1.9652751924150211
+   },
+   "drift": 9.675419471655289e-05,
+   "frac_released_taken_before_substrate_cfd": 0.9506824840937633,
+   "tier1_sub_frac": 0.021177415220904078
+  },
+  "flow200": {
+   "values": {
+    "flow_sccm": 200.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 1.2719760742125403,
+    "p_S2_Pa": 25.042101749910387,
+    "ratio_Mo_S": 0.05079350315382742,
+    "ss_wallT": 27.39652457854726,
+    "ss_gasT": 3.5337173323544078,
+    "T_gas_K": 898.0564765357776,
+    "supply_mol_s": 2.8777526031521578e-09,
+    "sub_frac": 0.03387763934396321
+   },
+   "cfd": {
+    "p_MoO3_Pa": 1.8398694740992658,
+    "p_S2_Pa": 254.60017374127156,
+    "ratio_Mo_S": 0.007226505178935849,
+    "ss_wallT": 39.54276622740187,
+    "ss_gasT": 10.38063395248578,
+    "T_gas_K": 885.1448269976321,
+    "supply_mol_s": 1.1271163149217598e-08
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 1.446465473211278,
+    "p_S2_Pa": 10.166885203322947,
+    "ratio_Mo_S": 0.1422722342471729,
+    "ss_wallT": 1.4433497254015086,
+    "ss_gasT": 2.9375960146675006,
+    "T_gas_K": 0.9856226753266657,
+    "supply_mol_s": 3.9166546619996745
+   },
+   "drift": 2.923212112371232e-07,
+   "frac_released_taken_before_substrate_cfd": 0.7604138466541052,
+   "tier1_sub_frac": 0.03387763934396321
+  },
+  "flow400": {
+   "values": {
+    "flow_sccm": 400.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 0.8611208953549209,
+    "p_S2_Pa": 12.72556191776555,
+    "ratio_Mo_S": 0.06766859498382945,
+    "ss_wallT": 18.547298375322793,
+    "ss_gasT": 0.6907970050673659,
+    "T_gas_K": 921.5570263767411,
+    "supply_mol_s": 2.97376001189249e-09,
+    "sub_frac": 0.0212891432620774
+   },
+   "cfd": {
+    "p_MoO3_Pa": 2.73447566650064,
+    "p_S2_Pa": 180.71662021838475,
+    "ratio_Mo_S": 0.015131290432480404,
+    "ss_wallT": 58.76978424672743,
+    "ss_gasT": 5.124342303202956,
+    "T_gas_K": 905.3840523337094,
+    "supply_mol_s": 1.4502469719219598e-08
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 3.1754840478857433,
+    "p_S2_Pa": 14.201071935856515,
+    "ratio_Mo_S": 0.22360875729865948,
+    "ss_wallT": 3.168643920934637,
+    "ss_gasT": 7.418014649185161,
+    "T_gas_K": 0.9824503817125474,
+    "supply_mol_s": 4.876812406254087
+   },
+   "drift": 8.985650445936244e-09,
+   "frac_released_taken_before_substrate_cfd": 0.4465155738376766,
+   "tier1_sub_frac": 0.0212891432620774
+  },
+  "sub6": {
+   "values": {
+    "x_substrate_cm": 6.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 3.6745572260537465,
+    "p_S2_Pa": 48.50034337824709,
+    "ratio_Mo_S": 0.07576353011351718,
+    "ss_wallT": 0.039062899668002665,
+    "ss_gasT": 0.036740521132438295,
+    "T_gas_K": 1014.3491029344987,
+    "supply_mol_s": 2.6979354653386364e-09,
+    "sub_frac": 0.0
+   },
+   "cfd": {
+    "p_MoO3_Pa": 10.517342617205731,
+    "p_S2_Pa": 314.61643023284574,
+    "ratio_Mo_S": 0.0334290952618778,
+    "ss_wallT": 0.11179113645438021,
+    "ss_gasT": 0.10916445414393779,
+    "T_gas_K": 1013.4863664500919,
+    "supply_mol_s": 7.742882417784372e-09
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 2.8622067830743037,
+    "p_S2_Pa": 6.4868907788796095,
+    "ratio_Mo_S": 0.44122937793144923,
+    "ss_wallT": 2.861823812479311,
+    "ss_gasT": 2.971227701164974,
+    "T_gas_K": 0.9991494678884115,
+    "supply_mol_s": 2.869928698169402
+   },
+   "drift": 4.769327740516971e-06,
+   "frac_released_taken_before_substrate_cfd": 0.0031790558090425414,
+   "tier1_sub_frac": 0.0
+  },
+  "sub20": {
+   "values": {
+    "x_substrate_cm": 20.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 0.007185126929907556,
+    "p_S2_Pa": 0.023384871001836036,
+    "ratio_Mo_S": 0.3072553587891686,
+    "ss_wallT": 1.7948030590250066e+19,
+    "ss_gasT": 1.708870657411116e+19,
+    "T_gas_K": 453.3629559856003,
+    "supply_mol_s": 2.6979354653386364e-09,
+    "sub_frac": 0.00013502471270707183
+   },
+   "cfd": {
+    "p_MoO3_Pa": 5.6122146104667985e-05,
+    "p_S2_Pa": 0.03815369937283684,
+    "ratio_Mo_S": 0.0014709490043480192,
+    "ss_wallT": 1.4018986789006165e+17,
+    "ss_gasT": 1.2261069193206085e+17,
+    "T_gas_K": 453.73213344138844,
+    "supply_mol_s": 7.745268980336207e-09
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 0.007810877476786628,
+    "p_S2_Pa": 1.631554836023737,
+    "ratio_Mo_S": 0.004787382749465241,
+    "ss_wallT": 0.007810877476786628,
+    "ss_gasT": 0.007174954488235645,
+    "T_gas_K": 1.000814308824561,
+    "supply_mol_s": 2.8708132866195317
+   },
+   "drift": 2.983248465149302e-06,
+   "frac_released_taken_before_substrate_cfd": 0.9999946824731636,
+   "tier1_sub_frac": 0.00013502471270707183
+  },
+  "furn700": {
+   "values": {
+    "T_furnace_C": 700.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 0.40735300949794456,
+    "p_S2_Pa": 48.500864394077205,
+    "ratio_Mo_S": 0.008398881434115005,
+    "ss_wallT": 94.20293246308157,
+    "ss_gasT": 28.036653902842918,
+    "T_gas_K": 842.2112293941509,
+    "supply_mol_s": 2.6979354653386364e-09,
+    "sub_frac": 0.012080587069336521
+   },
+   "cfd": {
+    "p_MoO3_Pa": 0.17188845521469306,
+    "p_S2_Pa": 308.28656291646126,
+    "ratio_Mo_S": 0.0005575606461358193,
+    "ss_wallT": 39.663305164011646,
+    "ss_gasT": 20.840215609996736,
+    "T_gas_K": 833.0320388422434,
+    "supply_mol_s": 1.0500758328569819e-08
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 0.4219643680220813,
+    "p_S2_Pa": 6.35631069194116,
+    "ratio_Mo_S": 0.06638510741098107,
+    "ss_wallT": 0.4210410878616313,
+    "ss_gasT": 0.7433203577793404,
+    "T_gas_K": 0.989101082683841,
+    "supply_mol_s": 3.892145851328507
+   },
+   "drift": 2.2958327310362847e-06,
+   "frac_released_taken_before_substrate_cfd": 0.9879873283076468,
+   "tier1_sub_frac": 0.012080587069336521
+  },
+  "furn850": {
+   "values": {
+    "T_furnace_C": 850.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 3.6605529131969603,
+    "p_S2_Pa": 48.50034561247076,
+    "ratio_Mo_S": 0.07547477996230469,
+    "ss_wallT": 1.1894659228703937,
+    "ss_gasT": 0.40751462192707805,
+    "T_gas_K": 961.3415341711324,
+    "supply_mol_s": 2.6979354653386364e-09,
+    "sub_frac": 0.02914545384017421
+   },
+   "cfd": {
+    "p_MoO3_Pa": 6.10178219980799,
+    "p_S2_Pa": 325.3500172057113,
+    "ratio_Mo_S": 0.018754516296674954,
+    "ss_wallT": 1.978582551146678,
+    "ss_gasT": 1.1500657075485805,
+    "T_gas_K": 950.4299021327805,
+    "supply_mol_s": 8.181314508452361e-09
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 1.6669017890193454,
+    "p_S2_Pa": 6.708199974600902,
+    "ratio_Mo_S": 0.248487194080483,
+    "ss_wallT": 1.6634209632269288,
+    "ss_gasT": 2.8221458707667595,
+    "T_gas_K": 0.9886495780630555,
+    "supply_mol_s": 3.032435213355064
+   },
+   "drift": 5.884034335323918e-06,
+   "frac_released_taken_before_substrate_cfd": 0.45267265279249336,
+   "tier1_sub_frac": 0.02914545384017421
+  },
+  "boatS150": {
+   "values": {
+    "T_boat_S_C": 150.0
+   },
+   "tier1": {
+    "p_MoO3_Pa": 1.2619004732190024,
+    "p_S2_Pa": 9.857817829306867,
+    "ratio_Mo_S": 0.1280101230383287,
+    "ss_wallT": 27.17951070866454,
+    "ss_gasT": 8.505912485198541,
+    "T_gas_K": 881.9568528819715,
+    "supply_mol_s": 2.6979354653386364e-09,
+    "sub_frac": 0.03704718801273182
+   },
+   "cfd": {
+    "p_MoO3_Pa": 1.0149477952861734,
+    "p_S2_Pa": 67.10893357722153,
+    "ratio_Mo_S": 0.015123885020736975,
+    "ss_wallT": 21.81341881421571,
+    "ss_gasT": 11.887377905149748,
+    "T_gas_K": 872.1910216048472,
+    "supply_mol_s": 7.745274727418525e-09
+   },
+   "cfd_over_tier1": {
+    "p_MoO3_Pa": 0.8043009863504739,
+    "p_S2_Pa": 6.807686522438016,
+    "ratio_Mo_S": 0.11814600800132495,
+    "ss_wallT": 0.802568488006733,
+    "ss_gasT": 1.3975429356739117,
+    "T_gas_K": 0.9889270872546514,
+    "supply_mol_s": 2.870815416797363
+   },
+   "drift": 3.5901302655183542e-06,
+   "frac_released_taken_before_substrate_cfd": 0.9038342650259958,
+   "tier1_sub_frac": 0.03704718801273182
+  }
+ },
+ "agreement_summary": {
+  "p_MoO3_Pa": {
+   "median": 0.9173871339353157,
+   "min": 0.007810877476786628,
+   "max": 3.1754840478857433
+  },
+  "p_S2_Pa": {
+   "median": 6.486895152254565,
+   "min": 1.631554836023737,
+   "max": 14.201071935856515
+  },
+  "ratio_Mo_S": {
+   "median": 0.13314644539018625,
+   "min": 0.004787382749465241,
+   "max": 0.44122937793144923
+  },
+  "ss_wallT": {
+   "median": 0.9154110432465252,
+   "min": 0.007810877476786628,
+   "max": 3.168643920934637
+  },
+  "ss_gasT": {
+   "median": 1.489349717995816,
+   "min": 0.007174954488235645,
+   "max": 7.418014649185161
+  },
+  "T_gas_K": {
+   "median": 0.988927057032496,
+   "min": 0.9824503817125474,
+   "max": 1.000814308824561
+  },
+  "supply_mol_s": {
+   "median": 2.921044865909822,
+   "min": 0.6042748855278112,
+   "max": 4.876812406254087
+  }
+ },
+ "sweep": [
+  {
+   "id": "v5sweep_00",
+   "values": {
+    "flow_sccm": 912.1833154012628,
+    "T_boat_Mo_C": 778.8159474670194,
+    "T_furnace_C": 826.24203459246,
+    "tube_id_in": 2.220891898196782,
+    "x_substrate_cm": 13.780288894935811
+   },
+   "ok": true,
+   "drift": 2.3378179725419557e-08,
+   "ratio_Mo_S": 0.4411128023575495,
+   "supersaturation_MoO3_wallT": 471548.83017124305,
+   "ss_gasT": 201.72132639498398,
+   "p_MoO3_Pa": 56.667139392564195,
+   "p_S2_Pa": 128.46405520244215,
+   "theta_gas": -0.26150414445051595,
+   "frac_upstream_uptake": 0.4366438572633481,
+   "ss_wall": 471548.83017124305,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_01",
+   "values": {
+    "flow_sccm": 331.5742267058102,
+    "T_boat_Mo_C": 722.6047435092958,
+    "T_furnace_C": 842.7516317835183,
+    "tube_id_in": 1.2632711424295393,
+    "x_substrate_cm": 1.4210057905373334
+   },
+   "ok": true,
+   "drift": 7.419797021235297e-08,
+   "ratio_Mo_S": 0.08046153017210694,
+   "supersaturation_MoO3_wallT": 0.019344331078818083,
+   "ss_gasT": 0.019344331078818083,
+   "p_MoO3_Pa": 17.75166524056345,
+   "p_S2_Pa": 220.62301329085713,
+   "theta_gas": 0.0038025758945431907,
+   "frac_upstream_uptake": -0.03702308799971932,
+   "ss_wall": 0.019344331078818083,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_02",
+   "values": {
+    "flow_sccm": 167.89610946317802,
+    "T_boat_Mo_C": 627.4162990868932,
+    "T_furnace_C": 859.8085748724113,
+    "tube_id_in": 1.420660071428093,
+    "x_substrate_cm": 8.249527051036225
+   },
+   "ok": true,
+   "drift": 2.418681239801934e-05,
+   "ratio_Mo_S": 0.000837618441234334,
+   "supersaturation_MoO3_wallT": 0.00026404037274788903,
+   "ss_gasT": 0.00026404037274788903,
+   "p_MoO3_Pa": 0.24230128650695626,
+   "p_S2_Pa": 289.2740591406935,
+   "theta_gas": -0.0027192639467070404,
+   "frac_upstream_uptake": 0.018698652638793112,
+   "ss_wall": 0.00026404037274788903,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_03",
+   "values": {
+    "flow_sccm": 49.130368416905036,
+    "T_boat_Mo_C": 608.578994181256,
+    "T_furnace_C": 764.6965799557511,
+    "tube_id_in": 0.6651892001664923,
+    "x_substrate_cm": 16.060957644219066
+   },
+   "ok": true,
+   "drift": 1.8867178670500806e-06,
+   "ratio_Mo_S": 7.180606587328746e-06,
+   "supersaturation_MoO3_wallT": 22753201915.161594,
+   "ss_gasT": 3285034667.888741,
+   "p_MoO3_Pa": 2.421979126975541e-05,
+   "p_S2_Pa": 3.372945025632633,
+   "theta_gas": -0.053862090208036416,
+   "frac_upstream_uptake": 0.9998039337940637,
+   "ss_wall": 22753201915.161594,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_04",
+   "values": {
+    "flow_sccm": 106.96044865626087,
+    "T_boat_Mo_C": 770.1326986261679,
+    "T_furnace_C": 791.8849923561445,
+    "tube_id_in": 2.4343006998982832,
+    "x_substrate_cm": 3.4264372415385504
+   },
+   "ok": true,
+   "drift": 0.00135670830746637,
+   "ratio_Mo_S": 0.8291386413617524,
+   "supersaturation_MoO3_wallT": 0.33186335886422463,
+   "ss_gasT": 0.34670584255032466,
+   "p_MoO3_Pa": 239.77279139069304,
+   "p_S2_Pa": 289.1829899483365,
+   "theta_gas": 0.0014366768166227722,
+   "frac_upstream_uptake": -0.007355708810260486,
+   "ss_wall": 0.33186335886422463,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_05",
+   "values": {
+    "flow_sccm": 34.45207610238865,
+    "T_boat_Mo_C": 657.6434516740908,
+    "T_furnace_C": 845.1670186896949,
+    "tube_id_in": 0.9984826996168764,
+    "x_substrate_cm": 13.014191579563578
+   },
+   "ok": true,
+   "drift": 0.0004960489119645306,
+   "ratio_Mo_S": 0.0008348186848014135,
+   "supersaturation_MoO3_wallT": 10.378965931680288,
+   "ss_gasT": 8.577177376955705,
+   "p_MoO3_Pa": 0.3053593472157946,
+   "p_S2_Pa": 365.77924377487244,
+   "theta_gas": -0.005788427876949364,
+   "frac_upstream_uptake": 0.8255323078128223,
+   "ss_wall": 10.378965931680288,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_06",
+   "values": {
+    "flow_sccm": 543.8173156179613,
+    "T_boat_Mo_C": 729.5457364324787,
+    "T_furnace_C": 864.6218745785757,
+    "tube_id_in": 2.253426807262932,
+    "x_substrate_cm": 18.47658419516152
+   },
+   "ok": true,
+   "drift": 4.0441351563114125e-06,
+   "ratio_Mo_S": 0.752329179470642,
+   "supersaturation_MoO3_wallT": 3.4421045362666656e+21,
+   "ss_gasT": 937582786369792.2,
+   "p_MoO3_Pa": 1.377976144776673,
+   "p_S2_Pa": 1.8316133181837397,
+   "theta_gas": -0.512683779316915,
+   "frac_upstream_uptake": 0.9294862499102119,
+   "ss_wall": 3.4421045362666656e+21,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_07",
+   "values": {
+    "flow_sccm": 68.01847598666907,
+    "T_boat_Mo_C": 793.5091845467128,
+    "T_furnace_C": 701.6140207495666,
+    "tube_id_in": 1.2138917595928942,
+    "x_substrate_cm": 11.821110173329817
+   },
+   "ok": true,
+   "drift": 9.569736895875813e-05,
+   "ratio_Mo_S": 0.0006158434680541639,
+   "supersaturation_MoO3_wallT": 22.848038709442026,
+   "ss_gasT": 18.4479969035077,
+   "p_MoO3_Pa": 0.2038876183455515,
+   "p_S2_Pa": 331.07052184828797,
+   "theta_gas": -0.006444950306467514,
+   "frac_upstream_uptake": 0.9905202311045471,
+   "ss_wall": 22.848038709442026,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_08",
+   "values": {
+    "flow_sccm": 132.2697198780783,
+    "T_boat_Mo_C": 796.7117389456338,
+    "T_furnace_C": 814.4825068258729,
+    "tube_id_in": 1.1089962124914732,
+    "x_substrate_cm": 17.89642787045823
+   },
+   "ok": true,
+   "drift": 3.831085801930811e-06,
+   "ratio_Mo_S": 0.4587548913854599,
+   "supersaturation_MoO3_wallT": 1.2401014018712304e+20,
+   "ss_gasT": 1.954910696601913e+18,
+   "p_MoO3_Pa": 0.04964492306605182,
+   "p_S2_Pa": 0.1082166620962274,
+   "theta_gas": -0.12205753453263021,
+   "frac_upstream_uptake": 0.9999146546928562,
+   "ss_wall": 1.2401014018712304e+20,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_09",
+   "values": {
+    "flow_sccm": 264.121382407016,
+    "T_boat_Mo_C": 705.6075990766687,
+    "T_furnace_C": 874.360500487987,
+    "tube_id_in": 1.0075115831266923,
+    "x_substrate_cm": 19.33788451699964
+   },
+   "ok": true,
+   "drift": 8.301451437375817e-08,
+   "ratio_Mo_S": 0.3771624387510597,
+   "supersaturation_MoO3_wallT": 6.2184400923724685e+19,
+   "ss_gasT": 5.294595465708168e+18,
+   "p_MoO3_Pa": 0.02489425296277018,
+   "p_S2_Pa": 0.06600406192410176,
+   "theta_gas": -0.07098664263229576,
+   "frac_upstream_uptake": 0.9973919600855634,
+   "ss_wall": 6.2184400923724685e+19,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_10",
+   "values": {
+    "flow_sccm": 124.12543725957214,
+    "T_boat_Mo_C": 744.268327151209,
+    "T_furnace_C": 833.1348353440807,
+    "tube_id_in": 0.5354010692006075,
+    "x_substrate_cm": 2.486208903848045
+   },
+   "ok": true,
+   "drift": 3.835820550079916e-13,
+   "ratio_Mo_S": 0.24349407592093236,
+   "supersaturation_MoO3_wallT": 0.08751683633698898,
+   "ss_gasT": 0.08751683633698898,
+   "p_MoO3_Pa": 80.31136229200276,
+   "p_S2_Pa": 329.82881406150324,
+   "theta_gas": 0.00021338142648514628,
+   "frac_upstream_uptake": -0.001250647507511582,
+   "ss_wall": 0.08751683633698898,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_11",
+   "values": {
+    "flow_sccm": 206.4951885094097,
+    "T_boat_Mo_C": 667.1909514063456,
+    "T_furnace_C": 810.0021486179346,
+    "tube_id_in": 1.7693545254048781,
+    "x_substrate_cm": 17.531596361108242
+   },
+   "ok": true,
+   "drift": 4.520540537655826e-05,
+   "ratio_Mo_S": 0.04434952068751459,
+   "supersaturation_MoO3_wallT": 6.320411655817428e+19,
+   "ss_gasT": 1760053696842773.5,
+   "p_MoO3_Pa": 0.025302475259310713,
+   "p_S2_Pa": 0.5705242101169752,
+   "theta_gas": -0.3342674342363257,
+   "frac_upstream_uptake": 0.9854042709759372,
+   "ss_wall": 6.320411655817428e+19,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_12",
+   "values": {
+    "flow_sccm": 43.58737119995352,
+    "T_boat_Mo_C": 631.2656980717508,
+    "T_furnace_C": 895.298603635192,
+    "tube_id_in": 1.0716511062773544,
+    "x_substrate_cm": 11.962487153290608
+   },
+   "ok": true,
+   "drift": 0.0004448653886681697,
+   "ratio_Mo_S": 0.0005629123464919357,
+   "supersaturation_MoO3_wallT": 0.010593502809846398,
+   "ss_gasT": 0.009986809605788051,
+   "p_MoO3_Pa": 0.20292028285709618,
+   "p_S2_Pa": 360.4829137639162,
+   "theta_gas": -0.0018764499513107223,
+   "frac_upstream_uptake": 0.5281951479351875,
+   "ss_wall": 0.010593502809846398,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_13",
+   "values": {
+    "flow_sccm": 609.6532133500546,
+    "T_boat_Mo_C": 715.7454943770417,
+    "T_furnace_C": 730.1938293042057,
+    "tube_id_in": 1.601782113955286,
+    "x_substrate_cm": 15.428745954149578
+   },
+   "ok": true,
+   "drift": 3.504040835267119e-08,
+   "ratio_Mo_S": 0.012672842200383491,
+   "supersaturation_MoO3_wallT": 4858014779927.821,
+   "ss_gasT": 11173771.850503327,
+   "p_MoO3_Pa": 1.7346222215938527,
+   "p_S2_Pa": 136.8771262330846,
+   "theta_gas": -0.43223405769097434,
+   "frac_upstream_uptake": 0.7752215585909004,
+   "ss_wall": 4858014779927.821,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_14",
+   "values": {
+    "flow_sccm": 1162.4273644443165,
+    "T_boat_Mo_C": 685.1472061843369,
+    "T_furnace_C": 713.8310455388201,
+    "tube_id_in": 2.060504126195572,
+    "x_substrate_cm": 10.474305465011291
+   },
+   "ok": true,
+   "drift": 1.838400787157468e-08,
+   "ratio_Mo_S": 0.01973770405980223,
+   "supersaturation_MoO3_wallT": 3.3112654174644205,
+   "ss_gasT": 0.46006524614313793,
+   "p_MoO3_Pa": 1.8059537709518316,
+   "p_S2_Pa": 91.49766180909732,
+   "theta_gas": -0.06335035852491917,
+   "frac_upstream_uptake": -0.6125888320859247,
+   "ss_wall": 3.3112654174644205,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_15",
+   "values": {
+    "flow_sccm": 1311.9940032878276,
+    "T_boat_Mo_C": 664.5755261391727,
+    "T_furnace_C": 686.2904526158405,
+    "tube_id_in": 1.6893066504653926,
+    "x_substrate_cm": 12.467145082221194
+   },
+   "ok": true,
+   "drift": 4.051501356627796e-10,
+   "ratio_Mo_S": 0.005249574476887422,
+   "supersaturation_MoO3_wallT": 1269.4649506944752,
+   "ss_gasT": 4.070143620735031,
+   "p_MoO3_Pa": 0.40295633333638436,
+   "p_S2_Pa": 76.75980883984053,
+   "theta_gas": -0.18755008486068384,
+   "frac_upstream_uptake": -0.16518863035506826,
+   "ss_wall": 1269.4649506944752,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_16",
+   "values": {
+    "flow_sccm": 58.756671128093686,
+    "T_boat_Mo_C": 788.5162111580528,
+    "T_furnace_C": 653.1697063817229,
+    "tube_id_in": 1.4575269794405232,
+    "x_substrate_cm": 9.091515075102246
+   },
+   "ok": true,
+   "drift": 0.000514217091628133,
+   "ratio_Mo_S": 0.0009187061478836623,
+   "supersaturation_MoO3_wallT": 1.5482108231644085,
+   "ss_gasT": 1.6944094799476792,
+   "p_MoO3_Pa": 0.30275364896700496,
+   "p_S2_Pa": 329.54351036447326,
+   "theta_gas": 0.0027613016851477335,
+   "frac_upstream_uptake": 0.9667933609074832,
+   "ss_wall": 1.5482108231644085,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_17",
+   "values": {
+    "flow_sccm": 90.51787250381534,
+    "T_boat_Mo_C": 643.9315639028473,
+    "T_furnace_C": 690.3438582408875,
+    "tube_id_in": 2.1147020478506553,
+    "x_substrate_cm": 14.750355799329853
+   },
+   "ok": true,
+   "drift": 0.0012647250964181733,
+   "ratio_Mo_S": 0.0002172002008791239,
+   "supersaturation_MoO3_wallT": 287996636.9667505,
+   "ss_gasT": 27040998.03543251,
+   "p_MoO3_Pa": 0.014940646365910394,
+   "p_S2_Pa": 68.78744267011591,
+   "theta_gas": -0.06747315870543937,
+   "frac_upstream_uptake": 0.9779136292758361,
+   "ss_wall": 287996636.9667505,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_18",
+   "values": {
+    "flow_sccm": 707.7729134715435,
+    "T_boat_Mo_C": 613.1585908243046,
+    "T_furnace_C": 708.81437320763,
+    "tube_id_in": 0.7165233359429167,
+    "x_substrate_cm": 3.0571644393306805
+   },
+   "ok": true,
+   "drift": 7.630758691590245e-09,
+   "ratio_Mo_S": 0.0003228930672436556,
+   "supersaturation_MoO3_wallT": 0.0018837276362482017,
+   "ss_gasT": 0.002173891306404355,
+   "p_MoO3_Pa": 0.03999244879083512,
+   "p_S2_Pa": 123.85663505329073,
+   "theta_gas": 0.0045437939321637515,
+   "frac_upstream_uptake": 0.0016723495650319276,
+   "ss_wall": 0.0018837276362482017,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_19",
+   "values": {
+    "flow_sccm": 83.58375134381694,
+    "T_boat_Mo_C": 647.2263128376745,
+    "T_furnace_C": 780.0115642899154,
+    "tube_id_in": 0.8252406304232299,
+    "x_substrate_cm": 5.215430500493505
+   },
+   "ok": true,
+   "drift": 3.024280655461453e-06,
+   "ratio_Mo_S": 0.002574981385306364,
+   "supersaturation_MoO3_wallT": 0.002257868650257527,
+   "ss_gasT": 0.0022229960223293472,
+   "p_MoO3_Pa": 0.8536739321307962,
+   "p_S2_Pa": 331.52625374386093,
+   "theta_gas": -0.0005084869219228707,
+   "frac_upstream_uptake": -4.193974771826703e-05,
+   "ss_wall": 0.002257868650257527,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_20",
+   "values": {
+    "flow_sccm": 363.9421774676203,
+    "T_boat_Mo_C": 702.318775372151,
+    "T_furnace_C": 882.6618448980605,
+    "tube_id_in": 1.3803167603502906,
+    "x_substrate_cm": 10.015689801187987
+   },
+   "ok": true,
+   "drift": 6.589431045256333e-08,
+   "ratio_Mo_S": 0.03171964483994183,
+   "supersaturation_MoO3_wallT": 0.007572377333708509,
+   "ss_gasT": 0.007572377333708509,
+   "p_MoO3_Pa": 6.9489250858829354,
+   "p_S2_Pa": 219.07323114578983,
+   "theta_gas": -0.02312565776520466,
+   "frac_upstream_uptake": 0.009317846928281082,
+   "ss_wall": 0.007572377333708509,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_21",
+   "values": {
+    "flow_sccm": 1062.3135623656265,
+    "T_boat_Mo_C": 698.9738375377495,
+    "T_furnace_C": 795.3671404800352,
+    "tube_id_in": 1.7305651384791632,
+    "x_substrate_cm": 5.569275247036919
+   },
+   "ok": true,
+   "drift": 5.889577714413008e-11,
+   "ratio_Mo_S": 0.024216591718835955,
+   "supersaturation_MoO3_wallT": 0.003861574690013357,
+   "ss_gasT": 0.0038392082010212563,
+   "p_MoO3_Pa": 2.5525629963058933,
+   "p_S2_Pa": 105.4055428584725,
+   "theta_gas": -0.0001907726858476141,
+   "frac_upstream_uptake": -0.009523081994068816,
+   "ss_wall": 0.003861574690013357,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_22",
+   "values": {
+    "flow_sccm": 214.01888922877527,
+    "T_boat_Mo_C": 693.035147780224,
+    "T_furnace_C": 722.8196776428027,
+    "tube_id_in": 1.332599013232087,
+    "x_substrate_cm": 11.221636354106273
+   },
+   "ok": true,
+   "drift": 1.8211813532786891e-06,
+   "ratio_Mo_S": 0.007457746753900569,
+   "supersaturation_MoO3_wallT": 12.003496420041389,
+   "ss_gasT": 5.097751283187605,
+   "p_MoO3_Pa": 1.8377501414347477,
+   "p_S2_Pa": 246.42163405100382,
+   "theta_gas": -0.02663558825594026,
+   "frac_upstream_uptake": 0.6549241497527589,
+   "ss_wall": 12.003496420041389,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_23",
+   "values": {
+    "flow_sccm": 679.7273515155638,
+    "T_boat_Mo_C": 757.2662629602714,
+    "T_furnace_C": 781.7410783622888,
+    "tube_id_in": 1.8718538967560132,
+    "x_substrate_cm": 18.69664265150849
+   },
+   "ok": true,
+   "drift": 3.0595800337707146e-08,
+   "ratio_Mo_S": 2.9333203098154113,
+   "supersaturation_MoO3_wallT": 1.0849792291160721e+22,
+   "ss_gasT": 5140052604207298.0,
+   "p_MoO3_Pa": 4.343492417350295,
+   "p_S2_Pa": 1.4807426256233243,
+   "theta_gas": -0.4901631032423702,
+   "frac_upstream_uptake": 0.9093609221708976,
+   "ss_wall": 1.0849792291160721e+22,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_24",
+   "values": {
+    "flow_sccm": 44.59266375726429,
+    "T_boat_Mo_C": 745.7894230645054,
+    "T_furnace_C": 851.5999603524219,
+    "tube_id_in": 1.5593418130402719,
+    "x_substrate_cm": 7.735433955227196
+   },
+   "ok": true,
+   "drift": 0.0011324822703644433,
+   "ratio_Mo_S": 0.21847703156691933,
+   "supersaturation_MoO3_wallT": 0.0819198198642728,
+   "ss_gasT": 0.0819198198642728,
+   "p_MoO3_Pa": 75.1751618018048,
+   "p_S2_Pa": 344.0872537614038,
+   "theta_gas": 0.003450740587708041,
+   "frac_upstream_uptake": 0.2220116899028074,
+   "ss_wall": 0.0819198198642728,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_25",
+   "values": {
+    "flow_sccm": 154.31404126124437,
+    "T_boat_Mo_C": 637.5901847640581,
+    "T_furnace_C": 754.1080203083843,
+    "tube_id_in": 0.5869133353185673,
+    "x_substrate_cm": 5.95351299801675
+   },
+   "ok": true,
+   "drift": 2.220446049250313e-16,
+   "ratio_Mo_S": 0.0014251219579444667,
+   "supersaturation_MoO3_wallT": 0.003705562759689145,
+   "ss_gasT": 0.0034797014530642883,
+   "p_MoO3_Pa": 0.41953336742787856,
+   "p_S2_Pa": 294.38418592117904,
+   "theta_gas": -0.0020330581484011017,
+   "frac_upstream_uptake": -1.5829104040188113e-05,
+   "ss_wall": 0.003705562759689145,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_26",
+   "values": {
+    "flow_sccm": 63.59358221379911,
+    "T_boat_Mo_C": 616.9067172711367,
+    "T_furnace_C": 733.8598966858015,
+    "tube_id_in": 1.8447800512809014,
+    "x_substrate_cm": 14.089851615509437
+   },
+   "ok": true,
+   "drift": 0.0014520576492456083,
+   "ratio_Mo_S": 3.724230178500556e-05,
+   "supersaturation_MoO3_wallT": 62908.01625751378,
+   "ss_gasT": 25822.881420592108,
+   "p_MoO3_Pa": 0.010533812346823556,
+   "p_S2_Pa": 282.8453624492314,
+   "theta_gas": -0.02556954629872275,
+   "frac_upstream_uptake": 0.9398588203992682,
+   "ss_wall": 62908.01625751378,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_27",
+   "values": {
+    "flow_sccm": 113.55387599499109,
+    "T_boat_Mo_C": 676.466737944498,
+    "T_furnace_C": 761.9491697261851,
+    "tube_id_in": 0.7915520913770001,
+    "x_substrate_cm": 7.406516208421142
+   },
+   "ok": true,
+   "drift": 6.877252862746985e-07,
+   "ratio_Mo_S": 0.010667123020672183,
+   "supersaturation_MoO3_wallT": 0.03306748604923836,
+   "ss_gasT": 0.03038658622144665,
+   "p_MoO3_Pa": 3.3214735672123488,
+   "p_S2_Pa": 311.3748253184623,
+   "theta_gas": -0.0027315092441417255,
+   "frac_upstream_uptake": 0.00018428402103587427,
+   "ss_wall": 0.03306748604923836,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_28",
+   "values": {
+    "flow_sccm": 975.0108383279644,
+    "T_boat_Mo_C": 736.6732665990914,
+    "T_furnace_C": 772.919645701526,
+    "tube_id_in": 0.6401390615827502,
+    "x_substrate_cm": 6.732373423949507
+   },
+   "ok": true,
+   "drift": 2.2361001938975278e-11,
+   "ratio_Mo_S": 0.1431202848420511,
+   "supersaturation_MoO3_wallT": 0.07843613839755836,
+   "ss_gasT": 0.06146382186390693,
+   "p_MoO3_Pa": 15.949361100723433,
+   "p_S2_Pa": 111.44025543496716,
+   "theta_gas": -0.007956304129015974,
+   "frac_upstream_uptake": -0.001136491435257847,
+   "ss_wall": 0.07843613839755836,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_29",
+   "values": {
+    "flow_sccm": 32.30250364575877,
+    "T_boat_Mo_C": 734.2646784628339,
+    "T_furnace_C": 879.5006615355112,
+    "tube_id_in": 1.9830137811325734,
+    "x_substrate_cm": 1.8430699034868034
+   },
+   "ok": true,
+   "drift": 0.00021695447388436762,
+   "ratio_Mo_S": 0.19888360033985567,
+   "supersaturation_MoO3_wallT": 0.07226407413774559,
+   "ss_gasT": 0.07226407413774559,
+   "p_MoO3_Pa": 66.31439711126454,
+   "p_S2_Pa": 333.4332091632763,
+   "theta_gas": 0.0018183747784297456,
+   "frac_upstream_uptake": -0.005058521336133381,
+   "ss_wall": 0.07226407413774559,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_30",
+   "values": {
+    "flow_sccm": 485.3945198340011,
+    "T_boat_Mo_C": 620.3153307716615,
+    "T_furnace_C": 667.9623821780306,
+    "tube_id_in": 2.4792417693558324,
+    "x_substrate_cm": 14.932625215508866
+   },
+   "ok": true,
+   "drift": 5.433331969229016e-06,
+   "ratio_Mo_S": 0.00017333238499783426,
+   "supersaturation_MoO3_wallT": 8969753965.372328,
+   "ss_gasT": 920100.7942127421,
+   "p_MoO3_Pa": 0.021980332022190026,
+   "p_S2_Pa": 126.81030162058096,
+   "theta_gas": -0.2891355228426974,
+   "frac_upstream_uptake": 0.7216762667101828,
+   "ss_wall": 8969753965.372328,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_31",
+   "values": {
+    "flow_sccm": 765.0118333649636,
+    "T_boat_Mo_C": 765.0009848585739,
+    "T_furnace_C": 824.102269085327,
+    "tube_id_in": 1.5231351137786342,
+    "x_substrate_cm": 4.381429748855392
+   },
+   "ok": true,
+   "drift": 1.2816459005193792e-10,
+   "ratio_Mo_S": 0.45577231994712725,
+   "supersaturation_MoO3_wallT": 0.06715523910764444,
+   "ss_gasT": 0.06715523910764444,
+   "p_MoO3_Pa": 61.626184897872214,
+   "p_S2_Pa": 135.21265377638835,
+   "theta_gas": -0.0004506692193810858,
+   "frac_upstream_uptake": -0.011588302181785304,
+   "ss_wall": 0.06715523910764444,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_32",
+   "values": {
+    "flow_sccm": 40.021338499817986,
+    "T_boat_Mo_C": 672.0585342207211,
+    "T_furnace_C": 661.4130540663232,
+    "tube_id_in": 1.9116084868917285,
+    "x_substrate_cm": 16.704625258504716
+   },
+   "ok": true,
+   "drift": 0.0026026644195529247,
+   "ratio_Mo_S": 0.0019061312637263497,
+   "supersaturation_MoO3_wallT": 7.014735895101262e+17,
+   "ss_gasT": 374199244246740.5,
+   "p_MoO3_Pa": 0.0006478403611705177,
+   "p_S2_Pa": 0.3398718511672886,
+   "theta_gas": -0.23051996001967343,
+   "frac_upstream_uptake": 0.9997042659145774,
+   "ss_wall": 7.014735895101262e+17,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_33",
+   "values": {
+    "flow_sccm": 244.7323439817532,
+    "T_boat_Mo_C": 714.9551676337478,
+    "T_furnace_C": 674.5984354896998,
+    "tube_id_in": 2.379214903804039,
+    "x_substrate_cm": 10.572530614139938
+   },
+   "ok": true,
+   "drift": 0.0001451225638466891,
+   "ratio_Mo_S": 0.0031431209474994232,
+   "supersaturation_MoO3_wallT": 10.92684100838156,
+   "ss_gasT": 8.82073467232896,
+   "p_MoO3_Pa": 0.7251897296871146,
+   "p_S2_Pa": 230.72282034328165,
+   "theta_gas": -0.006539531117030235,
+   "frac_upstream_uptake": 0.8422085449737936,
+   "ss_wall": 10.92684100838156,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_34",
+   "values": {
+    "flow_sccm": 1465.6651502408376,
+    "T_boat_Mo_C": 601.6543121343391,
+    "T_furnace_C": 678.7168259867254,
+    "tube_id_in": 0.9367422404915986,
+    "x_substrate_cm": 19.665652673687088
+   },
+   "ok": true,
+   "drift": 1.5080163229264087e-08,
+   "ratio_Mo_S": 0.0006487127587861708,
+   "supersaturation_MoO3_wallT": 1.0405003054558958e+19,
+   "ss_gasT": 11163376525.901682,
+   "p_MoO3_Pa": 0.004165430144391141,
+   "p_S2_Pa": 6.4210701700783925,
+   "theta_gas": -0.7580327362010768,
+   "frac_upstream_uptake": 0.6308283655617744,
+   "ss_wall": 1.0405003054558958e+19,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_35",
+   "values": {
+    "flow_sccm": 408.16243587932235,
+    "T_boat_Mo_C": 683.1405952539526,
+    "T_furnace_C": 745.2168105702019,
+    "tube_id_in": 2.325240004570048,
+    "x_substrate_cm": 3.9526386835463465
+   },
+   "ok": true,
+   "drift": 3.628387977427927e-05,
+   "ratio_Mo_S": 0.012673717116230263,
+   "supersaturation_MoO3_wallT": 0.024401731818330274,
+   "ss_gasT": 0.02455155849424576,
+   "p_MoO3_Pa": 2.472688057983459,
+   "p_S2_Pa": 195.1036176132475,
+   "theta_gas": 0.0001974014318179229,
+   "frac_upstream_uptake": -0.015889784643040805,
+   "ss_wall": 0.024401731818330274,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_36",
+   "values": {
+    "flow_sccm": 298.24541743878143,
+    "T_boat_Mo_C": 754.2001416749,
+    "T_furnace_C": 697.2268885987579,
+    "tube_id_in": 0.8563617468683513,
+    "x_substrate_cm": 6.431664023609099
+   },
+   "ok": true,
+   "drift": 1.5240286810325188e-09,
+   "ratio_Mo_S": 0.05003347574249814,
+   "supersaturation_MoO3_wallT": 1.2792817993909507,
+   "ss_gasT": 1.1119529292231591,
+   "p_MoO3_Pa": 10.11343096751251,
+   "p_S2_Pa": 202.13328811218727,
+   "theta_gas": -0.004434158796511286,
+   "frac_upstream_uptake": 0.3758861047340405,
+   "ss_wall": 1.2792817993909507,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_37",
+   "values": {
+    "flow_sccm": 175.04599948634126,
+    "T_boat_Mo_C": 784.9942579312806,
+    "T_furnace_C": 804.1227095871765,
+    "tube_id_in": 2.011547492290427,
+    "x_substrate_cm": 16.349078293373708
+   },
+   "ok": true,
+   "drift": 0.0002683269305114866,
+   "ratio_Mo_S": 0.2543239910149253,
+   "supersaturation_MoO3_wallT": 1.4140241802336714e+16,
+   "ss_gasT": 5639846428722.695,
+   "p_MoO3_Pa": 2.463330101865096,
+   "p_S2_Pa": 9.68579524108102,
+   "theta_gas": -0.23664506317008271,
+   "frac_upstream_uptake": 0.9934862025535045,
+   "ss_wall": 1.4140241802336714e+16,
+   "regime_cfd": "transport_limited",
+   "regime_tier0": "transport_limited"
+  },
+  {
+   "id": "v5sweep_38",
+   "values": {
+    "flow_sccm": 439.1097805516565,
+    "T_boat_Mo_C": 651.6812848492269,
+    "T_furnace_C": 738.2723068558893,
+    "tube_id_in": 2.165822427873444,
+    "x_substrate_cm": 2.165066434573186
+   },
+   "ok": true,
+   "drift": 1.0487520121449379e-05,
+   "ratio_Mo_S": 0.0025783863812374468,
+   "supersaturation_MoO3_wallT": 0.00582074098444068,
+   "ss_gasT": 0.006181442079384269,
+   "p_MoO3_Pa": 0.47823495763147433,
+   "p_S2_Pa": 185.47839110209492,
+   "theta_gas": 0.0019330487959944853,
+   "frac_upstream_uptake": -0.03577257950431112,
+   "ss_wall": 0.00582074098444068,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "reaction_limited"
+  },
+  {
+   "id": "v5sweep_39",
+   "values": {
+    "flow_sccm": 75.50458577970593,
+    "T_boat_Mo_C": 761.6681153751986,
+    "T_furnace_C": 891.725548778099,
+    "tube_id_in": 1.1665282396889434,
+    "x_substrate_cm": 8.782871047886449
+   },
+   "ok": true,
+   "drift": 0.0001598143299852417,
+   "ratio_Mo_S": 0.5498694081413349,
+   "supersaturation_MoO3_wallT": 0.2043822069220454,
+   "ss_gasT": 0.2043822069220454,
+   "p_MoO3_Pa": 187.55492260885117,
+   "p_S2_Pa": 341.08993850525917,
+   "theta_gas": -0.00026897627456998836,
+   "frac_upstream_uptake": -0.004065021649724443,
+   "ss_wall": 0.2043822069220454,
+   "regime_cfd": "reaction_limited",
+   "regime_tier0": "transport_limited"
+  }
+ ],
+ "regime": {
+  "definition": "CFD side, from the solution only. heat_limited: the gas at the substrate has closed < 90 % of the wall-inlet temperature gap.\n    else transport_limited if >= 63 % (1 - 1/e, i.e. NTU >= 1) of the MoO3 released by the boat is taken up by walls before the substrate centre;\n    else reaction_limited (supply-limited: the vapour passes the substrate barely depleted).",
+  "n_cases": 40,
+  "agreement": 0.65,
+  "counts_cfd": {
+   "heat_limited": 0,
+   "transport_limited": 17,
+   "reaction_limited": 23
+  },
+  "counts_tier0": {
+   "heat_limited": 0,
+   "transport_limited": 31,
+   "reaction_limited": 9
+  },
+  "agreement_vs_f_threshold": {
+   "f_c=0.50": 0.7,
+   "f_c=0.63": 0.65,
+   "f_c=0.80": 0.575
+  },
+  "disagreements": [
+   {
+    "id": "v5sweep_00",
+    "values": {
+     "flow_sccm": 912.1833154012628,
+     "T_boat_Mo_C": 778.8159474670194,
+     "T_furnace_C": 826.24203459246,
+     "tube_id_in": 2.220891898196782,
+     "x_substrate_cm": 13.780288894935811
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.4366438572633481,
+    "theta_gas": -0.26150414445051595
+   },
+   {
+    "id": "v5sweep_02",
+    "values": {
+     "flow_sccm": 167.89610946317802,
+     "T_boat_Mo_C": 627.4162990868932,
+     "T_furnace_C": 859.8085748724113,
+     "tube_id_in": 1.420660071428093,
+     "x_substrate_cm": 8.249527051036225
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.018698652638793112,
+    "theta_gas": -0.0027192639467070404
+   },
+   {
+    "id": "v5sweep_04",
+    "values": {
+     "flow_sccm": 106.96044865626087,
+     "T_boat_Mo_C": 770.1326986261679,
+     "T_furnace_C": 791.8849923561445,
+     "tube_id_in": 2.4343006998982832,
+     "x_substrate_cm": 3.4264372415385504
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": -0.007355708810260486,
+    "theta_gas": 0.0014366768166227722
+   },
+   {
+    "id": "v5sweep_10",
+    "values": {
+     "flow_sccm": 124.12543725957214,
+     "T_boat_Mo_C": 744.268327151209,
+     "T_furnace_C": 833.1348353440807,
+     "tube_id_in": 0.5354010692006075,
+     "x_substrate_cm": 2.486208903848045
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": -0.001250647507511582,
+    "theta_gas": 0.00021338142648514628
+   },
+   {
+    "id": "v5sweep_12",
+    "values": {
+     "flow_sccm": 43.58737119995352,
+     "T_boat_Mo_C": 631.2656980717508,
+     "T_furnace_C": 895.298603635192,
+     "tube_id_in": 1.0716511062773544,
+     "x_substrate_cm": 11.962487153290608
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.5281951479351875,
+    "theta_gas": -0.0018764499513107223
+   },
+   {
+    "id": "v5sweep_19",
+    "values": {
+     "flow_sccm": 83.58375134381694,
+     "T_boat_Mo_C": 647.2263128376745,
+     "T_furnace_C": 780.0115642899154,
+     "tube_id_in": 0.8252406304232299,
+     "x_substrate_cm": 5.215430500493505
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": -4.193974771826703e-05,
+    "theta_gas": -0.0005084869219228707
+   },
+   {
+    "id": "v5sweep_20",
+    "values": {
+     "flow_sccm": 363.9421774676203,
+     "T_boat_Mo_C": 702.318775372151,
+     "T_furnace_C": 882.6618448980605,
+     "tube_id_in": 1.3803167603502906,
+     "x_substrate_cm": 10.015689801187987
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.009317846928281082,
+    "theta_gas": -0.02312565776520466
+   },
+   {
+    "id": "v5sweep_24",
+    "values": {
+     "flow_sccm": 44.59266375726429,
+     "T_boat_Mo_C": 745.7894230645054,
+     "T_furnace_C": 851.5999603524219,
+     "tube_id_in": 1.5593418130402719,
+     "x_substrate_cm": 7.735433955227196
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.2220116899028074,
+    "theta_gas": 0.003450740587708041
+   },
+   {
+    "id": "v5sweep_25",
+    "values": {
+     "flow_sccm": 154.31404126124437,
+     "T_boat_Mo_C": 637.5901847640581,
+     "T_furnace_C": 754.1080203083843,
+     "tube_id_in": 0.5869133353185673,
+     "x_substrate_cm": 5.95351299801675
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": -1.5829104040188113e-05,
+    "theta_gas": -0.0020330581484011017
+   },
+   {
+    "id": "v5sweep_27",
+    "values": {
+     "flow_sccm": 113.55387599499109,
+     "T_boat_Mo_C": 676.466737944498,
+     "T_furnace_C": 761.9491697261851,
+     "tube_id_in": 0.7915520913770001,
+     "x_substrate_cm": 7.406516208421142
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.00018428402103587427,
+    "theta_gas": -0.0027315092441417255
+   },
+   {
+    "id": "v5sweep_29",
+    "values": {
+     "flow_sccm": 32.30250364575877,
+     "T_boat_Mo_C": 734.2646784628339,
+     "T_furnace_C": 879.5006615355112,
+     "tube_id_in": 1.9830137811325734,
+     "x_substrate_cm": 1.8430699034868034
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": -0.005058521336133381,
+    "theta_gas": 0.0018183747784297456
+   },
+   {
+    "id": "v5sweep_34",
+    "values": {
+     "flow_sccm": 1465.6651502408376,
+     "T_boat_Mo_C": 601.6543121343391,
+     "T_furnace_C": 678.7168259867254,
+     "tube_id_in": 0.9367422404915986,
+     "x_substrate_cm": 19.665652673687088
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.6308283655617744,
+    "theta_gas": -0.7580327362010768
+   },
+   {
+    "id": "v5sweep_36",
+    "values": {
+     "flow_sccm": 298.24541743878143,
+     "T_boat_Mo_C": 754.2001416749,
+     "T_furnace_C": 697.2268885987579,
+     "tube_id_in": 0.8563617468683513,
+     "x_substrate_cm": 6.431664023609099
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": 0.3758861047340405,
+    "theta_gas": -0.004434158796511286
+   },
+   {
+    "id": "v5sweep_39",
+    "values": {
+     "flow_sccm": 75.50458577970593,
+     "T_boat_Mo_C": 761.6681153751986,
+     "T_furnace_C": 891.725548778099,
+     "tube_id_in": 1.1665282396889434,
+     "x_substrate_cm": 8.782871047886449
+    },
+    "regime_cfd": "reaction_limited",
+    "regime_tier0": "transport_limited",
+    "frac_upstream_uptake": -0.004065021649724443,
+    "theta_gas": -0.00026897627456998836
+   }
+  ]
+ },
+ "surrogate": {
+  "ratio_Mo_S": {
+   "n_train": 30,
+   "n_test": 10,
+   "mean_rel_err": 0.9393231927582143,
+   "median_rel_err": 0.3142308482753569,
+   "max_rel_err": 5.083402383992647,
+   "frac_within_5pct": 0.2
+  },
+  "supersaturation_MoO3_wallT": {
+   "n_train": 30,
+   "n_test": 10,
+   "mean_rel_err": 117.83003187019669,
+   "median_rel_err": 0.9881283053403312,
+   "max_rel_err": 1153.8924036586664,
+   "frac_within_5pct": 0.0
+  },
+  "ss_gasT": {
+   "n_train": 30,
+   "n_test": 10,
+   "mean_rel_err": 14.14193415902552,
+   "median_rel_err": 0.5568588711246083,
+   "max_rel_err": 82.96175713730437,
+   "frac_within_5pct": 0.0
+  },
+  "plan_target": "within 5 % of the solver",
+  "model": "surrogate/data/tube_gp.json"
+ },
+ "constants_basis": "vessels.cvd_tube defaults at run time: MoO3.psat_model=smolik_hsc (P_ref 53.3 Pa at 1000 K), (MoO3)3 vapour, literature S8/S2 basis; CFD cases take the same values dict. Earlier mesh/agreement runs with the Simnad-OCR 1.2 Pa basis (prefixes v2-v4) are NOT used here.",
+ "findings": [
+  "Boat source: mixed BC is the Robin law flux = h (ref - Y_wall) with the exact wall-cell centroid distance; boat release still changes +2..5 % per refinement (first order, ring-edge singularity), so the <2 % target is NOT met.",
+  "CFD boat release is a median 2.9x Tier 1 supply and CFD p(S2) 6.5x Tier 1: the axisymmetric wedge makes each boat a full-circumference ring, Tier 1 a disk (boat_Sh_model=tube changes Tier 1 by only ~9 %). Geometry, not the BC.",
+  "Tier 1 closure pointers: boat transfer (disk vs ring) sets supply and Mo:S; wall-uptake between boat and substrate (Sherwood/NTU, uniform 3.66, no entrance effect) sets the position trend (substrate 6 cm: CFD/T1 p 2.9, 20 cm: 0.008); gas-T lag is fine (T_gas CFD/T1 0.98-1.0).",
+  "CFD fixes made this session: substrate strip used substrate_width_cm (now substrate_length_cm); substrate was a perfect sink (now saturation sink like the wall); oligomer/S-atom species basis; momentumPredictor off (yes gave a spurious radial vortex train); refined cells on boats, substrate and the stretch between; GAMG.",
+  "Regime: CFD classes defined in cfd_regime(); no case is heat_limited in either tier; every disagreement is Tier 0 transport_limited (Da>=1) vs CFD reaction_limited (walls between boat and substrate are hotter than the boat so they take up little).",
+  "Surrogate: 30 train / 10 held-out GP on log outputs over a box where outputs span 5-25 orders of magnitude; misses the 5 % target by far (see surrogate); it is no better than Tier 1 itself (CFD/Tier1 log-std 1.3)."
+ ]
+}

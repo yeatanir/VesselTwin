@@ -1,0 +1,24 @@
+{
+ "medium": {
+  "model": "medium",
+  "a_A": 3.182755151240144,
+  "h_S_A": 1.5716261070143496,
+  "E_MoS2_fu_eV": -21.716749582882645,
+  "E_Mo_bcc_eV": -10.694609022114605,
+  "a_Mo_bcc_A": 3.170269861220794,
+  "E_S8_per_atom_eV": -4.082255070745334,
+  "S8_SS_A": 2.066262129332116,
+  "E_S8_per_atom_eV_symmetric_saddle": -4.07793374720967
+ },
+ "small": {
+  "model": "small",
+  "a_A": 3.179101172910638,
+  "h_S_A": 1.5692163427749728,
+  "E_MoS2_fu_eV": -21.709202454655262,
+  "E_Mo_bcc_eV": -10.723328589046016,
+  "a_Mo_bcc_A": 3.15693367533709,
+  "E_S8_per_atom_eV": -4.08523406261314,
+  "S8_SS_A": 2.0591195440751804
+ },
+ "_note": "medium S8 energy re-minimised after a 0.08 A rattle (symmetric crown is a saddle in MACE-MP-0, 4.4 meV/atom higher); small-model S8 left at the symmetric value"
+}

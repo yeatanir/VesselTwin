@@ -1,0 +1,17 @@
+numpy>=2.0
+scipy>=1.13
+pydantic>=2.5
+pint>=0.24
+pyyaml>=6.0
+pytest>=8.0
+streamlit>=1.66
+altair>=5.0
+plotly>=5.0
+matplotlib>=3.8
+pandas>=2.0
+scikit-learn>=1.4
+jsonschema>=4.0
+# optional extras (not needed for make test / make demo):
+# anthropic       # LLM extractor backend (set ANTHROPIC_API_KEY)
+# mlx-lm          # local extractor backend (Apple silicon, untested)
+# CoolProp thermo cantera

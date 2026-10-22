@@ -1,0 +1,26 @@
+{
+ "synthetic": true,
+ "vessel": "cvd_tube",
+ "text": "The substrate was placed 8 cm downstream of the MoO3 boat in a 25 mm i.d. tube. The furnace was ramped to 760 \u00b0C under 100 sccm Ar at atmospheric pressure.",
+ "gold": {
+  "x_substrate_cm": {
+   "value": 8,
+   "unit": "cm"
+  },
+  "tube_id_in": {
+   "value": 25,
+   "unit": "mm"
+  },
+  "T_furnace_C": {
+   "value": 760,
+   "unit": "C"
+  },
+  "flow_sccm": {
+   "value": 100,
+   "unit": "sccm"
+  },
+  "carrier": {
+   "value": "Ar"
+  }
+ }
+}

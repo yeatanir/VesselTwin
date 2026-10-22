@@ -1,0 +1,35 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "flow_sccm",
+   "value": "30",
+   "unit": "sccm",
+   "span": "30 sccm"
+  },
+  {
+   "key": "pressure_Pa",
+   "value": "560",
+   "unit": "Torr",
+   "span": "560 Torr"
+  },
+  {
+   "key": "T_furnace_C",
+   "value": "850",
+   "unit": "°C",
+   "span": "850 °C"
+  },
+  {
+   "key": "T_boat_S_C",
+   "value": "180",
+   "unit": "°C",
+   "span": "180 °C"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "argon (Ar, 30 sccm)"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "synthetic": true,
+ "vessel": "sorbent",
+ "text": "Adsorption column of 15 mm i.d. filled with zeolite beads, 5 cm bed, isothermal operation at 120 kPa, 200 sccm feed.",
+ "gold": {
+  "bed_id_cm": {
+   "value": 15,
+   "unit": "mm"
+  },
+  "bed_length_cm": {
+   "value": 5,
+   "unit": "cm"
+  },
+  "energy": {
+   "value": "isothermal"
+  },
+  "P_kPa": {
+   "value": 120,
+   "unit": "kPa"
+  },
+  "flow_sccm": {
+   "value": 200,
+   "unit": "sccm"
+  }
+ }
+}

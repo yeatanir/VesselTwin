@@ -1,0 +1,58 @@
+[
+ {
+  "label": "q1_mos2_edges",
+  "task_id": "a8cb8da1-90db-4d65-bb25-cfe62143ae70",
+  "job": "LITERATURE",
+  "submitted": "2026-10-19 22:55:38 EDT",
+  "query": "For monolayer MoS2 grown by chemical vapor deposition, what do published first-principles (DFT) studies report for (a) the formation energies of the Mo-terminated zigzag edge and the S-terminated zigzag edge as a function of the sulfur chemical potential (including edge sulfur coverage, e.g. 100%, 50%, 0%), giving numerical values with units (eV/Angstrom or eV per edge site), the functional used and the chemical-potential reference; (b) calculated or fitted attachment/growth energy barriers or rate constants for Mo and S species adding to each zigzag edge; and (c) which edge grows faster as a function of the local Mo:S precursor ratio, and how the experimentally observed triangle to truncated-triangle to hexagon to inverted-triangle shape sequence along the gas flow in MoO3 + S CVD is explained (e.g. Wang et al. Chem. Mater. 2014; Govind Rajan et al. ACS Nano 2016; Cao et al. Nano Lett. 2015; Momeni et al. npj 2D Mater. Appl. 2018; Levita et al. Carbon 2016). Please cite each number to its source paper with DOI."
+ },
+ {
+  "label": "q2_moo3_vapour",
+  "task_id": "68dba641-7d28-4758-83bd-8a0e91ad0f8a",
+  "job": "LITERATURE",
+  "submitted": "2026-10-20 09:24:58",
+  "query": "What is the equilibrium vapour pressure of solid/liquid MoO3 as a function of temperature between about 600 and 1100 K, and which gas species carry it (monomer MoO3 versus the oligomers Mo3O9, Mo4O12, Mo5O15)? Give the fitted or tabulated expression (log10 P versus 1/T, or sublimation enthalpy and entropy) with units, the temperature range, whether the pressure is the total Mo-bearing vapour or the monomer partial pressure, the numerical value at 1000 K, and the primary experimental sources (for example Berkowitz, Inghram and Chupka 1957; Simnad and Spilners 1956; Gurvich/NIST-JANAF assessments). Cite each number to its source with DOI where available."
+ },
+ {
+  "label": "q3_sulfur_vapour",
+  "task_id": "6fa43a1e-d586-45e0-841d-f9090d484c00",
+  "job": "LITERATURE",
+  "submitted": "2026-10-20 09:25:03",
+  "query": "What is the equilibrium vapour pressure of elemental sulfur between about 350 and 800 K and the equilibrium speciation of sulfur vapour (S8, S7, S6, S5, S4, S3, S2) as a function of temperature and pressure? Give a fitted vapour-pressure expression (for example Antoine or log10 P versus 1/T) with units and temperature range, the normal boiling point, the enthalpy of vaporisation, the fraction of S2 versus S8 at 700-1000 K and 1 bar and at low pressure, and cite the primary sources (for example Rau, Kutty and Guedes de Carvalho 1973; West and Menzies 1929; Lewis and Randall; NIST-JANAF) with DOI where available."
+ },
+ {
+  "label": "q4_stirbar_power",
+  "task_id": "d84855bc-2842-431a-aa66-f1d7aa6f1c27",
+  "job": "LITERATURE",
+  "submitted": "2026-10-20 09:25:07",
+  "query": "What are the published power numbers, mixing times and energy dissipation rates for magnetic stir bars (cylindrical, oval, octagonal, egg-shaped) in round-bottom flasks or beakers, as a function of Reynolds number, stir rate and flask size? Give correlations or numbers with units (Np versus Re, mixing time theta95 versus rpm, epsilon in W/kg), the bar and vessel geometry and solvent used, and cite the primary sources (for example work from the Noel group on stirring in organic synthesis, Bourne, Nienow, Mahmoudi/Hartman or other studies of magnetic stirrer hydrodynamics), with DOI where available."
+ },
+ {
+  "label": "q5_329_reactions",
+  "task_id": "b0b3ff0d-c11d-4aa6-82d8-55e662289286",
+  "job": "LITERATURE",
+  "submitted": "2026-10-20 09:25:13",
+  "query": "The 2024 Synlett study of 329 classic organic reactions concluded that stirring barely matters, and a response from Timothy Noel's group argued this holds only for small, homogeneous, slow reactions. Does the 329-reaction study publish per-reaction conditions (scale, solvent, stir rate, stir-bar type, temperature, yield with and without stirring) in its supplementary information or an open dataset, in a form that could be reused to classify reactions as mixing-sensitive or not? Give the bibliographic details (title, journal, DOI), the data availability statement, and whether the reaction conditions and paired yields are public."
+ },
+ {
+  "label": "q6_flow_rate",
+  "task_id": "c2bcae42-5fe8-4804-85e0-d389a4ad76c9",
+  "job": "LITERATURE",
+  "submitted": "2026-10-20 20:07:12",
+  "query": "In powder-vapourization (MoO3 + sulfur) CVD growth of monolayer MoS2 in a tube furnace, what do published experiments report about how the carrier-gas (Ar/N2) flow rate changes domain size, nucleation density, coverage or triangle vs other shapes? Give each study with DOI, the flow values compared, the direction and size of the effect, and whether only flow was changed. Prefer open-access papers."
+ },
+ {
+  "label": "q7_substrate_position",
+  "task_id": "10f4ab80-78ca-4e4b-a723-8f195975ec56",
+  "job": "LITERATURE",
+  "submitted": "2026-10-20 20:07:17",
+  "query": "In powder-vapourization (MoO3 + sulfur) CVD growth of monolayer MoS2, what do published experiments report about how substrate position or distance from the MoO3 boat (or MoO3 boat temperature or amount) changes domain size, nucleation density, shape or Mo:S-related morphology? Give each study with DOI, the values compared, the direction and size of the effect, and whether only that variable changed. Prefer open-access papers."
+ },
+ {
+  "label": "q8_sulfur_supply",
+  "task_id": "a5731c4c-054d-44a8-9945-cc5f5f237046",
+  "job": "LITERATURE",
+  "submitted": "2026-10-20 20:07:20",
+  "query": "In powder-vapourization (MoO3 + sulfur) CVD growth of MoS2, what do published experiments report about how sulfur boat temperature or sulfur boat position (sulfur supply) changes domain size, nucleation density, coverage or triangle vs truncated/other shapes? Give each study with DOI, the values compared, the direction and size of the effect, and whether only that variable changed. Prefer open-access papers."
+ }
+]

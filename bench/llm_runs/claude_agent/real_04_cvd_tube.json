@@ -1,0 +1,23 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "tube_id_in",
+   "value": "50",
+   "unit": "mm",
+   "span": "50 mm"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "10",
+   "unit": "sccm",
+   "span": "10 sccm"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "Ar gas (>99.9% purity) at a flow rate of 2000"
+  }
+ ]
+}

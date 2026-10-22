@@ -1,0 +1,17 @@
+{
+ "vessel": "flask",
+ "fields": [
+  {
+   "key": "volume_mL",
+   "value": "250",
+   "unit": "mL",
+   "span": "250 mL"
+  },
+  {
+   "key": "stir_rpm",
+   "value": "1000",
+   "unit": "rpm",
+   "span": "1000 evolutions per minute (rpm)"
+  }
+ ]
+}

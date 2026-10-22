@@ -1,0 +1,35 @@
+{
+ "vessel": "ampoule",
+ "fields": [
+  {
+   "key": "D_mm",
+   "value": "14",
+   "unit": "mm",
+   "span": "14 mm"
+  },
+  {
+   "key": "L_cm",
+   "value": "25",
+   "unit": "cm",
+   "span": "25 cm"
+  },
+  {
+   "key": "agent_mg_per_cm3",
+   "value": "2",
+   "unit": "mg/cm3",
+   "span": "2 mg/cm3"
+  },
+  {
+   "key": "T_source_C",
+   "value": "1100",
+   "unit": "°C",
+   "span": "1100 °C"
+  },
+  {
+   "key": "T_sink_C",
+   "value": "1000",
+   "unit": "°C",
+   "span": "1000 °C"
+  }
+ ]
+}

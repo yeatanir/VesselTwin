@@ -1,0 +1,61 @@
+{
+ "text": "The growth processes were conducted in a standard 55-mm inner (60-mm outer) diameter hot-wall reactor Carbolite Gero EZS-1200 with a quartz tube (1200 mm length) and an additional 100 or 220-mm homemade sulfur heater. [...] The default growth process parameters were 900 °C, 950 mbar, 100 sccm Ar, and 15 min (counting from the main heating zone reaching the set temperature). [...] The temperature ramping was set at approx. 35 °C/min.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "tube_id_in": {
+   "value": 55,
+   "unit": "mm"
+  },
+  "L_tube_cm": {
+   "value": 1200,
+   "unit": "mm"
+  },
+  "T_furnace_C": {
+   "value": 900,
+   "unit": "C"
+  },
+  "pressure_Pa": {
+   "value": 950,
+   "unit": "mbar"
+  },
+  "flow_sccm": {
+   "value": 100,
+   "unit": "sccm"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Technological limitations of solid-source chemical vapor deposition of van der Waals heterostructures",
+  "authors": [
+   "Jakub Sitek",
+   "Wojciech Sitek",
+   "Ben R. Conran",
+   "Xiaochen Wang",
+   "Clifford McAleese",
+   "Anna Kaleta",
+   "Slawomir Kret",
+   "Iwona Pasternak",
+   "Mariusz Zdrojek",
+   "Wlodek Strupinski"
+  ],
+  "journal": "Scientific Reports",
+  "year": 2025,
+  "DOI": "10.1038/s41598-025-13921-4",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12325618/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "ramp_rate: approx. 35 C/min",
+  "hold_time: 15 min growth, counted from set temperature reached",
+  "position: quartz boats 98 mm outside / 168 mm inside the furnace insulation (reference is insulation, not tube inlet)",
+  "geometry_other: sulfur heater length 100 or 220 mm; boat size 75x15x10 mm",
+  "purge: three purges at 500 sccm Ar"
+ ],
+ "ambiguous": [
+  "tube_id_in: written '55-mm inner diameter' with the unit mm, ParamDef unit is inch"
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "text": "Crystal growth occurred in sealed quartz ampoules (850 °C source, 5 mg/cm3 I2, 99.999%) where optimized ampoule geometry (5 cm length, controlled diameter/taper) and thermal gradients enabled defect-free, large-area crystals at >1 mm/h rates.",
+ "vessel": "ampoule",
+ "gold": {
+  "T_source_C": {
+   "value": 850,
+   "unit": "C"
+  },
+  "agent_mg_per_cm3": {
+   "value": 5,
+   "unit": "mg/cm3"
+  },
+  "L_cm": {
+   "value": 5,
+   "unit": "cm"
+  },
+  "gas": {
+   "value": "I2",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "In situ topotactic transition to porous crystals boosts methane photooxidation",
+  "authors": [
+   "Yongchun Xiao",
+   "Xiuli Hu",
+   "Siu Wing Or",
+   "Kui Xie"
+  ],
+  "journal": "Nature Communications",
+  "year": 2026,
+  "DOI": "10.1038/s41467-026-75390-1",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13486515/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "other: growth rate >1 mm/h",
+  "geometry_other: 'controlled diameter/taper' (no number)",
+  "gradient: 'thermal gradients' (no number)"
+ ],
+ "ambiguous": []
+}

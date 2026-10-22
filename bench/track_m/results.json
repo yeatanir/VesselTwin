@@ -1,0 +1,4193 @@
+{
+ "A": {
+  "single": {
+   "s01": {
+    "id": "s01",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.25,
+     "D_p05": 0.5618847729194811,
+     "D_p50": 0.8656396950183658,
+     "D_p95": 1.086183434432693
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.28,
+     "D_p05": -0.195083938670967,
+     "D_p50": -0.03584655973016715,
+     "D_p95": 0.14515519140618713
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.32,
+     "D_p05": -0.2938543983922072,
+     "D_p50": 0.5601201738155117,
+     "D_p95": 1.2706899169383368
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.07,
+     "D_p05": 2.0354966095507816,
+     "D_p50": 3.88030754103496,
+     "D_p95": 5.125335400682204
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "decrease",
+     "2": "decrease",
+     "3": "decrease"
+    },
+    "call": "decrease",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6078566245100259,
+     "D_p50": -1.6059670015034273,
+     "D_p95": -1.5965619215631943
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -229.00707590402143,
+     "D_p50": -3.1974981047101085,
+     "D_p95": 0.5853784579166261
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "no_change",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "truncated_triangle",
+     "triangle"
+    ],
+    "abstain": [
+     null,
+     null,
+     null,
+     "band_spans_classes",
+     null
+    ],
+    "cfg": "M0",
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "non_monotonic",
+     "2": "non_monotonic",
+     "3": "non_monotonic"
+    },
+    "call": "non_monotonic",
+    "diag_i1": {
+     "nm_frac": 0.99
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.2335075174117854,
+     "D_p50": 0.3882214630312619,
+     "D_p95": 0.5519103218899538
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.0004585865068933437,
+     "D_p50": -1.017680626103079e-06,
+     "D_p95": -2.4083199878788277e-10
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.00042726454496261335,
+     "D_p50": -8.94471886336845e-07,
+     "D_p95": -1.6354688714415066e-10
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 3.270937742883007e-10,
+     "D_p50": 1.78894377267369e-06,
+     "D_p95": 0.0008545290899252267
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "ensemble": {
+   "s01": {
+    "id": "s01",
+    "rule": "A",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.4575,
+    "P_down": 0.51,
+    "P_tie": 0.0325,
+    "P_literal_high_gt_low": 0.4625,
+    "P_nonmono": 0.25833333333333336,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.3333333333333333,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "condensation/sticking": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.38666666666666666,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/reactive": {
+      "P_up": 0.27,
+      "P_down": 0.58,
+      "P_tie": 0.15,
+      "P_nonmono": 0.11333333333333333,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.52,
+      "P_down": 0.41,
+      "P_tie": 0.07,
+      "P_nonmono": 0.5633333333333334,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/sticking": {
+      "P_up": 0.57,
+      "P_down": 0.41,
+      "P_tie": 0.02,
+      "P_nonmono": 0.56,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.32,
+      "P_down": 0.68,
+      "P_tie": 0.0,
+      "P_nonmono": 0.11,
+      "n": 300,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": true,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s03": {
+    "id": "s03",
+    "rule": "A",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.7170833333333333,
+    "P_down": 0.19916666666666666,
+    "P_tie": 0.08375,
+    "P_literal_high_gt_low": 0.75,
+    "P_nonmono": 0.205,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.32666666666666666,
+      "P_down": 0.49,
+      "P_tie": 0.18333333333333332,
+      "P_nonmono": 0.52,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/sticking": {
+      "P_up": 0.38666666666666666,
+      "P_down": 0.43,
+      "P_tie": 0.18333333333333332,
+      "P_nonmono": 0.49666666666666665,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.67,
+      "P_down": 0.23,
+      "P_tie": 0.1,
+      "P_nonmono": 0.05,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.8,
+      "P_down": 0.11333333333333333,
+      "P_tie": 0.08666666666666667,
+      "P_nonmono": 0.21333333333333335,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 0.7933333333333333,
+      "P_down": 0.1,
+      "P_tie": 0.10666666666666667,
+      "P_nonmono": 0.2733333333333333,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.77,
+      "P_down": 0.23,
+      "P_tie": 0.0,
+      "P_nonmono": 0.08666666666666667,
+      "n": 300,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s04": {
+    "id": "s04",
+    "rule": "A",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.30875,
+    "P_down": 0.6425,
+    "P_tie": 0.04875,
+    "P_literal_high_gt_low": 0.32375,
+    "P_nonmono": 0.1925,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.76,
+      "P_down": 0.18,
+      "P_tie": 0.06,
+      "P_nonmono": 0.35,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.99,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "condensation/sticking": {
+      "P_up": 0.7,
+      "P_down": 0.24,
+      "P_tie": 0.06,
+      "P_nonmono": 0.37,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.17,
+      "P_down": 0.67,
+      "P_tie": 0.16,
+      "P_nonmono": 0.05,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.28,
+      "P_down": 0.69,
+      "P_tie": 0.03,
+      "P_nonmono": 0.35,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/sticking": {
+      "P_up": 0.32,
+      "P_down": 0.61,
+      "P_tie": 0.07,
+      "P_nonmono": 0.38,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.24,
+      "P_down": 0.76,
+      "P_tie": 0.0,
+      "P_nonmono": 0.04,
+      "n": 300,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s05": {
+    "id": "s05",
+    "rule": "A",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.0,
+    "P_tie": 1.0,
+    "P_literal_high_gt_low": 0.0,
+    "P_nonmono": 0.0,
+    "ens_call": "no_change",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s06": {
+    "id": "s06",
+    "rule": "A",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.0,
+    "P_tie": 1.0,
+    "P_literal_high_gt_low": 0.0,
+    "P_nonmono": 0.0,
+    "ens_call": "no_change",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s07": {
+    "id": "s07",
+    "rule": "A",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "n_members": 4800,
+    "P_up": 0.745,
+    "P_down": 0.18125,
+    "P_tie": 0.07375,
+    "P_literal_high_gt_low": 0.77875,
+    "P_nonmono": 0.07375,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.92,
+      "P_down": 0.08,
+      "P_tie": 0.0,
+      "P_nonmono": 0.18,
+      "n": 600,
+      "call": "increase"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.25,
+      "P_down": 0.49,
+      "P_tie": 0.26,
+      "P_nonmono": 0.11,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.9,
+      "P_down": 0.1,
+      "P_tie": 0.0,
+      "P_nonmono": 0.25,
+      "n": 600,
+      "call": "increase"
+     },
+     "condensation/reactive": {
+      "P_up": 0.13,
+      "P_down": 0.59,
+      "P_tie": 0.28,
+      "P_nonmono": 0.05,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 0.77,
+      "P_down": 0.19,
+      "P_tie": 0.04,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s08": {
+    "id": "s08",
+    "rule": "A",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.65,
+    "P_tie": 0.35,
+    "P_literal_high_gt_low": 0.0,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.32,
+      "P_tie": 0.68,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.31,
+      "P_tie": 0.69,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.33,
+      "P_tie": 0.67,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.24,
+      "P_tie": 0.76,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s09": {
+    "id": "s09",
+    "rule": "A",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.5,
+    "P_down": 0.0,
+    "P_tie": 0.5,
+    "P_literal_high_gt_low": 0.5,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": true,
+     "condensation/reflecting": true,
+     "condensation/sticking": true,
+     "condensation/reactive": true,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s10": {
+    "id": "s10",
+    "rule": "A",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 4800,
+    "P_up": 0.295625,
+    "P_down": 0.6695833333333333,
+    "P_tie": 0.034791666666666665,
+    "P_literal_high_gt_low": 0.3097916666666667,
+    "P_nonmono": 0.10875,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.26,
+      "P_down": 0.72,
+      "P_tie": 0.02,
+      "P_nonmono": 0.39666666666666667,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.9383333333333334,
+      "P_tie": 0.06166666666666667,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "decrease"
+     },
+     "condensation/sticking": {
+      "P_up": 0.26,
+      "P_down": 0.73,
+      "P_tie": 0.01,
+      "P_nonmono": 0.40166666666666667,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.8816666666666667,
+      "P_tie": 0.11833333333333333,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "decrease"
+     },
+     "reactive/condensation": {
+      "P_up": 0.5033333333333333,
+      "P_down": 0.49666666666666665,
+      "P_tie": 0.0,
+      "P_nonmono": 0.03833333333333333,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.45666666666666667,
+      "P_down": 0.5,
+      "P_tie": 0.043333333333333335,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/sticking": {
+      "P_up": 0.5033333333333333,
+      "P_down": 0.49333333333333335,
+      "P_tie": 0.0033333333333333335,
+      "P_nonmono": 0.03333333333333333,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.38166666666666665,
+      "P_down": 0.5966666666666667,
+      "P_tie": 0.021666666666666667,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s11": {
+    "id": "s11",
+    "rule": "A",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "n_members": 64,
+    "fractions": {
+     "class_change": 0.0,
+     "no_change": 0.515625,
+     "unknown": 0.484375
+    },
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "class_change": 0.0,
+      "no_change": 1.0,
+      "unknown": 0.0
+     },
+     "condensation/reflecting": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "condensation/sticking": {
+      "class_change": 0.0,
+      "no_change": 0.875,
+      "unknown": 0.125
+     },
+     "condensation/reactive": {
+      "class_change": 0.0,
+      "no_change": 0.125,
+      "unknown": 0.875
+     },
+     "reactive/condensation": {
+      "class_change": 0.0,
+      "no_change": 1.0,
+      "unknown": 0.0
+     },
+     "reactive/reflecting": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "reactive/sticking": {
+      "class_change": 0.0,
+      "no_change": 1.0,
+      "unknown": 0.0
+     },
+     "reactive/reactive": {
+      "class_change": 0.0,
+      "no_change": 0.125,
+      "unknown": 0.875
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {}
+   },
+   "s13": {
+    "id": "s13",
+    "rule": "A",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 4800,
+    "P_up": 0.5425,
+    "P_down": 0.39875,
+    "P_tie": 0.05875,
+    "P_literal_high_gt_low": 0.56,
+    "P_nonmono": 0.1775,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.31,
+      "P_down": 0.66,
+      "P_tie": 0.03,
+      "P_nonmono": 0.71,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.9,
+      "P_tie": 0.1,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "decrease"
+     },
+     "condensation/sticking": {
+      "P_up": 0.3,
+      "P_down": 0.68,
+      "P_tie": 0.02,
+      "P_nonmono": 0.71,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.73,
+      "P_tie": 0.27,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.97,
+      "P_down": 0.0,
+      "P_tie": 0.03,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 0.76,
+      "P_down": 0.22,
+      "P_tie": 0.02,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": true,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s14": {
+    "id": "s14",
+    "rule": "A",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.97,
+    "P_down": 0.0,
+    "P_tie": 0.03,
+    "P_literal_high_gt_low": 0.97,
+    "P_nonmono": 0.0,
+    "ens_call": "increase",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/sticking": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/reactive": {
+      "P_up": 0.79,
+      "P_down": 0.0,
+      "P_tie": 0.21,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "j1": {
+    "id": "j1",
+    "rule": "A",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.0,
+    "P_tie": 1.0,
+    "P_literal_high_gt_low": 0.00125,
+    "P_nonmono": 0.0,
+    "ens_call": "no_change",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "j2": {
+    "id": "j2",
+    "rule": "A",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.0,
+    "P_tie": 1.0,
+    "P_literal_high_gt_low": 0.005,
+    "P_nonmono": 0.0,
+    "ens_call": "no_change",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "j3": {
+    "id": "j3",
+    "rule": "A",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.0,
+    "P_tie": 1.0,
+    "P_literal_high_gt_low": 0.97,
+    "P_nonmono": 0.0,
+    "ens_call": "no_change",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   }
+  },
+  "tables_single": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.3333333333333333,
+     "n_confident": 6,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.3333333333333333
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 5,
+     "acc_confident": 0.4,
+     "abstain_rate": 0.375
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 3,
+     "acc_confident": 0.0,
+     "abstain_rate": 0.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 3,
+     "acc_uncertain_wrong": 0.25,
+     "n_confident": 9,
+     "acc_confident": 0.3333333333333333,
+     "abstain_rate": 0.25
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "increase",
+     "correct": false
+    }
+   ]
+  },
+  "tables_ensemble": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.1111111111111111,
+     "n_confident": 1,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.8888888888888888
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.125,
+     "n_confident": 1,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.875
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 3,
+     "acc_confident": 0.0,
+     "abstain_rate": 0.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.08333333333333333,
+     "n_confident": 4,
+     "acc_confident": 0.25,
+     "abstain_rate": 0.6666666666666666
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "uncertain",
+     "correct": false
+    }
+   ]
+  }
+ },
+ "L": {
+  "single": {
+   "s01": {
+    "id": "s01",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.02,
+     "D_p05": -225.37765662687073,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s03": {
+    "id": "s03",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s04": {
+    "id": "s04",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s05": {
+    "id": "s05",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s06": {
+    "id": "s06",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s07": {
+    "id": "s07",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -3.4774138314139464,
+     "D_p50": -2.6646681076896357,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s08": {
+    "id": "s08",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -1.6066771280241914,
+     "D_p50": -8.881784197001252e-16,
+     "D_p95": 0.0
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "non_monotonic",
+    "always_increase": "increase"
+   },
+   "s09": {
+    "id": "s09",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "no_change",
+     "2": "no_change",
+     "3": "no_change"
+    },
+    "call": "no_change",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.0,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "s10": {
+    "id": "s10",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.5,
+     "D_p05": -229.00707590402143,
+     "D_p50": -3.1974981047101085,
+     "D_p95": 0.5853784579166261
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s11": {
+    "id": "s11",
+    "set": "dev",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "call": "uncertain",
+    "labels": [
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle",
+     "triangle"
+    ],
+    "abstain": [
+     "band_spans_classes",
+     null,
+     null,
+     null,
+     null
+    ],
+    "cfg": "M0",
+    "zero_flux": false,
+    "blind": "class_change",
+    "always_increase": "increase"
+   },
+   "s13": {
+    "id": "s13",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 1.9012953527443062,
+     "D_p50": 1.9026645098476513,
+     "D_p95": 1.903773205502443
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "s14": {
+    "id": "s14",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "increase",
+     "2": "increase",
+     "3": "increase"
+    },
+    "call": "increase",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.4010945502088921,
+     "D_p50": 0.5127587001797682,
+     "D_p95": 0.6346474086441263
+    },
+    "zero_flux": false,
+    "n_draws": 100,
+    "set": "dev",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j1": {
+    "id": "j1",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.12169451695022104,
+     "D_p95": 0.24989087759867842
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   },
+   "j2": {
+    "id": "j2",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": 0.0,
+     "D_p50": 0.11632918089095057,
+     "D_p95": 0.2387322756904183
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "decrease",
+    "always_increase": "increase"
+   },
+   "j3": {
+    "id": "j3",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "calls_by_i": {
+     "1": "uncertain",
+     "2": "uncertain",
+     "3": "uncertain"
+    },
+    "call": "uncertain",
+    "diag_i1": {
+     "nm_frac": 0.0,
+     "D_p05": -0.4774645513808366,
+     "D_p50": -0.23265836178190114,
+     "D_p95": 0.0
+    },
+    "zero_flux": true,
+    "n_draws": 100,
+    "set": "dev (j1-j3: formerly held-out, now seen)",
+    "blind": "increase",
+    "always_increase": "increase"
+   }
+  },
+  "ensemble": {
+   "s01": {
+    "id": "s01",
+    "rule": "L",
+    "param": "flow_sccm",
+    "sweep": [
+     10,
+     160
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.02,
+    "P_down": 0.6983333333333334,
+    "P_tie": 0.2816666666666667,
+    "P_literal_high_gt_low": 0.0225,
+    "P_nonmono": 0.07083333333333333,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.08,
+      "P_down": 0.39666666666666667,
+      "P_tie": 0.5233333333333333,
+      "P_nonmono": 0.28,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.49,
+      "P_tie": 0.51,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.46,
+      "P_tie": 0.54,
+      "P_nonmono": 0.006666666666666667,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.35,
+      "P_tie": 0.65,
+      "P_nonmono": 0.08666666666666667,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.006666666666666667,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/reactive": {
+      "P_up": 0.08,
+      "P_down": 0.89,
+      "P_tie": 0.03,
+      "P_nonmono": 0.18666666666666668,
+      "n": 300,
+      "call": "decrease"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s03": {
+    "id": "s03",
+    "rule": "L",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     300
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.65,
+    "P_down": 0.0,
+    "P_tie": 0.35,
+    "P_literal_high_gt_low": 0.65,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.31,
+      "P_down": 0.0,
+      "P_tie": 0.69,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.31,
+      "P_down": 0.0,
+      "P_tie": 0.69,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.31,
+      "P_down": 0.0,
+      "P_tie": 0.69,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.27,
+      "P_down": 0.0,
+      "P_tie": 0.73,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s04": {
+    "id": "s04",
+    "rule": "L",
+    "param": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.65,
+    "P_tie": 0.35,
+    "P_literal_high_gt_low": 0.0,
+    "P_nonmono": 0.00125,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.31,
+      "P_tie": 0.69,
+      "P_nonmono": 0.01,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.31,
+      "P_tie": 0.69,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.31,
+      "P_tie": 0.69,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.27,
+      "P_tie": 0.73,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 1.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "decrease"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s05": {
+    "id": "s05",
+    "rule": "L",
+    "param": "m_MoO3_mg",
+    "sweep": [
+     10,
+     30
+    ],
+    "observable": "layers",
+    "label": "class_change",
+    "class": "secondary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.0,
+    "P_tie": 1.0,
+    "P_literal_high_gt_low": 0.0,
+    "P_nonmono": 0.0,
+    "ens_call": "no_change",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s06": {
+    "id": "s06",
+    "rule": "L",
+    "param": "m_S_mg",
+    "sweep": [
+     100,
+     400
+    ],
+    "observable": "domain",
+    "label": "class_change",
+    "class": "secondary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.0,
+    "P_tie": 1.0,
+    "P_literal_high_gt_low": 0.0,
+    "P_nonmono": 0.0,
+    "ens_call": "no_change",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s07": {
+    "id": "s07",
+    "rule": "L",
+    "param": "T_furnace_C",
+    "sweep": [
+     650,
+     800
+    ],
+    "observable": "coverage",
+    "label": "class_change",
+    "class": "secondary",
+    "n_members": 4800,
+    "P_up": 0.56,
+    "P_down": 0.385,
+    "P_tie": 0.055,
+    "P_literal_high_gt_low": 0.56,
+    "P_nonmono": 0.05625,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.12,
+      "P_down": 0.77,
+      "P_tie": 0.11,
+      "P_nonmono": 0.13,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.12,
+      "P_down": 0.77,
+      "P_tie": 0.11,
+      "P_nonmono": 0.11,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.12,
+      "P_down": 0.77,
+      "P_tie": 0.11,
+      "P_nonmono": 0.11,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.12,
+      "P_down": 0.77,
+      "P_tie": 0.11,
+      "P_nonmono": 0.1,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s08": {
+    "id": "s08",
+    "rule": "L",
+    "param": "gap_mm",
+    "sweep": [
+     2,
+     10
+    ],
+    "observable": "layers",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.0,
+    "P_down": 0.25,
+    "P_tie": 0.75,
+    "P_literal_high_gt_low": 0.0525,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.3,
+      "P_tie": 0.7,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.3,
+      "P_tie": 0.7,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.3,
+      "P_tie": 0.7,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.3,
+      "P_tie": 0.7,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.25,
+      "P_tie": 0.75,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.22,
+      "P_tie": 0.78,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "unresolved"
+     },
+     "reactive/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.15,
+      "P_tie": 0.85,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.18,
+      "P_tie": 0.82,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s09": {
+    "id": "s09",
+    "rule": "L",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     200,
+     400
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.5,
+    "P_down": 0.0,
+    "P_tie": 0.5,
+    "P_literal_high_gt_low": 0.5,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.0,
+      "P_tie": 1.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "no_change"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": true,
+     "condensation/reflecting": true,
+     "condensation/sticking": true,
+     "condensation/reactive": true,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s10": {
+    "id": "s10",
+    "rule": "L",
+    "param": "T_furnace_C",
+    "sweep": [
+     700,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 4800,
+    "P_up": 0.295625,
+    "P_down": 0.6695833333333333,
+    "P_tie": 0.034791666666666665,
+    "P_literal_high_gt_low": 0.3097916666666667,
+    "P_nonmono": 0.10875,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.26,
+      "P_down": 0.72,
+      "P_tie": 0.02,
+      "P_nonmono": 0.39666666666666667,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.9383333333333334,
+      "P_tie": 0.06166666666666667,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "decrease"
+     },
+     "condensation/sticking": {
+      "P_up": 0.26,
+      "P_down": 0.73,
+      "P_tie": 0.01,
+      "P_nonmono": 0.40166666666666667,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.8816666666666667,
+      "P_tie": 0.11833333333333333,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "decrease"
+     },
+     "reactive/condensation": {
+      "P_up": 0.5033333333333333,
+      "P_down": 0.49666666666666665,
+      "P_tie": 0.0,
+      "P_nonmono": 0.03833333333333333,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.45666666666666667,
+      "P_down": 0.5,
+      "P_tie": 0.043333333333333335,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/sticking": {
+      "P_up": 0.5033333333333333,
+      "P_down": 0.49333333333333335,
+      "P_tie": 0.0033333333333333335,
+      "P_nonmono": 0.03333333333333333,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.38166666666666665,
+      "P_down": 0.5966666666666667,
+      "P_tie": 0.021666666666666667,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": true,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s11": {
+    "id": "s11",
+    "rule": "L",
+    "param": "T_boat_S_C",
+    "sweep": [
+     180,
+     300
+    ],
+    "observable": "shape",
+    "label": "class_change",
+    "class": "primary",
+    "n_members": 64,
+    "fractions": {
+     "class_change": 0.0,
+     "no_change": 0.046875,
+     "unknown": 0.953125
+    },
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "condensation/reflecting": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "condensation/sticking": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "condensation/reactive": {
+      "class_change": 0.0,
+      "no_change": 0.375,
+      "unknown": 0.625
+     },
+     "reactive/condensation": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "reactive/reflecting": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "reactive/sticking": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     },
+     "reactive/reactive": {
+      "class_change": 0.0,
+      "no_change": 0.0,
+      "unknown": 1.0
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {}
+   },
+   "s13": {
+    "id": "s13",
+    "rule": "L",
+    "param": "T_furnace_C",
+    "sweep": [
+     750,
+     850
+    ],
+    "observable": "coverage",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 4800,
+    "P_up": 1.0,
+    "P_down": 0.0,
+    "P_tie": 0.0,
+    "P_literal_high_gt_low": 1.0,
+    "P_nonmono": 0.005,
+    "ens_call": "increase",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.01,
+      "n": 600,
+      "call": "increase"
+     },
+     "condensation/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.01,
+      "n": 600,
+      "call": "increase"
+     },
+     "condensation/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.01,
+      "n": 600,
+      "call": "increase"
+     },
+     "condensation/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.01,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "increase"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "s14": {
+    "id": "s14",
+    "rule": "L",
+    "param": "boat_area_MoO3_cm2",
+    "sweep": [
+     1,
+     4
+    ],
+    "observable": "coverage",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 2400,
+    "P_up": 0.9775,
+    "P_down": 0.0,
+    "P_tie": 0.0225,
+    "P_literal_high_gt_low": 0.9775,
+    "P_nonmono": 0.0,
+    "ens_call": "increase",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/sticking": {
+      "P_up": 0.99,
+      "P_down": 0.0,
+      "P_tie": 0.01,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "condensation/reactive": {
+      "P_up": 0.85,
+      "P_down": 0.0,
+      "P_tie": 0.15,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/condensation": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reflecting": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/sticking": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     },
+     "reactive/reactive": {
+      "P_up": 1.0,
+      "P_down": 0.0,
+      "P_tie": 0.0,
+      "P_nonmono": 0.0,
+      "n": 300,
+      "call": "increase"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "j1": {
+    "id": "j1",
+    "rule": "L",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     800,
+     825
+    ],
+    "observable": "domain",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 4800,
+    "P_up": 0.5316666666666666,
+    "P_down": 0.12875,
+    "P_tie": 0.33958333333333335,
+    "P_literal_high_gt_low": 0.541875,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.565,
+      "P_down": 0.0,
+      "P_tie": 0.435,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.565,
+      "P_down": 0.0,
+      "P_tie": 0.435,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.565,
+      "P_down": 0.0,
+      "P_tie": 0.435,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.555,
+      "P_down": 0.0,
+      "P_tie": 0.445,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.5,
+      "P_down": 0.25166666666666665,
+      "P_tie": 0.24833333333333332,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.5,
+      "P_down": 0.255,
+      "P_tie": 0.245,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/sticking": {
+      "P_up": 0.5,
+      "P_down": 0.23833333333333334,
+      "P_tie": 0.26166666666666666,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.5033333333333333,
+      "P_down": 0.285,
+      "P_tie": 0.21166666666666667,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "j2": {
+    "id": "j2",
+    "rule": "L",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "domain",
+    "label": "decrease",
+    "class": "primary",
+    "n_members": 4800,
+    "P_up": 0.515,
+    "P_down": 0.1225,
+    "P_tie": 0.3625,
+    "P_literal_high_gt_low": 0.525,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.53,
+      "P_down": 0.0,
+      "P_tie": 0.47,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.53,
+      "P_down": 0.0,
+      "P_tie": 0.47,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.53,
+      "P_down": 0.0,
+      "P_tie": 0.47,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.525,
+      "P_down": 0.0,
+      "P_tie": 0.475,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.5,
+      "P_down": 0.235,
+      "P_tie": 0.265,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.5,
+      "P_down": 0.24833333333333332,
+      "P_tie": 0.25166666666666665,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/sticking": {
+      "P_up": 0.5,
+      "P_down": 0.225,
+      "P_tie": 0.275,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.505,
+      "P_down": 0.27166666666666667,
+      "P_tie": 0.22333333333333333,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   },
+   "j3": {
+    "id": "j3",
+    "rule": "L",
+    "param": "T_boat_Mo_C",
+    "sweep": [
+     825,
+     850
+    ],
+    "observable": "nucleation",
+    "label": "increase",
+    "class": "primary",
+    "n_members": 4800,
+    "P_up": 0.16833333333333333,
+    "P_down": 0.5170833333333333,
+    "P_tie": 0.3145833333333333,
+    "P_literal_high_gt_low": 0.239375,
+    "P_nonmono": 0.0,
+    "ens_call": "unresolved",
+    "by_cell": {
+     "condensation/condensation": {
+      "P_up": 0.0,
+      "P_down": 0.53,
+      "P_tie": 0.47,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reflecting": {
+      "P_up": 0.0,
+      "P_down": 0.53,
+      "P_tie": 0.47,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/sticking": {
+      "P_up": 0.0,
+      "P_down": 0.53,
+      "P_tie": 0.47,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "condensation/reactive": {
+      "P_up": 0.0,
+      "P_down": 0.525,
+      "P_tie": 0.475,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/condensation": {
+      "P_up": 0.33,
+      "P_down": 0.5,
+      "P_tie": 0.17,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reflecting": {
+      "P_up": 0.3333333333333333,
+      "P_down": 0.5,
+      "P_tie": 0.16666666666666666,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/sticking": {
+      "P_up": 0.325,
+      "P_down": 0.5,
+      "P_tie": 0.175,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     },
+     "reactive/reactive": {
+      "P_up": 0.35833333333333334,
+      "P_down": 0.5216666666666666,
+      "P_tie": 0.12,
+      "P_nonmono": 0.0,
+      "n": 600,
+      "call": "unresolved"
+     }
+    },
+    "sign_flip_across_cells": false,
+    "cells_disagree": false,
+    "zero_flux_cells": {
+     "condensation/condensation": false,
+     "condensation/reflecting": false,
+     "condensation/sticking": false,
+     "condensation/reactive": false,
+     "reactive/condensation": false,
+     "reactive/reflecting": false,
+     "reactive/sticking": false,
+     "reactive/reactive": false
+    }
+   }
+  },
+  "tables_single": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.1111111111111111,
+     "n_confident": 5,
+     "acc_confident": 0.2,
+     "abstain_rate": 0.4444444444444444
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.125,
+     "n_confident": 5,
+     "acc_confident": 0.2,
+     "abstain_rate": 0.375
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 0,
+     "acc_confident": null,
+     "abstain_rate": 1.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.08333333333333333,
+     "n_confident": 5,
+     "acc_confident": 0.2,
+     "abstain_rate": 0.5833333333333334
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "uncertain",
+     "correct": false
+    }
+   ]
+  },
+  "tables_ensemble": {
+   "T1_dev_primary_s": {
+    "call": {
+     "n": 9,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.1111111111111111,
+     "n_confident": 2,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.7777777777777778
+    },
+    "blind": {
+     "n": 9,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 9,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 9,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.4444444444444444,
+     "n_confident": 9,
+     "acc_confident": 0.4444444444444444,
+     "abstain_rate": 0.0
+    }
+   },
+   "T2_original8": {
+    "call": {
+     "n": 8,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.125,
+     "n_confident": 2,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.75
+    },
+    "blind": {
+     "n": 8,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 8,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 8,
+     "correct": 4,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 8,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T4_j1_j3": {
+    "call": {
+     "n": 3,
+     "correct": 0,
+     "acc_uncertain_wrong": 0.0,
+     "n_confident": 0,
+     "acc_confident": null,
+     "abstain_rate": 1.0
+    },
+    "blind": {
+     "n": 3,
+     "correct": 3,
+     "acc_uncertain_wrong": 1.0,
+     "n_confident": 3,
+     "acc_confident": 1.0,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 3,
+     "correct": 2,
+     "acc_uncertain_wrong": 0.6666666666666666,
+     "n_confident": 3,
+     "acc_confident": 0.6666666666666666,
+     "abstain_rate": 0.0
+    }
+   },
+   "T5_all_primary_incl_j": {
+    "call": {
+     "n": 12,
+     "correct": 1,
+     "acc_uncertain_wrong": 0.08333333333333333,
+     "n_confident": 2,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.8333333333333334
+    },
+    "blind": {
+     "n": 12,
+     "correct": 9,
+     "acc_uncertain_wrong": 0.75,
+     "n_confident": 12,
+     "acc_confident": 0.75,
+     "abstain_rate": 0.0
+    },
+    "always_increase": {
+     "n": 12,
+     "correct": 6,
+     "acc_uncertain_wrong": 0.5,
+     "n_confident": 12,
+     "acc_confident": 0.5,
+     "abstain_rate": 0.0
+    }
+   },
+   "T3_secondary": [
+    {
+     "id": "s05",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s06",
+     "call": "no_change",
+     "correct": false
+    },
+    {
+     "id": "s07",
+     "call": "uncertain",
+     "correct": false
+    }
+   ]
+  }
+ }
+}

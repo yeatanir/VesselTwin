@@ -1,0 +1,37 @@
+{
+ "text": "A 50 mL round-bottom flask with a magnetic stir bar was placed in an oil bath on top of a magnetic stir plate. To the round-bottom flask, 5 g of parent ester (FAEEc, FAMEc, or FAPEc) was added, heated to 60 °C, and agitated at 300 rpm.",
+ "vessel": "flask",
+ "gold": {
+  "volume_mL": {
+   "value": 50,
+   "unit": "mL"
+  },
+  "stir_rpm": {
+   "value": 300,
+   "unit": "rpm"
+  },
+  "T_C": {
+   "value": 60,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Brown grease-derived ester base oils: tunable viscosity and cold-flow behaviour",
+  "authors": [
+   "Ykok B Ksor",
+   "Ashlyn D Smith",
+   "Rhett C Smith"
+  ],
+  "journal": "RSC Advances",
+  "year": 2026,
+  "DOI": "10.1039/d6ra02359b",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13330713/",
+  "licence": "CC BY 3.0"
+ },
+ "unannotatable": [
+  "precursor_mass: 5 g parent ester",
+  "other: oil bath on magnetic stir plate"
+ ],
+ "ambiguous": []
+}

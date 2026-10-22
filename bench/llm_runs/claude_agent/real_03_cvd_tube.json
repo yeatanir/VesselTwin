@@ -1,0 +1,41 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "tube_id_in",
+   "value": "55",
+   "unit": "mm",
+   "span": "55-mm"
+  },
+  {
+   "key": "L_tube_cm",
+   "value": "1200",
+   "unit": "mm",
+   "span": "1200 mm"
+  },
+  {
+   "key": "T_furnace_C",
+   "value": "900",
+   "unit": "°C",
+   "span": "900 °C"
+  },
+  {
+   "key": "pressure_Pa",
+   "value": "950",
+   "unit": "mbar",
+   "span": "950 mbar"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "100",
+   "unit": "sccm",
+   "span": "100 sccm"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "100 sccm Ar"
+  }
+ ]
+}

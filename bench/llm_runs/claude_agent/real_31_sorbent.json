@@ -1,0 +1,23 @@
+{
+ "vessel": "sorbent",
+ "fields": [
+  {
+   "key": "bed_id_cm",
+   "value": "18",
+   "unit": "mm",
+   "span": "18 mm"
+  },
+  {
+   "key": "bed_length_cm",
+   "value": "30",
+   "unit": "mm",
+   "span": "30 mm"
+  },
+  {
+   "key": "y_feed",
+   "value": "400",
+   "unit": "ppm",
+   "span": "400 ppm"
+  }
+ ]
+}

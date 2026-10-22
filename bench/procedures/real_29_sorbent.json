@@ -1,0 +1,55 @@
+{
+ "text": "The activated sample (0.7261 g) was packed into a stainless‐steel column with an inner diameter of 4 mm and a length of 105 mm. The outlet effluent from the column was continuously monitored by a mass spectrometer (Hidden QGA quantitative gas analysis S3 system). The column packed with activated sample was first purged with a helium gas flow (8 mL/min) for 12 h at 120°C. During the breakthrough process, the gas mixture flow rate was 2 mL/min. The breakthrough experiments were conducted at 298 K and 1 bar.",
+ "vessel": "sorbent",
+ "gold": {
+  "bed_id_cm": {
+   "value": 4,
+   "unit": "mm"
+  },
+  "bed_length_cm": {
+   "value": 105,
+   "unit": "mm"
+  },
+  "flow_sccm": {
+   "value": 2,
+   "unit": "mL/min"
+  },
+  "T_K": {
+   "value": 298,
+   "unit": "K"
+  },
+  "P_kPa": {
+   "value": 1,
+   "unit": "bar"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Structural Exploration of Zirconium Metal–Organic Frameworks Through Linker Desymmetrization and Modulator Compensation",
+  "authors": [
+   "Rong‐Ran Liang",
+   "Kun‐Yu Wang",
+   "Zongsu Han",
+   "Kui Tan",
+   "Yihao Yang",
+   "Zhaoyi Liu",
+   "Joshua Rushlow",
+   "Jiatong Huo",
+   "Hong‐Cai Zhou"
+  ],
+  "journal": "Advanced Materials (Deerfield Beach, Fla.)",
+  "year": 2025,
+  "DOI": "10.1002/adma.202514373",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12910544/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "adsorbent_mass: 0.7261 g",
+  "activation: He purge 8 mL/min for 12 h at 120 C",
+  "other: stainless-steel column, mass spectrometer detection"
+ ],
+ "ambiguous": [
+  "flow_sccm: 8 mL/min He purge vs 2 mL/min gas mixture",
+  "y_feed: gas mixture composition not given in excerpt"
+ ]
+}

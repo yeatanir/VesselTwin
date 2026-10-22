@@ -1,0 +1,29 @@
+{
+  "_note": "Edge energies / attachment barriers for monolayer MoS2 zigzag edges. status: sourced = number read from the cited text; qualitative = published ordering/trend only (no number retrieved); synthetic = placeholder used by wulff.py. NO literature number has been invented; where the full text/SI was not reachable the entry says so. Searched Oct 18 2026.",
+  "lattice_a_A": {"value": 3.16, "status": "textbook MoS2 lattice constant (not re-verified in this search)", "use": "eV/A -> eV/site: one Mo per a along a zigzag edge"},
+  "sourced": [
+    {"quantity": "zigzag edge formation energy, MoS2 (termination/coverage not stated in the passage read)", "value_eV_per_A": 0.77,
+     "also": {"armchair_eV_per_A": 0.80, "reconstructed_zigzag_eV_per_A": 0.52}, "functional": "DFT (see paper)",
+     "citation": "Levita, Restuccia, Righi, 'Graphene and MoS2 interacting with water: a comparison by ab initio calculations', Carbon 107, 878 (2016); arXiv:1607.05607",
+     "doi": "not retrieved", "equiv_eV_per_site": 2.43,
+     "caveat": "single composition, not vs mu_S; not split into Mo-zz and S-zz; wulff.py gamma_edge_* is a rate-model scale tied to the synthetic P_eq_ref, so this is NOT plugged in"}
+  ],
+  "qualitative": [
+    {"claim": "Mo-terminated zigzag edges (S-Mo, Mo-zz) have lower formation energy than S-terminated ones for Delta mu_Mo > -0.3 eV; Mo-zz and S-Mo differ by only 0.01 eV at Delta mu_Mo = 0.1 eV (DFT, Fig. 5h of the paper; values not extracted)",
+     "citation": "Zhu, Shu, Jiang, Lv, Asokan, Omar, Yuan, Zhang, Jin, 'Capture the growth kinetics of CVD growth of two-dimensional MoS2', npj 2D Mater. Appl. 1, 8 (2017); arXiv:1612.05337"},
+    {"claim": "flake shape goes dodecagon -> hexagon -> triangle from Mo-rich to S-rich with purely zigzag edges (abstract only)",
+     "citation": "Cao, Shen, Liang, Chen, Shu, 'Role of Chemical Potential in Flake Shape and Edge Properties of Monolayer MoS2', J. Phys. Chem. C 119, 4294 (2015)", "doi": "10.1021/jp5097713"},
+    {"claim": "stable edge reconstructions vs mu_S; window -5.4 eV < mu_S < -4.2 eV for MoS2; ZZMo-S2/S3/S4 within 0.1 eV/A at mu_S = -3.9 eV",
+     "citation": "'Predicting synthesizable multi-functional edge reconstructions in two-dimensional transition metal dichalcogenides', npj Comput. Mater. (2020), s41524-020-0327-4 (authors not retrieved)"},
+    {"claim": "gas-phase route: Mo3O9 + S2 -> chain opening (rate-determining chain-breaking step) -> MoO3S2 -> ... MoS6 precursor; barrier values not retrieved",
+     "citation": "Lei, Xie, Yakobson, ACS Nano 15, 10525 (2021)"}
+  ],
+  "synthetic": [
+    {"param": "k_attach_Mo.A / Ea_eV", "value": "0.06 um/s/Pa, 0.6 eV", "note": "placeholder; no published attachment barrier retrieved (Govind Rajan et al. ACS Nano 10, 4330 (2016) SI and Momeni et al. not reachable)"},
+    {"param": "k_attach_S.A / Ea_eV", "value": "15 um/s/Pa, 0.5 eV", "note": "placeholder, retuned only so the default tube spans all shape classes after the MoO3 vapour pressure was sourced"},
+    {"param": "gamma_edge_Mo / gamma_edge_S", "value": "0.3 eV/site", "note": "placeholder"},
+    {"param": "P_eq_ref_Pa", "value": 1e-5, "note": "placeholder"},
+    {"param": "N_nuc_cm2", "value": 1e4, "note": "placeholder"},
+    {"param": "alpha_MoO3", "value": 0.1, "note": "no published MoO3 evaporation coefficient found"}
+  ]
+}

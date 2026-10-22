@@ -1,0 +1,1569 @@
+{
+ "meta": {
+  "generated": "2026-10-20",
+  "f_cfd": "CFD sink-flux rate / dilute Fick diffusion-only rate (Tier 1 J, same as docs/ampoule_convection_scan.json)",
+  "sweep": "60-point Latin hypercube (seed 7): D 6-45 mm, L 8-20 cm, dT=T_source-T_sink 10-150 K (T_sink 800 C), tilt -90..90, agent 0.5-15 mg/cm3; other params default; mesh 4 cells/cm x 10 across; t_end = 4 L^2/D_C; laminar",
+  "solver": "tier2/foam/ampouleBoussinesqFoam, OpenFOAM v2512; scripts/ampoule_sweep_design.py, ampoule_cfd_sweep.py, ampoule_verification_build.py"
+ },
+ "regime_agreement": {
+  "threshold_1.1": {
+   "agreement": 0.8166666666666667,
+   "n": 60,
+   "n_disagree": 11,
+   "disagreeing": [
+    {
+     "id": "s10",
+     "D_mm": 6.42,
+     "tilt_deg": 49.8,
+     "tier0_f": 3.983,
+     "f_cfd": 1.0
+    },
+    {
+     "id": "s11",
+     "D_mm": 41.65,
+     "tilt_deg": -83.9,
+     "tier0_f": 1.149,
+     "f_cfd": 1.025
+    },
+    {
+     "id": "s19",
+     "D_mm": 15.26,
+     "tilt_deg": 32.9,
+     "tier0_f": 2.045,
+     "f_cfd": 1.001
+    },
+    {
+     "id": "s20",
+     "D_mm": 23.57,
+     "tilt_deg": -73.6,
+     "tier0_f": 1.386,
+     "f_cfd": 1.065
+    },
+    {
+     "id": "s23",
+     "D_mm": 19.16,
+     "tilt_deg": 37.7,
+     "tier0_f": 3.133,
+     "f_cfd": 1.056
+    },
+    {
+     "id": "s26",
+     "D_mm": 17.08,
+     "tilt_deg": 68.2,
+     "tier0_f": 2.12,
+     "f_cfd": 1.003
+    },
+    {
+     "id": "s30",
+     "D_mm": 42.89,
+     "tilt_deg": -68.2,
+     "tier0_f": 1.043,
+     "f_cfd": 1.538
+    },
+    {
+     "id": "s36",
+     "D_mm": 6.71,
+     "tilt_deg": 52.4,
+     "tier0_f": 3.056,
+     "f_cfd": 1.001
+    },
+    {
+     "id": "s41",
+     "D_mm": 18.97,
+     "tilt_deg": -71.6,
+     "tier0_f": 1.457,
+     "f_cfd": 1.1
+    },
+    {
+     "id": "s55",
+     "D_mm": 36.74,
+     "tilt_deg": -80.3,
+     "tier0_f": 1.254,
+     "f_cfd": 1.041
+    },
+    {
+     "id": "s57",
+     "D_mm": 13.03,
+     "tilt_deg": 45.8,
+     "tier0_f": 3.245,
+     "f_cfd": 1.014
+    }
+   ]
+  },
+  "threshold_1.2": {
+   "agreement": 0.75,
+   "n": 60,
+   "n_disagree": 15,
+   "disagreeing": [
+    {
+     "id": "s01",
+     "D_mm": 34.03,
+     "tilt_deg": -77.4,
+     "tier0_f": 1.105,
+     "f_cfd": 1.142
+    },
+    {
+     "id": "s03",
+     "D_mm": 35.54,
+     "tilt_deg": -37.9,
+     "tier0_f": 1.361,
+     "f_cfd": 1.14
+    },
+    {
+     "id": "s10",
+     "D_mm": 6.42,
+     "tilt_deg": 49.8,
+     "tier0_f": 3.983,
+     "f_cfd": 1.0
+    },
+    {
+     "id": "s11",
+     "D_mm": 41.65,
+     "tilt_deg": -83.9,
+     "tier0_f": 1.149,
+     "f_cfd": 1.025
+    },
+    {
+     "id": "s19",
+     "D_mm": 15.26,
+     "tilt_deg": 32.9,
+     "tier0_f": 2.045,
+     "f_cfd": 1.001
+    },
+    {
+     "id": "s20",
+     "D_mm": 23.57,
+     "tilt_deg": -73.6,
+     "tier0_f": 1.386,
+     "f_cfd": 1.065
+    },
+    {
+     "id": "s23",
+     "D_mm": 19.16,
+     "tilt_deg": 37.7,
+     "tier0_f": 3.133,
+     "f_cfd": 1.056
+    },
+    {
+     "id": "s26",
+     "D_mm": 17.08,
+     "tilt_deg": 68.2,
+     "tier0_f": 2.12,
+     "f_cfd": 1.003
+    },
+    {
+     "id": "s30",
+     "D_mm": 42.89,
+     "tilt_deg": -68.2,
+     "tier0_f": 1.043,
+     "f_cfd": 1.538
+    },
+    {
+     "id": "s31",
+     "D_mm": 10.57,
+     "tilt_deg": -12.6,
+     "tier0_f": 1.132,
+     "f_cfd": 1.108
+    },
+    {
+     "id": "s36",
+     "D_mm": 6.71,
+     "tilt_deg": 52.4,
+     "tier0_f": 3.056,
+     "f_cfd": 1.001
+    },
+    {
+     "id": "s41",
+     "D_mm": 18.97,
+     "tilt_deg": -71.6,
+     "tier0_f": 1.457,
+     "f_cfd": 1.1
+    },
+    {
+     "id": "s48",
+     "D_mm": 16.8,
+     "tilt_deg": -56.0,
+     "tier0_f": 1.667,
+     "f_cfd": 1.193
+    },
+    {
+     "id": "s55",
+     "D_mm": 36.74,
+     "tilt_deg": -80.3,
+     "tier0_f": 1.254,
+     "f_cfd": 1.041
+    },
+    {
+     "id": "s57",
+     "D_mm": 13.03,
+     "tilt_deg": 45.8,
+     "tier0_f": 3.245,
+     "f_cfd": 1.014
+    }
+   ]
+  },
+  "n_tier0_convection": 50,
+  "n_cfd_convection_1.2": 37,
+  "note": "Tier 0 = vessels.ampoule.tier0 (calibrated f >= conv_threshold 1.1); CFD class: f_CFD = rate_CFD/rate_diffusion-only > threshold. Target >= 90%. Re-scored after the stratification-cutoff fix in vessels/ampoule (no CFD rerun, no refit of conv_c/conv_fmax/conv_n); 'before_fix' = original scoring.",
+  "before_fix": {
+   "threshold_1.1": {
+    "agreement": 0.65,
+    "n": 60,
+    "n_disagree": 21
+   },
+   "threshold_1.2": {
+    "agreement": 0.7166666666666667,
+    "n": 60,
+    "n_disagree": 17
+   }
+  }
+ },
+ "mesh_convergence": {
+  "diffusion": {
+   "values": {
+    "D_mm": 10,
+    "tilt_deg": 0
+   },
+   "levels_done": [
+    0,
+    1
+   ],
+   "f_cfd": [
+    1.001591712270126,
+    1.0012715921135964
+   ],
+   "change_pct": [
+    -0.03197136112228505
+   ],
+   "status": "incomplete: fine level not finished"
+  },
+  "tilted": {
+   "values": {
+    "D_mm": 25,
+    "tilt_deg": 30
+   },
+   "levels_done": [
+    0,
+    1
+   ],
+   "f_cfd": [
+    4.514093839217124,
+    4.09980155297191
+   ],
+   "change_pct": [
+    -10.105179016406222
+   ],
+   "status": "incomplete: fine level not finished"
+  },
+  "weak": {
+   "values": {
+    "D_mm": 20,
+    "tilt_deg": 0
+   },
+   "levels_done": [
+    0,
+    1
+   ],
+   "f_cfd": [
+    1.3494469045424522,
+    1.2849254132348038
+   ],
+   "change_pct": [
+    -5.0214191923572695
+   ],
+   "status": "incomplete: fine level not finished"
+  }
+ },
+ "sweep": [
+  {
+   "id": "s00",
+   "values": {
+    "D_mm": 32.89,
+    "L_cm": 19.82,
+    "T_source_C": 887.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": -57.7,
+    "agent_mg_per_cm3": 4.052,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.7363448568296014,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.2262036959976026,
+   "ok": true,
+   "drift_last_quarter": 1.1547930697607578e-09,
+   "osc_last_quarter": 4.5592977595365565e-09,
+   "t_end_s": 2071.01,
+   "wall_s": 309
+  },
+  {
+   "id": "s01",
+   "values": {
+    "D_mm": 34.03,
+    "L_cm": 14.0,
+    "T_source_C": 934.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": -77.4,
+    "agent_mg_per_cm3": 12.954,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.1046621876270557,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.1419636149400783,
+   "ok": true,
+   "drift_last_quarter": 1.9434731047244667e-09,
+   "osc_last_quarter": 8.973375443367036e-09,
+   "t_end_s": 3195.06,
+   "wall_s": 109
+  },
+  {
+   "id": "s02",
+   "values": {
+    "D_mm": 40.9,
+    "L_cm": 8.54,
+    "T_source_C": 909.7,
+    "T_sink_C": 800.0,
+    "tilt_deg": 1.7,
+    "agent_mg_per_cm3": 3.278,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 7.656467096506508,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 5.515475341176062,
+   "ok": true,
+   "drift_last_quarter": 2.2234209323994077e-09,
+   "osc_last_quarter": 1.6103388461723036e-16,
+   "t_end_s": 48.2658,
+   "wall_s": 85
+  },
+  {
+   "id": "s03",
+   "values": {
+    "D_mm": 35.54,
+    "L_cm": 9.6,
+    "T_source_C": 824.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": -37.9,
+    "agent_mg_per_cm3": 1.953,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.3611481446493667,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.1397573551369433,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 5.029125380589496e-10,
+   "t_end_s": 239.536,
+   "wall_s": 33
+  },
+  {
+   "id": "s04",
+   "values": {
+    "D_mm": 20.16,
+    "L_cm": 12.97,
+    "T_source_C": 815.6,
+    "T_sink_C": 800.0,
+    "tilt_deg": 11.9,
+    "agent_mg_per_cm3": 8.225,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 2.9446256642033166,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.6414931338387464,
+   "ok": true,
+   "drift_last_quarter": 3.5194007424688436e-10,
+   "osc_last_quarter": 2.9187710741537423e-09,
+   "t_end_s": 1795.93,
+   "wall_s": 204
+  },
+  {
+   "id": "s05",
+   "values": {
+    "D_mm": 10.22,
+    "L_cm": 10.71,
+    "T_source_C": 866.2,
+    "T_sink_C": 800.0,
+    "tilt_deg": -52.9,
+    "agent_mg_per_cm3": 1.342,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0000221405962175,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 0.9998803442026497,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 0.0,
+   "t_end_s": 197.033,
+   "wall_s": 4
+  },
+  {
+   "id": "s06",
+   "values": {
+    "D_mm": 29.08,
+    "L_cm": 16.95,
+    "T_source_C": 945.3,
+    "T_sink_C": 800.0,
+    "tilt_deg": 62.4,
+    "agent_mg_per_cm3": 1.783,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.2193812414502387,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 4.543731658541618,
+   "ok": true,
+   "drift_last_quarter": 3.484116876262936e-12,
+   "osc_last_quarter": 3.850837217738651e-10,
+   "t_end_s": 684.9,
+   "wall_s": 697
+  },
+  {
+   "id": "s07",
+   "values": {
+    "D_mm": 7.82,
+    "L_cm": 16.33,
+    "T_source_C": 891.7,
+    "T_sink_C": 800.0,
+    "tilt_deg": -35.5,
+    "agent_mg_per_cm3": 3.846,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0002268705463442,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.000193374655919,
+   "ok": true,
+   "drift_last_quarter": 5.804800574327578e-09,
+   "osc_last_quarter": 2.2200167542743208e-16,
+   "t_end_s": 1327.61,
+   "wall_s": 64
+  },
+  {
+   "id": "s08",
+   "values": {
+    "D_mm": 40.28,
+    "L_cm": 8.62,
+    "T_source_C": 862.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": 27.5,
+    "agent_mg_per_cm3": 11.462,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 10.059644299868703,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 10.564860009690577,
+   "ok": true,
+   "drift_last_quarter": 0.00047165427020668223,
+   "osc_last_quarter": 0.03797596467127045,
+   "t_end_s": 1089.25,
+   "wall_s": 749
+  },
+  {
+   "id": "s09",
+   "values": {
+    "D_mm": 43.87,
+    "L_cm": 8.18,
+    "T_source_C": 857.7,
+    "T_sink_C": 800.0,
+    "tilt_deg": -10.5,
+    "agent_mg_per_cm3": 2.464,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.7202105203422042,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 2.969908250866415,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 1.495296057447256e-16,
+   "t_end_s": 218.268,
+   "wall_s": 47
+  },
+  {
+   "id": "s10",
+   "values": {
+    "D_mm": 6.42,
+    "L_cm": 17.68,
+    "T_source_C": 849.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": 49.8,
+    "agent_mg_per_cm3": 9.122,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.982685371516002,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.000193921669501,
+   "ok": true,
+   "drift_last_quarter": 5.188869406136496e-09,
+   "osc_last_quarter": 9.824573684067767e-10,
+   "t_end_s": 3659.43,
+   "wall_s": 181
+  },
+  {
+   "id": "s11",
+   "values": {
+    "D_mm": 41.65,
+    "L_cm": 18.04,
+    "T_source_C": 834.8,
+    "T_sink_C": 800.0,
+    "tilt_deg": -83.9,
+    "agent_mg_per_cm3": 11.716,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.148930229918534,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.024867833550875,
+   "ok": true,
+   "drift_last_quarter": 4.64908702359647e-11,
+   "osc_last_quarter": 1.3590457537229268e-08,
+   "t_end_s": 4895.44,
+   "wall_s": 95
+  },
+  {
+   "id": "s12",
+   "values": {
+    "D_mm": 30.31,
+    "L_cm": 10.27,
+    "T_source_C": 941.4,
+    "T_sink_C": 800.0,
+    "tilt_deg": 26.5,
+    "agent_mg_per_cm3": 10.06,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 10.334189315228407,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 15.233739655214244,
+   "ok": true,
+   "drift_last_quarter": 0.0022374869953798956,
+   "osc_last_quarter": 0.09777210647206527,
+   "t_end_s": 1340.93,
+   "wall_s": 1241
+  },
+  {
+   "id": "s13",
+   "values": {
+    "D_mm": 38.99,
+    "L_cm": 16.72,
+    "T_source_C": 896.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": 15.1,
+    "agent_mg_per_cm3": 2.865,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 7.1592301496933,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 7.860283225168399,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 1.129957272857807e-16,
+   "t_end_s": 1052.21,
+   "wall_s": 774
+  },
+  {
+   "id": "s14",
+   "values": {
+    "D_mm": 34.81,
+    "L_cm": 17.14,
+    "T_source_C": 906.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": 58.0,
+    "agent_mg_per_cm3": 5.543,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 8.954176187597907,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 21.054614069360337,
+   "ok": true,
+   "drift_last_quarter": 0.0015239192091116183,
+   "osc_last_quarter": 0.0730272713375784,
+   "t_end_s": 2097.25,
+   "wall_s": 4750
+  },
+  {
+   "id": "s15",
+   "values": {
+    "D_mm": 31.45,
+    "L_cm": 10.01,
+    "T_source_C": 915.2,
+    "T_sink_C": 800.0,
+    "tilt_deg": 73.3,
+    "agent_mg_per_cm3": 12.79,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 10.508968111639556,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 12.32942133428914,
+   "ok": true,
+   "drift_last_quarter": 0.027271848161217988,
+   "osc_last_quarter": 0.2546942326569773,
+   "t_end_s": 1618.98,
+   "wall_s": 1649
+  },
+  {
+   "id": "s16",
+   "values": {
+    "D_mm": 9.77,
+    "L_cm": 18.61,
+    "T_source_C": 925.4,
+    "T_sink_C": 800.0,
+    "tilt_deg": 44.5,
+    "agent_mg_per_cm3": 12.37,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 4.769553131913004,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.4791983277687404,
+   "ok": true,
+   "drift_last_quarter": 1.4431864856350042e-09,
+   "osc_last_quarter": 9.163763920166338e-09,
+   "t_end_s": 5404.19,
+   "wall_s": 983
+  },
+  {
+   "id": "s17",
+   "values": {
+    "D_mm": 21.18,
+    "L_cm": 14.89,
+    "T_source_C": 886.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": -31.2,
+    "agent_mg_per_cm3": 5.275,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.8928892531753623,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.444876378091694,
+   "ok": true,
+   "drift_last_quarter": 4.151991567881984e-10,
+   "osc_last_quarter": 2.719319124987644e-09,
+   "t_end_s": 1511.66,
+   "wall_s": 137
+  },
+  {
+   "id": "s18",
+   "values": {
+    "D_mm": 11.83,
+    "L_cm": 18.22,
+    "T_source_C": 869.6,
+    "T_sink_C": 800.0,
+    "tilt_deg": -4.6,
+    "agent_mg_per_cm3": 4.772,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.010442840537162,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.0100987783870135,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 1.2041619673928718e-10,
+   "t_end_s": 2053.3,
+   "wall_s": 133
+  },
+  {
+   "id": "s19",
+   "values": {
+    "D_mm": 15.26,
+    "L_cm": 14.59,
+    "T_source_C": 874.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": 32.9,
+    "agent_mg_per_cm3": 1.195,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 2.045064456334868,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0005925678669734,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 2.2191310634894867e-16,
+   "t_end_s": 342.636,
+   "wall_s": 13
+  },
+  {
+   "id": "s20",
+   "values": {
+    "D_mm": 23.57,
+    "L_cm": 11.27,
+    "T_source_C": 837.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": -73.6,
+    "agent_mg_per_cm3": 10.922,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.3860031330443985,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0647414032405949,
+   "ok": true,
+   "drift_last_quarter": 5.910582729731774e-09,
+   "osc_last_quarter": 1.0256041109892146e-08,
+   "t_end_s": 1783.64,
+   "wall_s": 27
+  },
+  {
+   "id": "s21",
+   "values": {
+    "D_mm": 27.88,
+    "L_cm": 11.08,
+    "T_source_C": 820.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": 22.9,
+    "agent_mg_per_cm3": 13.908,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 8.759439146984796,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 9.149074996293452,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 0.0,
+   "t_end_s": 2199.31,
+   "wall_s": 602
+  },
+  {
+   "id": "s22",
+   "values": {
+    "D_mm": 12.0,
+    "L_cm": 19.22,
+    "T_source_C": 903.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": 81.2,
+    "agent_mg_per_cm3": 13.79,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 4.8906706586205475,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 16.907552016347147,
+   "ok": true,
+   "drift_last_quarter": 2.2771401017336306e-10,
+   "osc_last_quarter": 6.743128320009264e-09,
+   "t_end_s": 6442.12,
+   "wall_s": 4239
+  },
+  {
+   "id": "s23",
+   "values": {
+    "D_mm": 19.16,
+    "L_cm": 19.44,
+    "T_source_C": 861.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": 37.7,
+    "agent_mg_per_cm3": 2.961,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.1333628097533444,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0562753720675844,
+   "ok": true,
+   "drift_last_quarter": 2.0670936472798506e-10,
+   "osc_last_quarter": 1.5071884109237182e-09,
+   "t_end_s": 1472.81,
+   "wall_s": 135
+  },
+  {
+   "id": "s24",
+   "values": {
+    "D_mm": 26.14,
+    "L_cm": 19.07,
+    "T_source_C": 838.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": -88.5,
+    "agent_mg_per_cm3": 3.466,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0002607871741978,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.0000736649040554,
+   "ok": true,
+   "drift_last_quarter": 1.3211098242612114e-09,
+   "osc_last_quarter": 1.3211098242612114e-09,
+   "t_end_s": 1620.96,
+   "wall_s": 7
+  },
+  {
+   "id": "s25",
+   "values": {
+    "D_mm": 29.9,
+    "L_cm": 10.56,
+    "T_source_C": 914.2,
+    "T_sink_C": 800.0,
+    "tilt_deg": 89.5,
+    "agent_mg_per_cm3": 14.433,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 4.69797579586862,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 14.019962612088582,
+   "ok": true,
+   "drift_last_quarter": 0.0012579005934465004,
+   "osc_last_quarter": 0.25610455870583504,
+   "t_end_s": 2029.28,
+   "wall_s": 1542
+  },
+  {
+   "id": "s26",
+   "values": {
+    "D_mm": 17.08,
+    "L_cm": 9.89,
+    "T_source_C": 813.9,
+    "T_sink_C": 800.0,
+    "tilt_deg": 68.2,
+    "agent_mg_per_cm3": 4.137,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 2.1198237624034917,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0028928028492472,
+   "ok": true,
+   "drift_last_quarter": 8.156094065860053e-10,
+   "osc_last_quarter": 1.22341404345777e-09,
+   "t_end_s": 530.153,
+   "wall_s": 7
+  },
+  {
+   "id": "s27",
+   "values": {
+    "D_mm": 8.31,
+    "L_cm": 16.4,
+    "T_source_C": 918.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": -25.6,
+    "agent_mg_per_cm3": 7.533,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.009465023557658,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.0081918159580336,
+   "ok": true,
+   "drift_last_quarter": 2.5544653019364767e-10,
+   "osc_last_quarter": 2.607098127382968e-09,
+   "t_end_s": 2583.88,
+   "wall_s": 136
+  },
+  {
+   "id": "s28",
+   "values": {
+    "D_mm": 25.02,
+    "L_cm": 9.28,
+    "T_source_C": 949.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": 78.4,
+    "agent_mg_per_cm3": 7.167,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 6.501618923553044,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 8.218603309592984,
+   "ok": true,
+   "drift_last_quarter": 0.033499286227331296,
+   "osc_last_quarter": 0.3287641532487544,
+   "t_end_s": 785.589,
+   "wall_s": 499
+  },
+  {
+   "id": "s29",
+   "values": {
+    "D_mm": 35.95,
+    "L_cm": 11.59,
+    "T_source_C": 830.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": -22.6,
+    "agent_mg_per_cm3": 0.512,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0052583107505009,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.0062315336628855,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 0.0,
+   "t_end_s": 96.2228,
+   "wall_s": 5
+  },
+  {
+   "id": "s30",
+   "values": {
+    "D_mm": 42.89,
+    "L_cm": 15.64,
+    "T_source_C": 929.8,
+    "T_sink_C": 800.0,
+    "tilt_deg": -68.2,
+    "agent_mg_per_cm3": 14.606,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0429583618723546,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.537645653277614,
+   "ok": true,
+   "drift_last_quarter": 1.5254620839094138e-09,
+   "osc_last_quarter": 9.380282913111366e-09,
+   "t_end_s": 4490.64,
+   "wall_s": 228
+  },
+  {
+   "id": "s31",
+   "values": {
+    "D_mm": 10.57,
+    "L_cm": 14.73,
+    "T_source_C": 911.7,
+    "T_sink_C": 800.0,
+    "tilt_deg": -12.6,
+    "agent_mg_per_cm3": 8.704,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.1317619728728814,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.1084022376660965,
+   "ok": true,
+   "drift_last_quarter": 3.2052086033099017e-10,
+   "osc_last_quarter": 1.5054557380817365e-09,
+   "t_end_s": 2404.92,
+   "wall_s": 127
+  },
+  {
+   "id": "s32",
+   "values": {
+    "D_mm": 27.31,
+    "L_cm": 9.02,
+    "T_source_C": 938.7,
+    "T_sink_C": 800.0,
+    "tilt_deg": -15.3,
+    "agent_mg_per_cm3": 1.562,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.7407069371412942,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.5435629020272812,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 1.438519963348451e-16,
+   "t_end_s": 170.533,
+   "wall_s": 20
+  },
+  {
+   "id": "s33",
+   "values": {
+    "D_mm": 14.79,
+    "L_cm": 13.68,
+    "T_source_C": 864.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": 14.1,
+    "agent_mg_per_cm3": 14.043,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 5.911325315054521,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 7.09024211337045,
+   "ok": true,
+   "drift_last_quarter": 1.1104694710999506e-10,
+   "osc_last_quarter": 4.3148921142086e-09,
+   "t_end_s": 3349.34,
+   "wall_s": 640
+  },
+  {
+   "id": "s34",
+   "values": {
+    "D_mm": 33.65,
+    "L_cm": 16.07,
+    "T_source_C": 946.2,
+    "T_sink_C": 800.0,
+    "tilt_deg": -18.6,
+    "agent_mg_per_cm3": 13.293,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.3533694207764924,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 10.843554569888314,
+   "ok": true,
+   "drift_last_quarter": 2.999404424202006e-11,
+   "osc_last_quarter": 2.165011403852315e-09,
+   "t_end_s": 4310.14,
+   "wall_s": 512
+  },
+  {
+   "id": "s35",
+   "values": {
+    "D_mm": 21.98,
+    "L_cm": 15.25,
+    "T_source_C": 892.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": 33.8,
+    "agent_mg_per_cm3": 11.348,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 9.225520341210562,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 15.47136173051913,
+   "ok": true,
+   "drift_last_quarter": 1.3949960745674965e-06,
+   "osc_last_quarter": 0.028358770938612103,
+   "t_end_s": 3355.53,
+   "wall_s": 3280
+  },
+  {
+   "id": "s36",
+   "values": {
+    "D_mm": 6.71,
+    "L_cm": 8.84,
+    "T_source_C": 899.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": 52.4,
+    "agent_mg_per_cm3": 6.562,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.055885262939282,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0011955683609903,
+   "ok": true,
+   "drift_last_quarter": 8.081436991607058e-10,
+   "osc_last_quarter": 1.6323702366389235e-09,
+   "t_end_s": 653.071,
+   "wall_s": 13
+  },
+  {
+   "id": "s37",
+   "values": {
+    "D_mm": 24.82,
+    "L_cm": 15.99,
+    "T_source_C": 856.6,
+    "T_sink_C": 800.0,
+    "tilt_deg": -84.8,
+    "agent_mg_per_cm3": 6.965,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0375551657288713,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.0043307593512114,
+   "ok": true,
+   "drift_last_quarter": 7.409903180471768e-10,
+   "osc_last_quarter": 2.0990826763117275e-09,
+   "t_end_s": 2278.39,
+   "wall_s": 16
+  },
+  {
+   "id": "s38",
+   "values": {
+    "D_mm": 44.88,
+    "L_cm": 13.29,
+    "T_source_C": 938.2,
+    "T_sink_C": 800.0,
+    "tilt_deg": -7.8,
+    "agent_mg_per_cm3": 5.777,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 2.041973513750682,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 10.991211205532396,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 1.6161611365507436e-16,
+   "t_end_s": 1307.64,
+   "wall_s": 267
+  },
+  {
+   "id": "s39",
+   "values": {
+    "D_mm": 8.81,
+    "L_cm": 15.6,
+    "T_source_C": 883.9,
+    "T_sink_C": 800.0,
+    "tilt_deg": -62.8,
+    "agent_mg_per_cm3": 13.42,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0200843080764765,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.0098076060305436,
+   "ok": true,
+   "drift_last_quarter": 1.0921387667635204e-09,
+   "osc_last_quarter": 4.4830915681908545e-09,
+   "t_end_s": 4142.11,
+   "wall_s": 158
+  },
+  {
+   "id": "s40",
+   "values": {
+    "D_mm": 32.12,
+    "L_cm": 17.47,
+    "T_source_C": 922.9,
+    "T_sink_C": 800.0,
+    "tilt_deg": 77.4,
+    "agent_mg_per_cm3": 8.336,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 8.844344957185802,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 16.84064051366875,
+   "ok": true,
+   "drift_last_quarter": 0.02018236920245325,
+   "osc_last_quarter": 0.35126458133835925,
+   "t_end_s": 3237.53,
+   "wall_s": 4530
+  },
+  {
+   "id": "s41",
+   "values": {
+    "D_mm": 18.97,
+    "L_cm": 12.64,
+    "T_source_C": 903.4,
+    "T_sink_C": 800.0,
+    "tilt_deg": -71.6,
+    "agent_mg_per_cm3": 12.329,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.4572868199938782,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0998978680397924,
+   "ok": true,
+   "drift_last_quarter": 5.357699200481211e-09,
+   "osc_last_quarter": 8.278865935798027e-09,
+   "t_end_s": 2494.8,
+   "wall_s": 56
+  },
+  {
+   "id": "s42",
+   "values": {
+    "D_mm": 20.73,
+    "L_cm": 17.94,
+    "T_source_C": 819.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": -40.9,
+    "agent_mg_per_cm3": 14.807,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.928767004235842,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.3403055316036712,
+   "ok": true,
+   "drift_last_quarter": 3.2464485349965816e-09,
+   "osc_last_quarter": 2.4910031333428256e-08,
+   "t_end_s": 6134.58,
+   "wall_s": 274
+  },
+  {
+   "id": "s43",
+   "values": {
+    "D_mm": 43.5,
+    "L_cm": 13.43,
+    "T_source_C": 871.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": -0.4,
+    "agent_mg_per_cm3": 8.773,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 6.227210892379231,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 12.402522521444574,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 0.0,
+   "t_end_s": 2029.01,
+   "wall_s": 304
+  },
+  {
+   "id": "s44",
+   "values": {
+    "D_mm": 41.83,
+    "L_cm": 12.36,
+    "T_source_C": 843.7,
+    "T_sink_C": 800.0,
+    "tilt_deg": -46.9,
+    "agent_mg_per_cm3": 2.286,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.9174779831629376,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.298765243593673,
+   "ok": true,
+   "drift_last_quarter": 3.93866175593607e-11,
+   "osc_last_quarter": 1.0278365987559032e-09,
+   "t_end_s": 463.482,
+   "wall_s": 20
+  },
+  {
+   "id": "s45",
+   "values": {
+    "D_mm": 26.74,
+    "L_cm": 19.67,
+    "T_source_C": 927.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": 84.5,
+    "agent_mg_per_cm3": 7.314,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 5.044188785570437,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 11.754438083469603,
+   "ok": true,
+   "drift_last_quarter": 0.010313672792982558,
+   "osc_last_quarter": 0.3816114957794367,
+   "t_end_s": 3609.69,
+   "wall_s": 6028
+  },
+  {
+   "id": "s46",
+   "values": {
+    "D_mm": 23.34,
+    "L_cm": 14.06,
+    "T_source_C": 840.6,
+    "T_sink_C": 800.0,
+    "tilt_deg": 3.3,
+    "agent_mg_per_cm3": 9.644,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 6.414620824237603,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 6.332694011111608,
+   "ok": true,
+   "drift_last_quarter": 1.1343061911714625e-10,
+   "osc_last_quarter": 1.412163487970595e-09,
+   "t_end_s": 2456.27,
+   "wall_s": 239
+  },
+  {
+   "id": "s47",
+   "values": {
+    "D_mm": 14.43,
+    "L_cm": 10.87,
+    "T_source_C": 879.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": 55.3,
+    "agent_mg_per_cm3": 9.697,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 4.279036107142824,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 8.199893631134826,
+   "ok": true,
+   "drift_last_quarter": 2.9322052821512253e-10,
+   "osc_last_quarter": 3.4307967455025764e-09,
+   "t_end_s": 1464.13,
+   "wall_s": 292
+  },
+  {
+   "id": "s48",
+   "values": {
+    "D_mm": 16.8,
+    "L_cm": 18.55,
+    "T_source_C": 897.6,
+    "T_sink_C": 800.0,
+    "tilt_deg": -56.0,
+    "agent_mg_per_cm3": 12.076,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.6667754131087196,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.1927141495206963,
+   "ok": true,
+   "drift_last_quarter": 1.7847166542231557e-09,
+   "osc_last_quarter": 1.4685662022581542e-08,
+   "t_end_s": 5271.58,
+   "wall_s": 272
+  },
+  {
+   "id": "s49",
+   "values": {
+    "D_mm": 39.55,
+    "L_cm": 14.37,
+    "T_source_C": 810.8,
+    "T_sink_C": 800.0,
+    "tilt_deg": 69.5,
+    "agent_mg_per_cm3": 4.517,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.0722866714717685,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 3.2032520760541905,
+   "ok": true,
+   "drift_last_quarter": 1.7792129963884384e-10,
+   "osc_last_quarter": 3.989878123532992e-09,
+   "t_end_s": 1224.91,
+   "wall_s": 140
+  },
+  {
+   "id": "s50",
+   "values": {
+    "D_mm": 16.16,
+    "L_cm": 13.09,
+    "T_source_C": 823.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": -63.7,
+    "agent_mg_per_cm3": 10.329,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.0865414013112018,
+   "tier0_regime": "transport_limited",
+   "f_cfd": 1.0270150680829475,
+   "ok": true,
+   "drift_last_quarter": 1.5808083448501221e-09,
+   "osc_last_quarter": 5.535886726090609e-09,
+   "t_end_s": 2282.28,
+   "wall_s": 34
+  },
+  {
+   "id": "s51",
+   "values": {
+    "D_mm": 22.6,
+    "L_cm": 17.38,
+    "T_source_C": 875.9,
+    "T_sink_C": 800.0,
+    "tilt_deg": 7.3,
+    "agent_mg_per_cm3": 10.819,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 8.40653101831257,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 12.601093640613088,
+   "ok": true,
+   "drift_last_quarter": 3.927945334325791e-11,
+   "osc_last_quarter": 2.5557764287126692e-09,
+   "t_end_s": 4171.58,
+   "wall_s": 885
+  },
+  {
+   "id": "s52",
+   "values": {
+    "D_mm": 37.8,
+    "L_cm": 9.45,
+    "T_source_C": 933.4,
+    "T_sink_C": 800.0,
+    "tilt_deg": 41.6,
+    "agent_mg_per_cm3": 0.952,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 2.557100041303268,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 2.4685007440918905,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 1.7990240064255426e-16,
+   "t_end_s": 117.173,
+   "wall_s": 28
+  },
+  {
+   "id": "s53",
+   "values": {
+    "D_mm": 31.3,
+    "L_cm": 12.42,
+    "T_source_C": 851.4,
+    "T_sink_C": 800.0,
+    "tilt_deg": -48.9,
+    "agent_mg_per_cm3": 6.099,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.9365871645856105,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.5154882026233236,
+   "ok": true,
+   "drift_last_quarter": 2.507687702434871e-10,
+   "osc_last_quarter": 5.190218460436937e-09,
+   "t_end_s": 1219.07,
+   "wall_s": 45
+  },
+  {
+   "id": "s54",
+   "values": {
+    "D_mm": 38.1,
+    "L_cm": 18.96,
+    "T_source_C": 921.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": -29.7,
+    "agent_mg_per_cm3": 5.001,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 2.0080792126829596,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 3.437257942269519,
+   "ok": true,
+   "drift_last_quarter": 7.331043524873856e-11,
+   "osc_last_quarter": 2.796853823483662e-09,
+   "t_end_s": 2317.49,
+   "wall_s": 236
+  },
+  {
+   "id": "s55",
+   "values": {
+    "D_mm": 36.74,
+    "L_cm": 11.98,
+    "T_source_C": 827.0,
+    "T_sink_C": 800.0,
+    "tilt_deg": -80.3,
+    "agent_mg_per_cm3": 9.242,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.2540707498875634,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0405548780267453,
+   "ok": true,
+   "drift_last_quarter": 1.1565914332255633e-09,
+   "osc_last_quarter": 9.388961300991147e-09,
+   "t_end_s": 1704.99,
+   "wall_s": 13
+  },
+  {
+   "id": "s56",
+   "values": {
+    "D_mm": 28.31,
+    "L_cm": 8.33,
+    "T_source_C": 847.2,
+    "T_sink_C": 800.0,
+    "tilt_deg": 64.4,
+    "agent_mg_per_cm3": 5.875,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 5.606443890184089,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 6.414107870041777,
+   "ok": true,
+   "drift_last_quarter": 0.0,
+   "osc_last_quarter": 1.128034053781081e-10,
+   "t_end_s": 528.912,
+   "wall_s": 85
+  },
+  {
+   "id": "s57",
+   "values": {
+    "D_mm": 13.03,
+    "L_cm": 15.15,
+    "T_source_C": 832.1,
+    "T_sink_C": 800.0,
+    "tilt_deg": 45.8,
+    "agent_mg_per_cm3": 6.325,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.2453566977696084,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.0135825541751002,
+   "ok": true,
+   "drift_last_quarter": 4.542943004710909e-10,
+   "osc_last_quarter": 2.1382676258552534e-09,
+   "t_end_s": 1886.14,
+   "wall_s": 47
+  },
+  {
+   "id": "s58",
+   "values": {
+    "D_mm": 13.72,
+    "L_cm": 12.16,
+    "T_source_C": 852.5,
+    "T_sink_C": 800.0,
+    "tilt_deg": 19.1,
+    "agent_mg_per_cm3": 10.476,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 3.882653625197782,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 2.387126383305321,
+   "ok": true,
+   "drift_last_quarter": 2.0041929530903988e-10,
+   "osc_last_quarter": 3.84474757418063e-09,
+   "t_end_s": 1987.88,
+   "wall_s": 177
+  },
+  {
+   "id": "s59",
+   "values": {
+    "D_mm": 17.7,
+    "L_cm": 11.61,
+    "T_source_C": 880.4,
+    "T_sink_C": 800.0,
+    "tilt_deg": -44.3,
+    "agent_mg_per_cm3": 7.896,
+    "cells_per_cm": 4.0,
+    "n_cross": 10
+   },
+   "tier0_f": 1.7902798658771912,
+   "tier0_regime": "convection_assisted",
+   "f_cfd": 1.279579369577315,
+   "ok": true,
+   "drift_last_quarter": 4.878672451807654e-10,
+   "osc_last_quarter": 3.586405164673036e-09,
+   "t_end_s": 1364.83,
+   "wall_s": 57
+  }
+ ],
+ "surrogate": {
+  "kernel": "0.976**2 * RBF(length_scale=[2.28, 13.6, 3.05, 1.26, 1.95]) + WhiteKernel(noise_level=0.0224)",
+  "n_train": 45,
+  "n_test": 15,
+  "mean_rel_err_f": 0.5600089908224167,
+  "max_rel_err_f": 2.682593697666247,
+  "median_rel_err_f": 0.4030524449036468,
+  "mean_abs_err_fm1": 1.7724222583523024,
+  "max_abs_err_fm1": 7.496764248246736,
+  "frac_within_5pct": 0.2,
+  "test_ids": [
+   "s16",
+   "s27",
+   "s20",
+   "s08",
+   "s42",
+   "s34",
+   "s51",
+   "s04",
+   "s52",
+   "s57",
+   "s10",
+   "s02",
+   "s44",
+   "s23",
+   "s24"
+  ],
+  "target": "held-out error within 5% of solver",
+  "model": "surrogate/data/ampoule_gp.json"
+ }
+}

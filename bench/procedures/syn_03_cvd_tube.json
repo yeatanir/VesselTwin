@@ -1,0 +1,22 @@
+{
+ "synthetic": true,
+ "vessel": "cvd_tube",
+ "text": "Growth used a tube furnace with N2 at 50 sccm. The sulfur boat sat at 160 \u00b0C. Pressure was 500 Torr. Growth time was 15 minutes.",
+ "gold": {
+  "flow_sccm": {
+   "value": 50,
+   "unit": "sccm"
+  },
+  "T_boat_S_C": {
+   "value": 160,
+   "unit": "C"
+  },
+  "pressure_Pa": {
+   "value": 500,
+   "unit": "Torr"
+  },
+  "carrier": {
+   "value": "N2"
+  }
+ }
+}

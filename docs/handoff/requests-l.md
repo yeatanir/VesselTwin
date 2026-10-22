@@ -1,0 +1,3 @@
+# Requests from Track L
+- None required for code. Suggested caption (docs/tiers.json is Track F's): "Sensitivity benchmark rescored with each paper's stated geometry (Track L): model 1/9 strict (3/9 at default geometry), blind agent 6/9; all items development data; substrates farther than ~4 cm from the boat are insensitive to boat temperature by construction."
+- Open input gap (not a model change): the tube model has no separate substrate temperature unless `T_substrate_offset_K` is set; papers with a cooler substrate than source (Jian 2019) give zero flux when substrate = wall = boat temperature.

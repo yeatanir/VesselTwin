@@ -1,0 +1,48 @@
+{
+ "text": "Simulated dry air was prepared by mixing 400 ppm of CO2 with a O2/N2 mixture in a 1:4 volume ratio. [...] In a typical breakthrough experiment, the sample was packed into a quartz fixed-bed reactor with an inner diameter of 4 mm and a length of 42 mm. Prior to the breakthrough experiment, the sorbent was purged under a 50 sccm flow of He gas at 100 °C for 2 h. Subsequently, the simulated air with a total flow rate of 25 sccm was introduced from the inlet, passing through the sorbent where adsorption occurred at the selected temperatures and exiting through the outlet.",
+ "vessel": "sorbent",
+ "gold": {
+  "bed_id_cm": {
+   "value": 4,
+   "unit": "mm"
+  },
+  "bed_length_cm": {
+   "value": 42,
+   "unit": "mm"
+  },
+  "flow_sccm": {
+   "value": 25,
+   "unit": "sccm"
+  },
+  "y_feed": {
+   "value": 400,
+   "unit": "ppm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Upcycling Wood Waste into Solar-Driven Regenerative Sorbent for Direct Air Capture",
+  "authors": [
+   "Man Qi",
+   "Bo Pang",
+   "Aji P. Mathew",
+   "Zoltán Bacsik",
+   "Niklas Hedin",
+   "Jiayin Yuan"
+  ],
+  "journal": "ACS Sustainable Chemistry & Engineering",
+  "year": 2026,
+  "DOI": "10.1021/acssuschemeng.5c12124",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13014533/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "activation: purge 50 sccm He at 100 C for 2 h",
+  "composition: O2/N2 1:4 balance",
+  "humidity: wet air at chosen RH",
+  "temperature: adsorption 'at the selected temperatures' (no value)"
+ ],
+ "ambiguous": [
+  "flow_sccm: 50 sccm He purge vs 25 sccm feed"
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "vessel": "ampoule",
+ "fields": [
+  {
+   "key": "L_cm",
+   "value": "30",
+   "unit": "cm",
+   "span": "30 cm"
+  },
+  {
+   "key": "D_mm",
+   "value": "1.3",
+   "unit": "cm",
+   "span": "1.3"
+  },
+  {
+   "key": "T_source_C",
+   "value": "1020",
+   "unit": "°C",
+   "span": "1020 °C zone"
+  },
+  {
+   "key": "T_sink_C",
+   "value": "960",
+   "unit": "°C",
+   "span": "960 °C. The"
+  }
+ ]
+}

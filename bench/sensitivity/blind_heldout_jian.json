@@ -1,0 +1,3 @@
+[{"id":"j1","predicted_direction":"increase","mechanism":"Higher MoO3 temperature raises MoO3-x vapor supply and growth rate, so domains grow larger from 1073 to 1098 K.","confidence":0.65},
+{"id":"j2","predicted_direction":"decrease","mechanism":"At 1123 K the oversupplied precursor drives higher nucleation density and competing crystals, shrinking domain size (or yielding thick/multilayer growth), so size peaks near 1098 K.","confidence":0.45},
+{"id":"j3","predicted_direction":"increase","mechanism":"Greater MoO3 vapor flux gives higher supersaturation at the substrate and thus more nucleation sites per area.","confidence":0.7}]

@@ -1,0 +1,642 @@
+{
+ "label_set": [
+  "triangle",
+  "truncated_triangle",
+  "hexagon",
+  "mixed",
+  "other"
+ ],
+ "cases": [
+  {
+   "id": "S01",
+   "pmcid": "PMC6316495",
+   "in_scope": true,
+   "scope_note": "MoO3 + S powder boats, face-down SiO2/Si 5 cm downstream",
+   "condition": "720 C, 35 sccm Ar (stated optimum)",
+   "extractor": "replay",
+   "manual": [],
+   "reported": {
+    "label": "triangle",
+    "phrase": "Figure 2b shows a very regular triangular MoS2",
+    "where": "text"
+   },
+   "figure": {
+    "label": "triangle",
+    "figure": "Fig. 2b, 5b",
+    "description": "optical micrographs: well separated triangles, 40-60 um (at 670 C small triangles, at 770 C concave triangles plus bulk)",
+    "agrees_with_text": true
+   },
+   "notes": "",
+   "procedure": "real_01_cvd_tube",
+   "title": "Research on the Factors Affecting the Growth of Large-Size Monolayer MoS2 by APCVD",
+   "journal": "Materials",
+   "year": 2018,
+   "doi": "10.3390/ma11122562",
+   "licence": "CC BY 4.0",
+   "text": "Next, the first quartz boat with S powder was placed in the low temperature zone of the tube furnace, and then the second quartz boat with MoO3 powder and SiO2/Si substrate was placed in the middle position of the tube furnace, wherein the cleaned SiO2/Si substrate was placed face down on the downstream from the MoO3 powder for 5 cm, as shown in Figure 1a. [...] During the heating process, argon gas with a flow rate of 35 sccm was continuously supplied as the carrier gas. It can be observed from Figure 1c that the temperature of the SiO2/Si substrate rises from room temperature to 550 °C in 20 min initially, then rises to 720 °C in 10 min, and maintains the growth temperature 720 °C in 10 min, and then cools to room temperature naturally."
+  },
+  {
+   "id": "S02",
+   "pmcid": "PMC12012742",
+   "in_scope": true,
+   "scope_note": "MoO3 + S, MoO3 and substrate side by side mid-tube; distance not given",
+   "condition": "850 C, 30 sccm Ar, S belt 180 C",
+   "extractor": "replay",
+   "manual": [],
+   "reported": {
+    "label": "triangle",
+    "phrase": "yielding triangular domains of varying dimensions",
+    "where": "text"
+   },
+   "figure": {
+    "label": null,
+    "figure": "Fig. 5a-c",
+    "description": "low-magnification optical images of merging flakes; individual shape not resolvable (the cited Fig. S1a is supplementary and was not examined)",
+    "agrees_with_text": null
+   },
+   "notes": "",
+   "procedure": "real_07_cvd_tube",
+   "title": "Improved Metal–Semiconductor Interface in Monolayer (1L)-MoS2 via Thermally-Driven Ag Filaments as Atomic Scale Edge Contacts Triggered by Selective Annealing Process Using Long Wavelength (1064 nm) Pulsed Laser",
+   "journal": "ACS Applied Materials & Interfaces",
+   "year": 2025,
+   "doi": "10.1021/acsami.4c20612",
+   "licence": "CC BY 4.0",
+   "text": "The MoO3 (2 mg) and sapphire substrate were placed separately in tiny tubes in the middle of the quartz tube, while the sulfur powder was inserted upstream. Initially, tube was pumped to a base pressure of 200 mTorr, before introducing argon (Ar, 30 sccm) to raise the working pressure to 560 Torr. Subsequently, the furnace was ramped up to 850 °C and maintained at this temperature for 40 min, with a continuous flow of 30 sccm of argon. Meanwhile, the sulfur source was heated independently using an external heating belt at a temperature of 180 °C."
+  },
+  {
+   "id": "S03",
+   "pmcid": "PMC10537635",
+   "in_scope": true,
+   "scope_note": "MoO3 + S powder boats 18 cm apart, one-inch tube",
+   "condition": "650 C growth, 85 mg S / 15 mg MoO3",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "tube_id_in",
+     "value": 1,
+     "unit": "inch",
+     "span": "one-inch single-chamber quartz tube",
+     "note": "text states tube size; rules missed 'one-inch'"
+    },
+    {
+     "key": "T_furnace_C",
+     "value": 650,
+     "unit": "C",
+     "span": "at a lower temperature of 650 °C",
+     "note": "growth temperature at the furnace centre where the MoO3 boat sits"
+    }
+   ],
+   "reported": {
+    "label": "triangle",
+    "phrase": "Figure 4 demonstrates the large sizes of the triangular MoS2 grains",
+    "where": "text"
+   },
+   "figure": {
+    "label": "triangle",
+    "figure": "Fig. 4a-d",
+    "description": "SEM: isolated triangle (a), dense triangles incl. truncated/concave ones (b-d)",
+    "agrees_with_text": true
+   },
+   "notes": "text also mentions 'a truncated monolayer triangle' for a Mo:S of 1:3 (XPS discussion)",
+   "procedure": "real_10_cvd_tube",
+   "title": "Towards Low-Temperature CVD Synthesis and Characterization of Mono- or Few-Layer Molybdenum Disulfide",
+   "journal": "Micromachines",
+   "year": 2023,
+   "doi": "10.3390/mi14091758",
+   "licence": "CC BY 4.0",
+   "text": "The one-inch quartz tube used for CVD is acetone-cleaned and dried via initial heating to 150 °C. [...] As the Ar fills the quartz tube, the pressure gauge reading will increase initially. After the quartz tube is filled, the pressure gauge reading stabilizes between 65 and 75 Torr. [...] Thus, once the pressure gauge reading stabilizes and the temperature reaches about 600 °C for MoO3, an Ar flow of 100–200 sccm is sufficient to cause the drift of sulfur to Mo."
+  },
+  {
+   "id": "S04",
+   "pmcid": "PMC6223922",
+   "in_scope": true,
+   "scope_note": "MoO3 700 C, S 150 C, Ar+H2, substrate Ds = 9-13 cm from MoO3 boat",
+   "condition": "representative Ds = 11 cm of the 9-13 cm series (chosen by us)",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "carrier",
+     "value": "Ar",
+     "unit": null,
+     "span": "Ar and H2 were introduced to the system as carrying gases",
+     "note": "rules returned N2 (from 'nitrogen environment'): wrong; replaced",
+     "override": true
+    },
+    {
+     "key": "flow_sccm",
+     "value": 27,
+     "unit": "sccm",
+     "span": "flow rates of 17 and 10 sccm",
+     "note": "Ar 17 + H2 10 summed; carrier modelled as Ar",
+     "derived": true
+    },
+    {
+     "key": "T_boat_S_C",
+     "value": 150,
+     "unit": "C",
+     "span": "150 °C for sulfur",
+     "note": "rules missed"
+    },
+    {
+     "key": "T_furnace_C",
+     "value": 700,
+     "unit": "C",
+     "span": "The MoO3 boat was located at the highest temperature zone of the furnace",
+     "note": "700 C is the MoO3 boat temperature, so plateau taken equal",
+     "derived": true
+    },
+    {
+     "key": "x_substrate_cm",
+     "value": 11,
+     "unit": "cm",
+     "span": "from 9 cm (~670 °C) to 13 cm (~600 °C)",
+     "note": "series 9-13 cm; midpoint chosen as the representative position",
+     "derived": true
+    }
+   ],
+   "reported": {
+    "label": "truncated_triangle",
+    "phrase": "most of our MoS2 flakes are in the shape of half pringles resembling truncated triangles",
+    "where": "text"
+   },
+   "figure": {
+    "label": "other",
+    "figure": "Fig. 3a-d, 5a-f",
+    "description": "SEM: flakes stand erect on the surface as curved petals ('half pringles'); flat polygon outline not visible",
+    "agrees_with_text": false
+   },
+   "notes": "text and figure disagree: erect curved flakes cannot be assigned a planar shape from SEM",
+   "procedure": null,
+   "title": "Investigation of Single-Wall MoS2 Monolayer Flakes Grown by Chemical Vapor Deposition",
+   "journal": "Nano-Micro Letters",
+   "year": 2015,
+   "doi": "10.1007/s40820-015-0064-2",
+   "licence": "CC BY 4.0",
+   "text": "The quartz boats containing high-purity MoO3 (14 mg, 99.9 %, Aldrich) and S powder (1.4 g, 99.5 %, Alfa) were placed at the temperature zones specified according to the melting temperatures of the precursors, 700 °C for MoO3 and 150 °C for sulfur. [...] This effect was investigated by varying the distance between boats of MoO3 powder and the substrates (D s) from 9 cm (~670 °C) to 13 cm (~600 °C). [...] Before deposition started, the reaction chamber was heated to deposition temperature at a rate of 15 °C min−1 in a nitrogen environment, and at the specified deposition temperatures, Ar and H2 were introduced to the system as carrying gases at flow rates of 17 and 10 sccm, respectively."
+  },
+  {
+   "id": "S05",
+   "pmcid": "PMC12655622",
+   "in_scope": true,
+   "scope_note": "MoO3 + S, Mo:S mass ratio 1:15 (optimum); boat temperatures, flow, positions not given",
+   "condition": "800 C substrate, Mo:S 1:15",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "T_furnace_C",
+     "value": 800,
+     "unit": "C",
+     "span": "on a Si/SiO2 substrate at 800 °C",
+     "note": "rules missed"
+    }
+   ],
+   "reported": {
+    "label": "triangle",
+    "phrase": "A well-defined monolayer triangle (Figure 4d) is obtained at a Mo:S precursor molar ratio of 1:15",
+    "where": "text"
+   },
+   "figure": {
+    "label": "triangle",
+    "figure": "Fig. 4d, 5a",
+    "description": "SEM: large clean triangle, 30 um sides",
+    "agrees_with_text": true
+   },
+   "notes": "precursor mass ratio is not a model input",
+   "procedure": null,
+   "title": "Engineering the Morphology and Properties of MoS2 Films Through Gaseous Precursor-Induced Vacancy Defect Engineering",
+   "journal": "Nanomaterials",
+   "year": 2025,
+   "doi": "10.3390/nano15221723",
+   "licence": "CC BY 4.0",
+   "text": "The monolayers were grown on a Si/SiO2 substrate at 800 °C, using MoO3 and pure S as precursors. [...] The precursor mass, the inert gas flow rate, and the deposition substrate position were kept constant during the 10-minute growth process."
+  },
+  {
+   "id": "S06",
+   "pmcid": "PMC12655622",
+   "in_scope": true,
+   "scope_note": "same paper and setup as S05, Mo:S mass ratio 1:10 (inputs identical to S05: mass ratio is not a model input)",
+   "condition": "800 C, Mo:S 1:10",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "T_furnace_C",
+     "value": 800,
+     "unit": "C",
+     "span": "on a Si/SiO2 substrate at 800 °C",
+     "note": "rules missed"
+    }
+   ],
+   "reported": {
+    "label": "hexagon",
+    "phrase": "a small increase in S pressure (Mo:S = 1:10) results in hexagonal MoS2 (Figure 4c)",
+    "where": "text"
+   },
+   "figure": {
+    "label": "hexagon",
+    "figure": "Fig. 4c",
+    "description": "SEM: rounded near-hexagonal domain (6-8 soft sides)",
+    "agrees_with_text": true
+   },
+   "notes": "same paper as S05; counted once in the paper tally, twice in the case tally",
+   "procedure": null,
+   "title": "Engineering the Morphology and Properties of MoS2 Films Through Gaseous Precursor-Induced Vacancy Defect Engineering",
+   "journal": "Nanomaterials",
+   "year": 2025,
+   "doi": "10.3390/nano15221723",
+   "licence": "CC BY 4.0",
+   "text": "The monolayers were grown on a Si/SiO2 substrate at 800 °C, using MoO3 and pure S as precursors. [...] The precursor mass, the inert gas flow rate, and the deposition substrate position were kept constant during the 10-minute growth process."
+  },
+  {
+   "id": "S07",
+   "pmcid": "PMC5233980",
+   "in_scope": true,
+   "scope_note": "MoO3 furnace 700 C, S furnace 120 C, N2 250 sccm, substrate (HOPG) face down over MoO3 crucible",
+   "condition": "as stated",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "T_furnace_C",
+     "value": 700,
+     "unit": "C",
+     "span": "ramped to 700 °C at a rate of 15 °C/min",
+     "note": "rules returned 320 C (the trigger for the sulfur furnace): wrong; replaced",
+     "override": true
+    },
+    {
+     "key": "T_boat_Mo_C",
+     "value": 700,
+     "unit": "C",
+     "span": "ramped to 700 °C at a rate of 15 °C/min",
+     "note": "MoO3 sits in the 700 C furnace"
+    },
+    {
+     "key": "x_substrate_cm",
+     "value": 0,
+     "unit": "cm",
+     "span": "Substrates were suspended facedown above ~15 mg of MoO3",
+     "note": "substrate directly above the MoO3 crucible (offset 0)",
+     "derived": true
+    }
+   ],
+   "reported": {
+    "label": "mixed",
+    "phrase": "AFM images of stacked MoS2 triangular and hexagonal structures",
+    "where": "Figure 1 caption"
+   },
+   "figure": {
+    "label": "mixed",
+    "figure": "Fig. 1a,b",
+    "description": "AFM: stacked triangles (a) and a hexagon-like truncated stack (b)",
+    "agrees_with_text": true
+   },
+   "notes": "substrate is HOPG, not SiO2",
+   "procedure": null,
+   "title": "Inter-Layer Coupling Induced Valence Band Edge Shift in Mono- to Few-Layer MoS2",
+   "journal": "Scientific Reports",
+   "year": 2017,
+   "doi": "10.1038/srep40559",
+   "licence": "CC BY 4.0",
+   "text": "Mono- to few-layer thick MoS2 islands were grown using the well-known ambient pressure chemical vapor deposition technique using ultra-high-purity N2 (250sccm) as the carrier gas. [...] Substrates were suspended facedown above ~15 mg of MoO3 (≥99.5% Sigma Aldrich) in a crucible placed downstream from a different crucible containing 80 mg of Sulfur (≥99.5% Sigma Aldrich). [...] The furnace containing the MoO3 and HOPG was degassed at 150 °C for 90 minutes then ramped to 700 °C at a rate of 15 °C/min. [...] Once this furnace reached 320 °C the furnace containing the Sulfur crucible was ramped to 120 °C at approximately 3 °C/min."
+  },
+  {
+   "id": "S08",
+   "pmcid": "PMC7584339",
+   "in_scope": true,
+   "scope_note": "MoO3 + S in two separate 1-inch tubes, substrate 10 cm from MoO3 (standard run, SiO2/Si)",
+   "condition": "standard growth run (Table 1)",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "tube_id_in",
+     "value": 1,
+     "unit": "inch",
+     "span": "we used two 1-in. quartz tubes",
+     "note": "rules missed"
+    },
+    {
+     "key": "x_substrate_cm",
+     "value": 10,
+     "unit": "cm",
+     "span": "10 and 40 cm from Mo and S precursors",
+     "note": "rules missed"
+    },
+    {
+     "key": "T_furnace_C",
+     "value": 770,
+     "unit": "C",
+     "span": "substrate temperature 770 °C",
+     "note": "Table 1",
+     "table": true
+    },
+    {
+     "key": "T_boat_Mo_C",
+     "value": 687,
+     "unit": "C",
+     "span": "MoO3 temperature 687 ± 15 °C",
+     "note": "Table 1",
+     "table": true
+    },
+    {
+     "key": "T_boat_S_C",
+     "value": 115,
+     "unit": "C",
+     "span": "S temperature 115 °C",
+     "note": "Table 1",
+     "table": true
+    },
+    {
+     "key": "flow_sccm",
+     "value": 100,
+     "unit": "sccm",
+     "span": "Ar flow 100 sccm",
+     "note": "Table 1",
+     "table": true
+    },
+    {
+     "key": "pressure_Pa",
+     "value": 93000,
+     "unit": "Pa",
+     "span": "pressure 930 mbar",
+     "note": "Table 1",
+     "table": true
+    },
+    {
+     "key": "boat_area_MoO3_cm2",
+     "value": 0.5,
+     "unit": "cm2",
+     "span": "evaporation area of MoO3 0.5 cm2",
+     "note": "Table 1",
+     "table": true
+    },
+    {
+     "key": "boat_area_S_cm2",
+     "value": 10,
+     "unit": "cm2",
+     "span": "evaporation area of S 10 cm2",
+     "note": "Table 1",
+     "table": true
+    }
+   ],
+   "reported": {
+    "label": "other",
+    "phrase": "MoS2 on SiO2 and sapphire tends to form circular domains",
+    "where": "text"
+   },
+   "figure": {
+    "label": "other",
+    "figure": "Fig. 2c",
+    "description": "AFM: round monolayer domains with triangular adlayers",
+    "agrees_with_text": true
+   },
+   "notes": "paper also reports triangles/truncated triangles under modified conditions (Fig. 4a-c)",
+   "procedure": null,
+   "title": "Substrate-Induced Variances in Morphological and Structural Properties of MoS2 Grown by Chemical Vapor Deposition",
+   "journal": "ACS Applied Materials & Interfaces",
+   "year": 2020,
+   "doi": "10.1021/acsami.0c06173",
+   "licence": "CC BY (ACS AuthorChoice)",
+   "text": "The substrates were placed on a quartz rod, approximately 8 mm above the bottom of the work tube, and 10 and 40 cm from Mo and S precursors, respectively, to increase the uniformity across samples. [...] As precursors, we used MoO3 (Alfa Aesar, 99.95%) and sublimated sulfur (Chempur, pure p.a.), and Ar served as a carrier gas."
+  },
+  {
+   "id": "S09",
+   "pmcid": "PMC11547744",
+   "in_scope": false,
+   "scope_note": "spin-coated liquid Mo precursor, sulfur boat only: no MoO3 boat in the model's sense",
+   "condition": "300 sccm N2 (highest flow)",
+   "extractor": "replay",
+   "manual": [],
+   "reported": {
+    "label": "triangle",
+    "phrase": "the synthesis yields a 100 μm large triangular monolayer with concave edges",
+    "where": "text"
+   },
+   "figure": {
+    "label": "triangle",
+    "figure": "Fig. 1a,b",
+    "description": "optical/SEM: concave (three-pointed) triangles",
+    "agrees_with_text": true
+   },
+   "notes": "",
+   "procedure": "real_02_cvd_tube",
+   "title": "Influence of the Carrier Gas Flow in the CVD Synthesis of 2-Dimensional MoS2 Based on the Spin-Coating of Liquid Molybdenum Precursors",
+   "journal": "Nanomaterials",
+   "year": 2024,
+   "doi": "10.3390/nano14211749",
+   "licence": "CC BY 4.0",
+   "text": "The substrate is placed 20 cm away from an alumina boat containing 275 mg of a sulfur solid precursor (Sigma-Aldrich, 99.98%). The growth process is carried out at a temperature of 820 °C (heating rate of 40 °C/min), providing optimal growth conditions, while the low zone containing sulfur powders is independently heated to 180 °C (heating rate of 60 °C/min). The nitrogen carrier gas flow rate, selected for its inert nature and low cost, is kept constant within the range of 150 to 300 sccm during the growth process."
+  },
+  {
+   "id": "S10",
+   "pmcid": "PMC10343541",
+   "in_scope": false,
+   "scope_note": "MoO2 precursor, not MoO3",
+   "condition": "760 C growth zone map (Fig. 4)",
+   "extractor": "replay",
+   "manual": [
+    {
+     "key": "T_furnace_C",
+     "value": 760,
+     "unit": "C",
+     "span": "growth results obtained at 760 °C",
+     "note": "figure-4 condition (text range 600-850 C)"
+    },
+    {
+     "key": "x_substrate_cm",
+     "value": 1,
+     "unit": "cm",
+     "span": "The distance between the substrate and the MoO2 source is 1 cm",
+     "note": "Fig. 1 caption"
+    }
+   ],
+   "reported": {
+    "label": "mixed",
+    "phrase": "the morphology evolves to continuous MoS2 and individual triangular domains in the downstream regions",
+    "where": "text"
+   },
+   "figure": {
+    "label": "triangle",
+    "figure": "Fig. 4 region 1",
+    "description": "optical: irregular, partly truncated triangles",
+    "agrees_with_text": false
+   },
+   "notes": "text also reports 'truncated MoS2 domains' elsewhere; label is mixed",
+   "procedure": "real_04_cvd_tube",
+   "title": "CVD Synthesis of MoS2 Using a Direct MoO2 Precursor: A Study on the Effects of Growth Temperature on Precursor Diffusion and Morphology Evolutions",
+   "journal": "Materials",
+   "year": 2023,
+   "doi": "10.3390/ma16134817",
+   "licence": "CC BY 4.0",
+   "text": "Our CVD system consisted of a quartz tube with a diameter of 50 mm and a single heating zone, where MoS2 growth occurred at a set growth temperature, which ranged from 600 to 850 °C in this study. [...] Separately, a different quartz boat was loaded with the required amount of sulfur powder (99.5% purity Alfa Aesar, Haverhill, MA, USA) and placed at the edge of the heating zone (details in Figure S1). The tube was then purged with Ar gas (>99.9% purity) at a flow rate of 2000 standard cubic centimeters per minute (sccm) for 5 min at room temperature. Subsequently, the flow rate was adjusted to a low value of 10 sccm, and the temperature of the heating zone was increased at a ramp rate of 15 °C/min until the desired growth temperature was reached, and it was then maintained at this level for a short time of ~1 min."
+  },
+  {
+   "id": "S11",
+   "pmcid": "PMC10794196",
+   "in_scope": false,
+   "scope_note": "NaCl-assisted (NaCl + MoO3 pellet): halide promoter not modelled",
+   "condition": "780 C, 50 sccm Ar",
+   "extractor": "replay",
+   "manual": [],
+   "reported": {
+    "label": "triangle",
+    "phrase": "resulting in the growth of triangular shapes MoS2 crystal on SiO2/Si substrate",
+    "where": "text"
+   },
+   "figure": {
+    "label": "triangle",
+    "figure": "Fig. 1g",
+    "description": "optical: triangles with twisted triangular bilayers",
+    "agrees_with_text": true
+   },
+   "notes": "",
+   "procedure": "real_08_cvd_tube",
+   "title": "Reconfiguring nucleation for CVD growth of twisted bilayer MoS2 with a wide range of twist angles",
+   "journal": "Nature Communications",
+   "year": 2024,
+   "doi": "10.1038/s41467-023-44598-w",
+   "licence": "CC BY 4.0",
+   "text": "Then, the small quartz tube is loaded into a 1-inch quartz tube and placed at the high-temperature range of the furnace. Another crucible containing 0.1 g S powder was placed around 12 cm upstream from the precursors. The CVD process is carried out under ambient pressure and high-purity Ar is used as the carrier gas to facilitate the growth. The tube was cleaned by the 600 sccm Ar for 10 min, and maintained in 50 sccm in the overall process. The temperature of the furnace was gradually increased to 780 °C at a rate of 30 °C/min and held there for 5 min."
+  },
+  {
+   "id": "S12",
+   "pmcid": "PMC12899469",
+   "in_scope": false,
+   "scope_note": "Mo nanofilm proximity precursor, not a MoO3 boat",
+   "condition": "780-860 C, 5 sccm Ar",
+   "extractor": "replay",
+   "manual": [],
+   "reported": {
+    "label": "mixed",
+    "phrase": "Though the triangle is the most common shape of MoS2 growth, flakes with unusual shapes were noticed.",
+    "where": "text"
+   },
+   "figure": {
+    "label": "other",
+    "figure": "Fig. 5a-d",
+    "description": "optical: multi-point star-like flakes",
+    "agrees_with_text": false
+   },
+   "notes": "",
+   "procedure": "real_09_cvd_tube",
+   "title": "Proximity-Assisted Synthesis of Large Area MoS2 on Different Target Substrates by Chemical Vapor Deposition Using a Mo Nanofilm Substrate",
+   "journal": "Nanomaterials",
+   "year": 2026,
+   "doi": "10.3390/nano16030159",
+   "licence": "CC BY 4.0",
+   "text": "For the growth step, the Ar gas flow rate is reduced to 5 sccm, and the temperature in the growth zone is increased to 780–860 °C, depending on the thickness of the Mo film. As the temperature approaches the intended growth temperature, the sulfur zone is heated up to 250 °C to vaporize the sulfur and allow it to flow into the growth zone. This step lasts 5–8 min to achieve a reaction between the sulfur fumes and the oxides of Mo, leading to the growth of a mono- to few-layer MoS2 on the bottom substrate."
+  },
+  {
+   "id": "S13",
+   "pmcid": "PMC9418562",
+   "in_scope": false,
+   "scope_note": "gold-nanoparticle seeded substrate (control without Au grew no flakes)",
+   "condition": "785 C, S 140 C, N2 300 sccm",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "T_boat_S_C",
+     "value": 140,
+     "unit": "C",
+     "span": "The sulfur temperature T1 was fixed at 140 °C",
+     "note": "rules missed"
+    },
+    {
+     "key": "T_furnace_C",
+     "value": 785,
+     "unit": "C",
+     "span": "T2 was 785 °C",
+     "note": "rules missed"
+    }
+   ],
+   "reported": {
+    "label": "triangle",
+    "phrase": "monolayer MoS2 triangular flakes with an average lateral size of tens of micrometers",
+    "where": "text"
+   },
+   "figure": {
+    "label": "triangle",
+    "figure": "Fig. 1c",
+    "description": "SEM: large triangle on Au-seeded substrate",
+    "agrees_with_text": true
+   },
+   "notes": "",
+   "procedure": null,
+   "title": "Gold nanoparticle assisted synthesis of MoS2 monolayers by chemical vapor deposition",
+   "journal": "Nanoscale Advances",
+   "year": 2021,
+   "doi": "10.1039/d1na00367d",
+   "licence": "CC BY-NC 3.0",
+   "text": "The growth was carried out at atmospheric pressure in an open tube using 175 mg of sulfur powder and 50 mg of MoO3 powder with nitrogen as the carrier gas with a flow rate of 300 sccm. [...] The sulfur temperature T1 was fixed at 140 °C, and the temperature of the powders and susceptor T2 was 785 °C."
+  },
+  {
+   "id": "S14",
+   "pmcid": "PMC12044508",
+   "in_scope": false,
+   "scope_note": "KCl + PTAS dual promoter at 460 C: not modelled",
+   "condition": "460 C MoO3+KCl, S 170 C, N2 10 sccm",
+   "extractor": "rules",
+   "manual": [
+    {
+     "key": "tube_id_in",
+     "value": 2,
+     "unit": "inch",
+     "span": "A two-temperature-zone furnace with a 2 in. quartz tube",
+     "note": "rules missed '2 in.'"
+    },
+    {
+     "key": "T_boat_S_C",
+     "value": 170,
+     "unit": "C",
+     "span": "raised to 170 and 460 °C",
+     "note": "S zone 170 C"
+    },
+    {
+     "key": "T_boat_Mo_C",
+     "value": 460,
+     "unit": "C",
+     "span": "raised to 170 and 460 °C",
+     "note": "MoO3 zone 460 C"
+    },
+    {
+     "key": "T_furnace_C",
+     "value": 460,
+     "unit": "C",
+     "span": "raised to 170 and 460 °C",
+     "note": "MoO3 zone 460 C"
+    },
+    {
+     "key": "flow_sccm",
+     "value": 10,
+     "unit": "sccm",
+     "span": "N2 carrier gas with a flow rate of 10 sccm",
+     "note": "rules missed"
+    },
+    {
+     "key": "carrier",
+     "value": "N2",
+     "unit": null,
+     "span": "N2 carrier gas",
+     "note": ""
+    }
+   ],
+   "reported": {
+    "label": "other",
+    "phrase": "The as-grown MoS2 exhibited a round shape",
+    "where": "text"
+   },
+   "figure": {
+    "label": "other",
+    "figure": "Fig. 1b,c",
+    "description": "optical: round domains 10-20 um",
+    "agrees_with_text": true
+   },
+   "notes": "",
+   "procedure": null,
+   "title": "Low-Temperature Chemical Vapor Deposition Growth of Monolayer MoS2 Using a Dual-Assisted Approach",
+   "journal": "ACS Omega",
+   "year": 2025,
+   "doi": "10.1021/acsomega.4c10312",
+   "licence": "CC BY-NC-ND 4.0",
+   "text": "A two-temperature-zone furnace with a 2 in. quartz tube was used for the growth of monolayer MoS2. [...] Two quartz boats of 5 mg of MoO3 (Aladdin 99.9%) mixed with 1 mg of KCl and 120 mg of sublimed sulfur (Aladdin 99.99%) were positioned in the two heating zones, respectively. [...] After that, the two temperature zones were raised to 170 and 460 °C, respectively, within 30 min and were stabilized at these temperatures for 10 min to grow MoS2."
+  }
+ ]
+}

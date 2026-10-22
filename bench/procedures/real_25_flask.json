@@ -1,0 +1,40 @@
+{
+ "text": "For the synthesis of the micrometric silica particles, 85 mL of EtOH and 40 mL of distilled water were added to a 250 mL flask, and the mixture was stirred at 1000 evolutions per minute (rpm). Then, 30 mL of TEOS were slowly poured in, and after 30 min, 8 mL of NH4OH were added to the flask.",
+ "vessel": "flask",
+ "gold": {
+  "volume_mL": {
+   "value": 250,
+   "unit": "mL"
+  },
+  "stir_rpm": {
+   "value": 1000,
+   "unit": "rpm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Janus Nanoparticles by Pickering Emulsions: A Versatile Approach for the Selective Functionalization of SiO2",
+  "authors": [
+   "Elisa Manzini",
+   "Silvia Mostoni",
+   "Massimiliano D’Arienzo",
+   "Luciano Tadiello",
+   "Roberto Scotti",
+   "Barbara Di Credico"
+  ],
+  "journal": "ACS Applied Materials & Interfaces",
+  "year": 2026,
+  "DOI": "10.1021/acsami.5c20303",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12903102/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "solvent_other: 85 mL EtOH + 40 mL water mixture (binary solvent)",
+  "precursor_mass: 30 mL TEOS, 8 mL NH4OH",
+  "hold_time: TEOS added after 30 min"
+ ],
+ "ambiguous": [
+  "stir_rpm: written '1000 evolutions per minute (rpm)'",
+  "solvent: ethanol/water mixture, ambiguous single choice"
+ ]
+}

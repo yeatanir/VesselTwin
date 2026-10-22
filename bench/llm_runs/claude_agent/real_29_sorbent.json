@@ -1,0 +1,35 @@
+{
+ "vessel": "sorbent",
+ "fields": [
+  {
+   "key": "bed_id_cm",
+   "value": "4",
+   "unit": "mm",
+   "span": "4 mm"
+  },
+  {
+   "key": "bed_length_cm",
+   "value": "105",
+   "unit": "mm",
+   "span": "105 mm"
+  },
+  {
+   "key": "T_K",
+   "value": "298",
+   "unit": "K",
+   "span": "298 K"
+  },
+  {
+   "key": "P_kPa",
+   "value": "1",
+   "unit": "bar",
+   "span": "1 bar"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "2",
+   "unit": "mL/min",
+   "span": "2 mL/min"
+  }
+ ]
+}

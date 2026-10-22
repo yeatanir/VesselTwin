@@ -1,0 +1,50 @@
+{
+ "text": "High-quality NbSe2 single crystals were prepared using the iodine vapor transport method52. Stoichiometric amounts of Nb (99.9%; Alfa Aesar) and Se (99.5%; Alfa Aesar) powders were sealed in an evacuated quartz tube (1/2 inch diameter) with 2 mg/cm3 of iodine as the transport agent, and introduced horizontally into a tube furnace. The temperature was slowly increased to 725 °C, maintained for 3 days, and followed by furnace cooling down to room temperature.",
+ "vessel": "ampoule",
+ "gold": {
+  "D_mm": {
+   "value": 0.5,
+   "unit": "inch"
+  },
+  "agent_mg_per_cm3": {
+   "value": 2,
+   "unit": "mg/cm3"
+  },
+  "gas": {
+   "value": "I2",
+   "unit": ""
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Field-resilient supercurrent diode in a multiferroic Josephson junction",
+  "authors": [
+   "Hung-Yu Yang",
+   "Joseph J Cuozzo",
+   "Anand Johnson Bokka",
+   "Gang Qiu",
+   "Christopher Eckberg",
+   "Yanfeng Lyu",
+   "Shuyuan Huyan",
+   "Ching-Wu Chu",
+   "Kenji Watanabe",
+   "Takashi Taniguchi",
+   "Kang L Wang"
+  ],
+  "journal": "Nature Communications",
+  "year": 2025,
+  "DOI": "10.1038/s41467-025-63698-3",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12540659/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "hold_time: 725 C maintained for 3 days",
+  "other: tube introduced horizontally into a single tube furnace",
+  "other: second growth round with fresh mixture on the other side of the same tube"
+ ],
+ "ambiguous": [
+  "D_mm: written '1/2 inch' (gold 0.5 inch)",
+  "T_source_C: single-zone furnace 725 C",
+  "gas: written 'iodine'"
+ ]
+}

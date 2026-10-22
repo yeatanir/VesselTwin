@@ -1,0 +1,22 @@
+{
+ "synthetic": true,
+ "vessel": "ampoule",
+ "text": "A 12 cm long sealed ampoule with a 14 mm inner diameter was loaded with the source powder and 5 mg/cm3 iodine, then evacuated.",
+ "gold": {
+  "L_cm": {
+   "value": 12,
+   "unit": "cm"
+  },
+  "D_mm": {
+   "value": 14,
+   "unit": "mm"
+  },
+  "agent_mg_per_cm3": {
+   "value": 5,
+   "unit": "mg/cm3"
+  },
+  "gas": {
+   "value": "I2"
+  }
+ }
+}

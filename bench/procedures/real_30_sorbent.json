@@ -1,0 +1,53 @@
+{
+ "text": "Approximately 40 mg of the sample was packed into a silanized glass column (3 mm inner diameter) to form a fixed bed with a height of ca. 30 mm. Prior to the measurement, the sample underwent a strict activation protocol to ensure the complete removal of preadsorbed species: the material was first activated at 80 °C under high vacuum (10–5 Torr) for 20 h, followed by in situ activation at 80 °C under a pure N2 flow (50 sccm) for 2 h. After cooling to the adsorption temperature of 25 °C, the gas stream was switched from N2 to a feed gas containing 410 ppm of CO2 at a total flow rate of 50 sccm to initiate the adsorption process.",
+ "vessel": "sorbent",
+ "gold": {
+  "bed_id_cm": {
+   "value": 3,
+   "unit": "mm"
+  },
+  "bed_length_cm": {
+   "value": 30,
+   "unit": "mm"
+  },
+  "flow_sccm": {
+   "value": 50,
+   "unit": "sccm"
+  },
+  "y_feed": {
+   "value": 410,
+   "unit": "ppm"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Benchmarking CO2 Adsorbents for Direct Air Capture with an Amine-Grafted Metal–Organic Framework",
+  "authors": [
+   "Jiaqi Zhang",
+   "Tianhao Chen",
+   "Aamir Hanif",
+   "Yuyan Shi",
+   "Xinyi Xu",
+   "Weixiang Zuo",
+   "Zhaolei Zhang",
+   "Yu Qiu",
+   "Paul Iacomi",
+   "Qiaowei Li",
+   "Yue-Biao Zhang"
+  ],
+  "journal": "ACS Central Science",
+  "year": 2026,
+  "DOI": "10.1021/acscentsci.6c00769",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13614033/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "temperature: adsorption temperature 25 C (ParamDef T_K is Kelvin; offset-unit conversion unsupported)",
+  "adsorbent_mass: about 40 mg",
+  "activation: 80 C under vacuum 20 h then 80 C under 50 sccm N2 for 2 h"
+ ],
+ "ambiguous": [
+  "bed_length_cm: written 'ca. 30 mm'",
+  "flow_sccm: N2 activation flow is also 50 sccm"
+ ]
+}

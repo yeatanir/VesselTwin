@@ -1,0 +1,58 @@
+{
+ "text": "The MoS2 film was synthesized within the inner quartz tube (2 inches) situated in the outer quartz tube (4 inches) furnace. High‐purity argon (Ar, 120 sccm) was used as the carrier gas under atmospheric pressure (≈750 Torr). Sulfur powder (120–180 mg, Sigma–Aldrich 99.98%) was placed in the upstream region of the furnace, while molybdenum trioxide (MoO3) powder (3.0–3.5 mg, Sigma–Aldrich ≥99.5%) and the Si/SiO2 growth substrates were positioned downstream. Note that perylene 3,4,9,10‐tetracarboxylic acid tetrapotassium salt (PTAS) was applied as a seeding promoter on the growth substrate. During heating, the upstream and downstream temperatures were raised to 830°C and 320°C, respectively, enabling sulfur vaporization, MoO3 reduction, and subsequent formation of monolayer MoS2 on the downward‐facing substrates.",
+ "vessel": "cvd_tube",
+ "gold": {
+  "tube_id_in": {
+   "value": 2,
+   "unit": "inches"
+  },
+  "flow_sccm": {
+   "value": 120,
+   "unit": "sccm"
+  },
+  "carrier": {
+   "value": "Ar",
+   "unit": ""
+  },
+  "pressure_Pa": {
+   "value": 750,
+   "unit": "Torr"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Barrier‐Assisted Plasma Doping for Spatially Selective Resistance Engineering in MoS2 Transistors",
+  "authors": [
+   "Inseong Lee",
+   "Joonho Park",
+   "Seungsun Yoo",
+   "Seunghyun Yu",
+   "Mingu Kang",
+   "Seohak Park",
+   "Min Kyu Lee",
+   "Hyeongjin Lim",
+   "Dongyoung Kim",
+   "Kunwoo Roh",
+   "Sejin Kim",
+   "Kihyuk Kim",
+   "Wonbae Ahn",
+   "Kibum Kang",
+   "Yong‐Hoon Kim",
+   "Sung‐Yool Choi"
+  ],
+  "journal": "Advanced Materials (Deerfield Beach, Fla.)",
+  "year": 2026,
+  "DOI": "10.1002/adma.74389",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13629280/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "precursor_mass: 120-180 mg sulfur, 3.0-3.5 mg MoO3",
+  "geometry_other: outer quartz tube 4 inches",
+  "substrate: Si/SiO2 with PTAS seeding promoter, facing downward"
+ ],
+ "ambiguous": [
+  "T_furnace_C / T_boat_S_C / T_boat_Mo_C: 'upstream and downstream temperatures raised to 830 C and 320 C' - upstream is the sulfur side per the text yet 830 C is far above sulfur range; do not map",
+  "pressure_Pa: written approx. 750 Torr"
+ ]
+}

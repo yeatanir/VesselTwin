@@ -1,0 +1,42 @@
+# Track M pre-registration (committed before any scoring)
+
+Branch `track-m` (from origin/polish 512e052). Written Oct 21 2026 after the closure code and its unit tests (limits, default reproduction) were written and before `bench/track_m_score.py --score` or `--flux` was run. The scoring run is executed once after this commit; the M3 flux file is produced after it too (default conditions, no benchmark data).
+
+## 0. Status of the data and of the closure
+All items (s01-s14, j1-j3) are **development data**; none is held out. The reactive closure was **proposed after seeing the Track K/L failures** (boat-temperature insensitivity far from the boat; zero flux for a substrate as hot as the boat). Even an improvement is therefore **not a validation**; it would only show the hypothesis is not ruled out. If the reactive sink does not change the responses to boat temperature, substrate position and flow, that rules out this one hypothesis and will be said plainly.
+
+## 1. Closure equations (module docstring of `vessels/cvd_tube/reactive.py`)
+Proposed reduced-order closure, **not a validated MoS2 kinetic law**. Switch `substrate_uptake_model` in {condensation (default, unchanged), reactive}.
+- condensation: J = k_m f_St (p_Mo - p_sat,MoO3(T_sub))+ / (R T_f).
+- reactive: J = k_eff (C_Mo,bulk - C_Mo,eq_rxn), k_eff = k_m k_rxn/(k_m + k_rxn), k_rxn = k0 exp(-Ea/(k_B T_sub)) a_S^n, a_S = p_S2,local / S_ref, C_Mo,eq_rxn = C_eq_rxn_Pa/(R T) with C_eq_rxn_Pa = 0 (irreversible). k_m f_St = the model's existing substrate mass-transfer coefficient (Sh D/d times the Stefan factor), T_sub = wall T + T_substrate_offset_K, p_S2 from the local gas composition (thermo.s2_fraction). In the cell balance the substrate extra area (substrate_width x length) is a first-order sink in parallel with the wall sink; Mo consumed by the substrate is removed from the gas (mass balance checked). In the face-down gap model (s08, s13) the reactive sink replaces the driving force psat(T_boat) - psat(T_sub) by psat(T_boat) - C_eq_rxn and adds R T_sub/k_rxn in series with the Hertz-Knudsen and gap resistances; wall variants do not exist in that model.
+- Limits tested: k_rxn -> inf gives the mass-transfer flux k_m p/(RT); k_rxn -> 0 gives zero; substrate hotter than saturation gives non-zero flux (condensation gives zero); the default reproduces the stored default results bit for bit (`bench/track_m/default_reference.json`).
+- Wall switch `wall_uptake_model`: condensation (default, current), reflecting (zero wall flux; only the substrate area removes Mo), sticking (condensation driving force, k_w = k_m s v/(k_m + s v), v = sqrt(RT/(2 pi n M)) the Hertz-Knudsen velocity, s = `wall_sticking`), reactive (same k_rxn law on the wall area at the wall temperature and local S2, C_eq as above).
+- M2: T_boat_Mo_C, the wall profile (T_furnace_C) and `T_substrate_offset_K` are independent inputs. No paper in the benchmark states a substrate-minus-wall offset, so it stays an uncertain input: ensemble sigma 30 K (scoped, mean 0, bounds -100..100, symmetric because no direction is sourced). No paper value is invented. The prediction text for every item must say the substrate temperature is unstated. A deterministic probe (offset -50 K for j1-j3) is a labelled diagnostic and not scored.
+
+## 2. New constants (all `source = synthetic`; no source opened; never tuned to a benchmark)
+| ParamDef | default | hard bounds | ensemble range | scoped MC sigma | justification |
+|---|---|---|---|---|---|
+| rxn_log10_k0_m_s | 1.0 | -12..12 (limit tests) | uniform -3..2 | 1.0 dex | k0 is a velocity; upper end = Hertz-Knudsen limit v_bar/4 ~ 55 m/s for (MoO3)3 at 1000 K (sticking 1); lower end 1e5 below it. With k_m ~ 1e-2 m/s the range spans reaction-limited to transport-limited |
+| rxn_Ea_eV | 0.5 | 0..6 | uniform 0..2 | 0.5 eV | 0 = barrierless; 2 eV = upper end for oxide surface reactions; exp(-Ea/kT) at 1100 K spans 1 to 1e-9 |
+| rxn_n_S | 1.0 | 0..4 | uniform 0..2 | 0.5 | 0 = no S dependence; 1-2 = one or two S2 per Mo unit |
+| S_ref_Pa | 50 | 1e-3..1e6 | fixed | 0 | convention: rounded default substrate S2 pressure (48.5 Pa); a different value is absorbed into k0 |
+| C_eq_rxn_Pa | 0 | 0..1e3 | fixed 0 | 0 | irreversible sulfurization (task statement) |
+| wall_sticking | 1.0 | 1e-4..1 | log-uniform 1e-4..1 | 0 | task statement sweep range; no measured value |
+Defaults of rxn_* are only used when a user switches the model on; the ensemble samples the constants, it does not use the defaults. ParamDef sigmas are 0 so stored default MC streams are unchanged; `reactive.with_structural_sigma` scopes the sigmas (same pattern as `thermo.with_liq_sigma`).
+
+## 3. Items and input rules
+Same items as Tracks A/L: s01, s03, s04, s08, s09, s10, s11, s13, s14 (primary dev s), s05, s06, s07 (secondary), j1, j2, j3 (formerly held-out, now seen); s02 and s12 excluded. Two input rules: **rule L** = Track L's paper-stated geometry (`bench/track_l/items.json`, "after" of Track L), **rule A** = Track A default geometry ("before" of Track L). Sweeps, observables, labels, tolerances (0.05 ln), 100 draws, seed 0, 5 sweep points, i in {1,2,3}, E_eff corners {0, 2 eV} for temperature sweeps (also when T_furnace is tied) are exactly Track A/L. Default `smolik_hsc` vapour-pressure law only (Track L showed the liquid law changes little).
+
+## 4. Ensembles and calls
+- Existing single-model rule (reproduced with the same code as Track L: rule A = its "before", rule L = its "after") is kept and its table reported as is.
+- Structural ensemble (new, separate table): 8 equal-weight cells = substrate model {condensation, reactive} x wall variant {condensation, reflecting, sticking, reactive}; per cell the existing parameter Monte Carlo (100 draws, seed 0, draw 0 nominal, with the scoped substrate-offset sigma of 30 K), each draw paired with a structural sample (seed 1: log10 k0, Ea, n uniform over the ranges above, log10 sticking uniform -4..0; constants fixed across the 5 sweep points of a draw), crossed with i in {1,2,3} and the E_eff corners where used. Member difference d = y(high) - y(low) of the item's observable. P_up = frac(d > 0.05), P_down = frac(d < -0.05), P_tie = rest; the literal P(high > low) (d > 0) is also reported. Call: non_monotonic if >= 0.9 of members reverse (Track A rule); else increase if P_up >= 0.8; decrease if P_down >= 0.8 (equivalent to P(increase) <= 0.2 when ties are absent; the tie band is added so that a flat response is not called a decrease); no_change if P_tie >= 0.8; else **unresolved**. For s11 (shape): 8 structural samples per cell, members compare the predicted class at the sweep ends via `bench.shape_score.predict` (members with a band-spanning abstention are 'unknown'); class_change / no_change if >= 0.8 of members, else unresolved. Items s05-s07 use the same sweep-item rule; T3 is correct iff non_monotonic.
+- Whether any item's sign flips across the ensemble: reported per item (some cell calls increase and another decrease); also per-cell P values.
+
+## 5. Metric and baselines
+Same three-way scoring as Track A/L (`bench.track_a_score.correct`, `track_i_score.tables`): strict table counts uncertain (single-model) and unresolved (ensemble) as wrong; confident-call accuracy and abstention rate reported next to it. Tables T1 (9 dev primary s), T2 (original 8), T4 (j1-j3), T5 (12), T3 secondary. Baselines: stored blind agent predictions, always-increase. A result beats the blind baseline only if strict accuracy is higher by >= 2 items on the same table. n is tiny; one or two items are not evidence.
+
+## 6. M3 (flux_vs_distance.json)
+Substrate Mo flux versus x_substrate in {0.5, 1, 2, 3, 4, 6, 8, 10, 12, 15, 20} cm at default conditions for {condensation, reactive} x {condensation, reflecting, reactive, sticking at 1e-4, 1e-2, 1}, nominal plus p05/p50/p95 over 100 parameter draws (scoped sigmas on k0, Ea, n for reactive cells). Also nominal responses d ln F to boat T (800->850 C liquid law; 700->750 C default law), flow (50->200 sccm) at 1, 4, 12 cm. Reported: which results hold in all variants and which depend on a variant. Not a scoring step.
+
+## 7. Reporting
+All numbers Track L (before = rule A single; after = rule L single) versus Track M (single and ensemble under both rules), including worse ones. Nothing is tuned; if the method changes after seeing results a new pre-registration is committed and both results are reported.

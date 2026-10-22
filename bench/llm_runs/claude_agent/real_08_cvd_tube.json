@@ -1,0 +1,29 @@
+{
+ "vessel": "cvd_tube",
+ "fields": [
+  {
+   "key": "tube_id_in",
+   "value": "1",
+   "unit": "inch",
+   "span": "1-inch"
+  },
+  {
+   "key": "flow_sccm",
+   "value": "50",
+   "unit": "sccm",
+   "span": "50 sccm"
+  },
+  {
+   "key": "T_furnace_C",
+   "value": "780",
+   "unit": "°C",
+   "span": "780 °C"
+  },
+  {
+   "key": "carrier",
+   "value": "Ar",
+   "unit": "",
+   "span": "high-purity Ar is used as the carrier gas"
+  }
+ ]
+}

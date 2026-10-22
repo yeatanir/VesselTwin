@@ -1,0 +1,1044 @@
+{
+ "schema_version": 1,
+ "trace_id": "sens_s04",
+ "policy": {
+  "name": "scripted_v1",
+  "kind": "scripted",
+  "llm": null
+ },
+ "question": {
+  "id": "s04",
+  "text": "Same as s03. What happens to the coverage when the Ar flow rate changes (50 sccm to 100 sccm to 150 sccm)?",
+  "benchmark": "bench/sensitivity/papers.json"
+ },
+ "seed": 0,
+ "n_mc": 30,
+ "steps": [
+  {
+   "name": "extract_setup",
+   "title": "Extract the setup",
+   "tool_calls": [
+    {
+     "name": "detect_vessel",
+     "args": {
+      "text": "Same as s03. What happens to the coverage when the Ar flow rate changes (50 sccm to 100 sccm to 150 sccm)?"
+     },
+     "result_summary": "cvd_tube"
+    },
+    {
+     "name": "extract_setup",
+     "args": {
+      "text": "Same as s03. What happens to the coverage when the Ar flow rate changes (50 sccm to 100 sccm to 150 sccm)?",
+      "vessel": "cvd_tube",
+      "backend": "rules",
+      "fill_defaults": true
+     },
+     "result_summary": "1 stated, 68 default, 0 missing"
+    }
+   ],
+   "claims": [
+    {
+     "id": "c1.1",
+     "text": "1 setup parameter(s) are stated in the question text: carrier",
+     "evidence": [
+      {
+       "kind": "span_check",
+       "ref": "llm/span_check.py"
+      }
+     ],
+     "label": "uncertain"
+    },
+    {
+     "id": "c1.2",
+     "text": "68 parameters are ParamDef defaults, not facts about this experiment",
+     "evidence": [
+      {
+       "kind": "paramdef_default",
+       "ref": "ParamDef"
+      }
+     ],
+     "label": "hypothesis"
+    }
+   ],
+   "data": {
+    "vessel": "cvd_tube",
+    "fields": {
+     "tube_id_in": {
+      "status": "default",
+      "value": 1.0,
+      "unit": "in",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "L_tube_cm": {
+      "status": "default",
+      "value": 100.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "x_furnace_center_cm": {
+      "status": "default",
+      "value": 50.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "L_hot_cm": {
+      "status": "default",
+      "value": 30.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "ramp_cm": {
+      "status": "default",
+      "value": 12.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "x_S_boat_cm": {
+      "status": "default",
+      "value": 10.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "x_MoO3_cm": {
+      "status": "default",
+      "value": 50.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "x_substrate_cm": {
+      "status": "default",
+      "value": 12.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "substrate_length_cm": {
+      "status": "default",
+      "value": 1.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "substrate_width_cm": {
+      "status": "default",
+      "value": 1.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "T_substrate_offset_K": {
+      "status": "default",
+      "value": 0.0,
+      "unit": "K",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "boat_area_MoO3_cm2": {
+      "status": "default",
+      "value": 2.0,
+      "unit": "cm2",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "boat_area_S_cm2": {
+      "status": "default",
+      "value": 2.0,
+      "unit": "cm2",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "T_furnace_C": {
+      "status": "default",
+      "value": 750.0,
+      "unit": "C",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "T_ends_C": {
+      "status": "default",
+      "value": 25.0,
+      "unit": "C",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "T_boat_Mo_C": {
+      "status": "default",
+      "value": 700.0,
+      "unit": "C",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "T_boat_S_C": {
+      "status": "default",
+      "value": 180.0,
+      "unit": "C",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "flow_sccm": {
+      "status": "default",
+      "value": 100.0,
+      "unit": "sccm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "carrier": {
+      "status": "stated",
+      "value": "Ar",
+      "unit": null,
+      "span": "Ar",
+      "note": null
+     },
+     "pressure_Pa": {
+      "status": "default",
+      "value": 101325.0,
+      "unit": "Pa",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "thermo_basis": {
+      "status": "default",
+      "value": "literature",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "MoO3.psat_model": {
+      "status": "default",
+      "value": "smolik_hsc",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "MoO3.logP_A": {
+      "status": "default",
+      "value": -16140.0,
+      "unit": "K",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "MoO3.logP_B": {
+      "status": "default",
+      "value": -5.53,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "MoO3.logP_C": {
+      "status": "default",
+      "value": 30.69,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "MoO3.P_ref_Pa": {
+      "status": "default",
+      "value": 53.3,
+      "unit": "Pa",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "MoO3.n_oligomer": {
+      "status": "default",
+      "value": 3.0,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "S.antoine_A": {
+      "status": "default",
+      "value": 6.69535,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "S.antoine_B": {
+      "status": "default",
+      "value": 2285.37,
+      "unit": "C",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "S.antoine_C": {
+      "status": "default",
+      "value": 155.0,
+      "unit": "C",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "S.P_scale": {
+      "status": "default",
+      "value": 1.0,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "S.dHf_S8_kJ": {
+      "status": "default",
+      "value": 100.416,
+      "unit": "kJ/mol",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "S.speciation": {
+      "status": "default",
+      "value": "equilibrium",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "MoO3.dH_kJmol": {
+      "status": "default",
+      "value": 150.0,
+      "unit": "kJ/mol",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "S.dH_kJmol": {
+      "status": "default",
+      "value": 55.0,
+      "unit": "kJ/mol",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "alpha_MoO3": {
+      "status": "default",
+      "value": 0.1,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "alpha_S": {
+      "status": "default",
+      "value": 1.0,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "Sh": {
+      "status": "default",
+      "value": 3.66,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "Nu": {
+      "status": "default",
+      "value": 3.66,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "D_scale": {
+      "status": "default",
+      "value": 1.0,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "gas_T_lag": {
+      "status": "default",
+      "value": "on",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "stefan": {
+      "status": "default",
+      "value": "on",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "boat_Sh_model": {
+      "status": "default",
+      "value": "disk",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "buoyancy": {
+      "status": "default",
+      "value": "flag",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "Ri_c": {
+      "status": "default",
+      "value": 1.0,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "buoy_exp": {
+      "status": "default",
+      "value": 0.25,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "k_attach_Mo.A": {
+      "status": "default",
+      "value": 0.06,
+      "unit": "um/s/Pa",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "k_attach_Mo.Ea_eV": {
+      "status": "default",
+      "value": 0.6,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "k_attach_S.A": {
+      "status": "default",
+      "value": 15.0,
+      "unit": "um/s/Pa",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "k_attach_S.Ea_eV": {
+      "status": "default",
+      "value": 0.5,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "gamma_edge_Mo.gamma_eV": {
+      "status": "default",
+      "value": 0.3,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "gamma_edge_S.gamma_eV": {
+      "status": "default",
+      "value": 0.3,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "P_eq_ref_Pa": {
+      "status": "default",
+      "value": 1e-05,
+      "unit": "Pa",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "eq_model": {
+      "status": "default",
+      "value": "kink",
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "E_kink_Mo.E_eV": {
+      "status": "default",
+      "value": 1.7,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "E_kink_S.E_eV": {
+      "status": "default",
+      "value": -0.3,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "P_std_Mo_Pa": {
+      "status": "default",
+      "value": 1e-05,
+      "unit": "Pa",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "Dmu_S_std_eV": {
+      "status": "default",
+      "value": -0.796,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "mu_S_eV": {
+      "status": "default",
+      "value": 0.0,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "s_hex": {
+      "status": "default",
+      "value": 0.15,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "s_tri": {
+      "status": "default",
+      "value": 0.95,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "s_boundary": {
+      "status": "default",
+      "value": 0.5,
+      "unit": null,
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "duration_min": {
+      "status": "default",
+      "value": 10.0,
+      "unit": "min",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "N_nuc_cm2": {
+      "status": "default",
+      "value": 10000.0,
+      "unit": "1/cm2",
+      "span": null,
+      "note": "ParamDef default (synthetic)"
+     },
+     "L_map_cm": {
+      "status": "default",
+      "value": 25.0,
+      "unit": "cm",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "dE_Mo_dft_eV": {
+      "status": "default",
+      "value": 0.0,
+      "unit": "eV",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "m_MoO3_mg": {
+      "status": "default",
+      "value": 1000000.0,
+      "unit": "mg",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "m_S_mg": {
+      "status": "default",
+      "value": 1000000.0,
+      "unit": "mg",
+      "span": null,
+      "note": "ParamDef default"
+     },
+     "gap_mm": {
+      "status": "default",
+      "value": 0.0,
+      "unit": "mm",
+      "span": null,
+      "note": "ParamDef default"
+     }
+    }
+   },
+   "idx": 1
+  },
+  {
+   "name": "literature",
+   "title": "Literature evidence",
+   "tool_calls": [
+    {
+     "name": "search_literature",
+     "args": {
+      "parameter": "Ar flow rate",
+      "outcome": "coverage"
+     },
+     "result_summary": "3 excerpt(s)"
+    }
+   ],
+   "claims": [
+    {
+     "id": "c2.1",
+     "text": "Paper reports: coverage shows 'increase' for Ar flow rate (50 sccm to 100 sccm to 150 sccm)",
+     "evidence": [
+      {
+       "kind": "literature_quote",
+       "ref": "10.1021/acsomega.2c07408",
+       "quote": "A gas flow rate of 100 sccm results in a coverage area of 70% while a flow rate of 150 sccm leads to 92% coverage area"
+      }
+     ],
+     "label": "uncertain"
+    }
+   ],
+   "data": {
+    "excerpts": [
+     {
+      "source": "bench/sensitivity/papers.json",
+      "id": "s03",
+      "doi": "10.1021/acsomega.2c07408",
+      "citation": "Prasad R.K., Singh D.K., Continuous Large Area Monolayered Molybdenum Disulfide Growth Using Atmospheric Pressure Chemical Vapor Deposition, ACS Omega 8(12):10930 (2023)",
+      "quote": "Growth with 50 sccm of argon flow results in MoS2 flakes having a large crystallite size of \u223c80 \u03bcm",
+      "observed_direction": "decrease",
+      "confidence": "medium",
+      "is_question_paper": false,
+      "support": {
+       "verified": true,
+       "name": true,
+       "value": true,
+       "why": "name+value match"
+      }
+     },
+     {
+      "source": "bench/sensitivity/papers.json",
+      "id": "s03",
+      "doi": "10.1021/acsomega.2c07408",
+      "citation": "Prasad R.K., Singh D.K., Continuous Large Area Monolayered Molybdenum Disulfide Growth Using Atmospheric Pressure Chemical Vapor Deposition, ACS Omega 8(12):10930 (2023)",
+      "quote": "300 sccm results in MoS2 crystallites of size as small as \u223c7 \u03bcm",
+      "observed_direction": "decrease",
+      "confidence": "medium",
+      "is_question_paper": false,
+      "support": {
+       "verified": false,
+       "name": false,
+       "value": false,
+       "why": "no alias for the parameter in the excerpt"
+      }
+     },
+     {
+      "source": "bench/sensitivity/papers.json",
+      "id": "s04",
+      "doi": "10.1021/acsomega.2c07408",
+      "citation": "Prasad R.K., Singh D.K., ACS Omega 8(12):10930 (2023)",
+      "quote": "A gas flow rate of 100 sccm results in a coverage area of 70% while a flow rate of 150 sccm leads to 92% coverage area",
+      "observed_direction": "increase",
+      "confidence": "medium",
+      "is_question_paper": true,
+      "support": {
+       "verified": true,
+       "name": true,
+       "value": true,
+       "why": "name+value match"
+      }
+     }
+    ],
+    "found": true,
+    "observed_direction": "increase",
+    "doi": "10.1021/acsomega.2c07408",
+    "paper_confidence": "medium",
+    "paper_notes": "The ~40% value for 50 sccm was relayed by the page extraction and not verified verbatim. Coverage increases while domain size decreases (trade-off, see s03). Peak at intermediate flow."
+   },
+   "idx": 2
+  },
+  {
+   "name": "vessel_model",
+   "title": "Run the vessel model",
+   "tool_calls": [
+    {
+     "name": "run_vessel",
+     "args": {
+      "vessel": "cvd_tube",
+      "spec_hash_fields": [
+       "carrier"
+      ],
+      "n_mc": 30,
+      "seed": 0
+     },
+     "result_summary": "regime=transport_limited, synthetic=False"
+    },
+    {
+     "name": "knob_sensitivity",
+     "args": {
+      "proxy": "flux_MoO3_mol_m2_s",
+      "knobs": [
+       "flow_sccm",
+       "T_boat_Mo_C",
+       "T_boat_S_C",
+       "T_furnace_C",
+       "boat_area_MoO3_cm2"
+      ],
+      "step": "+-10% or +-25 C"
+     },
+     "result_summary": "largest: T_boat_Mo_C"
+    }
+   ],
+   "claims": [
+    {
+     "id": "c3.1",
+     "text": "Passport quantities from sourced inputs",
+     "evidence": [
+      {
+       "kind": "tier_status",
+       "ref": "tiers.json:cvd_tube"
+      }
+     ],
+     "label": "hypothesis"
+    },
+    {
+     "id": "c3.2",
+     "text": "Predicted flake shape class at the substrate: triangle_Mo",
+     "evidence": [
+      {
+       "kind": "benchmark_at_baseline",
+       "ref": "docs/track_a_results.md: accuracy 0.50 = majority baseline"
+      }
+     ],
+     "label": "hypothesis"
+    },
+    {
+     "id": "c3.3",
+     "text": "Knob effects on flux_MoO3_mol_m2_s (one step each side) with p05..p95 whiskers are model sensitivities",
+     "evidence": [
+      {
+       "kind": "tier_status",
+       "ref": "tiers.json:cvd_tube"
+      }
+     ],
+     "label": "hypothesis"
+    }
+   ],
+   "data": {
+    "regime": "transport_limited",
+    "tier": 1,
+    "synthetic": false,
+    "passport": [
+     {
+      "quantity": "T_K",
+      "unit": "K",
+      "p05": 852.0904173035698,
+      "p50": 862.2591119368487,
+      "p95": 876.8922616149413
+     },
+     {
+      "quantity": "MoO3_g.p_Pa",
+      "unit": "Pa",
+      "p05": 2.8910316715987847e-05,
+      "p50": 1.1644141580357852,
+      "p95": 2.618912545452838
+     },
+     {
+      "quantity": "S2_g.p_Pa",
+      "unit": "Pa",
+      "p05": 15.247034662770211,
+      "p50": 49.821389662273404,
+      "p95": 78.13013321541773
+     },
+     {
+      "quantity": "ratio_Mo_S",
+      "unit": "",
+      "p05": 5.422559457661467e-07,
+      "p50": 0.022266103499013017,
+      "p95": 0.08500487467097695
+     },
+     {
+      "quantity": "supersaturation_MoO3",
+      "unit": "",
+      "p05": 14.156024141115646,
+      "p50": 21.542420653910206,
+      "p95": 47.36178392374646
+     },
+     {
+      "quantity": "flux_MoO3_mol_m2_s",
+      "unit": "mol/m2/s",
+      "p05": 2.2072526630561004e-11,
+      "p50": 1.164146523483053e-06,
+      "p95": 2.716868266455227e-06
+     },
+     {
+      "quantity": "balance_err",
+      "unit": "",
+      "p05": 0.0,
+      "p50": 0.0,
+      "p95": 1.7203519449280066e-16
+     },
+     {
+      "quantity": "supersaturation_MoO3_gasT",
+      "unit": "",
+      "p05": 3.7070028721528874,
+      "p50": 7.885047129771803,
+      "p95": 14.169331477694444
+     },
+     {
+      "quantity": "T_gas_K",
+      "unit": "K",
+      "p05": 873.0024497275612,
+      "p50": 882.1677184410012,
+      "p95": 897.9605203503272
+     },
+     {
+      "quantity": "ratio_Mo_Satoms",
+      "unit": "",
+      "p05": 2.7112797274023556e-07,
+      "p50": 0.011133051730397357,
+      "p95": 0.04250243733353788
+     },
+     {
+      "quantity": "S2_fraction_of_S",
+      "unit": "",
+      "p05": 0.9999999980589109,
+      "p50": 0.9999999995292608,
+      "p95": 0.9999999999828257
+     },
+     {
+      "quantity": "Ri_buoyancy",
+      "unit": "",
+      "p05": 45.69326348640739,
+      "p50": 55.692869676252386,
+      "p95": 77.32116397468083
+     },
+     {
+      "quantity": "Ra_buoyancy",
+      "unit": "",
+      "p05": 289.72611463658643,
+      "p50": 369.3016220067543,
+      "p95": 510.99212976426975
+     },
+     {
+      "quantity": "MoO3_supply_mol_s",
+      "unit": "mol/s",
+      "p05": 4.680145058743358e-14,
+      "p50": 2.712275365211662e-09,
+      "p95": 5.291147490251861e-09
+     },
+     {
+      "quantity": "MoO3_to_substrate_frac",
+      "unit": "",
+      "p05": 0.02505666804953194,
+      "p50": 0.036658145841179664,
+      "p95": 0.04819107032216857
+     }
+    ],
+    "knob_bars": {
+     "proxy": "flux_MoO3_mol_m2_s",
+     "base_p05_p50_p95": [
+      2.2072526630561004e-11,
+      1.164146523483053e-06,
+      2.716868266455227e-06
+     ],
+     "rows": [
+      {
+       "knob": "flow_sccm",
+       "low": 90.0,
+       "high": 110.0,
+       "step": "10%",
+       "effect_p50_pct": 14.751950566583703,
+       "effect_p05_pct": -3.54828366351009e-05,
+       "effect_p95_pct": 19.085710752198995
+      },
+      {
+       "knob": "T_boat_Mo_C",
+       "low": 675.0,
+       "high": 725.0,
+       "step": "25 C",
+       "effect_p50_pct": 134.50831149146202,
+       "effect_p05_pct": 0.0034620936777767226,
+       "effect_p95_pct": 315.41480894323786
+      },
+      {
+       "knob": "T_boat_S_C",
+       "low": 155.0,
+       "high": 205.0,
+       "step": "25 C",
+       "effect_p50_pct": 0.029208058757544546,
+       "effect_p05_pct": -1.3954833619967365e-07,
+       "effect_p95_pct": 0.034867820491184504
+      },
+      {
+       "knob": "T_furnace_C",
+       "low": 725.0,
+       "high": 775.0,
+       "step": "25 C",
+       "effect_p50_pct": 89.02752757468986,
+       "effect_p05_pct": 0.0010267234256232994,
+       "effect_p95_pct": 199.7455592120516
+      },
+      {
+       "knob": "boat_area_MoO3_cm2",
+       "low": 1.8,
+       "high": 2.2,
+       "step": "10%",
+       "effect_p50_pct": 4.2720254283710934,
+       "effect_p05_pct": 0.00013135923569701217,
+       "effect_p95_pct": 11.02468696554248
+      }
+     ]
+    },
+    "shape_here": "triangle_Mo",
+    "tier_status": "Tier 1. MoO3 vapour pressure from Smolik et al. 2000 (solid branch only; no sourced liquid-MoO3 branch above the 1068 K melting point, so the model cannot respond to a hotter boat). Shape map: hypothesis. Edge rates are synthetic; DFT Mo-edge S binding (Rosen et al. 2018) is an option and the map is still not predictive (shape accuracy 0.50 = always-triangle baseline, n = 14, 8 in scope). Sensitivity direction (pre-registered, Track A): original 8 items model 2/8 vs blind no-tool baseline 6/8 vs always-increase 4/8; held-out j1-j3 (one paper) 0/3, no claim; handles added for MoO3/S inventory and source-substrate gap. Tier 0 regime call re-derived with a wall-uptake driving-force term; agrees with the CFD convention on 37/40 sweep cases (was 26/40); the CFD label is an agent-chosen convention (63 % uptake), not measured. Mesh: tube GCI 0.8-13 %, mostly oscillatory (target 2 % missed). Surrogate: multi-fidelity correction does not reach 5 % (LOO median error 24-36 %); tube outputs span 3.5-6.6 decades of CFD/Tier 1 and are not learnable from 40 cases."
+   },
+   "idx": 3
+  },
+  {
+   "name": "compare",
+   "title": "Model vs literature direction",
+   "tool_calls": [
+    {
+     "name": "compare_direction",
+     "args": {
+      "id": "s04",
+      "model_source": "bench/sensitivity/predictions.json"
+     },
+     "result_summary": "status=modelled, direction=non_monotonic"
+    }
+   ],
+   "claims": [
+    {
+     "id": "c4.1",
+     "text": "Model direction 'non_monotonic' vs paper 'increase' for flow_sccm 50->150: disagree",
+     "evidence": [
+      {
+       "kind": "benchmark_fail",
+       "ref": "s04"
+      }
+     ],
+     "label": "hypothesis"
+    }
+   ],
+   "data": {
+    "status": "modelled",
+    "observed": "increase",
+    "parameter": "flow_sccm",
+    "sweep": [
+     50,
+     150
+    ],
+    "proxy": "flux_MoO3_mol_m2_s",
+    "reason": null,
+    "model_direction": "non_monotonic",
+    "match": false,
+    "uncertain": false,
+    "band_overlap_endpoints": true,
+    "values": [
+     50.0,
+     75.0,
+     100.0,
+     125.0,
+     150.0
+    ],
+    "labels": null,
+    "summary": {
+     "n_total": 14,
+     "n_modellable": 8,
+     "n_not_modellable": 6,
+     "correct": 5,
+     "correct_strict_uncertain_wrong": 4,
+     "n_uncertain": 1,
+     "majority_class": "increase",
+     "majority_baseline_correct": 4,
+     "chance_note": "5 direction classes; uniform chance 20%",
+     "blind_correct_all14": 8,
+     "blind_correct_on_modellable8": 6,
+     "majority_all14": "decrease",
+     "majority_all14_correct": 5
+    },
+    "flip": false,
+    "signs": [
+     1,
+     1,
+     1
+    ],
+    "series": [
+     [
+      1.2258330375693256e-11,
+      5.639774167664571e-07,
+      1.7046369923629819e-06
+     ],
+     [
+      2.176874495790855e-11,
+      8.996061775576095e-07,
+      2.4420142250628997e-06
+     ],
+     [
+      2.517930885558827e-11,
+      1.1117781549164488e-06,
+      2.7545751558734778e-06
+     ],
+     [
+      2.4958111910458448e-11,
+      1.176687997251863e-06,
+      2.910547949326895e-06
+     ],
+     [
+      2.6749535339450494e-11,
+      1.1349520017218402e-06,
+      2.899062148654377e-06
+     ]
+    ],
+    "verdict": "disagree"
+   },
+   "idx": 4
+  },
+  {
+   "name": "briefs",
+   "title": "Two briefs",
+   "tool_calls": [
+    {
+     "name": "make_atomistic_brief",
+     "args": {
+      "vessel": "cvd_tube",
+      "n_mc": 30,
+      "seed": 0
+     },
+     "result_summary": "11 ranked calculations"
+    }
+   ],
+   "claims": [
+    {
+     "id": "c5.1",
+     "text": "Change first: T_boat_Mo_C (model: +134.5% in flux_MoO3_mol_m2_s for +-25 C, p05..p95 +0.0..+315.4%).",
+     "evidence": [
+      {
+       "kind": "benchmark_fail",
+       "ref": "s04"
+      },
+      {
+       "kind": "tier_status",
+       "ref": "tiers.json:cvd_tube"
+      }
+     ],
+     "label": "hypothesis"
+    },
+    {
+     "id": "c5.2",
+     "text": "Rank 1: DFT/JANAF thermochemistry of gas species for MoO3.P_ref_Pa [cheap], sigma 37.3 Pa moves the outcome by 1.26 cm.",
+     "evidence": [
+      {
+       "kind": "tier_status",
+       "ref": "tiers.json:cvd_tube"
+      }
+     ],
+     "label": "hypothesis"
+    }
+   ],
+   "data": {
+    "experimentalist": [
+     "Change first: T_boat_Mo_C (model: +134.5% in flux_MoO3_mol_m2_s for +-25 C, p05..p95 +0.0..+315.4%).",
+     "Model and paper disagree on flow_sccm: measure coverage at 4+ points across 50-150 to see whether the trend is non-monotonic.",
+     "Record the substrate position and boat positions: they are always defaults in this model."
+    ],
+    "simulation": [
+     "Rank 1: DFT/JANAF thermochemistry of gas species for MoO3.P_ref_Pa [cheap], sigma 37.3 Pa moves the outcome by 1.26 cm.",
+     "Rank 2: DFT/JANAF thermochemistry of gas species for MoO3.dH_kJmol [cheap], sigma 5 kJ/mol moves the outcome by 0 cm.",
+     "Rank 3: DFT/JANAF thermochemistry of gas species for S.dH_kJmol [cheap], sigma 3 kJ/mol moves the outcome by 0 cm."
+    ],
+    "simulation_markdown": "# Simulation brief: cvd_tube\n\n- Brief for cvd_tube at site substrate_x=12.0cm: Tier 1 solver (tier1:plug-flow-wall-condensation).\n- Inputs are not flagged synthetic.\n- Outcome of interest: triangle-hexagon shape boundary position from the MoO3 boat. Nominal 18.2 cm; at the low tail 13.8 cm; at the high tail n/a cm.\n- T_K: p05 852, p50 862, p95 877 K. At the low-outcome tail 862; at the high-outcome tail 862.\n- MoO3_g.p_Pa: p05 2.89e-05, p50 1.16, p95 2.62 Pa. At the low-outcome tail 0.861; at the high-outcome tail 1.73.\n- S2_g.p_Pa: p05 15.2, p50 49.8, p95 78.1 Pa. At the low-outcome tail 53.5; at the high-outcome tail 43.4.\n- ratio_Mo_S: p05 5.42e-07, p50 0.0223, p95 0.085 -. At the low-outcome tail 0.0161; at the high-outcome tail 0.0398.\n- supersaturation_MoO3: p05 14.2, p50 21.5, p95 47.4 -. At the low-outcome tail 23.5; at the high-outcome tail 30.9.\n- flux_MoO3_mol_m2_s: p05 2.21e-11, p50 1.16e-06, p95 2.72e-06 mol/m2/s. At the low-outcome tail 1.05e-06; at the high-outcome tail 1.3e-06.\n- balance_err: p05 0, p50 0, p95 1.72e-16 -. At the low-outcome tail 0; at the high-outcome tail 0.\n- supersaturation_MoO3_gasT: p05 3.71, p50 7.89, p95 14.2 -. At the low-outcome tail 7.37; at the high-outcome tail 9.69.\n- T_gas_K: p05 873, p50 882, p95 898 K. At the low-outcome tail 882; at the high-outcome tail 882.\n- ratio_Mo_Satoms: p05 2.71e-07, p50 0.0111, p95 0.0425 -. At the low-outcome tail 0.00804; at the high-outcome tail 0.0199.\n- S2_fraction_of_S: p05 1, p50 1, p95 1 -. At the low-outcome tail 1; at the high-outcome tail 1.\n- Ri_buoyancy: p05 45.7, p50 55.7, p95 77.3 -. At the low-outcome tail 56.4; at the high-outcome tail 56.4.\n- Ra_buoyancy: p05 290, p50 369, p95 511 -. At the low-outcome tail 372; at the high-outcome tail 372.\n- MoO3_supply_mol_s: p05 4.68e-14, p50 2.71e-09, p95 5.29e-09 mol/s. At the low-outcome tail 2.34e-09; at the high-outcome tail 2.94e-09.\n- MoO3_to_substrate_frac: p05 0.0251, p50 0.0367, p95 0.0482 -. At the low-outcome tail 0.0353; at the high-outcome tail 0.0373.\n- n/a means the solver finds no value there, for example no shape boundary inside the mapped region.\n- Rank 1: DFT/JANAF thermochemistry of gas species for MoO3.P_ref_Pa [cheap]. Its one-sigma uncertainty (37.3 Pa) moves the triangle-hexagon shape boundary position from the MoO3 boat by 1.26 cm.\n- Rank 2: DFT/JANAF thermochemistry of gas species for MoO3.dH_kJmol [cheap]. Its one-sigma uncertainty (5 kJ/mol) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 3: DFT/JANAF thermochemistry of gas species for S.dH_kJmol [cheap]. Its one-sigma uncertainty (3 kJ/mol) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 4: MLIP-MD evaporation/sticking coefficient for alpha_MoO3 [expensive]. Its one-sigma uncertainty (0.05 ) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 5: MLIP-MD evaporation/sticking coefficient for alpha_S [expensive]. Its one-sigma uncertainty (0.3 ) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 6: MLIP-MD / TST attachment prefactor for k_attach_Mo.A [expensive]. Its one-sigma uncertainty (0.03 um/s/Pa) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 7: ReaxFF/MLIP attachment barrier (NEB) for k_attach_Mo.Ea_eV [medium]. Its one-sigma uncertainty (0.05 eV) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 8: MLIP-MD / TST attachment prefactor for k_attach_S.A [expensive]. Its one-sigma uncertainty (7.5 um/s/Pa) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 9: ReaxFF/MLIP attachment barrier (NEB) for k_attach_S.Ea_eV [medium]. Its one-sigma uncertainty (0.05 eV) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 10: DFT edge energy vs mu_S (nanoribbon) for gamma_edge_Mo.gamma_eV [medium]. Its one-sigma uncertainty (0.05 eV) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n- Rank 11: DFT edge energy vs mu_S (nanoribbon) for gamma_edge_S.gamma_eV [medium]. Its one-sigma uncertainty (0.05 eV) moves the triangle-hexagon shape boundary position from the MoO3 boat by 0 cm.\n\n## Conditions the chemistry sees\n\n| condition | unit | p05 | p50 | p95 | low tail | high tail |\n|---|---|---|---|---|---|---|\n| T_K | K | 852 | 862 | 877 | 862 | 862 |\n| MoO3_g.p_Pa | Pa | 2.89e-05 | 1.16 | 2.62 | 0.861 | 1.73 |\n| S2_g.p_Pa | Pa | 15.2 | 49.8 | 78.1 | 53.5 | 43.4 |\n| ratio_Mo_S | - | 5.42e-07 | 0.0223 | 0.085 | 0.0161 | 0.0398 |\n| supersaturation_MoO3 | - | 14.2 | 21.5 | 47.4 | 23.5 | 30.9 |\n| flux_MoO3_mol_m2_s | mol/m2/s | 2.21e-11 | 1.16e-06 | 2.72e-06 | 1.05e-06 | 1.3e-06 |\n| balance_err | - | 0 | 0 | 1.72e-16 | 0 | 0 |\n| supersaturation_MoO3_gasT | - | 3.71 | 7.89 | 14.2 | 7.37 | 9.69 |\n| T_gas_K | K | 873 | 882 | 898 | 882 | 882 |\n| ratio_Mo_Satoms | - | 2.71e-07 | 0.0111 | 0.0425 | 0.00804 | 0.0199 |\n| S2_fraction_of_S | - | 1 | 1 | 1 | 1 | 1 |\n| Ri_buoyancy | - | 45.7 | 55.7 | 77.3 | 56.4 | 56.4 |\n| Ra_buoyancy | - | 290 | 369 | 511 | 372 | 372 |\n| MoO3_supply_mol_s | mol/s | 4.68e-14 | 2.71e-09 | 5.29e-09 | 2.34e-09 | 2.94e-09 |\n| MoO3_to_substrate_frac | - | 0.0251 | 0.0367 | 0.0482 | 0.0353 | 0.0373 |\n\n## Ranked atomistic calculations\n\n| rank | calculation | parameter | cost | one-sigma | expected change in outcome |\n|---|---|---|---|---|---|\n| 1 | DFT/JANAF thermochemistry of gas species | MoO3.P_ref_Pa | cheap | 37.3 Pa | 1.26 cm |\n| 2 | DFT/JANAF thermochemistry of gas species | MoO3.dH_kJmol | cheap | 5 kJ/mol | 0 cm |\n| 3 | DFT/JANAF thermochemistry of gas species | S.dH_kJmol | cheap | 3 kJ/mol | 0 cm |\n| 4 | MLIP-MD evaporation/sticking coefficient | alpha_MoO3 | expensive | 0.05  | 0 cm |\n| 5 | MLIP-MD evaporation/sticking coefficient | alpha_S | expensive | 0.3  | 0 cm |\n| 6 | MLIP-MD / TST attachment prefactor | k_attach_Mo.A | expensive | 0.03 um/s/Pa | 0 cm |\n| 7 | ReaxFF/MLIP attachment barrier (NEB) | k_attach_Mo.Ea_eV | medium | 0.05 eV | 0 cm |\n| 8 | MLIP-MD / TST attachment prefactor | k_attach_S.A | expensive | 7.5 um/s/Pa | 0 cm |\n| 9 | ReaxFF/MLIP attachment barrier (NEB) | k_attach_S.Ea_eV | medium | 0.05 eV | 0 cm |\n| 10 | DFT edge energy vs mu_S (nanoribbon) | gamma_edge_Mo.gamma_eV | medium | 0.05 eV | 0 cm |\n| 11 | DFT edge energy vs mu_S (nanoribbon) | gamma_edge_S.gamma_eV | medium | 0.05 eV | 0 cm |\n",
+    "synthetic": false
+   },
+   "idx": 5
+  }
+ ],
+ "limits": {
+  "sensitivity": "Sensitivity-direction benchmark (pre-registered, Track A): model 2/8 on the original 8 modellable items, always-increase 4/8, blind no-tool baseline 6/8; held-out j1-j3 (n = 3, one paper) model 0/3 (docs/track_a_results.md).",
+  "shape": "Shape-class benchmark: accuracy 0.50, equal to the always-triangle baseline (n = 14, 8 in scope; docs/track_a_results.md). Shape class is a hypothesis.",
+  "tiers": {
+   "cvd_tube": "Tier 1. MoO3 vapour pressure from Smolik et al. 2000 (solid branch only; no sourced liquid-MoO3 branch above the 1068 K melting point, so the model cannot respond to a hotter boat). Shape map: hypothesis. Edge rates are synthetic; DFT Mo-edge S binding (Rosen et al. 2018) is an option and the map is still not predictive (shape accuracy 0.50 = always-triangle baseline, n = 14, 8 in scope). Sensitivity direction (pre-registered, Track A): original 8 items model 2/8 vs blind no-tool baseline 6/8 vs always-increase 4/8; held-out j1-j3 (one paper) 0/3, no claim; handles added for MoO3/S inventory and source-substrate gap. Tier 0 regime call re-derived with a wall-uptake driving-force term; agrees with the CFD convention on 37/40 sweep cases (was 26/40); the CFD label is an agent-chosen convention (63 % uptake), not measured. Mesh: tube GCI 0.8-13 %, mostly oscillatory (target 2 % missed). Surrogate: multi-fidelity correction does not reach 5 % (LOO median error 24-36 %); tube outputs span 3.5-6.6 decades of CFD/Tier 1 and are not learnable from 40 cases.",
+   "ampoule": "Tier 1. Thermochemistry sourced for WO2 + HgX2 presets, but the model over-predicts published transport rates by about 1x to 38x (not tuned). Convection enhancement is CFD-calibrated (laminar, square duct for tilts) and flagged outside the scanned range. 60-case CFD sweep: Tier 0 agreement 81.7 % (threshold 1.1) / 75 % (1.2) with the CFD f>1.1 / f>1.2 convention; the stratification fix adds nothing over no stratification term when scored held-out (tier2/verification/b3_results.json). Finest mesh done: GCI 0.0-2.1 % on 3 steady cases, 13 % (unsteady, not meaningful) on the strong-convection case. Surrogate: correction does not reach 5 % (LOO median error 27-31 %), and adds essentially nothing over Tier 1. A possible sign error in Tier 1's composition-buoyancy term is unchecked. OpenFOAM matches Tier 1 within 2 % for diffusion-limited cases."
+  }
+ }
+}

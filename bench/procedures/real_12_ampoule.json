@@ -1,0 +1,56 @@
+{
+ "text": "Single crystals of FGT were grown by CVT using I2 as the transport agent. The high‐purity powdered materials (Fe: 99.999%, Ge: 99.99%, and Te: 99.999%) with stoichiometric composition (Fe:Ge:Te ratio is 3:1:2, with 10 g of powder in total) were first combined with an appropriate amount of I2 (12 mg cm−3) and placed in a quartz ampoule (20 cm length and 2 cm inner diameter). The quartz ampoule was directly cooled with liquid nitrogen and then sealed in a vacuum environment at ≈10−6 Torr. The ampoule was then heated at 750 °C for two days in a three‐zone furnace to synthesize the source material. Next, the furnace temperature was adjusted to create a temperature gradient of 750 °C (source zone) à 650 °C (growth zone) for crystal growth.",
+ "vessel": "ampoule",
+ "gold": {
+  "gas": {
+   "value": "I2",
+   "unit": ""
+  },
+  "agent_mg_per_cm3": {
+   "value": 12,
+   "unit": "mg/cm3"
+  },
+  "L_cm": {
+   "value": 20,
+   "unit": "cm"
+  },
+  "D_mm": {
+   "value": 2,
+   "unit": "cm"
+  },
+  "T_source_C": {
+   "value": 750,
+   "unit": "C"
+  },
+  "T_sink_C": {
+   "value": 650,
+   "unit": "C"
+  }
+ },
+ "synthetic": false,
+ "source": {
+  "title": "Microthermoreflectance Characterization of the Band‐Structure Transformations Observed During the Magnetic‐Ordering Transitions of Multilayered 2D Fe3GeTe2 Ferromagnetic Metals",
+  "authors": [
+   "Ching‐Hwa Ho",
+   "Yen‐Chang Su",
+   "Yu‐Hung Peng",
+   "Zi‐Ying Chen"
+  ],
+  "journal": "Small Science",
+  "year": 2025,
+  "DOI": "10.1002/smsc.202500293",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12622467/",
+  "licence": "CC BY 4.0"
+ },
+ "unannotatable": [
+  "base_pressure: sealed at about 1e-6 Torr",
+  "hold_time: 2 days synthesis at 750 C (first stage)",
+  "precursor_mass: 10 g powder total",
+  "composition: Fe:Ge:Te 3:1:2",
+  "other: three-zone furnace; ampoule cooled in liquid nitrogen while sealing"
+ ],
+ "ambiguous": [
+  "T_source_C: 750 C also used for a separate 2-day synthesis step before the gradient",
+  "agent_mg_per_cm3: unit written 'mg cm-3' (gold unit normalised to mg/cm3)"
+ ]
+}

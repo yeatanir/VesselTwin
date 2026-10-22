@@ -1,0 +1,22 @@
+{
+ "synthetic": true,
+ "vessel": "flask",
+ "text": "The reagent was added dropwise to a 25 mL round-bottom flask containing ethanol, stirred at 400 rpm at 25 \u00b0C.",
+ "gold": {
+  "volume_mL": {
+   "value": 25,
+   "unit": "mL"
+  },
+  "solvent": {
+   "value": "ethanol"
+  },
+  "stir_rpm": {
+   "value": 400,
+   "unit": "rpm"
+  },
+  "T_C": {
+   "value": 25,
+   "unit": "C"
+  }
+ }
+}
