@@ -29,6 +29,11 @@ h1,h2,h3{{color:var(--n);letter-spacing:-.01em}}
 .vt-i{{position:relative;display:inline-flex;align-items:center;justify-content:center;width:1.15em;height:1.15em;margin-left:.4em;border-radius:50%;border:1.5px solid var(--b);color:var(--b);font:700 .72em/1 serif;cursor:help;vertical-align:middle;outline:none}}
 .vt-i .vt-tip{{visibility:hidden;opacity:0;position:absolute;z-index:99;bottom:140%;left:50%;transform:translateX(-50%);width:max-content;max-width:min(320px,80vw);background:var(--n);color:#fff;font:400 .85rem/1.35 sans-serif;padding:.6rem .8rem;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:opacity .15s;text-align:left;white-space:normal}}
 .vt-i:hover .vt-tip,.vt-i:focus .vt-tip{{visibility:visible;opacity:1}}
+/* heading scale + button/card polish (Track V) */
+h1{{font-size:2.2rem}}h2{{font-size:1.6rem}}h3{{font-size:1.25rem}}h4{{font-size:1.05rem}}
+.stButton>button{{box-shadow:0 1px 3px rgba(11,31,68,.12)}}
+.vt-card:hover{{box-shadow:0 10px 24px rgba(31,95,191,.16);border-color:var(--b)}}
+@media (max-width:640px){{h1{{font-size:1.7rem}}h2{{font-size:1.3rem}}.vt-sec{{font-size:1.35rem}}}}
 /* shared polish: page transition, cards, nav, inputs, tighter spacing */
 @keyframes vt-page{{from{{opacity:0;transform:translateY(10px)}}to{{opacity:1;transform:none}}}}
 [data-testid="stMainBlockContainer"]{{animation:vt-page .45s ease both}}
