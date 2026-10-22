@@ -246,7 +246,8 @@ LCSS = """
 .vt-trust{text-align:center;color:var(--n);font-weight:600}
 .vt-foot{text-align:center;color:var(--g);font-size:.9rem;margin-top:3rem;padding-top:1rem;border-top:1px solid #D6E3F5}
 .st-key-try_ws{width:100%!important;display:flex;justify-content:center;margin-top:-4.2rem;position:relative;z-index:3}
-.st-key-try_ws button{font-size:1.15rem;padding:.7rem 2.2rem;box-shadow:0 8px 24px rgba(31,95,191,.4);animation:vt-halo 2.6s ease-in-out infinite}
+.st-key-try_ws .stButton,.st-key-try_ws [data-testid=stButton]{width:auto!important;flex:none}
+.st-key-try_ws button{width:auto!important;font-size:1.15rem;padding:.7rem 2.2rem;box-shadow:0 8px 24px rgba(31,95,191,.4);animation:vt-halo 2.6s ease-in-out infinite}
 @media (max-width:760px){
  .vt-hero{padding:1.2rem .6rem 4rem;min-height:0}
  .vt-hs{width:230%;margin-left:-65%}
