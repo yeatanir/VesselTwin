@@ -42,7 +42,8 @@ def test_evidence_page_has_literature_and_llm_settings():
     at = AppTest.from_file(str(ROOT / "tests" / "ev_app.py"), default_timeout=120).run()
     assert not at.exception, at.exception
     assert "Literature" in [t.label for t in at.tabs]
-    assert at.sidebar.text_input(key="llm_api_key").proto.type == 1
+    assert at.text_input(key="llm_api_key").proto.type == 1
+    assert [e.label for e in at.expander][0].startswith("LLM settings")
 
 
 def test_llm_settings_survive_page_without_widgets():
@@ -59,3 +60,9 @@ def test_llm_settings_survive_page_without_widgets():
     at.session_state["show"] = False
     at.run()  # page without the widgets: values must come from the store
     assert "openai_compatible" in at.markdown[0].value
+
+
+def test_evidence_four_tabs_via_loader_path():
+    """Same loader as streamlit_app.py (import module by name, render); AppTest cannot click st.navigation pages."""
+    at = AppTest.from_file(str(ROOT / "tests" / "ev_app.py"), default_timeout=120).run()
+    assert [t.label for t in at.tabs][:4] == ["Reasoning trace", "Benchmarks", "Credibility", "Literature"]

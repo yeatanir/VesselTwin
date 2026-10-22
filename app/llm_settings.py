@@ -47,7 +47,7 @@ def _models():
 def render(container=None):
     """Settings expander; sidebar by default so it looks the same on every page. Safe to call from any page."""
     _sync()
-    with (container or st.sidebar).expander("LLM settings (optional)"):
+    with (container if container is not None else st.sidebar).expander("LLM settings (optional)"):
         st.selectbox("Provider", PROVIDERS, index=PROVIDERS.index("rules"), key="llm_provider",
                      help="rules = fully offline, no API. openai_compatible = any server with an OpenAI-style /v1 endpoint.")
         st.text_input("Base URL", key="llm_base_url", placeholder="https://host/v1", help="Ends in /v1 or is the full /chat/completions URL.")

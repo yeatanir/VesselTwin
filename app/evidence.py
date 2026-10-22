@@ -76,7 +76,7 @@ def render():
     st.title("Evidence")
     try:
         from app import llm_settings
-        llm_settings.render()
+        llm_settings.render(st)  # in-page, at the top: obvious on every screen size
     except Exception as e:  # noqa: BLE001
         st.caption(f"LLM settings unavailable: {e}")
     a, b, c, d = st.tabs(["Reasoning trace", "Benchmarks", "Credibility", "Literature"])

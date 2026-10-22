@@ -78,15 +78,20 @@ def _sources(vessel):
 
 
 def _agents(vessel):
-    st.markdown("**Literature agents**")
-    st.markdown("- **Edison Scientific Literature agent**: cited answers; one credit per question; needs your own key.\n"
-                "- **Valency**: semantic paper search; returns papers, not numbers.")
+    c1, c2 = st.columns(2)
+    with c1.container(border=True):
+        st.markdown("#### Edison Scientific")
+        st.markdown("Literature agent: cited answers. One credit per question; needs your own key.")
+        st.caption(f"{len(stored_answers())} cached answers below.")
+    with c2.container(border=True):
+        st.markdown("#### Valency")
+        st.markdown("Semantic paper search: returns papers, not numbers.")
+        st.caption(VALENCY_NOTE)
     for a in stored_answers():
         with st.expander(f"{a['label']} ({a['date']}, {a['status']})"):
             st.markdown(f"**Question.** {a['query'][:600]}")
             st.markdown(a["answer"][:1800] + (" ..." if len(a["answer"]) > 1800 else ""))
             st.caption("Stored answer. " + VERIFIED)
-    st.caption(VALENCY_NOTE)
     st.markdown("**Live Edison question (optional)**")
     if not edison_available():
         return st.caption("The Edison python client is not installed here (pip install edison-client); live questions are off.")
@@ -110,7 +115,7 @@ def render(vessel=None, pick=True):
     vs = ["cvd_tube", "ampoule", "flask", "sorbent", "photoreactor"]
     if pick:
         vessel = st.selectbox("Vessel", vs, index=vs.index(vessel) if vessel in vs else 0, key="lit_vessel")
-    a, b = st.tabs(["Parameter sources", "Literature agents"])
+    b, a = st.tabs(["Literature agents", "Parameter sources"])
     with a:
         _sources(vessel)
     with b:
