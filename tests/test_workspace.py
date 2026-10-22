@@ -61,25 +61,26 @@ def test_page_renders(vessel, fid):
     at.session_state["vt_vessel"] = vessel
     at.run()
     assert not at.exception
-    assert at.radio(key="wk_vessel").value == vessel  # preselected from session state
-    at.radio(key="wk_fid").set_value(fid).run()
+    assert at.session_state["wk_vessel"] == vessel  # preselected from session state
+    at.get("button_group")[0].set_value(fid).run()  # wk_fid segmented control
     assert not at.exception, (vessel, fid)
-    assert 'class="vt-tile"' in " ".join(m.value for m in at.markdown)
+    md = " ".join(m.value for m in at.markdown)
+    assert 'class="wk-kpi"' in md and "wk-tier on" in md and "Tier 1" in md
 
 
 def test_widget_changes_results_and_preset_sets_controls():
     at = AppTest.from_file(APP, default_timeout=240)
     at.session_state["vt_vessel"] = "photoreactor"
     at.run()
-    tiles = lambda: next(m.value for m in at.markdown if m.value.startswith('<div class="vt-tiles">'))
+    tiles = lambda: next(m.value for m in at.markdown if m.value.startswith('<div class="wk-kpis">'))
     t0 = tiles()
     at.slider(key="wk:photoreactor:dist_cm").set_value(15.0).run()
     assert not at.exception and tiles() != t0
     name = "365 nm LED strip, thin flow cell (illustrative)"
-    at.selectbox(key="wk_preset:photoreactor").set_value(name).run()
+    at.get("button_group")[1].set_value(name).run()  # wk_preset pills
     assert not at.exception
     assert at.select_slider(key="wk:photoreactor:P_rad_W").value == 10 and at.slider(key="wk:photoreactor:dist_cm").value == 3
-    at.selectbox(key="wk_preset:photoreactor").set_value("Defaults").run()
+    at.get("button_group")[1].set_value("Defaults").run()
     assert at.slider(key="wk:photoreactor:dist_cm").value == 5
 
 
@@ -90,4 +91,23 @@ def test_page_loads_like_streamlit_app_loader(vessel):
     at.session_state["vt_vessel"] = vessel
     at.run()
     assert not at.exception, at.exception
-    assert at.radio(key="wk_vessel").value == vessel
+    assert at.session_state["wk_vessel"] == vessel
+
+
+def test_picker_click_switches_vessel_and_all_five_render():
+    at = AppTest.from_file(APP, default_timeout=240)
+    at.run()
+    for v in VESSELS:
+        at.button(key=f"wk_pick_{v}").click().run()
+        assert not at.exception, v
+        assert at.session_state["vt_vessel"] == v
+        assert any(m.value.startswith('<div class="wk-kpis">') for m in at.markdown), v
+
+
+def test_reset_dot_restores_preset_value():
+    at = AppTest.from_file(APP, default_timeout=240)
+    at.session_state["vt_vessel"] = "photoreactor"
+    at.run()
+    at.slider(key="wk:photoreactor:dist_cm").set_value(15.0).run()
+    at.button(key="wk_rs:photoreactor:dist_cm").click().run()
+    assert at.slider(key="wk:photoreactor:dist_cm").value == 5
