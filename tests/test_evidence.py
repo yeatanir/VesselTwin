@@ -10,7 +10,7 @@ APP = str(pathlib.Path(__file__).resolve().parents[1] / "tests" / "ev_app.py")
 def test_evidence_renders():
     at = AppTest.from_file(APP, default_timeout=120).run()
     assert not at.exception
-    assert [t.label for t in at.tabs] == ["Reasoning trace", "Benchmarks", "Credibility"]
+    assert [t.label for t in at.tabs] [:4] == ["Reasoning trace", "Benchmarks", "Credibility", "Literature"]
 
 
 @pytest.mark.vessel("core")

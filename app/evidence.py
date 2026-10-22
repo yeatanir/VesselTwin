@@ -64,7 +64,8 @@ def _cred():
     n = int((h.outcome == "passed").sum())
     st.metric("Tests passing", f"{n} / {len(h)}", "all green" if n == len(h) else f"{len(h) - n} not passing", delta_color="off")
     info(f"Read from {name} (written by pytest). Re-run make test to refresh. A passing test checks the code against its stated limit; it is not a validation against experiment.")
-    h["check"] = h.get("check", pd.Series(dtype=str)).fillna("-")
+    for col in ("vessel", "check"):  # partial runs write rows without tags
+        h[col] = h[col].fillna("-") if col in h else "-"
     h["ok"] = h.outcome.map(lambda o: "PASS" if o == "passed" else "FAIL")
     show_df(st, h.pivot_table(index="vessel", columns="check", values="ok", aggfunc=lambda s: "FAIL" if "FAIL" in set(s) else f"PASS x{len(s)}", fill_value=""))
     with st.expander("All checks"):
@@ -73,10 +74,18 @@ def _cred():
 
 def render():
     st.title("Evidence")
-    a, b, c = st.tabs(["Reasoning trace", "Benchmarks", "Credibility"])
+    try:
+        from app import llm_settings
+        llm_settings.render()
+    except Exception as e:  # noqa: BLE001
+        st.caption(f"LLM settings unavailable: {e}")
+    a, b, c, d = st.tabs(["Reasoning trace", "Benchmarks", "Credibility", "Literature"])
     with a:
         _trace()
     with b:
         _bench()
     with c:
         _cred()
+    with d:
+        from app import literature
+        literature.render()

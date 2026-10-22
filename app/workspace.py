@@ -13,9 +13,9 @@ VESSELS = list(K.KEY_CONTROLS)
 SHORT = {"cvd_tube": "shape boundary", "ampoule": "transport rate", "flask": "mixing-vs-reaction ratio", "sorbent": "breakthrough time",
          "photoreactor": "mixing-vs-light ratio"}
 SLOW = ("sorbent",)  # vessels where knob effects + ranking take > 10 s
-FIDELITY = ["Tier 1 (live)", "Stored CFD"]
+FIDELITY = ["Tier 1 live", "Stored CFD"]
 CFD_VESSELS = ("cvd_tube", "ampoule", "flask")
-CFG = {"displayModeBar": False}
+CFG = {"displaylogo": False, "modeBarButtonsToRemove": ["lasso2d", "select2d"]}  # interactive: hover, zoom, pan, download
 
 try:  # Track R figures (agreed signatures); fall back to the existing helpers
     from app.viz import plotly_figs as PF
@@ -52,7 +52,7 @@ def overrides(vessel, ctl_values, adv):
     return {k: v for k, v in (ctl_values | adv).items() if v is not None and d.get(k) != v}
 
 
-@st.cache_data(show_spinner=False, max_entries=48)
+@st.cache_data(show_spinner="Solving (cached afterwards)...", max_entries=48)
 def solve_live(vessel, ov_items, extras=False):
     n = K.N_MC.get(vessel, 12)
     r = api.solve(vessel, dict(ov_items), n_mc=n, seed=0, extras=extras)
@@ -72,7 +72,7 @@ def _outcome_get(vessel, ov, n_mc):
     return d["p05"], d["p50"], d["p95"]
 
 
-@st.cache_data(show_spinner=False, max_entries=24)
+@st.cache_data(show_spinner="Testing each knob (slow vessels take about 20 s, then cached)...", max_entries=24)
 def knob_effects(vessel, ov_items):
     """Each numeric key control moved down/up by one small step (+-10 %, or +-25 for temperatures), clipped to its range, re-solved.
     effect = change of the headline output; whiskers = same change from p05 / p95. ponytail: one at a time, no interactions."""
@@ -209,6 +209,11 @@ def _advanced(vessel):
 
 def _paste(vessel):
     with st.expander("Paste a procedure (optional)"):
+        try:
+            from app.llm_settings import active
+            st.caption(f"Reader: {active()} (change in the sidebar LLM settings; offline rules reader otherwise).")
+        except Exception:  # noqa: BLE001
+            pass
         txt = st.text_area("Procedure", key=f"wk_text:{vessel}", height=110, label_visibility="collapsed",
                            placeholder="Paste a synthesis procedure; stated values fill the controls.")
         if st.button("Fill controls from text", key=f"wk_fill:{vessel}") and txt.strip():
@@ -289,6 +294,16 @@ def _tiles(vessel, res):
         p = res["passport"]["derived"].get(key, {}).get("p50")
         items.append((label, _fmt(None if p is None else p * scale), unit, kind))
     st.markdown(KIT.tiles(items), unsafe_allow_html=True)
+    try:
+        base = solve_live(vessel, ())["passport"]["derived"]
+        ch = []
+        for label, key, unit, scale in K.TILES[vessel]:
+            a, b = base.get(key, {}).get("p50"), res["passport"]["derived"].get(key, {}).get("p50")
+            if a and b is not None and abs(b - a) > 1e-9 * abs(a):
+                ch.append(f"{label} {100 * (b - a) / abs(a):+.0f} %")
+        st.caption("Versus the default setup: " + (", ".join(ch) if ch else "no change (controls are at their defaults)"))
+    except Exception:  # noqa: BLE001
+        pass
     st.caption(f"Regime: {res['regime'].replace('_', ' ')}  |  {KIT.status_legend()}", unsafe_allow_html=True)
 
 
@@ -318,8 +333,29 @@ def _knobs(vessel, ov_items):
     info("Bars: change in the result for one small step of each knob. Whiskers: the same change at the 5th and 95th percentile of the parameter uncertainty. One knob at a time, no interactions.")
 
 
+def _photo_sens(res):
+    ex = res.get("extras") or {}
+    sens = ex.get("sensitivity")
+    if not sens:
+        return st.caption("No sensitivity data for this setup.")
+    import plotly.graph_objects as go
+    r = sorted(sens.items(), key=lambda kv: abs(kv[1]["dln_rate_per_sigma"]))
+    lab = {d["name"]: d["label"] for d in api.schema("photoreactor")}
+    fig = go.Figure(go.Bar(y=[lab.get(k, k) for k, _ in r], x=[v["dln_rate_per_sigma"] for _, v in r], orientation="h", marker_color=KIT.BLUE,
+                           hovertemplate="%{y}<br>change in ln(rate) per 1 sigma: %{x:.3g}<extra></extra>"))
+    fig.update_layout(height=60 + 30 * len(r), margin=dict(l=0, r=10, t=10, b=30), xaxis_title="Change in ln(rate) for a 1-sigma move of the input")
+    st.plotly_chart(fig, width="stretch", config=CFG)
+    info("Each bar: how much the reaction rate changes when that input moves by one standard deviation of its uncertainty. Elasticity (local power-law exponent) is in the stored extras.")
+
+
 def _calcs(vessel, ov_items):
     from app import home
+    if vessel == "photoreactor":
+        st.caption("No atomistic parameter is ranked for the photoreactor yet. Sensitivity by knob instead:")
+        try:
+            return _photo_sens(solve_live(vessel, ov_items, True))
+        except Exception as e:  # noqa: BLE001
+            return st.caption(f"Sensitivity unavailable ({e}).")
     st.markdown("#### What to calculate next")
     with st.spinner("Ranking calculations..."):
         calcs = ranked_calcs(vessel, ov_items)
@@ -380,6 +416,11 @@ def _furnace(vessel, res):
 # ---------------- page
 def render():
     ss = st.session_state
+    try:
+        from app import llm_settings
+        llm_settings.render()
+    except Exception:  # noqa: BLE001
+        pass
     if "wk_vessel" not in ss:
         ss["wk_vessel"] = ss.get("vt_vessel") if ss.get("vt_vessel") in VESSELS else VESSELS[0]
     st.markdown(KIT.CSS, unsafe_allow_html=True)
@@ -413,11 +454,14 @@ def render():
         else:
             _hero(vessel, res)
         _tiles(vessel, res)
-        if vessel in SLOW and not st.toggle("Show what matters and what to calculate (slow, about 20 s)", key=f"wk_deep:{vessel}"):
-            st.caption("Sensitivity and calculation ranking are off for this slow vessel; the numbers above still update live.")
+        if vessel in SLOW and not st.toggle("Compute what matters and what to calculate (about 20 s, then cached)", key=f"wk_deep:{vessel}"):
+            st.caption("Sensitivity is off for this slow vessel until you switch it on; the numbers above still update live.")
         else:
             _knobs(vessel, ov_items)
             _calcs(vessel, ov_items)
         _trust(vessel, res)
         _extra_plots(vessel, res)
     _furnace(vessel, res)
+    with st.expander("Literature: where the parameters come from"):
+        from app import literature
+        literature.render(vessel, pick=False)

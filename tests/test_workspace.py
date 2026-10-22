@@ -81,3 +81,13 @@ def test_widget_changes_results_and_preset_sets_controls():
     assert at.select_slider(key="wk:photoreactor:P_rad_W").value == 10 and at.slider(key="wk:photoreactor:dist_cm").value == 3
     at.selectbox(key="wk_preset:photoreactor").set_value("Defaults").run()
     assert at.slider(key="wk:photoreactor:dist_cm").value == 5
+
+
+@pytest.mark.parametrize("vessel", VESSELS)
+def test_page_loads_like_streamlit_app_loader(vessel):
+    """Loader path of streamlit_app.py (module import + render) with vt_vessel set as Home's Open button does, from a foreign cwd."""
+    at = AppTest.from_file(str(pathlib.Path(APP).with_name("ws_nav_app.py")), default_timeout=240)
+    at.session_state["vt_vessel"] = vessel
+    at.run()
+    assert not at.exception, at.exception
+    assert at.radio(key="wk_vessel").value == vessel
