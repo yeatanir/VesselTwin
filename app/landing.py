@@ -208,6 +208,7 @@ LCSS = """
 .vt-hero{position:relative;overflow:hidden;min-height:72vh;border-radius:28px;padding:2.2rem 1.6rem 4.2rem;text-align:center;
  background:linear-gradient(120deg,#fff,#E6F0FC,#CFE2FA,#EEF4FC,#fff);background-size:300% 300%;animation:vt-bg 18s ease-in-out infinite;box-shadow:0 10px 40px rgba(31,95,191,.14)}
 @keyframes vt-bg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.vt-logo{position:relative;display:block;margin:0 auto .9rem;width:min(300px,62%);height:auto;filter:drop-shadow(0 4px 14px rgba(11,37,69,.12))}
 .vt-hero h1{position:relative;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.1;margin:0 0 .5rem;font-weight:800;
  background:linear-gradient(90deg,#0B1F44,#1F5FBF,#5B9BEA,#1F5FBF,#0B1F44);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:vt-txt 8s linear infinite}
 @keyframes vt-txt{to{background-position:-250% 0}}
@@ -283,12 +284,23 @@ LCSS = """
 """
 
 
+def _logo_uri(name="logo_hero.png"):
+    import base64, pathlib
+    f = pathlib.Path(__file__).resolve().parent.parent / "assets" / name
+    try:
+        return "data:image/png;base64," + base64.b64encode(f.read_bytes()).decode()
+    except OSError:
+        return ""
+
+
 def render():
     C = COPY
     st.html(LCSS)  # st.html sanitises <svg> away; markdown keeps it, so content goes through H()
     with st.container(key="hero"):
         ps = "".join(f'<span class="vt-fp" style="left:{(i * 53) % 100}%;bottom:-{10 + i * 7 % 30}px;width:{4 + i % 4 * 3}px;height:{4 + i % 4 * 3}px;animation-duration:{14 + i * 3 % 11}s;animation-delay:-{i * 2.3:.1f}s"></span>' for i in range(14))
-        H(f'<div class="vt-hero">{ps}<h1>{C["headline"]}</h1><div class="vt-sub">{C["sub"]}</div>{hero_svg()}</div>')
+        lg = _logo_uri()
+        logo_html = f'<img class="vt-logo" src="{lg}" alt="VesselTwin">' if lg else ""
+        H(f'<div class="vt-hero">{ps}{logo_html}<h1>{C["headline"]}</h1><div class="vt-sub">{C["sub"]}</div>{hero_svg()}</div>')
         if st.button(C["btn.try"], key="try_ws", type="primary"):
             go_to("Workspace")
 

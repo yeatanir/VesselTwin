@@ -6,7 +6,16 @@ import streamlit as st
 from app import theme
 from app.theme import go_to  # noqa: F401  (re-exported helper)
 
-st.set_page_config(page_title="VesselTwin", page_icon="🧪", layout="wide", initial_sidebar_state="collapsed")
+try:
+    from PIL import Image
+    _icon = Image.open(ROOT / "assets" / "icon.png")
+except Exception:  # Pillow missing or file absent: fall back to an emoji
+    _icon = "🧪"
+st.set_page_config(page_title="VesselTwin", page_icon=_icon, layout="wide", initial_sidebar_state="collapsed")
+try:
+    st.logo(str(ROOT / "assets" / "logo_small.png"), icon_image=str(ROOT / "assets" / "icon.png"), size="large")
+except Exception:  # older Streamlit without st.logo options
+    pass
 st.session_state["vt_embedded"] = True
 theme.inject_css()
 
