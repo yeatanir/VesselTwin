@@ -226,9 +226,10 @@ def _control(vessel, c, d, eff, base):
 
 def _knob_grid(vessel, sch, eff):
     base = _preset_vals(vessel)
-    cols = st.columns(2, gap="medium")
     vals = {}
     for i, c in enumerate(K.KEY_CONTROLS[vessel]):
+        if i % 2 == 0:  # one column pair per row, so the stacked mobile order stays row by row
+            cols = st.columns(2, gap="medium")
         with cols[i % 2]:
             vals[c["name"]] = _control(vessel, c, sch[c["name"]], eff, base[c["name"]])
     return vals
@@ -389,8 +390,12 @@ def _kpis(vessel, res, base):
     st.markdown(f'<div style="font-size:.72rem;color:#6B7A90">{KIT.status_legend()}</div>', unsafe_allow_html=True)
 
 
+KNOB_INFO = ("Bars: change in the result for one small step of each knob. Whiskers: the same change at the 5th and 95th percentile of the parameter uncertainty. One knob at a time, no interactions.")
+CALC_INFO = "Ranked by how much each uncertain input moves the result, per unit of calculation cost. Cost classes: cheap, medium, expensive."
+
+
 def _knobs(vessel, ov_items):
-    st.markdown("#### What matters most")
+    st.markdown(f"#### What matters most{_ii(KNOB_INFO)}", unsafe_allow_html=True)
     with st.spinner("Testing each knob..."):
         rows = knob_effects(vessel, ov_items)
     if not rows:
@@ -411,8 +416,7 @@ def _knobs(vessel, ov_items):
                                hovertemplate="%{y}<br>change %{x:.3g}<extra></extra>"))
         fig.update_layout(height=60 + 42 * len(r), margin=dict(l=0, r=10, t=10, b=30), xaxis_title=f"Change in {SHORT[vessel]}" + (f" ({unit})" if unit else ""))
     st.plotly_chart(fig, width="stretch", config=CFG)
-    st.markdown(f'<div class="vt-take">Change {html.escape(rows[0]["name"].split(" (")[0].lower())} first.</div>', unsafe_allow_html=True)
-    info("Bars: change in the result for one small step of each knob. Whiskers: the same change at the 5th and 95th percentile of the parameter uncertainty. One knob at a time, no interactions.")
+    st.markdown(f'<div class="wk-card" style="font-weight:700;color:#0B1F44">Change {html.escape(rows[0]["name"].split(" (")[0])} first.</div>', unsafe_allow_html=True)
 
 
 def _photo_sens(res):
@@ -438,7 +442,7 @@ def _calcs(vessel, ov_items):
             return _photo_sens(solve_live(vessel, ov_items, True))
         except Exception as e:  # noqa: BLE001
             return st.caption(f"Sensitivity unavailable ({e}).")
-    st.markdown("#### What to calculate next")
+    st.markdown(f"#### What to calculate next{_ii(CALC_INFO)}", unsafe_allow_html=True)
     with st.spinner("Ranking calculations..."):
         calcs = ranked_calcs(vessel, ov_items)
     if not calcs:
@@ -449,23 +453,21 @@ def _calcs(vessel, ov_items):
         col.markdown(f'<div class="wk-card wk-rank"><div class="r">{c["rank"]}</div><div><div class="t">{html.escape(home.plain(c["calc"]))}</div>'
                      f'<div class="s">{html.escape(c["label"].split(" (")[0])} moves the {SHORT[vessel]} by {_fmt(c["delta"])} {c["outcome_unit"]}.</div>'
                      f'<span class="wk-badge {"o" if c["cost"] != "cheap" else ""}">{c["cost"]} {sym}</span></div></div>', unsafe_allow_html=True)
-    info("Ranked by how much each uncertain input moves the result, per unit of calculation cost. Cost classes: cheap, medium, expensive.")
 
 
 def _trust(vessel, res):
     from app.trace_tab import COL, GLYPH
-    st.markdown("#### How far to trust this")
+    from app import home
     lab = setup_label(vessel, res)
     n = trust_counts()
+    st.markdown("#### How far to trust this" + _ii(f"Across all stored reasoning traces: {n['benchmarked']} benchmarked, {n['uncertain']} uncertain, {n['hypothesis']} hypothesis claims. "
+                f"{home.COPY['trust.sentence']} Labels only go down with weaker evidence, never up."), unsafe_allow_html=True)
     order = ("benchmarked", "uncertain", "hypothesis")
     sent = {"hypothesis": "Treat as a hypothesis: inputs are defaults or placeholders, so read trends, not absolute numbers.",
             "uncertain": "Some support exists, but a flag applies; check before relying on it.",
             "benchmarked": "This comparison passed a held-out benchmark."}[lab]
     st.markdown('<div class="wk-card">' + KIT.wk_meter([(l, n[l], {"benchmarked": KIT.WB, "uncertain": "#7FB0F0", "hypothesis": KIT.WO}[l]) for l in order])
                 + f'<div style="margin-top:.5rem"><span class="wk-badge {"o" if lab == "hypothesis" else ""}">{lab}</span> {sent}</div></div>', unsafe_allow_html=True)
-    from app import home
-    info(f"Across all stored reasoning traces: {n['benchmarked']} benchmarked, {n['uncertain']} uncertain, {n['hypothesis']} hypothesis claims. "
-         f"{home.COPY['trust.sentence']} Labels only go down with weaker evidence, never up.")
 
 
 def _extra_plots(vessel, res, spec=None):

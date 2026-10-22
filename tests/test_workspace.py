@@ -111,3 +111,15 @@ def test_reset_dot_restores_preset_value():
     at.slider(key="wk:photoreactor:dist_cm").set_value(15.0).run()
     at.button(key="wk_rs:photoreactor:dist_cm").click().run()
     assert at.slider(key="wk:photoreactor:dist_cm").value == 5
+
+
+def test_paste_reads_offline_and_fills_controls():
+    at = AppTest.from_file(APP, default_timeout=240)
+    at.session_state["vt_vessel"] = "cvd_tube"
+    at.run()
+    at.text_area(key="wk_text:cvd_tube").set_value("The furnace was heated to 800 C under 50 sccm Ar flow for 20 min.").run()
+    at.button(key="wk_fill:cvd_tube").click().run()
+    assert not at.exception, at.exception
+    md = " ".join(m.value for m in at.markdown)
+    assert "wk-chip stated" in md and "offline rules reader" in md
+    assert at.slider(key="wk:cvd_tube:flow_sccm").value == 50

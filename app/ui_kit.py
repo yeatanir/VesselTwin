@@ -113,6 +113,7 @@ def icon(kind):
 WB, WN, WO, WG = "#1F5FBF", "#0B1F44", "#F28C28", "#6B7A90"
 WS_CSS = """<style>
 .stMainBlockContainer{padding-top:2.4rem!important}
+h4{margin-top:1.1rem!important}
 /* vessel picker: card = animated icon + invisible full-card button */
 .st-key-vpick [data-testid=stHorizontalBlock]{flex-wrap:nowrap!important;overflow-x:auto;gap:.7rem;padding:8px 8px 12px}
 .st-key-vpick [data-testid=stColumn]{min-width:150px!important;flex:1 0 150px!important}
@@ -128,7 +129,7 @@ WS_CSS = """<style>
 .wk-vc .s{height:3px;border-radius:3px;margin:.35rem auto 0;width:0;background:#1F5FBF;transition:width .25s}
 [class*="__sel"] .wk-vc .s{width:46%}
 /* cards */
-.wk-card{background:#fff;border:1px solid #D6E3F5;border-radius:18px;padding:.9rem 1.1rem;box-shadow:0 2px 10px rgba(11,31,68,.06)}
+.wk-card{margin-bottom:.6rem;background:#fff;border:1px solid #D6E3F5;border-radius:18px;padding:.9rem 1.1rem;box-shadow:0 2px 10px rgba(11,31,68,.06)}
 .wk-h{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6B7A90;margin:0 0 .3rem}
 .wk-badge{display:inline-flex;align-items:center;gap:.3rem;border-radius:999px;padding:.12rem .65rem;font-size:.76rem;font-weight:600;background:#EEF4FC;color:#1F5FBF;border:1px solid #BCD3F2;white-space:nowrap}
 .wk-badge.o{background:#FFF3E5;color:#B35F00;border-color:#F6D3A8}.wk-badge.g{background:#F1F3F6;color:#4B5A70;border-color:#D8DEE8}
@@ -151,7 +152,7 @@ WS_CSS = """<style>
 .wk-kpi .d{font-size:.78rem;font-weight:600;color:#6B7A90}.wk-kpi .d.up{color:#1F5FBF}.wk-kpi .d.dn{color:#B35F00}
 .wk-dot{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;margin-right:.35rem;vertical-align:middle}
 /* knobs */
-[class*="st-key-kn_"]{background:#fff;border:1px solid #D6E3F5;border-radius:16px;padding:.65rem .9rem .85rem;box-shadow:0 2px 8px rgba(11,31,68,.05)}
+[class*="st-key-kn_"]{background:#fff;border:1px solid #D6E3F5;border-radius:16px;padding:.65rem .9rem 1.15rem;box-shadow:0 2px 8px rgba(11,31,68,.05)}
 [class*="st-key-kn_"] [data-testid=stVerticalBlock]{gap:.1rem}
 [class*="st-key-kn_"] [data-testid=stHorizontalBlock]{flex-wrap:nowrap!important;align-items:center}
 [class*="st-key-kn_"] [data-testid=stColumn]{min-width:0!important}
