@@ -9,6 +9,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 EXAMPLES = [("CVD tube", "real_01_cvd_tube"), ("Ampoule", "real_14_ampoule"), ("Sorbent bed", "real_29_sorbent")]
 GLYPH = {"extract_setup": "≡", "solve": "∑", "rank_calculations": "⇅", "lookup_parameter": "⌕"}
 WHAT = {"extract_setup": "Read the procedure", "solve": "Run the vessel model", "rank_calculations": "Rank atomistic calculations", "lookup_parameter": "Look up literature"}
+STEP_DELAY = 0.7  # seconds between replayed cards
 SUFFIX = "\nWhich variable should the experimentalist change first, and which atomistic calculation matters most?"
 CSS = """<style>
 @keyframes vs-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
@@ -89,7 +90,7 @@ def draw(run, box, animate=False):
         with box:
             st.html(step_html(s))
         if animate:
-            time.sleep(0.7)
+            time.sleep(STEP_DELAY)
     with box:
         if run.get("final"):
             st.html(final_html(run))
@@ -151,7 +152,8 @@ def _recorded(text):
     if not rr:
         return None
     key = text.strip()[:80]
-    return next((r for r in rr if key and key in r["question"]), rr[0])
+    m = next((r for r in rr if key and key in r["question"]), None)
+    return m or rr[0], m is not None
 
 
 def _example(stem):
@@ -192,13 +194,13 @@ def tab_agent():
                 with box:
                     st.error(f"Live run failed: {type(ex).__name__}: {ex}")
         else:
-            run = _recorded(text)
+            run, hit = _recorded(text) if A.recorded_runs() else (None, False)
             if run is None:
                 st.error("No recorded run found in runs/traces.")
             else:
                 with box:
                     st.html('<div class="vs-banner">No model connected: replaying a recorded run. Connect a model above to run live.</div>')
-                    st.caption(f"Recorded run · {run['model']} · {run['date']}")
+                    st.caption(f"Recorded run · {run['model']} · {run['date']}" + ("" if hit else " · closest recording, not your exact text"))
                 draw(run, box, animate=True)
                 ss["studio_last"] = {**run, "_banner": True}
     elif ss.get("studio_last"):
@@ -217,7 +219,7 @@ PREF = {"ampoule": ("transport_rate_mmol_h", "growth_rate_mm_day"), "photo": ("c
 def kpis(r, template):
     keys = [k for k in PREF.get(template, ()) if k in r["derived"]]
     keys += [k for k in r["derived"] if k not in keys and k != "T_K" and not k.startswith("species.") and "err" not in k]
-    items = [("Regime", r["regime"].replace("_", " "), "")] + [(k, f"{r['derived'][k]:.3g}", r["units"].get(k, "")) for k in keys[:2]]
+    items = [("Regime", r["regime"].replace("_", " "), "")] + [(k.replace("_", " "), f"{r['derived'][k]:.3g}", r["units"].get(k, "")) for k in keys[:2]]
     return '<div class="vs-kpi">' + "".join(f'<div><div class="l">{_e(l)}</div><div><span class="n">{_e(v)}</span><span class="u">{_e(u)}</span></div></div>' for l, v, u in items) + "</div>"
 
 
@@ -231,8 +233,10 @@ def generic_fig(e):
 
 def figure(e, r):
     try:
-        from app.viz.plotly_figs import vessel_hero
-        return vessel_hero(e["base"], r, height=320)
+        import plotly.graph_objects as go
+        from app import vessel_view as vv
+        from app.viz.template import apply_template
+        return apply_template(go.Figure(vv._schematic(e["base"], vv._key(r["values"]))).update_layout(height=320))  # schematic from the cloned values, never a stored CFD case
     except Exception:
         return generic_fig(e)
 
@@ -250,7 +254,7 @@ def tab_vessel():
     for col, (k, (vn, title, line, _)) in zip(cols, cv.TEMPLATES.items()):
         with col.container(key=f"vcard_{k}"):
             try:
-                st.html(f'<div style="height:60px;overflow:hidden">{landing.icon(vn)}</div>')
+                landing.H(f'<div style="max-width:140px">{landing.icon(vn)}</div>')
             except Exception:
                 pass
             st.markdown(f"**{title}**")
