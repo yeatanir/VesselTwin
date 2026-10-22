@@ -29,6 +29,20 @@ h1,h2,h3{{color:var(--n);letter-spacing:-.01em}}
 .vt-i{{position:relative;display:inline-flex;align-items:center;justify-content:center;width:1.15em;height:1.15em;margin-left:.4em;border-radius:50%;border:1.5px solid var(--b);color:var(--b);font:700 .72em/1 serif;cursor:help;vertical-align:middle;outline:none}}
 .vt-i .vt-tip{{visibility:hidden;opacity:0;position:absolute;z-index:99;bottom:140%;left:50%;transform:translateX(-50%);width:max-content;max-width:min(320px,80vw);background:var(--n);color:#fff;font:400 .85rem/1.35 sans-serif;padding:.6rem .8rem;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:opacity .15s;text-align:left;white-space:normal}}
 .vt-i:hover .vt-tip,.vt-i:focus .vt-tip{{visibility:visible;opacity:1}}
+/* shared polish: page transition, cards, nav, inputs, tighter spacing */
+@keyframes vt-page{{from{{opacity:0;transform:translateY(10px)}}to{{opacity:1;transform:none}}}}
+[data-testid="stMainBlockContainer"]{{animation:vt-page .45s ease both}}
+.stApp{{background:linear-gradient(180deg,#fff 0%,#F6F9FE 100%)}}
+h1{{font-weight:800}}h2,h3{{font-weight:700}}h2,h3,h4{{color:var(--b)}}
+[data-testid="stVerticalBlock"]{{gap:.8rem}}
+[data-testid="stMetric"]{{background:#fff;border:1px solid #D6E3F5;border-radius:14px;padding:.7rem .9rem;box-shadow:0 2px 8px rgba(11,31,68,.05)}}
+[data-testid="stExpander"]{{border:1px solid #D6E3F5!important;border-radius:14px!important;background:#fff}}
+[data-baseweb="tab-list"]{{gap:.3rem}}[data-baseweb="tab"]{{border-radius:10px 10px 0 0}}
+[data-baseweb="input"],[data-baseweb="select"]>div,[data-baseweb="textarea"]{{border-radius:12px!important}}
+a{{color:var(--b)}}a:hover{{color:#174c9a}}
+.stButton>button:focus-visible,a:focus-visible,.vt-i:focus-visible{{outline:3px solid #F28C28;outline-offset:2px}}
+.stButton>button:active{{transform:translateY(0);box-shadow:none}}
+@media (prefers-reduced-motion:reduce){{[data-testid="stMainBlockContainer"]{{animation:none}}.stButton>button{{transition:none}}}}
 /* hero animation */
 @keyframes vt-flow{{from{{transform:translateX(0)}}to{{transform:translateX(var(--d,640px))}}}}
 @keyframes vt-pulse{{0%,100%{{opacity:.35;transform:scale(1)}}50%{{opacity:1;transform:scale(1.5)}}}}
