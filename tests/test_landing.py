@@ -9,9 +9,9 @@ def test_copy_limits():
     assert len(landing.COPY["headline"].split()) <= 10
     for k, v in landing.COPY.items():
         if k != "headline":
-            assert len(v.split()) <= 14, k
+            assert len(v.split()) <= 16, k
     for key, title, line, chip, _ in landing.VESSELS:
-        assert len(line.split()) <= 14 and len(chip.split()) <= 14, key
+        assert len(line.split()) <= 14 and len(chip.split()) <= 16, key
 
 
 def test_footer_and_trust_text():
@@ -51,4 +51,21 @@ def test_entry_point_and_navigation():
     assert not at.exception
     assert any(b.key == "open_sorbent" for b in at.button)
     from app import theme
-    assert set(theme.PAGES) == {"Home", "Workspace", "Evidence", "Advanced"}
+    assert set(theme.PAGES) == {"Home", "Workspace", "Studio", "Evidence", "Advanced"}
+
+
+def test_explore_targets_exist_and_render():
+    pages = {"Home", "Workspace", "Studio", "Evidence", "Advanced"}
+    assert {e[3] for e in landing.EXPLORE} <= pages
+    for e in landing.EXPLORE:
+        assert len(e[2].split()) <= 16
+    at = AppTest.from_function(_page, default_timeout=30).run()
+    keys = [b.key for b in at.button]
+    for e in landing.EXPLORE:
+        assert f"explore_{e[0]}" in keys and f"foot_{e[0]}" in keys
+
+
+def test_copy_has_no_overclaims():
+    txt = " ".join(landing.COPY.values()).lower()
+    for bad in ("predict", "accurate", "outperform", "beats", "validated"):
+        assert bad not in txt

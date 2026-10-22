@@ -18,7 +18,7 @@ def _optional(modname, title):
             mod = __import__(modname, fromlist=["render"])
         except ImportError as e:
             st.title(title)
-            st.info(f"The {title} page could not be loaded: {e}")
+            st.info(f"The {title} page could not be loaded: {e}. Run `pip install -r requirements.txt` and restart the app.")
             return
         mod.render()  # errors inside the page are shown by Streamlit, not hidden
     return page
@@ -32,7 +32,8 @@ def _home():
 pages = {
     "Home": st.Page(_home, title="Home", url_path="home", default=True),
     "Workspace": st.Page(_optional("app.workspace", "Workspace"), title="Workspace", url_path="workspace"),
-    "Evidence": st.Page(_optional("app.evidence", "Evidence"), title="Evidence", url_path="evidence"),
+    "Studio": st.Page(_optional("app.studio", "Studio"), title="Studio", url_path="studio"),
+    "Evidence": st.Page(_optional("app.evidence", "Evidence & literature"), title="Evidence & literature", url_path="evidence"),
     "Advanced": st.Page(str(ROOT / "app" / "dashboard.py"), title="Advanced", url_path="advanced"),
 }
 theme.PAGES.update(pages)

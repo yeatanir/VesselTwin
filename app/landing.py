@@ -9,23 +9,38 @@ REPO = "https://github.com/yeatanir/VesselTwin"
 
 # every on-screen caption lives here so tests can check the word limits (headline <= 10, captions <= 14)
 COPY = {
-    "headline": "From recipe to vessel to the next calculation",
-    "sub": "Model your reactor, see what matters, know what to compute.",
+    "headline": "The recipe that worked once, and never twice.",
+    "sub": "See the hidden conditions in your vessel, and the one calculation worth running next.",
     "btn.try": "Try the workspace",
-    "gap.title": "Two people, one missing link",
-    "gap.exp": "Which variable matters?",
-    "gap.sim": "Which calculation matters?",
+    "gap.title": "Two people, stuck on two halves of one problem",
+    "gap.exp": "See the hidden temperature, flow and light dose. Find the knob that moves the result.",
+    "gap.sim": "Know which atomistic calculation changes the outcome, and the local conditions to run it under.",
     "gap.mid": "VesselTwin",
     "how.title": "How it works",
-    "step.1": "Read the procedure", "step.2": "Model the vessel", "step.3": "Say what matters and what to calculate",
-    "vessels.title": "Five vessels",
+    "step.1": "Read the procedure", "out.1": "Produces parameters with units and sources.",
+    "step.2": "Model the vessel", "out.2": "Produces temperature, flow and dose maps with uncertainty bands.",
+    "step.3": "Rank what matters", "out.3": "Produces the knobs that move the result, and the calculations to run.",
+    "llm.title": "Where the language model fits",
+    "llm.1": "Reads the procedure", "llm.2": "Calls physics and literature tools", "llm.3": "Explains the result",
+    "llm.cap": "It never invents a number: every value comes from a tool.",
+    "explore.title": "Explore the evidence behind it",
+    "vessels.title": "Five vessels, one workflow",
     "vessels.cap": "Pick one to open it in the workspace.",
-    "trust.title": "Honest by design",
-    "trust.line": "Our own tests are published, including the ones we fail.",
+    "trust.title": "Why trust it",
+    "trust.line": "Every number is labelled benchmarked, uncertain or hypothesis. Our failed tests are published.",
     "footer": "VesselTwin · Anirban Phukan · MIT License · github.com/yeatanir/VesselTwin",
     "thanks": "Literature search supported by Valency (free API credits) and Edison Scientific.",
     "proto": "Research prototype",
 }
+# (key, title, one line, target page, glyph path). Pages must exist in theme.PAGES (tests check this).
+EXPLORE = [
+    ("trace", "See the reasoning trace", "Every tool call and number the model used, step by step.", "Evidence",
+     "M6 38l10-12 8 8 16-22 M30 12h10v10"),
+    ("agents", "Meet the literature agents (Edison, Valency)", "Cited excerpts, checked against the value they claim.", "Evidence",
+     "M10 8h22l6 6v26H10z M16 20h16 M16 27h16 M16 34h10"),
+    ("llm", "Bring your own LLM / API", "Any provider or a local model. No key is stored.", "Studio",
+     "M24 6v8 M24 34v8 M6 24h8 M34 24h8 M14 14l5 5 M29 29l5 5 M34 14l-5 5 M19 29l-5 5"),
+]
 INFO = {
     "gap": "Experimentalists tune furnace, flow and geometry. Simulation scientists choose which atomistic calculation to run. VesselTwin links the two with a vessel-scale model and a ranked list of uncertainties.",
     "how": "Procedure text is parsed into parameters. Each carries a unit, a source and a stated, default or missing flag. Tier 0 gives a regime map, Tier 1 a reduced model with Monte Carlo bands, Tier 2 stored CFD.",
@@ -175,7 +190,7 @@ def how_html():
     C = COPY
     steps = "".join(
         f'<div class="vt-step vt-rv" style="animation-delay:{i * .15}s"><div class="vt-ic"><svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{STEP_ICONS[i]}"/></svg></div>'
-        f'<div class="n">{i + 1}</div><div class="t">{C[f"step.{i + 1}"]}</div></div>' for i in range(3))
+        f'<div class="n">{i + 1}</div><div class="t">{C[f"step.{i + 1}"]}</div><div class="o">{C[f"out.{i + 1}"]}</div></div>' for i in range(3))
     return f'<div class="vt-steps"><svg class="vt-sl" viewBox="0 0 100 4" preserveAspectRatio="none" aria-hidden="true"><line class="vt-dash" x1="0" y1="2" x2="100" y2="2" stroke="#1F5FBF" stroke-width="3" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/></svg>{steps}</div>'
 
 
@@ -237,7 +252,7 @@ LCSS = """
 .vt-sl{position:absolute;left:8%;right:8%;top:36px;width:84%;height:4px}
 .vt-step{position:relative;flex:1;text-align:center}
 .vt-ic{width:72px;height:72px;margin:0 auto .5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1F5FBF,#5B9BEA);box-shadow:0 6px 18px rgba(31,95,191,.35)}
-.vt-step .n{font-weight:800;color:#1F5FBF}.vt-step .t{color:var(--n);font-weight:600;max-width:200px;margin:0 auto}
+.vt-step .o{color:var(--g);font-size:.92rem;max-width:210px;margin:.2rem auto 0}.vt-step .n{font-weight:800;color:#1F5FBF}.vt-step .t{color:var(--n);font-weight:600;max-width:200px;margin:0 auto}
 [class*="st-key-vcard_"]{background:linear-gradient(180deg,#F4F8FE,#fff 55%)!important;overflow:hidden}
 [class*="st-key-vcard_"]:hover svg{filter:drop-shadow(0 0 8px rgba(242,140,40,.45))}
 .vt-chips{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:1rem 0}
@@ -250,12 +265,20 @@ LCSS = """
 .st-key-try_ws button{width:auto!important;font-size:1.15rem;padding:.7rem 2.2rem;box-shadow:0 8px 24px rgba(31,95,191,.4);animation:vt-halo 2.6s ease-in-out infinite}
 @media (max-width:760px){
  .vt-hero{padding:1.2rem .6rem 4rem;min-height:0}
- .vt-hs{width:230%;margin-left:-65%}
+ .vt-hs{width:100%}.vt-hero h1{font-size:1.55rem}
  .vt-gap{flex-direction:column}.vt-who{flex:none;width:100%}.vt-bridge{width:100%;flex:none;height:110px}
  .vt-steps{flex-direction:column;gap:1.6rem}.vt-sl{display:none}
 }
 @media (prefers-reduced-motion:reduce){.vt-hero,.vt-hero *,.vt-gap *,.vt-steps *,.vt-chips *,.vt-rv,.vt-draw,.st-key-hero button,[class*="st-key-vcard_"] *{animation:none!important}
  .vt-draw{stroke-dashoffset:0}.vt-m{display:none}}
+[class*="st-key-xcard_"]{background:#fff;border:1px solid #D6E3F5;border-radius:18px;padding:1rem 1.1rem;box-shadow:0 2px 10px rgba(11,31,68,.06);transition:transform .2s,box-shadow .2s,border-color .2s}
+[class*="st-key-xcard_"]:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(31,95,191,.2);border-color:var(--b)}
+.vt-xi{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1F5FBF,#5B9BEA);margin-bottom:.5rem}
+.vt-xt{font-weight:700;color:var(--n);font-size:1.02rem}
+[class*="st-key-foot_"] button{background:#fff;color:var(--b);padding:.2rem .9rem;font-size:.85rem}
+[class*="st-key-foot_"] button:hover{background:var(--l);color:var(--b)}
+.vt-llm{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:1rem 0 .3rem}
+.vt-llm .vt-chip{font-size:.95rem;padding:.35rem 1.1rem}
 </style>
 """
 
@@ -275,6 +298,9 @@ def render():
     _title(C["how.title"], INFO["how"])
     H(how_html())
 
+    _title(C["llm.title"])
+    H('<div class="vt-llm">' + "".join(f'<span class="vt-chip">{C[f"llm.{i}"]}</span>' for i in (1, 2, 3)) + f'</div><p class="vt-trust">{C["llm.cap"]}</p>')
+
     _title(C["vessels.title"], INFO["vessels"], C["vessels.cap"])
     for row, widths in ((VESSELS[:3], [1, 1, 1]), (VESSELS[3:], [.5, 1, 1, .5])):
         cols = st.columns(widths)
@@ -284,8 +310,20 @@ def render():
                 if st.button("Open", key=f"open_{key}"):
                     go_to("Workspace", vt_vessel=key)
 
+    _title(C["explore.title"])
+    for col, (key, title, line, page, glyph) in zip(st.columns(3), EXPLORE):
+        with col, st.container(key=f"xcard_{key}"):
+            H(f'<div class="vt-xi"><svg viewBox="0 0 48 48" width="26" height="26" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{glyph}"/></svg></div>'
+              f'<div class="vt-xt">{title}</div><div class="vt-cap" style="margin-bottom:.4rem">{line}</div>')
+            if st.button("Open", key=f"explore_{key}"):
+                go_to(page)
+
     _title(C["trust.title"])
     H('<div class="vt-chips"><span class="vt-chip">benchmarked</span><span class="vt-chip grey">uncertain</span><span class="vt-chip warn">hypothesis</span></div>'
             f'<p class="vt-trust">{C["trust.line"]}{info_html(trust_facts())}</p>')
     link = f'<a href="{REPO}" target="_blank" rel="noopener">github.com/yeatanir/VesselTwin</a>'
-    H(f'<div class="vt-foot">{C["footer"].replace("github.com/yeatanir/VesselTwin", link)}<br>{C["thanks"]}<br>{C["proto"]}</div>')
+    H('<div class="vt-foot" style="margin:2rem 0 .2rem;padding-top:.8rem">Explore</div>')
+    for col, (key, title, line, page, glyph) in zip(st.columns(3), EXPLORE):
+        if col.button(title.split(" (")[0], key=f"foot_{key}", use_container_width=True):
+            go_to(page)
+    H(f'<div class="vt-foot" style="margin-top:1rem;border:0">{C["footer"].replace("github.com/yeatanir/VesselTwin", link)}<br>{C["thanks"]}<br>{C["proto"]}</div>')
