@@ -122,7 +122,9 @@ h4{margin-top:1.1rem!important}
 [class*="st-key-vp_"]:focus-within{outline:3px solid #F28C28;outline-offset:2px}
 [class*="st-key-vp_"][class*="__sel"]{border-color:#1F5FBF;box-shadow:0 0 0 3px rgba(31,95,191,.22),0 12px 28px rgba(31,95,191,.25);background:linear-gradient(180deg,#E6F0FC,#fff 70%)}
 [class*="st-key-vp_"] [data-testid=stElementContainer]:has(button){position:absolute;inset:0;z-index:2;margin:0}
-[class*="st-key-vp_"] button{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+[class*="st-key-vp_"] [data-testid=stButton]{position:absolute!important;inset:0;width:100%!important;height:100%!important;display:block}
+[class*="st-key-vp_"] [data-testid=stElementContainer]:has(button){width:100%!important;height:100%!important}
+[class*="st-key-vp_"] button{position:absolute;inset:0;width:100%!important;height:100%!important;min-height:0;opacity:0;cursor:pointer;z-index:3}
 [class*="st-key-vp_"] [data-testid=stVerticalBlock]{gap:0}
 .wk-vc{text-align:center}.wk-vc svg{max-height:74px;width:100%}
 .wk-vc .t{font-weight:700;color:#0B1F44;font-size:.92rem;margin-top:.25rem}
