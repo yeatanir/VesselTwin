@@ -32,3 +32,6 @@ Checked against the opened Pyodide package list (pyodide.org/en/stable/usage/pac
 
 ## Keys and privacy
 Keys typed in the sidebar live only in that browser session's Streamlit state; they are not written to disk or to traces (a test checks this). A hosted app means the key passes through the host's server: use a key with a spend limit, or run locally.
+
+## Literature and LLM settings
+LLM settings (sidebar expander, `app/llm_settings.render()`) are on Workspace, Evidence and Advanced; values are mirrored into `st.session_state["vt_llm"]` so they survive page changes. The Literature section is offline (stored `docs/literature/*.json`); a live Edison question needs the optional `edison-client` package (not in requirements) and your own key typed into the page. Valency has no documented HTTP API reachable with a key, so nothing live is implemented for it.
