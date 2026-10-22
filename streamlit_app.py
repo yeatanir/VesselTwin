@@ -16,10 +16,11 @@ def _optional(modname, title):
     def page():
         try:
             mod = __import__(modname, fromlist=["render"])
-            mod.render()
-        except ImportError:
+        except ImportError as e:
             st.title(title)
-            st.info(f"The {title} page is not available in this build yet. Use Home or Advanced.")
+            st.info(f"The {title} page could not be loaded: {e}")
+            return
+        mod.render()  # errors inside the page are shown by Streamlit, not hidden
     return page
 
 
