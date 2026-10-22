@@ -1,94 +1,138 @@
-# VesselTwin
+<p align="center">
+  <img src="assets/logo.png" alt="VesselTwin" width="420">
+</p>
 
-> **Provenance.** Development began on Oct 18, 2026 in a private repository (archived as `VesselTwin-dev-history`); the OSI Hackathon period began Oct 21, 2026. This repository is a clean snapshot of the final code, with history starting on the day it was created.
+<h3 align="center">The recipe that worked once, and never twice.<br>VesselTwin shows the hidden conditions in your vessel, and the one calculation worth running next.</h3>
 
-A procedure goes in, a vessel digital twin comes out: the text becomes a checked setup spec, the flow regime is called instantly (Tier 0), a reduced model with Monte Carlo gives a conditions passport (Tier 1), and cached CFD backs it up (Tier 2).
-The LLM never produces a physical number: values come from the text (span-checked), defaults, a property DB, or a solver.
-Generality lives in three contracts (SetupSpec, Passport, Closure); the dashboard only shows it off.
+<p align="center">
+  <a href="#the-pain">The pain</a> ·
+  <a href="#what-vesseltwin-does">What it does</a> ·
+  <a href="#a-tour">Tour</a> ·
+  <a href="#what-we-tested-including-what-failed">What we tested</a> ·
+  <a href="#run-it">Run it</a> ·
+  <a href="#add-your-own-vessel">Add a vessel</a>
+</p>
 
-## Architecture
+> **Status: research prototype.** Built for the OSI Hackathon 2026. It is a framework and verification harness for vessel-scale models. It is **not** a validated predictor of growth outcomes, and we say so everywhere in the product.
+> **Provenance.** Development began on Oct 18, 2026 in a private repository (archived as `VesselTwin-dev-history`); the hackathon period began Oct 21, 2026. This repository is a clean snapshot of the final code.
+
+![VesselTwin home page](docs/screens/landing_1440.png)
+
+## The pain
+
+A paper reports a recipe. You repeat it, and the outcome changes. Nobody can see why, because between the chemistry and the result sits the **vessel**, and the vessel hides the variables that decide the outcome.
+
+**If you run experiments,** you tune furnace temperature, flow and boat position by trial and error. You cannot see the local gas temperature at the substrate, where the vapour went before it got there, or how much light actually reached your sample. A change in tube diameter, lamp distance or stir rate quietly changes all of it.
+
+**If you run atomistic simulations,** you can compute almost anything, but you do not know which calculation, under which local conditions, would actually change the experimental outcome. The conditions in a paper's methods section are not the conditions at the growing surface.
+
+Each side holds half of the problem. The vessel is the missing link, and nobody models it in a form either side can use.
+
+## What VesselTwin does
+
+1. **Reads a procedure** as plain text and extracts the setup. Every value is tagged *stated*, *default* or *missing*, and every stated value is checked against the sentence it came from. The language model never produces a physical number.
+2. **Models the vessel** at three levels: an instant regime call (Tier 0), fast reduced-order physics with Monte Carlo uncertainty bands (Tier 1, live), and OpenFOAM CFD (Tier 2, stored runs on the hosted site).
+3. **Tells each person what to do next.** The experimentalist sees the knobs ranked by how much they move the result. The simulation scientist gets a ranked list of atomistic calculations whose outcome would change the prediction most.
+4. **Labels every claim** *benchmarked*, *uncertain* or *hypothesis*. A label is capped by its weakest evidence and is never upgraded.
+
+**Five vessels share one core:** MoS2 CVD tube furnace, sealed ampoule, stirred flask, sorbent bed, and photoreactor. A new vessel is one file.
+
+## A tour
+
+### Workspace: pick a vessel, move the knobs, see the physics
+
+Five clickable vessel cards. A live vessel figure, big-number tiles with units and a status dot (model, CFD or synthetic), knobs with effect bars that show how strongly each one moves the headline result, and a strip that explains the tiers.
+
+![Workspace: tube furnace](docs/screens/ws_1440_tube_0.png)
+
+The same workspace for a photoreactor (lamp power, distance, wavelength, wall thickness):
+
+![Workspace: photoreactor](docs/screens/workspace_photoreactor.png)
+
+### Studio: where the language model fits
+
+The model reads your procedure, calls the physics and literature tools, and explains the result. It never invents a number. Connect any provider with your own key, or run fully offline; with no model connected, the Studio replays a recorded run.
+
+![Studio: ask the agent](docs/screens/studio_agent_1440.png)
+
+You can also add your own vessel from a physics template. It runs with borrowed physics and is always labelled *hypothesis*; a stub file lets a developer make it real.
+
+![Studio: add a vessel](docs/screens/studio_vessel_1440.png)
+
+### Evidence and literature: why you can trust it, or not
+
+The reasoning trace of each run, the benchmark table (including the failures), the credibility harness, and the literature agents. Edison Scientific and Valency supplied sourced parameters; cached answers are shown with their question, date and verification status.
+
+![Evidence and literature](docs/screens/evidence_literature.png)
+
+## How the pieces fit
 
 ```
-procedure text --llm/extract (rules | any LLM provider)--> SetupSpec (stated / default / missing, span-checked)
+procedure text --llm/extract (offline rules | any LLM provider)--> SetupSpec (stated / default / missing, span-checked)
                                                         |
-             presets/<vessel>__<set>.json  --->  core.api.solve  <--- Closure (atomistic -> vessel params)
+          presets/<vessel>__<set>.json  --->  core.api.solve  <--- Closure (atomistic value -> vessel parameter)
                                                         |
-        vessels/*.py  (auto-discovered)   tier0: regime + margin  ->  tier1: reduced model + Monte Carlo
+        vessels/*  (auto-discovered)   Tier 0: regime  ->  Tier 1: reduced model + Monte Carlo
                                                         |                         |
-                                                    Passport  <--  tier2/ (OpenFOAM v2512, cached in cache/tier2/)
+                                                    Passport  <--  Tier 2: OpenFOAM v2512 (stored results on the hosted site)
                                                         |
-                                   app/dashboard.py: Results | Brief | Credibility
+                    ranking of atomistic calculations  ·  trust labels  ·  Streamlit app
 ```
 
-## Quickstart
+Generality lives in three contracts: **SetupSpec** (what was stated, with spans), **Passport** (conditions with p05/p50/p95 bands and a synthetic flag) and **Closure** (an atomistic result turned into a vessel parameter, with its source).
 
-```
-conda activate research            # or: python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
-make test                          # also writes cache/harness.json
-make demo                          # default case through every stage, all vessels
-make dashboard                     # Streamlit, offline
-```
-`make test PY=python` uses the active interpreter (the Makefile default is the author's conda env).
+## What we tested, including what failed
 
-## Vessels and contracts
+We pre-registered benchmarks before scoring them and publish the numbers we do not like. All MoS2 benchmark items are development data (we have seen them); there is no held-out set yet.
 
-| Vessel | Tier available | Notes |
+| What | Result | Honest reading |
 |---|---|---|
-| cvd_tube | 1 | MoS2 CVD tube, Wulff shape vs position |
-| ampoule | 2 | sealed-ampoule transport, OpenFOAM v2512 case |
-| flask | 1 | stirred flask, Villermaux-Dushman |
-| sorbent | 1 | adsorption column, isotherm closures |
+| Sorbent bed, CALF-20 breakthrough vs published curves (n = 3) | -3%, +2%, +10% | Works for this material; 13X is off by about -38% |
+| Photoreactor vs ferrioxalate actinometry (2 setups, one paper) | predicted/measured 0.88 and 0.69, inside pre-registered tolerances | Inputs from the paper, not fitted; lamp-to-irradiance not validated |
+| Ampoule, diffusion-limited cases vs OpenFOAM | within 2% | Absolute rates vs published data are off by 1x to 38x |
+| Procedure extraction, 33 real procedures | precision 0.97, recall 0.83, no fabricated values (stand-in model); offline rules 0.95 / 0.73 | Stand-in is a Claude agent; the offline rules were tuned on this set |
+| Tube regime call vs CFD (n = 40) | 37/40 agree | Rule designed after seeing the failures; CFD label is a convention |
+| **MoS2 direction-of-change vs 14 literature observations** | **model 1/9 to 3/9, blind no-tool agent 6/9** | **The model does not beat a no-tool baseline** |
+| **MoS2 shape class (n = 14)** | **0.50, the same as always answering "triangle"** | **Not predictive; edge rates are synthetic** |
+| CFD surrogates | miss the 5% target everywhere | Too few CFD cases for sharp regime changes |
 
-A vessel is one file in `vessels/`: a `ParamDef` list (unit, bounds, sigma, source), `tier0`, `solve`, `register(...)`. `schemas/` holds the frozen contracts: SetupSpec (input), Passport (output), Closure (atomistic to vessel).
+What the process caught: a 30-60x error in a sourced vapour-pressure constant, a wrong edge orientation in a first edge-energy model, and stale claims in our own interface. Full detail: `docs/status/status_final_oct21.md` and `docs/track_*_results.md`.
 
-## Honesty
+**Closest precedent.** Momeni et al., *npj 2D Mater. Appl.* 2:27 (2018), coupled reactor-scale transport to phase-field growth and validated it on MoS2 islands. Coupling reactor physics to growth is not new; what VesselTwin adds is a reusable, uncertainty-aware, procedure-in workflow across vessels that also ranks the next atomistic calculation.
 
-Sourced versus illustrative is tracked per parameter: `source="synthetic"` marks a placeholder and shows an amber "synthetic" badge in the UI; any passport that depends on one is flagged `synthetic=True`.
-`tiers.json` records the highest tier per vessel and an honest status line (shown as a badge). The Credibility tab lists every test from the last `make test` (`cache/harness.json`, with the committed `docs/harness_snapshot.json` as fallback on a fresh clone). Nothing is shown as passing without a test.
-Known limits: Tier 1 convection enhancement is not confirmed by Tier 2; kinetic Wulff rates are synthetic (trend direction only); the real 100-procedure benchmark is a human task.
+## Run it
 
-## Add a vessel
+```
+git clone https://github.com/yeatanir/VesselTwin.git && cd VesselTwin
+python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
+streamlit run streamlit_app.py          # the web app (Home, Workspace, Studio, Evidence)
+make test                               # 400+ tests; also writes cache/harness.json
+make demo                               # default case through every stage, all vessels
+```
 
-Drop a file into `vessels/` (start from `vessels/_template.py`); it appears in the dashboard with no other edit. Chemistry sets are `presets/<vessel>__<name>.json` with an optional `_meta` entry (`title`, `source`). See `docs/ADDING_A_VESSEL.md`.
+Everything runs **offline** with the default rules extractor, recorded agent runs and stored CFD fields: no key, no network.
 
-## Tier 2 (CFD)
-
-OpenFOAM openfoam.com v2512 is not on PATH. Launch `/Applications/OpenFOAM-v2512.app` (it mounts a case-sensitive volume), write a case with `tier2.openfoam.write_case`, then `tier2/run.sh <case_dir>`. Save the resulting passport JSON to `cache/tier2/<vessel>.json`; the dashboard shows it under "Tier 2" and never runs OpenFOAM itself.
-
-## Run offline, or with your own LLM
-
-Everything runs offline with the default `rules` extractor, scripted agent replay and recorded traces: no key, no network (`make dashboard`, or `pip install -r requirements.txt && streamlit run app/dashboard.py`).
-
-To use a live model, choose any provider and supply your own key. Either fill in the sidebar expander "LLM settings (optional)" (key kept in the browser session only, "Test connection" button) or set environment variables:
+**Bring your own language model.** Use the "LLM settings" expander in the app (key kept only in the browser session), or environment variables:
 
 ```
 export VT_LLM_PROVIDER=openai_compatible          # openai_compatible | anthropic | mlx | rules
-export VT_LLM_BASE_URL=https://your-host/v1       # or the full .../chat/completions URL
+export VT_LLM_BASE_URL=https://your-host/v1
 export VT_LLM_MODEL=your-model-name
 export VT_LLM_API_KEY=...                         # never commit or log this
-export VT_LLM_EXTRA_HEADERS='{"OpenAI-Organization": "org-..."}'   # optional: organisation / workspace / project ID
+export VT_LLM_EXTRA_HEADERS='{"OpenAI-Organization": "org-..."}'   # optional organisation / workspace / project ID
 python -m llm.agent --provider openai_compatible --base-url https://your-host/v1 --model your-model-name
 ```
 
-In code, `extract(text, vessel, backend="llm")` uses the same variables. `anthropic` (Messages API; optional workspace header) is one optional provider among these; `mlx` is a local model (untested here). The model only proposes; value, span and bounds checks are the same for every backend, and keys never appear in recorded traces.
+**CFD (Tier 2).** OpenFOAM (openfoam.com v2512) is needed to regenerate cases through `tier2/openfoam.py`; the hosted app shows stored results, labelled as stored. **Docker / Codespaces:** `docker build -t vesseltwin . && docker run -p 8501:8501 vesseltwin` (not tested on the build machine), or open the repo in Codespaces. **Streamlit Community Cloud:** main file `streamlit_app.py` (see `docs/deploy.md`).
 
-## Docker and Codespaces
+## Add your own vessel
 
-`docker build -t vesseltwin . && docker run --rm -p 8501:8501 vesseltwin`, or open the repo in GitHub Codespaces (`.devcontainer/` forwards port 8501). The Docker files have not been built on the authoring machine. See `docs/deploy.md` (also Streamlit Community Cloud, Hugging Face Spaces, and why a static stlite build is not feasible today).
+Copy `vessels/_template.py`, fill in a `ParamDef` list (unit, bounds, uncertainty, source), `tier0`, `solve`, and `register(...)`. It appears in the app with no other edit. See `docs/ADDING_A_VESSEL.md`. Chemistry sets are `presets/<vessel>__<name>.json`. In the app, **Studio > Add a vessel** builds a pseudo-vessel from a template and downloads the stub.
 
-## Layout
+## Repository layout
 
-`core/` registry, api, params, uq, dimensionless, pipeline · `vessels/` one file or package each · `presets/` chemistry sets · `schemas/` contracts · `llm/` extractor, span check, units · `tier2/` OpenFOAM case writer and parser · `atomistic/` closures · `bench/` procedures and scoring · `app/` dashboard · `tests/` harness · `tiers.json` · `docs/`.
+`core/` registry, API, parameters, uncertainty, dimensionless numbers · `vessels/` one module or package per vessel · `presets/` chemistry sets · `schemas/` the three contracts · `llm/` extraction, providers, agent loop · `atomistic/` closures, brief and ranking · `tier2/` OpenFOAM case writers and verification · `surrogate/` CFD-informed corrections · `app/` Streamlit pages and figures · `bench/` benchmarks and pre-registered scorers · `docs/` status, pre-registrations, results, screenshots · `tests/`.
 
-## Licence
+## Credits and licence
 
-TBD (placeholder; choose an OSI-approved licence before Oct 22).
-
-## 90-second demo
-
-1. (0-15 s) Paste a MoS2 procedure; Extract. Stated values green, defaults amber.
-2. (15-35 s) Tier 0 shows the regime instantly; switch to Tier 1: conditions passport, amber synthetic badges.
-3. (35-55 s) Shape-vs-position slider: move the sulfur boat temperature, the triangle/hexagon boundary moves (about 0.8 cm per 10 C near the default, with the default constants; hotter than ~190 C the whole substrate is S-rich and the boundary leaves the map). Say on screen that the shape rates are synthetic and were tuned: this shows the workflow and the direction, not a prediction.
-4. (55-70 s) Brief tab: ranked decisions from the passport.
-5. (70-80 s) Drop a new file into `vessels/` and refresh: the vessel is in the dropdown. Tier 2 shows the cached CFD or the run command.
-6. (80-90 s) Credibility tab: the tests behind every claim.
+By Anirban Phukan. Literature search supported by **Valency** (free API credits) and **Edison Scientific**. MIT licence, see `LICENSE`.
