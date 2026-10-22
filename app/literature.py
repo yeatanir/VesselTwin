@@ -104,11 +104,12 @@ def _agents(vessel):
         st.caption("Live answer, unverified. " + VERIFIED)
 
 
-def render(vessel=None):
+def render(vessel=None, pick=True):
     st.subheader("Literature")
     vessel = vessel or st.session_state.get("vt_vessel", "cvd_tube")
     vs = ["cvd_tube", "ampoule", "flask", "sorbent", "photoreactor"]
-    vessel = st.selectbox("Vessel", vs, index=vs.index(vessel) if vessel in vs else 0, key="lit_vessel")
+    if pick:
+        vessel = st.selectbox("Vessel", vs, index=vs.index(vessel) if vessel in vs else 0, key="lit_vessel")
     a, b = st.tabs(["Parameter sources", "Literature agents"])
     with a:
         _sources(vessel)
