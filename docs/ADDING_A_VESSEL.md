@@ -8,3 +8,7 @@
 5. Add a test tagged `@pytest.mark.vessel("my_vessel")`; `make test` refreshes the Credibility tab.
 
 Contracts that matter: `solve` returns scalars whose keys are in `units` and includes `T_K`; `tier0` returns `(Regime, margin, numbers)`.
+
+## Quick try in the Studio (no files written)
+
+The Studio page, tab "Add a vessel", clones a template vessel's ParamDefs with your values, runs the template physics for this session only, and labels the result `hypothesis` (borrowed physics, not validated for your geometry). "Download vessel stub" gives a `vessels/<name>.py` whose `tier0`/`solve` delegate to the template; drop it into `vessels/`, restart, then replace the borrowed physics with your own model following the steps above.
