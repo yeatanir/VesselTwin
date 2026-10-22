@@ -12,10 +12,7 @@ try:
 except Exception:  # Pillow missing or file absent: fall back to an emoji
     _icon = "🧪"
 st.set_page_config(page_title="VesselTwin", page_icon=_icon, layout="wide", initial_sidebar_state="collapsed")
-try:
-    st.logo(str(ROOT / "assets" / "logo_small.png"), icon_image=str(ROOT / "assets" / "icon.png"), size="large")
-except Exception:  # older Streamlit without st.logo options
-    pass
+
 st.session_state["vt_embedded"] = True
 theme.inject_css()
 
@@ -46,4 +43,23 @@ pages = {
     "Advanced": st.Page(str(ROOT / "app" / "dashboard.py"), title="Advanced", url_path="advanced"),
 }
 theme.PAGES.update(pages)
-st.navigation(list(pages.values()), position="top").run()
+current = st.navigation(list(pages.values()), position="hidden")  # Streamlit's own top nav sits inside the toolbar that theme.py hides, so we draw ours
+
+
+def _topbar():
+    with st.container(key="topbar"):
+        cols = st.columns([2.2, 1, 1.2, 1, 1.9, 1.1], vertical_alignment="center")
+        with cols[0]:
+            st.page_link(pages["Home"], label=" ", icon=None)  # invisible full-logo link target (styled in theme.py)
+            try:
+                st.image(str(ROOT / "assets" / "logo_small.png"), width=170)
+            except Exception:
+                st.markdown("**VesselTwin**")
+        for col, key, label in zip(cols[1:], ["Home", "Workspace", "Studio", "Evidence", "Advanced"],
+                                   ["Home", "Workspace", "Studio", "Evidence & literature", "Advanced"]):
+            with col:
+                st.page_link(pages[key], label=label)
+
+
+_topbar()
+current.run()

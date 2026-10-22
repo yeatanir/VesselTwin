@@ -63,6 +63,17 @@ a{{color:var(--b)}}a:hover{{color:#174c9a}}
 .vt-flowline{{stroke-dasharray:6 6;animation:vt-dash .8s linear infinite}}
 @media (prefers-reduced-motion:reduce){{.vt-p,.vt-pulse,.vt-glow,.vt-spin,.vt-front,.vt-flowline{{animation:none}}}}
 @media (max-width:640px){{.block-container{{padding-left:1rem;padding-right:1rem}}.vt-hero{{padding:1.2rem 1rem .5rem;border-radius:16px}}}}
+
+.st-key-topbar{{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid #DCE7F7;padding:.35rem .6rem;margin:0 -1rem 1rem -1rem;padding-top:.7rem}}
+.st-key-topbar img{{display:block}}
+.st-key-topbar [data-testid="stPageLink"] a{{border-radius:999px;padding:.35rem .9rem;color:#0B2545;font-weight:600;text-decoration:none;justify-content:center}}
+.st-key-topbar [data-testid="stPageLink"] a:hover{{background:#EEF4FC;color:#1F5FBF}}
+.st-key-topbar [data-testid="stPageLink"] a[aria-current="page"]{{background:#1F5FBF;color:#fff}}
+.st-key-topbar [data-testid="stColumn"]:first-child [data-testid="stPageLink"]{{position:absolute;inset:0;z-index:3;opacity:0}}
+.st-key-topbar [data-testid="stColumn"]:first-child [data-testid="stPageLink"] a{{height:100%;width:100%}}
+@media (max-width:700px){{.st-key-topbar [data-testid="stHorizontalBlock"]{{flex-wrap:wrap}}.st-key-topbar [data-testid="stColumn"]{{min-width:auto}}}}
+header[data-testid="stHeader"]{{display:none!important}}
+.block-container{{padding-top:0!important}}
 </style>
 """
 
