@@ -14,6 +14,22 @@ def test_copy_limits():
         assert len(line.split()) <= 14 and len(chip.split()) <= 14, key
 
 
+def test_footer_and_trust_text():
+    f = landing.COPY["footer"]
+    for part in ("VesselTwin", "Anirban Phukan", "MIT License", "github.com/yeatanir/VesselTwin"):
+        assert part in f
+    assert "Valency" in landing.COPY["thanks"] and "Edison Scientific" in landing.COPY["thanks"]
+    assert landing.COPY["proto"] == "Research prototype"
+
+
+def test_icons_distinct_and_hero_has_all_parts():
+    svgs = {v[0]: landing.icon(v[0]) for v in landing.VESSELS}
+    assert len(set(svgs.values())) == 5 and all(s.startswith("<svg") for s in svgs.values())
+    h = landing.hero_svg()
+    for w in ("RECIPE", "WHICH KNOB MATTERS", "WHICH CALCULATION", "offset-path"):
+        assert w in h
+
+
 def test_five_vessels_and_trust_numbers():
     assert len(landing.VESSELS) == 5
     assert "blind agent" in landing.trust_facts()
