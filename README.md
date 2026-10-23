@@ -13,6 +13,8 @@
   <a href="#add-your-own-vessel">Add a vessel</a>
 </p>
 
+**Live app: https://vesseltwin.streamlit.app**
+
 > **The flagship MoS2 model fails our own benchmark, and the tool says so. That is the point.**
 >
 > **Status: research prototype.** Built for the OSI Hackathon 2026. It is a framework and verification harness for vessel-scale models. It is **not** a validated predictor of growth outcomes, and we say so everywhere in the product.

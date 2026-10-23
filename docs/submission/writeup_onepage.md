@@ -1,6 +1,6 @@
 # VesselTwin: a tool that tells you what its own numbers are worth
 
-**Author:** Anirban Phukan · **Licence:** MIT · **Repo:** https://github.com/yeatanir/VesselTwin · **Demo:** [link when hosted]
+**Author:** Anirban Phukan · **Licence:** MIT · **Repo:** https://github.com/yeatanir/VesselTwin · **Demo:** https://vesseltwin.streamlit.app
 
 ## The problem
 

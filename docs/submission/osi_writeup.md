@@ -34,4 +34,4 @@ What does not work, stated plainly: on 14 literature observations the tube model
 3. Measured furnace temperature profiles to validate the boat and substrate temperatures, which only agree with our own CFD today.
 4. Live Tier 2 CFD behind the app, and more vessels from the template.
 
-Code, MIT licence: https://github.com/yeatanir/VesselTwin · Live app: [DEMO_URL] · Author: Anirban Phukan
+Code, MIT licence: https://github.com/yeatanir/VesselTwin · Live app: https://vesseltwin.streamlit.app · Author: Anirban Phukan
