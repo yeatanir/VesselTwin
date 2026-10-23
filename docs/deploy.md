@@ -35,3 +35,19 @@ Keys typed in the sidebar live only in that browser session's Streamlit state; t
 
 ## Literature and LLM settings
 LLM settings (sidebar expander, `app/llm_settings.render()`) are on Workspace, Evidence and Advanced; values are mirrored into `st.session_state["vt_llm"]` so they survive page changes. The Literature section is offline (stored `docs/literature/*.json`); a live Edison question needs the optional `edison-client` package (not in requirements) and your own key typed into the page. Valency has no documented HTTP API reachable with a key, so nothing live is implemented for it.
+
+## Hosted demo model (optional, rate-limited)
+
+To let visitors run the live agent without their own key, add a secrets section in Streamlit Community Cloud (app settings, Secrets). The key lives only in Streamlit's secrets store: it is never in the repo, never in session state, and never shown.
+
+```toml
+[vt_demo_llm]
+provider = "anthropic"            # or "openai_compatible" (then also base_url)
+model = "claude-sonnet-5-5"       # any model your account allows
+api_key = "..."                   # use a NEW key with a spend limit, not a key shared in chat
+workspace_id = "wrkspc_..."       # optional; sent as the anthropic-workspace-id header
+max_calls_per_session = 24        # each agent step is one call (a run is at most 8-9)
+max_calls_total = 400             # hard cap per app process
+```
+
+Visitors who connect their own model under "LLM settings" use theirs instead. When the cap is reached the app says so and falls back to replaying a recorded run. Delete the secret to turn the demo model off.

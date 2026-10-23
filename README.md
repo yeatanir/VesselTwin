@@ -13,10 +13,12 @@
   <a href="#add-your-own-vessel">Add a vessel</a>
 </p>
 
+> **The flagship MoS2 model fails our own benchmark, and the tool says so. That is the point.**
+>
 > **Status: research prototype.** Built for the OSI Hackathon 2026. It is a framework and verification harness for vessel-scale models. It is **not** a validated predictor of growth outcomes, and we say so everywhere in the product.
 > **Provenance.** Development began on Oct 18, 2026 in a private repository (archived as `VesselTwin-dev-history`); the hackathon period began Oct 21, 2026. This repository is a clean snapshot of the final code.
 
-![VesselTwin home page](docs/screens/landing_1440.png)
+![VesselTwin home page](docs/screens/site_home.png)
 
 ## The pain
 
@@ -43,7 +45,9 @@ Each side holds half of the problem. The vessel is the missing link, and nobody 
 
 Five clickable vessel cards. A live vessel figure, big-number tiles with units and a status dot (model, CFD or synthetic), knobs with effect bars that show how strongly each one moves the headline result, and a strip that explains the tiers.
 
-![Workspace: tube furnace](docs/screens/ws_1440_tube_0.png)
+![Workspace: tube furnace](docs/screens/site_workspace.png)
+
+![Workspace: knobs with effect bars, and what matters most](docs/screens/site_workspace_knobs.png)
 
 The same workspace for a photoreactor (lamp power, distance, wavelength, wall thickness):
 
@@ -53,7 +57,9 @@ The same workspace for a photoreactor (lamp power, distance, wavelength, wall th
 
 The model reads your procedure, calls the physics and literature tools, and explains the result. It never invents a number. Connect any provider with your own key, or run fully offline; with no model connected, the Studio replays a recorded run.
 
-![Studio: ask the agent](docs/screens/studio_agent_1440.png)
+![Studio](docs/screens/site_studio.png)
+
+![Studio: a recorded agent run, step by step](docs/screens/studio_agent_1440.png)
 
 You can also add your own vessel from a physics template. It runs with borrowed physics and is always labelled *hypothesis*; a stub file lets a developer make it real.
 
@@ -63,7 +69,9 @@ You can also add your own vessel from a physics template. It runs with borrowed 
 
 The reasoning trace of each run, the benchmark table (including the failures), the credibility harness, and the literature agents. Edison Scientific and Valency supplied sourced parameters; cached answers are shown with their question, date and verification status.
 
-![Evidence and literature](docs/screens/evidence_literature.png)
+![Evidence: the reasoning trace](docs/screens/site_evidence.png)
+
+![Evidence: literature agents](docs/screens/evidence_literature.png)
 
 ## How the pieces fit
 
@@ -92,8 +100,8 @@ We pre-registered benchmarks before scoring them and publish the numbers we do n
 | Ampoule, diffusion-limited cases vs OpenFOAM | within 2% | Absolute rates vs published data are off by 1x to 38x |
 | Procedure extraction, 33 real procedures | precision 0.97, recall 0.83, no fabricated values (stand-in model); offline rules 0.95 / 0.73 | Stand-in is a Claude agent; the offline rules were tuned on this set |
 | Tube regime call vs CFD (n = 40) | 37/40 agree | Rule designed after seeing the failures; CFD label is a convention |
-| **MoS2 direction-of-change vs 14 literature observations** | **model 1/9 to 3/9, blind no-tool agent 6/9** | **The model does not beat a no-tool baseline** |
-| **MoS2 shape class (n = 14)** | **0.50, the same as always answering "triangle"** | **Not predictive; edge rates are synthetic** |
+| MoS2 direction-of-change vs 14 literature observations | model 1/9 to 3/9, blind no-tool agent 6/9 | The model does not beat a no-tool baseline |
+| MoS2 shape class (n = 14) | 0.50, the same as always answering "triangle" | Not predictive; edge rates are synthetic |
 | CFD surrogates | miss the 5% target everywhere | Too few CFD cases for sharp regime changes |
 
 What the process caught: a 30-60x error in a sourced vapour-pressure constant, a wrong edge orientation in a first edge-energy model, and stale claims in our own interface. Full detail: `docs/status/status_final_oct21.md` and `docs/track_*_results.md`.
@@ -106,7 +114,7 @@ What the process caught: a 30-60x error in a sourced vapour-pressure constant, a
 git clone https://github.com/yeatanir/VesselTwin.git && cd VesselTwin
 python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
 streamlit run streamlit_app.py          # the web app (Home, Workspace, Studio, Evidence)
-make test                               # 400+ tests; also writes cache/harness.json
+make test                               # 425 tests; also writes cache/harness.json
 make demo                               # default case through every stage, all vessels
 ```
 

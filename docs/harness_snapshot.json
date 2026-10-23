@@ -2,49 +2,49 @@
  {
   "test": "tests/test_agent.py::test_loop_calls_tools_logs_and_stops_on_final",
   "outcome": "passed",
-  "duration": 0.0978,
+  "duration": 0.0968,
   "vessel": "llm"
  },
  {
   "test": "tests/test_agent.py::test_schema_violations_bounce_back_and_cost_a_step",
   "outcome": "passed",
-  "duration": 0.0008,
+  "duration": 0.001,
   "vessel": "llm"
  },
  {
   "test": "tests/test_agent.py::test_max_8_steps",
   "outcome": "passed",
-  "duration": 0.0143,
+  "duration": 0.0138,
   "vessel": "llm"
  },
  {
   "test": "tests/test_agent.py::test_unknown_param_and_unknown_run_id_are_errors_not_crashes",
   "outcome": "passed",
-  "duration": 0.0003,
+  "duration": 0.0002,
   "vessel": "llm"
  },
  {
   "test": "tests/test_agent.py::test_lookup_is_cache_only_known_answer",
   "outcome": "passed",
-  "duration": 0.003,
+  "duration": 0.0029,
   "vessel": "llm"
  },
  {
   "test": "tests/test_agent.py::test_test_backend_runs_never_reach_the_dashboard",
   "outcome": "passed",
-  "duration": 0.0005,
+  "duration": 0.0004,
   "vessel": "llm"
  },
  {
   "test": "tests/test_agent.py::test_recorded_run_renders_with_recorded_label",
   "outcome": "passed",
-  "duration": 0.3124,
+  "duration": 0.3082,
   "vessel": "llm"
  },
  {
   "test": "tests/test_ampoule_physics.py::test_single_species_limit_equals_schafer",
   "outcome": "passed",
-  "duration": 0.001,
+  "duration": 0.0009,
   "check": "analytic_limit",
   "vessel": "ampoule"
  },
@@ -58,7 +58,7 @@
  {
   "test": "tests/test_ampoule_physics.py::test_nondilute_goes_to_dilute_and_binary_stefan_matters_when_concentrated",
   "outcome": "passed",
-  "duration": 0.007,
+  "duration": 0.0072,
   "check": "analytic_limit",
   "vessel": "ampoule"
  },
@@ -72,7 +72,7 @@
  {
   "test": "tests/test_ampoule_physics.py::test_agent_and_A_conservation_across_species",
   "outcome": "passed",
-  "duration": 0.0006,
+  "duration": 0.0007,
   "check": "mass_balance",
   "vessel": "ampoule"
  },
@@ -119,13 +119,13 @@
  {
   "test": "tests/test_brief_tab.py::test_brief_tab_renders[ampoule]",
   "outcome": "passed",
-  "duration": 0.2488,
+  "duration": 0.2945,
   "vessel": "core"
  },
  {
   "test": "tests/test_brief_tab.py::test_brief_tab_renders[cvd_tube]",
   "outcome": "passed",
-  "duration": 3.4073,
+  "duration": 3.3792,
   "vessel": "core"
  },
  {
@@ -157,265 +157,310 @@
  {
   "test": "tests/test_core.py::test_empty_case_runs_every_stage[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.0574,
+  "duration": 0.0575,
   "vessel": "core"
  },
  {
   "test": "tests/test_core.py::test_empty_case_runs_every_stage[ampoule]",
   "outcome": "passed",
-  "duration": 0.0018,
+  "duration": 0.0019,
   "vessel": "core"
  },
  {
   "test": "tests/test_core.py::test_empty_case_runs_every_stage[flask]",
   "outcome": "passed",
-  "duration": 0.1189,
+  "duration": 0.1289,
   "vessel": "core"
  },
  {
   "test": "tests/test_core.py::test_empty_case_runs_every_stage[sorbent]",
   "outcome": "passed",
-  "duration": 0.6836,
+  "duration": 0.6895,
   "vessel": "core"
  },
  {
   "test": "tests/test_core.py::test_unknown_param_rejected",
   "outcome": "passed",
-  "duration": 0.0003,
+  "duration": 0.0004,
   "vessel": "core"
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_clone_solve_label[tube]",
+  "outcome": "passed",
+  "duration": 0.007
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_clone_solve_label[ampoule]",
+  "outcome": "passed",
+  "duration": 0.0018
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_clone_solve_label[stirred]",
+  "outcome": "passed",
+  "duration": 0.1164
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_clone_solve_label[bed]",
+  "outcome": "passed",
+  "duration": 0.0015
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_clone_solve_label[photo]",
+  "outcome": "passed",
+  "duration": 0.0082
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_user_default_is_applied_and_original_untouched",
+  "outcome": "passed",
+  "duration": 0.0004
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_bounds_rejected",
+  "outcome": "passed",
+  "duration": 0.0001
+ },
+ {
+  "test": "tests/test_custom_vessel.py::test_stub_executes_and_registers",
+  "outcome": "passed",
+  "duration": 0.0003
  },
  {
   "test": "tests/test_dashboard.py::test_app_loads[cvd_tube]",
   "outcome": "passed",
-  "duration": 5.0647,
+  "duration": 5.0356,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_app_loads[ampoule]",
   "outcome": "passed",
-  "duration": 0.5066,
+  "duration": 0.469,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_app_loads[flask]",
   "outcome": "passed",
-  "duration": 3.4172,
+  "duration": 3.3767,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_app_loads[sorbent]",
   "outcome": "passed",
-  "duration": 22.7565,
+  "duration": 22.5983,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_app_loads[photoreactor]",
   "outcome": "passed",
-  "duration": 0.7468,
+  "duration": 0.7343,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_edit_changes_result",
   "outcome": "passed",
-  "duration": 5.1933,
+  "duration": 5.1751,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_harness_tab_renders",
   "outcome": "passed",
-  "duration": 0.4492,
+  "duration": 0.4436,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_three_dropdowns_and_chemistry_set",
   "outcome": "passed",
-  "duration": 23.8754,
+  "duration": 23.717,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_tier_dropdown[0]",
   "outcome": "passed",
-  "duration": 0.5376,
+  "duration": 0.5351,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_tier_dropdown[1]",
   "outcome": "passed",
-  "duration": 0.5761,
+  "duration": 0.5692,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_tier_dropdown[2]",
   "outcome": "passed",
-  "duration": 0.9819,
+  "duration": 0.918,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[0-cvd_tube]",
   "outcome": "passed",
-  "duration": 0.665,
+  "duration": 0.6621,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[0-ampoule]",
   "outcome": "passed",
-  "duration": 0.5627,
+  "duration": 0.6134,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[0-flask]",
   "outcome": "passed",
-  "duration": 0.5369,
+  "duration": 0.5413,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[0-sorbent]",
   "outcome": "passed",
-  "duration": 0.5715,
+  "duration": 0.5603,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[0-photoreactor]",
   "outcome": "passed",
-  "duration": 0.5974,
+  "duration": 0.5113,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[2-cvd_tube]",
   "outcome": "passed",
-  "duration": 0.8647,
+  "duration": 0.8621,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[2-ampoule]",
   "outcome": "passed",
-  "duration": 0.7851,
+  "duration": 0.7931,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[2-flask]",
   "outcome": "passed",
-  "duration": 0.6016,
+  "duration": 0.5897,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[2-sorbent]",
   "outcome": "passed",
-  "duration": 0.623,
+  "duration": 0.615,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_every_vessel_every_tier_no_exception[2-photoreactor]",
   "outcome": "passed",
-  "duration": 0.5464,
+  "duration": 0.6086,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_mixed_type_column_is_cast_not_crashed",
   "outcome": "passed",
-  "duration": 0.1955,
+  "duration": 0.1985,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s01]",
   "outcome": "passed",
-  "duration": 0.2454,
+  "duration": 0.2536,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s02]",
   "outcome": "passed",
-  "duration": 0.2358,
+  "duration": 0.2294,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s03]",
   "outcome": "passed",
-  "duration": 0.2464,
+  "duration": 0.2543,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s04]",
   "outcome": "passed",
-  "duration": 0.244,
+  "duration": 0.2506,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s05]",
   "outcome": "passed",
-  "duration": 0.2341,
+  "duration": 0.2336,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s06]",
   "outcome": "passed",
-  "duration": 0.239,
+  "duration": 0.2356,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s07]",
   "outcome": "passed",
-  "duration": 0.2341,
+  "duration": 0.2354,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s08]",
   "outcome": "passed",
-  "duration": 0.234,
+  "duration": 0.2319,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s09]",
   "outcome": "passed",
-  "duration": 0.2462,
+  "duration": 0.2468,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s10]",
   "outcome": "passed",
-  "duration": 0.3167,
+  "duration": 0.2471,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s11]",
   "outcome": "passed",
-  "duration": 0.2347,
+  "duration": 0.2349,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s12]",
   "outcome": "passed",
-  "duration": 0.2461,
+  "duration": 0.2325,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s13]",
   "outcome": "passed",
-  "duration": 0.254,
+  "duration": 0.2577,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_trace_tab_every_question[s14]",
   "outcome": "passed",
-  "duration": 0.2459,
+  "duration": 0.2504,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_extras_plots_render_and_photoreactor_has_a_plot",
   "outcome": "passed",
-  "duration": 0.4769,
+  "duration": 0.4786,
   "vessel": "core"
  },
  {
   "test": "tests/test_dashboard.py::test_extras_accepts_track_e_photon_flux_format",
   "outcome": "passed",
-  "duration": 0.0076,
+  "duration": 0.0075,
   "vessel": "core"
+ },
+ {
+  "test": "tests/test_demo_llm.py::test_demo_chat_is_capped_and_keyless_in_session",
+  "outcome": "passed",
+  "duration": 0.1978
  },
  {
   "test": "tests/test_edges.py::test_ribbon_and_triangle_stoichiometry",
   "outcome": "passed",
-  "duration": 0.0026,
+  "duration": 0.0025,
   "check": "stoichiometry",
   "vessel": "atomistic"
  },
@@ -443,14 +488,14 @@
  {
   "test": "tests/test_edges.py::test_mace_ribbon_energy_finite_or_skip",
   "outcome": "passed",
-  "duration": 1.3848,
+  "duration": 1.3637,
   "check": "mlip_smoke",
   "vessel": "atomistic"
  },
  {
   "test": "tests/test_evidence.py::test_evidence_renders",
   "outcome": "passed",
-  "duration": 0.2624,
+  "duration": 0.277,
   "vessel": "core"
  },
  {
@@ -474,7 +519,7 @@
  {
   "test": "tests/test_excerpt_match.py::test_name_alone_or_value_alone_fails",
   "outcome": "passed",
-  "duration": 0.0009,
+  "duration": 0.0013,
   "vessel": "llm"
  },
  {
@@ -492,28 +537,28 @@
  {
   "test": "tests/test_extract.py::test_rules_zero_fabricated_on_bench[syn-0.95]",
   "outcome": "passed",
-  "duration": 0.0229,
+  "duration": 0.0208,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
  {
   "test": "tests/test_extract.py::test_rules_zero_fabricated_on_bench[real-0.9]",
   "outcome": "passed",
-  "duration": 0.0474,
+  "duration": 0.047,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
  {
   "test": "tests/test_extract.py::test_vessel_detection",
   "outcome": "passed",
-  "duration": 0.0004,
+  "duration": 0.0005,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
  {
   "test": "tests/test_extract.py::test_hallucinated_value_rejected",
   "outcome": "passed",
-  "duration": 0.0003,
+  "duration": 0.0002,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
@@ -548,28 +593,28 @@
  {
   "test": "tests/test_extract.py::test_schema_enum_and_no_key",
   "outcome": "passed",
-  "duration": 0.0004,
+  "duration": 0.0003,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
  {
   "test": "tests/test_extract.py::test_extract_and_solve",
   "outcome": "passed",
-  "duration": 0.1925,
+  "duration": 0.188,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
  {
   "test": "tests/test_extract.py::test_units_and_ranges_and_offsets",
   "outcome": "passed",
-  "duration": 0.003,
+  "duration": 0.0029,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
  {
   "test": "tests/test_extract.py::test_replay_backend",
   "outcome": "passed",
-  "duration": 0.0008,
+  "duration": 0.0005,
   "vessel": "llm",
   "check": "extraction_accuracy"
  },
@@ -583,21 +628,21 @@
  {
   "test": "tests/test_flask_physics.py::test_vd_limits_perfect_and_total_segregation",
   "outcome": "passed",
-  "duration": 0.0766,
+  "duration": 0.0785,
   "check": "analytic_limit",
   "vessel": "flask"
  },
  {
   "test": "tests/test_flask_physics.py::test_incorporation_conserves_atoms",
   "outcome": "passed",
-  "duration": 0.0275,
+  "duration": 0.0363,
   "check": "mass_balance",
   "vessel": "flask"
  },
  {
   "test": "tests/test_flask_physics.py::test_selectivity_limits",
   "outcome": "passed",
-  "duration": 0.0925,
+  "duration": 0.0923,
   "check": "analytic_limit",
   "vessel": "flask"
  },
@@ -624,97 +669,97 @@
  {
   "test": "tests/test_flask_physics.py::test_hotspot_hand_calculation",
   "outcome": "passed",
-  "duration": 0.2376,
+  "duration": 0.2385,
   "check": "analytic_limit",
   "vessel": "flask"
  },
  {
   "test": "tests/test_flask_physics.py::test_validity_flags_and_bar_fit",
   "outcome": "passed",
-  "duration": 0.0584,
+  "duration": 0.0582,
   "check": "known_answer",
   "vessel": "flask"
  },
  {
   "test": "tests/test_flask_physics.py::test_verdict_critical_feed_and_knob",
   "outcome": "passed",
-  "duration": 0.0667,
+  "duration": 0.0576,
   "check": "analytic_limit",
   "vessel": "flask"
  },
  {
   "test": "tests/test_flask_physics.py::test_published_trend_anchor_vd_vs_dissipation",
   "outcome": "passed",
-  "duration": 0.1864,
+  "duration": 0.1835,
   "check": "known_answer",
   "vessel": "flask"
  },
  {
   "test": "tests/test_flask_physics.py::test_solve_time_budget",
   "outcome": "passed",
-  "duration": 0.029,
+  "duration": 0.0293,
   "vessel": "flask"
  },
  {
   "test": "tests/test_furnace_view.py::test_tab_renders[furnace-0]",
   "outcome": "passed",
-  "duration": 1.9603,
+  "duration": 1.9453,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_tab_renders[furnace-1]",
   "outcome": "passed",
-  "duration": 0.9294,
+  "duration": 0.9298,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_tab_renders[furnace-2]",
   "outcome": "passed",
-  "duration": 0.9721,
+  "duration": 1.0562,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_tab_renders[legacy-0]",
   "outcome": "passed",
-  "duration": 0.8098,
+  "duration": 0.8064,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_tab_renders[legacy-1]",
   "outcome": "passed",
-  "duration": 1.0397,
+  "duration": 0.93,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_tab_renders[legacy-2]",
   "outcome": "passed",
-  "duration": 0.9577,
+  "duration": 0.9554,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_valid_pasted_profile",
   "outcome": "passed",
-  "duration": 2.0504,
+  "duration": 2.0397,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_invalid_pasted_profile_shows_error",
   "outcome": "passed",
-  "duration": 0.9246,
+  "duration": 0.9101,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
  {
   "test": "tests/test_furnace_view.py::test_other_vessel_message",
   "outcome": "passed",
-  "duration": 0.5701,
+  "duration": 0.5691,
   "vessel": "cvd_tube",
   "check": "furnace_view"
  },
@@ -735,19 +780,19 @@
  {
   "test": "tests/test_home.py::test_all_five_steps[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.2629,
+  "duration": 0.2739,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_all_five_steps[ampoule]",
   "outcome": "passed",
-  "duration": 0.2732,
+  "duration": 0.264,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_all_five_steps[sorbent]",
   "outcome": "passed",
-  "duration": 0.8079,
+  "duration": 0.7798,
   "vessel": "core"
  },
  {
@@ -759,7 +804,7 @@
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[cvd_tube-1]",
   "outcome": "passed",
-  "duration": 0.2137,
+  "duration": 0.2134,
   "vessel": "core"
  },
  {
@@ -771,97 +816,97 @@
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[cvd_tube-3]",
   "outcome": "passed",
-  "duration": 0.2306,
+  "duration": 0.2299,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[cvd_tube-4]",
   "outcome": "passed",
-  "duration": 0.2419,
+  "duration": 0.2391,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[ampoule-1]",
   "outcome": "passed",
-  "duration": 0.2154,
+  "duration": 0.2145,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[ampoule-2]",
   "outcome": "passed",
-  "duration": 0.2241,
+  "duration": 0.2246,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[ampoule-3]",
   "outcome": "passed",
-  "duration": 0.2357,
+  "duration": 0.2257,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[ampoule-4]",
   "outcome": "passed",
-  "duration": 0.233,
+  "duration": 0.2331,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[sorbent-1]",
   "outcome": "passed",
-  "duration": 0.2078,
+  "duration": 0.2137,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[sorbent-2]",
   "outcome": "passed",
-  "duration": 0.2192,
+  "duration": 0.2184,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[sorbent-3]",
   "outcome": "passed",
-  "duration": 0.2258,
+  "duration": 0.2241,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_rendered_captions_within_limit[sorbent-4]",
   "outcome": "passed",
-  "duration": 0.2401,
+  "duration": 0.2268,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_trust_step_uses_trace_labels",
   "outcome": "passed",
-  "duration": 0.2361,
+  "duration": 0.2373,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_setup_label_never_above_evidence[cvd_tube]",
   "outcome": "passed",
-  "duration": 3.6923,
+  "duration": 3.7215,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_setup_label_never_above_evidence[ampoule]",
   "outcome": "passed",
-  "duration": 0.0415,
+  "duration": 0.0413,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_setup_label_never_above_evidence[sorbent]",
   "outcome": "passed",
-  "duration": 64.0565,
+  "duration": 60.1104,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_highlight_marks_stated_spans",
   "outcome": "passed",
-  "duration": 0.8804,
+  "duration": 0.8704,
   "vessel": "core"
  },
  {
   "test": "tests/test_home.py::test_dashboard_tab_order",
   "outcome": "passed",
-  "duration": 0.3466,
+  "duration": 0.3329,
   "vessel": "core"
  },
  {
@@ -873,7 +918,7 @@
  {
   "test": "tests/test_home.py::test_snapshot_matches_text[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.0007,
+  "duration": 0.0006,
   "vessel": "core"
  },
  {
@@ -894,6 +939,16 @@
   "duration": 0.0
  },
  {
+  "test": "tests/test_landing.py::test_footer_and_trust_text",
+  "outcome": "passed",
+  "duration": 0.0
+ },
+ {
+  "test": "tests/test_landing.py::test_icons_distinct_and_hero_has_all_parts",
+  "outcome": "passed",
+  "duration": 0.0001
+ },
+ {
   "test": "tests/test_landing.py::test_five_vessels_and_trust_numbers",
   "outcome": "passed",
   "duration": 0.0002
@@ -901,27 +956,67 @@
  {
   "test": "tests/test_landing.py::test_landing_renders",
   "outcome": "passed",
-  "duration": 0.2087
+  "duration": 0.3112
  },
  {
   "test": "tests/test_landing.py::test_entry_point_and_navigation",
   "outcome": "passed",
-  "duration": 0.2231
+  "duration": 0.2294
+ },
+ {
+  "test": "tests/test_landing.py::test_explore_targets_exist_and_render",
+  "outcome": "passed",
+  "duration": 0.2061
+ },
+ {
+  "test": "tests/test_landing.py::test_copy_has_no_overclaims",
+  "outcome": "passed",
+  "duration": 0.0
+ },
+ {
+  "test": "tests/test_literature.py::test_param_sources_classified",
+  "outcome": "passed",
+  "duration": 0.0005
+ },
+ {
+  "test": "tests/test_literature.py::test_stored_answers_have_question_and_date",
+  "outcome": "passed",
+  "duration": 0.0005
+ },
+ {
+  "test": "tests/test_literature.py::test_ask_edison_uses_literature_job_only",
+  "outcome": "passed",
+  "duration": 0.0001
+ },
+ {
+  "test": "tests/test_literature.py::test_evidence_page_has_literature_and_llm_settings",
+  "outcome": "passed",
+  "duration": 0.2615
+ },
+ {
+  "test": "tests/test_literature.py::test_llm_settings_survive_page_without_widgets",
+  "outcome": "passed",
+  "duration": 0.2057
+ },
+ {
+  "test": "tests/test_literature.py::test_evidence_four_tabs_via_loader_path",
+  "outcome": "passed",
+  "duration": 0.2659
  },
  {
   "test": "tests/test_llm_backends.py::test_openai_request_shape_and_parse",
   "outcome": "passed",
-  "duration": 0.0041
+  "duration": 0.004
  },
  {
   "test": "tests/test_llm_backends.py::test_full_url_and_env",
   "outcome": "passed",
-  "duration": 0.0006
+  "duration": 0.0005
  },
  {
   "test": "tests/test_llm_backends.py::test_anthropic_shape",
   "outcome": "passed",
-  "duration": 0.0006
+  "duration": 0.0005
  },
  {
   "test": "tests/test_llm_backends.py::test_errors_are_readable_and_keyless",
@@ -931,7 +1026,7 @@
  {
   "test": "tests/test_llm_backends.py::test_server_echoed_key_is_scrubbed",
   "outcome": "passed",
-  "duration": 0.0006
+  "duration": 0.0005
  },
  {
   "test": "tests/test_llm_backends.py::test_rules_provider_is_offline_and_default",
@@ -941,17 +1036,17 @@
  {
   "test": "tests/test_llm_backends.py::test_key_never_in_trace",
   "outcome": "passed",
-  "duration": 0.0012
+  "duration": 0.0014
  },
  {
   "test": "tests/test_llm_backends.py::test_extract_llm_backend_span_checked",
   "outcome": "passed",
-  "duration": 0.0014
+  "duration": 0.0012
  },
  {
   "test": "tests/test_llm_backends.py::test_llm_settings_panel_renders",
   "outcome": "passed",
-  "duration": 0.5316
+  "duration": 0.5101
  },
  {
   "test": "tests/test_photoreactor.py::test_inverse_square_point_source",
@@ -963,7 +1058,7 @@
  {
   "test": "tests/test_photoreactor.py::test_optically_thin_rate_linear_in_power_and_concentration",
   "outcome": "passed",
-  "duration": 0.0038,
+  "duration": 0.0037,
   "check": "analytic_limit",
   "vessel": "photoreactor"
  },
@@ -977,61 +1072,61 @@
  {
   "test": "tests/test_photoreactor.py::test_regime_flips_with_stirring_and_thickness",
   "outcome": "passed",
-  "duration": 0.0039,
+  "duration": 0.0037,
   "check": "known_answer",
   "vessel": "photoreactor"
  },
  {
   "test": "tests/test_photoreactor.py::test_ferrioxalate_preset_matches_sourced_numbers",
   "outcome": "passed",
-  "duration": 0.0176,
+  "duration": 0.0172,
   "check": "known_answer",
   "vessel": "photoreactor"
  },
  {
   "test": "tests/test_photoreactor.py::test_extras_sensitivity_and_passport_keys",
   "outcome": "passed",
-  "duration": 0.0542,
+  "duration": 0.0536,
   "vessel": "photoreactor"
  },
  {
   "test": "tests/test_photoreactor.py::test_saenz_collimated_cuvette_slope_within_preregistered_factor",
   "outcome": "passed",
-  "duration": 0.0337,
+  "duration": 0.0336,
   "check": "known_answer",
   "vessel": "photoreactor"
  },
  {
   "test": "tests/test_photoreactor.py::test_saenz_integrating_sphere_cuvette_slope_within_preregistered_factor",
   "outcome": "passed",
-  "duration": 0.1467,
+  "duration": 0.1445,
   "check": "known_answer",
   "vessel": "photoreactor"
  },
  {
   "test": "tests/test_photoreactor.py::test_diffuse_illumination_limits_and_measured_irradiance_mode",
   "outcome": "passed",
-  "duration": 0.0024,
+  "duration": 0.0023,
   "check": "analytic_limit",
   "vessel": "photoreactor"
  },
  {
   "test": "tests/test_photoreactor.py::test_extras_photon_flux_vs_depth_band",
   "outcome": "passed",
-  "duration": 0.0339,
+  "duration": 0.0328,
   "vessel": "photoreactor"
  },
  {
   "test": "tests/test_plotly_figs.py::test_hero[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.0132,
+  "duration": 0.0126,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_hero[ampoule]",
   "outcome": "passed",
-  "duration": 0.0128,
+  "duration": 0.0124,
   "vessel": "core",
   "check": "vessel_view"
  },
@@ -1045,70 +1140,70 @@
  {
   "test": "tests/test_plotly_figs.py::test_hero[sorbent]",
   "outcome": "passed",
-  "duration": 0.0129,
+  "duration": 0.0132,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_hero[photoreactor]",
   "outcome": "passed",
-  "duration": 0.006,
+  "duration": 0.0058,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_cfd_field[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.012,
+  "duration": 0.0108,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_cfd_field[ampoule]",
   "outcome": "passed",
-  "duration": 0.0131,
+  "duration": 0.0103,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_cfd_field[flask]",
   "outcome": "passed",
-  "duration": 0.1236,
+  "duration": 0.1172,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_cfd_field[sorbent]",
   "outcome": "passed",
-  "duration": 0.0008,
+  "duration": 0.0007,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_cfd_field[photoreactor]",
   "outcome": "passed",
-  "duration": 0.0006,
+  "duration": 0.0005,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_cfd_case_select",
   "outcome": "passed",
-  "duration": 0.0835,
+  "duration": 0.0911,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_profiles[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.116,
+  "duration": 0.115,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_profiles[ampoule]",
   "outcome": "passed",
-  "duration": 0.0123,
+  "duration": 0.0119,
   "vessel": "core",
   "check": "vessel_view"
  },
@@ -1122,35 +1217,35 @@
  {
   "test": "tests/test_plotly_figs.py::test_profiles[sorbent]",
   "outcome": "passed",
-  "duration": 0.023,
+  "duration": 0.0222,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_profiles[photoreactor]",
   "outcome": "passed",
-  "duration": 0.0064,
+  "duration": 0.0062,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_knob_bars",
   "outcome": "passed",
-  "duration": 0.1206,
+  "duration": 0.0047,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_furnace_figs",
   "outcome": "passed",
-  "duration": 0.6697,
+  "duration": 0.6485,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_plotly_figs.py::test_apply_template",
   "outcome": "passed",
-  "duration": 0.0021,
+  "duration": 0.0018,
   "vessel": "core",
   "check": "vessel_view"
  },
@@ -1163,7 +1258,7 @@
  {
   "test": "tests/test_ranking.py::test_every_vessel_has_brief[ampoule]",
   "outcome": "passed",
-  "duration": 0.0002,
+  "duration": 0.0001,
   "vessel": "core"
  },
  {
@@ -1211,34 +1306,34 @@
  {
   "test": "tests/test_ranking.py::test_brief_deterministic",
   "outcome": "passed",
-  "duration": 0.0351,
+  "duration": 0.0339,
   "vessel": "core"
  },
  {
   "test": "tests/test_ranking.py::test_top_ranked_beats_random[cvd_tube]",
   "outcome": "passed",
-  "duration": 5.9963,
+  "duration": 5.6773,
   "check": "ranking_benefit",
   "vessel": "core"
  },
  {
   "test": "tests/test_ranking.py::test_top_ranked_beats_random[ampoule]",
   "outcome": "passed",
-  "duration": 0.0722,
+  "duration": 0.0478,
   "check": "ranking_benefit",
   "vessel": "core"
  },
  {
   "test": "tests/test_ranking.py::test_top_ranked_beats_random[flask]",
   "outcome": "passed",
-  "duration": 2.2585,
+  "duration": 1.8268,
   "check": "ranking_benefit",
   "vessel": "core"
  },
  {
   "test": "tests/test_ranking.py::test_top_ranked_beats_random[sorbent]",
   "outcome": "passed",
-  "duration": 23.3426,
+  "duration": 21.2451,
   "check": "ranking_benefit",
   "vessel": "core"
  },
@@ -1251,7 +1346,7 @@
  {
   "test": "tests/test_registry.py::test_preset_meta_ignored",
   "outcome": "passed",
-  "duration": 0.5183,
+  "duration": 0.5168,
   "vessel": "core"
  },
  {
@@ -1272,82 +1367,82 @@
  {
   "test": "tests/test_shape_bench.py::test_stored_inputs_and_predictions_reproduce",
   "outcome": "passed",
-  "duration": 0.6038
+  "duration": 0.601
  },
  {
   "test": "tests/test_sorbent_physics.py::test_single_component_shock_time[He]",
   "outcome": "passed",
-  "duration": 0.8401,
+  "duration": 0.8324,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_single_component_shock_time[N2]",
   "outcome": "passed",
-  "duration": 1.1621,
+  "duration": 1.1483,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_multicomponent_reduces_to_single_component",
   "outcome": "passed",
-  "duration": 1.3962,
+  "duration": 1.3952,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_total_mass_balance_not_an_identity[kw0]",
   "outcome": "passed",
-  "duration": 0.2618,
+  "duration": 0.2649,
   "check": "mass_balance",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_total_mass_balance_not_an_identity[kw1]",
   "outcome": "passed",
-  "duration": 0.3787,
+  "duration": 0.3678,
   "check": "mass_balance",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_total_mass_balance_not_an_identity[kw2]",
   "outcome": "passed",
-  "duration": 1.5153,
+  "duration": 1.4947,
   "check": "mass_balance",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_energy_balance_adiabatic",
   "outcome": "passed",
-  "duration": 0.9439,
+  "duration": 0.7528,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_grid_convergence",
   "outcome": "passed",
-  "duration": 1.3261,
+  "duration": 1.1827,
   "check": "mesh_convergence",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_humidity_off_recovers_dry_and_water_matters",
   "outcome": "passed",
-  "duration": 3.7776,
+  "duration": 3.1754,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_ergun_feedback_matches_analytic_compressible_profile",
   "outcome": "passed",
-  "duration": 0.0638,
+  "duration": 0.047,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_axial_dispersion_correlation_and_effect",
   "outcome": "passed",
-  "duration": 2.7504,
+  "duration": 2.5408,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
@@ -1361,34 +1456,34 @@
  {
   "test": "tests/test_sorbent_physics.py::test_regeneration_stage_cycle_capacity",
   "outcome": "passed",
-  "duration": 0.6018,
+  "duration": 0.587,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_roy_moharir_generic_ldf_langmuir_cross_check",
   "outcome": "passed",
-  "duration": 1.5103,
+  "duration": 1.3536,
   "check": "known_answer",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_published_isotherm_loadings_and_breakthrough_times",
   "outcome": "passed",
-  "duration": 1.3461,
+  "duration": 1.2774,
   "check": "known_answer",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_presets_match_data_and_closure_names",
   "outcome": "passed",
-  "duration": 0.3473,
+  "duration": 0.3448,
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_nominal_speed_and_guard",
   "outcome": "passed",
-  "duration": 0.2433,
+  "duration": 0.2142,
   "vessel": "sorbent"
  },
  {
@@ -1401,42 +1496,57 @@
  {
   "test": "tests/test_sorbent_physics.py::test_13X_iast_competition_is_worse_than_edsl",
   "outcome": "passed",
-  "duration": 0.0025,
+  "duration": 0.0023,
   "check": "known_answer",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_calf20_breakthrough_unchanged_by_track_e",
   "outcome": "passed",
-  "duration": 1.1216,
+  "duration": 0.9473,
   "check": "known_answer",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_sorbent_physics.py::test_13X_wall_heat_transfer_fit_on_peak_temperature_holdout",
   "outcome": "skipped",
-  "duration": 0.4085,
+  "duration": 0.3336,
   "check": "known_answer",
   "vessel": "sorbent"
  },
  {
+  "test": "tests/test_studio.py::test_replay_without_provider",
+  "outcome": "passed",
+  "duration": 0.2185
+ },
+ {
+  "test": "tests/test_studio.py::test_live_with_fake_provider",
+  "outcome": "passed",
+  "duration": 0.5296
+ },
+ {
+  "test": "tests/test_studio.py::test_add_vessel_wizard",
+  "outcome": "passed",
+  "duration": 0.2354
+ },
+ {
   "test": "tests/test_surrogate_ampoule.py::test_sweep_json_schema",
   "outcome": "passed",
-  "duration": 0.0003,
+  "duration": 0.0004,
   "check": "cfd_sweep_schema",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_surrogate_ampoule.py::test_surrogate_reproduces_stored_heldout_error",
   "outcome": "passed",
-  "duration": 0.0113,
+  "duration": 0.0114,
   "check": "surrogate_heldout",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_surrogate_ampoule.py::test_in_range_flag_and_output",
   "outcome": "passed",
-  "duration": 0.0034,
+  "duration": 0.0028,
   "check": "surrogate_range",
   "vessel": "ampoule"
  },
@@ -1457,14 +1567,14 @@
  {
   "test": "tests/test_surrogate_tube.py::test_tube_boat_bc_is_mesh_consistent",
   "outcome": "passed",
-  "duration": 0.0081,
+  "duration": 0.0087,
   "check": "case_consistency",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_surrogate_tube.py::test_surrogate_fit_predict_uncertainty_range",
   "outcome": "passed",
-  "duration": 0.2286,
+  "duration": 0.2039,
   "check": "surrogate",
   "vessel": "cvd_tube"
  },
@@ -1491,35 +1601,35 @@
  {
   "test": "tests/test_tier2.py::test_ampoule_gravity_and_temperatures[0.0]",
   "outcome": "passed",
-  "duration": 0.0058,
+  "duration": 0.0056,
   "check": "case_consistency",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_tier2.py::test_ampoule_gravity_and_temperatures[30.0]",
   "outcome": "passed",
-  "duration": 0.0058,
+  "duration": 0.0061,
   "check": "case_consistency",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_tier2.py::test_ampoule_gravity_and_temperatures[-45.0]",
   "outcome": "passed",
-  "duration": 0.0059,
+  "duration": 0.0054,
   "check": "case_consistency",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_tier2.py::test_ampoule_gravity_and_temperatures[90.0]",
   "outcome": "passed",
-  "duration": 0.0045,
+  "duration": 0.004,
   "check": "case_consistency",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_tier2.py::test_tube_parser_on_fake_fixture",
   "outcome": "passed",
-  "duration": 0.0007,
+  "duration": 0.0006,
   "check": "parser",
   "vessel": "cvd_tube"
  },
@@ -1533,7 +1643,7 @@
  {
   "test": "tests/test_tier2_flask.py::test_flask_case_follows_params",
   "outcome": "passed",
-  "duration": 0.0075,
+  "duration": 0.007,
   "check": "case_consistency",
   "vessel": "flask"
  },
@@ -1547,14 +1657,14 @@
  {
   "test": "tests/test_tier2_flask.py::test_flask_reachable_through_tier2_openfoam",
   "outcome": "passed",
-  "duration": 0.0022,
+  "duration": 0.0021,
   "check": "case_consistency",
   "vessel": "flask"
  },
  {
   "test": "tests/test_trace.py::test_trace_schema_and_labels_never_exceed_evidence",
   "outcome": "passed",
-  "duration": 6.3329,
+  "duration": 5.5122,
   "vessel": "llm"
  },
  {
@@ -1565,27 +1675,27 @@
  {
   "test": "tests/test_trace.py::test_sign_flip_banner_fires_when_condition_holds",
   "outcome": "passed",
-  "duration": 0.9147
+  "duration": 0.85
  },
  {
   "test": "tests/test_trace.py::test_sign_flip_banner_silent_on_stored_data",
   "outcome": "passed",
-  "duration": 0.002
+  "duration": 0.0018
  },
  {
   "test": "tests/test_trace.py::test_every_excerpt_carries_support_label",
   "outcome": "passed",
-  "duration": 0.0465
+  "duration": 0.0449
  },
  {
   "test": "tests/test_track_a_growth.py::test_infinite_inventory_recovers_old_time",
   "outcome": "passed",
-  "duration": 0.0017
+  "duration": 0.0016
  },
  {
   "test": "tests/test_track_a_growth.py::test_depletion_time_linear_in_mass_and_caps_supply",
   "outcome": "passed",
-  "duration": 0.0046
+  "duration": 0.0044
  },
  {
   "test": "tests/test_track_a_growth.py::test_gap_limits",
@@ -1605,7 +1715,7 @@
  {
   "test": "tests/test_track_a_growth.py::test_call_rule_known_answers",
   "outcome": "passed",
-  "duration": 0.0007
+  "duration": 0.0006
  },
  {
   "test": "tests/test_track_i.py::test_liquid_continuous_at_melting_and_solid_unchanged",
@@ -1615,17 +1725,17 @@
  {
   "test": "tests/test_track_i.py::test_liquid_pinned_to_1atm_at_Tb_and_monotonic",
   "outcome": "passed",
-  "duration": 0.0011
+  "duration": 0.001
  },
  {
   "test": "tests/test_track_i.py::test_liquid_below_unphysical_solid_extrapolation",
   "outcome": "passed",
-  "duration": 0.0001
+  "duration": 0.0
  },
  {
   "test": "tests/test_track_i.py::test_bfac_scaling_and_sigma_scoped",
   "outcome": "passed",
-  "duration": 0.0001
+  "duration": 0.0
  },
  {
   "test": "tests/test_track_i.py::test_momeni_si_equations_as_printed",
@@ -1640,32 +1750,32 @@
  {
   "test": "tests/test_track_i.py::test_edge_model_option_and_default_unchanged",
   "outcome": "passed",
-  "duration": 0.0007
+  "duration": 0.0006
  },
  {
   "test": "tests/test_track_k.py::test_no_condensation_returns_supply",
   "outcome": "passed",
-  "duration": 0.0017
+  "duration": 0.0015
  },
  {
   "test": "tests/test_track_k.py::test_mass_balance",
   "outcome": "passed",
-  "duration": 0.0017
+  "duration": 0.0016
  },
  {
   "test": "tests/test_track_k.py::test_flux_nondecreasing_in_boat_T",
   "outcome": "passed",
-  "duration": 0.0149
+  "duration": 0.0139
  },
  {
   "test": "tests/test_track_k.py::test_flux_responds_near_boat",
   "outcome": "passed",
-  "duration": 0.0085
+  "duration": 0.008
  },
  {
   "test": "tests/test_track_k.py::test_documented_saturation_far_from_boat",
   "outcome": "passed",
-  "duration": 0.0064
+  "duration": 0.0063
  },
  {
   "test": "tests/test_track_l.py::test_quotes_short_and_present",
@@ -1685,7 +1795,7 @@
  {
   "test": "tests/test_track_l.py::test_tied_parameter_follows_sweep",
   "outcome": "passed",
-  "duration": 0.7598
+  "duration": 0.7015
  },
  {
   "test": "tests/test_track_l.py::test_far_substrate_note",
@@ -1695,62 +1805,62 @@
  {
   "test": "tests/test_track_m.py::test_default_reproduces_stored_results_exactly[r0]",
   "outcome": "passed",
-  "duration": 0.0052
+  "duration": 0.0041
  },
  {
   "test": "tests/test_track_m.py::test_default_reproduces_stored_results_exactly[r1]",
   "outcome": "passed",
-  "duration": 0.0053
+  "duration": 0.0042
  },
  {
   "test": "tests/test_track_m.py::test_default_reproduces_stored_results_exactly[r2]",
   "outcome": "passed",
-  "duration": 0.0053
+  "duration": 0.0041
  },
  {
   "test": "tests/test_track_m.py::test_default_reproduces_stored_results_exactly[r3]",
   "outcome": "passed",
-  "duration": 0.0048
+  "duration": 0.0041
  },
  {
   "test": "tests/test_track_m.py::test_series_limits",
   "outcome": "passed",
-  "duration": 0.0001
+  "duration": 0.0
  },
  {
   "test": "tests/test_track_m.py::test_k_rxn_to_infinity_is_mass_transfer_limited",
   "outcome": "passed",
-  "duration": 0.0077
+  "duration": 0.0122
  },
  {
   "test": "tests/test_track_m.py::test_k_rxn_to_zero_gives_zero_flux",
   "outcome": "passed",
-  "duration": 0.0085
+  "duration": 0.0092
  },
  {
   "test": "tests/test_track_m.py::test_hot_substrate_reactive_nonzero_condensation_zero",
   "outcome": "passed",
-  "duration": 0.0039
+  "duration": 0.0033
  },
  {
   "test": "tests/test_track_m.py::test_flux_monotone_in_k_rxn_and_bounded_by_mass_transfer",
   "outcome": "passed",
-  "duration": 0.0154
+  "duration": 0.0125
  },
  {
   "test": "tests/test_track_m.py::test_mass_balance_all_cells",
   "outcome": "passed",
-  "duration": 0.0723
+  "duration": 0.0586
  },
  {
   "test": "tests/test_track_m.py::test_wall_variants_order_and_limits",
   "outcome": "passed",
-  "duration": 0.0444
+  "duration": 0.0353
  },
  {
   "test": "tests/test_track_m.py::test_reflecting_wall_restores_boat_temperature_response_for_reactive_substrate",
   "outcome": "passed",
-  "duration": 0.004
+  "duration": 0.0036
  },
  {
   "test": "tests/test_track_m.py::test_gap_model_reactive_limit",
@@ -1765,7 +1875,7 @@
  {
   "test": "tests/test_track_n.py::test_legacy_default_reproduces_stored_reference_bit_for_bit",
   "outcome": "passed",
-  "duration": 0.1058
+  "duration": 0.1048
  },
  {
   "test": "tests/test_track_n.py::test_thermal_model_default_is_legacy_and_adds_no_mc_sigma",
@@ -1780,27 +1890,27 @@
  {
   "test": "tests/test_track_n.py::test_expansion_factor_exact",
   "outcome": "passed",
-  "duration": 0.0257
+  "duration": 0.0264
  },
  {
   "test": "tests/test_track_n.py::test_uniform_wall_gives_uniform_gas_far_downstream",
   "outcome": "passed",
-  "duration": 0.1811
+  "duration": 0.1734
  },
  {
   "test": "tests/test_track_n.py::test_zero_flow_limit_gas_follows_wall",
   "outcome": "passed",
-  "duration": 0.0853
+  "duration": 0.0817
  },
  {
   "test": "tests/test_track_n.py::test_energy_balance_closes",
   "outcome": "passed",
-  "duration": 0.5714
+  "duration": 0.438
  },
  {
   "test": "tests/test_track_n.py::test_fully_developed_nusselt_in_2d_solver",
   "outcome": "passed",
-  "duration": 0.0963
+  "duration": 0.0859
  },
  {
   "test": "tests/test_track_n.py::test_band_fraction_planck",
@@ -1810,17 +1920,17 @@
  {
   "test": "tests/test_track_n.py::test_body_in_isothermal_enclosure_takes_the_enclosure_temperature",
   "outcome": "passed",
-  "duration": 0.0252
+  "duration": 0.0232
  },
  {
   "test": "tests/test_track_n.py::test_nir_window_heats_a_body_above_the_quartz_when_the_element_is_hotter",
   "outcome": "passed",
-  "duration": 0.0081
+  "duration": 0.0076
  },
  {
   "test": "tests/test_track_n.py::test_quartz_network_limits",
   "outcome": "passed",
-  "duration": 0.7245
+  "duration": 0.5858
  },
  {
   "test": "tests/test_track_n.py::test_table_profile_and_zones",
@@ -1835,107 +1945,107 @@
  {
   "test": "tests/test_track_n.py::test_profile_schema_finite_and_complete",
   "outcome": "passed",
-  "duration": 0.8365
+  "duration": 0.7449
  },
  {
   "test": "tests/test_track_n.py::test_centreline_lags_the_mean_when_heating_and_leads_when_cooling",
   "outcome": "passed",
-  "duration": 0.5207
+  "duration": 0.4532
  },
  {
   "test": "tests/test_track_n.py::test_furnace_switch_runs_through_solve_and_conserves_mass",
   "outcome": "passed",
-  "duration": 0.0368
+  "duration": 0.024
  },
  {
   "test": "tests/test_track_n.py::test_computed_boat_is_close_to_local_quartz_at_the_plateau",
   "outcome": "passed",
-  "duration": 0.0149
+  "duration": 0.0102
  },
  {
   "test": "tests/test_track_n.py::test_legacy_gas_helper_matches_the_march",
   "outcome": "passed",
-  "duration": 0.0024
+  "duration": 0.0016
  },
  {
   "test": "tests/test_track_n.py::test_cfd_extract_is_complete_and_gravity_free",
   "outcome": "passed",
-  "duration": 0.0119
+  "duration": 0.0077
  },
  {
   "test": "tests/test_tube_physics.py::test_buoyancy_off_recovers_forced_convection",
   "outcome": "passed",
-  "duration": 0.0117,
+  "duration": 0.0082,
   "check": "analytic_limit",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_gas_temperature_lag_limits",
   "outcome": "passed",
-  "duration": 0.0123,
+  "duration": 0.0096,
   "check": "analytic_limit",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_stefan_factor_limits",
   "outcome": "passed",
-  "duration": 0.0073,
+  "duration": 0.0051,
   "check": "analytic_limit",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_growth_size_linear_in_time_and_hexagon_area",
   "outcome": "passed",
-  "duration": 0.0004,
+  "duration": 0.0001,
   "check": "analytic_limit",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_isothermal_deposition_matches_closed_form",
   "outcome": "passed",
-  "duration": 0.0044,
+  "duration": 0.0036,
   "check": "mass_balance",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_deposited_moles_match_independent_flux_integral",
   "outcome": "passed",
-  "duration": 0.0102,
+  "duration": 0.008,
   "check": "mass_balance",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_march_mesh_convergence",
   "outcome": "passed",
-  "duration": 0.0165,
+  "duration": 0.0113,
   "check": "mesh_convergence",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_sourced_constants_sanity",
   "outcome": "passed",
-  "duration": 0.0005,
+  "duration": 0.0002,
   "check": "known_answer",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_substrate_geometry_temperature_carrier_and_pressure",
   "outcome": "passed",
-  "duration": 0.0174,
+  "duration": 0.012,
   "check": "analytic_limit",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_tube_physics.py::test_solve_time_budget",
   "outcome": "passed",
-  "duration": 0.0182,
+  "duration": 0.0147,
   "check": "speed",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_verification_b.py::test_f_variant_duct_reproduces_shipped[-90]",
   "outcome": "passed",
-  "duration": 0.0006,
+  "duration": 0.0005,
   "check": "analytic_limit",
   "vessel": "ampoule"
  },
@@ -1949,7 +2059,7 @@
  {
   "test": "tests/test_verification_b.py::test_f_variant_duct_reproduces_shipped[0]",
   "outcome": "passed",
-  "duration": 0.0006,
+  "duration": 0.0007,
   "check": "analytic_limit",
   "vessel": "ampoule"
  },
@@ -1963,152 +2073,152 @@
  {
   "test": "tests/test_verification_b.py::test_f_variant_duct_reproduces_shipped[90]",
   "outcome": "passed",
-  "duration": 0.0006,
+  "duration": 0.0005,
   "check": "analytic_limit",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_verification_b.py::test_tube_da_eff_limits",
   "outcome": "passed",
-  "duration": 0.0004,
+  "duration": 0.0003,
   "check": "analytic_limit",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_verification_b.py::test_gci_nasa_worked_example",
   "outcome": "passed",
-  "duration": 0.0005,
+  "duration": 0.0004,
   "check": "known_answer"
  },
  {
   "test": "tests/test_verification_b.py::test_gci_exact_second_order_and_flags",
   "outcome": "passed",
-  "duration": 0.0001,
+  "duration": 0.0,
   "check": "analytic_limit"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[cvd_tube-0]",
   "outcome": "passed",
-  "duration": 0.776,
+  "duration": 0.6662,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[cvd_tube-1]",
   "outcome": "passed",
-  "duration": 1.072,
+  "duration": 0.7197,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[cvd_tube-2]",
   "outcome": "passed",
-  "duration": 1.0962,
+  "duration": 0.739,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[ampoule-0]",
   "outcome": "passed",
-  "duration": 0.7546,
+  "duration": 0.5714,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[ampoule-1]",
   "outcome": "passed",
-  "duration": 0.9015,
+  "duration": 0.5903,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[ampoule-2]",
   "outcome": "passed",
-  "duration": 0.8123,
+  "duration": 0.6132,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[flask-0]",
   "outcome": "passed",
-  "duration": 0.7683,
+  "duration": 0.5314,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[flask-1]",
   "outcome": "passed",
-  "duration": 0.7473,
+  "duration": 0.6935,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[flask-2]",
   "outcome": "passed",
-  "duration": 0.8412,
+  "duration": 0.5984,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[sorbent-0]",
   "outcome": "passed",
-  "duration": 0.9935,
+  "duration": 0.5631,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[sorbent-1]",
   "outcome": "passed",
-  "duration": 0.7622,
+  "duration": 0.6323,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[sorbent-2]",
   "outcome": "passed",
-  "duration": 0.9189,
+  "duration": 0.6363,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[photoreactor-0]",
   "outcome": "passed",
-  "duration": 0.7196,
+  "duration": 0.5376,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[photoreactor-1]",
   "outcome": "passed",
-  "duration": 0.6458,
+  "duration": 0.5437,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_vessel_view_tab[photoreactor-2]",
   "outcome": "passed",
-  "duration": 0.5779,
+  "duration": 0.5579,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_cfd_labels_present_at_tier2",
   "outcome": "passed",
-  "duration": 0.7817,
+  "duration": 0.7326,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_no_cfd_for_sorbent_says_so",
   "outcome": "passed",
-  "duration": 0.6484,
+  "duration": 0.627,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_field_cache_loads[ampoule_tilt0_D15]",
   "outcome": "passed",
-  "duration": 0.0022,
+  "duration": 0.0021,
   "vessel": "core",
   "check": "vessel_view"
  },
@@ -2122,21 +2232,21 @@
  {
   "test": "tests/test_vessel_view.py::test_field_cache_loads[ampoule_tilt90_D40]",
   "outcome": "passed",
-  "duration": 0.0024,
+  "duration": 0.0021,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_field_cache_loads[flask_w400_horizontal]",
   "outcome": "passed",
-  "duration": 0.0019,
+  "duration": 0.0018,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_field_cache_loads[flask_w400_vertical]",
   "outcome": "passed",
-  "duration": 0.002,
+  "duration": 0.0021,
   "vessel": "core",
   "check": "vessel_view"
  },
@@ -2150,95 +2260,95 @@
  {
   "test": "tests/test_vessel_view.py::test_hero_function[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.3344,
+  "duration": 0.3259,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_hero_function[ampoule]",
   "outcome": "passed",
-  "duration": 0.2198,
+  "duration": 0.2151,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_hero_function[flask]",
   "outcome": "passed",
-  "duration": 0.482,
+  "duration": 0.4666,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_hero_function[sorbent]",
   "outcome": "passed",
-  "duration": 0.9212,
+  "duration": 0.9038,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessel_view.py::test_hero_function[photoreactor]",
   "outcome": "passed",
-  "duration": 0.2859,
+  "duration": 0.2755,
   "vessel": "core",
   "check": "vessel_view"
  },
  {
   "test": "tests/test_vessels.py::test_tube_mass_balance_and_trend",
   "outcome": "passed",
-  "duration": 0.0045,
+  "duration": 0.0042,
   "check": "mass_balance",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_vessels.py::test_tube_no_condensation_limit_and_position_knob",
   "outcome": "passed",
-  "duration": 0.0042,
+  "duration": 0.0039,
   "check": "analytic_limit",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_vessels.py::test_ampoule_schafer_scaling",
   "outcome": "passed",
-  "duration": 0.0006,
+  "duration": 0.0004,
   "check": "analytic_limit",
   "vessel": "ampoule"
  },
  {
   "test": "tests/test_vessels.py::test_flask_mixing_scaling_and_vd_trend",
   "outcome": "passed",
-  "duration": 0.1246,
+  "duration": 0.1173,
   "check": "known_answer",
   "vessel": "flask"
  },
  {
   "test": "tests/test_vessels.py::test_sorbent_shock_time_isothermal",
   "outcome": "passed",
-  "duration": 0.5013,
+  "duration": 0.4911,
   "check": "analytic_limit",
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_vessels.py::test_closure_overrides_isotherm",
   "outcome": "passed",
-  "duration": 0.3928,
+  "duration": 0.3694,
   "vessel": "sorbent"
  },
  {
   "test": "tests/test_vessels.py::test_api_editable_params_contract",
   "outcome": "passed",
-  "duration": 0.2491,
+  "duration": 0.2349,
   "vessel": "core"
  },
  {
   "test": "tests/test_vessels.py::test_spec_units_converted_to_canonical",
   "outcome": "passed",
-  "duration": 0.0639,
+  "duration": 0.0587,
   "vessel": "llm"
  },
  {
   "test": "tests/test_vessels.py::test_api_returns_shape_map_for_tube",
   "outcome": "passed",
-  "duration": 0.1606,
+  "duration": 0.1239,
   "vessel": "cvd_tube"
  },
  {
@@ -2249,132 +2359,172 @@
  {
   "test": "tests/test_workspace.py::test_controls_map_to_paramdefs[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.0166
+  "duration": 0.0161
  },
  {
   "test": "tests/test_workspace.py::test_controls_map_to_paramdefs[ampoule]",
   "outcome": "passed",
-  "duration": 0.0038
+  "duration": 0.0041
  },
  {
   "test": "tests/test_workspace.py::test_controls_map_to_paramdefs[flask]",
   "outcome": "passed",
-  "duration": 0.1953
+  "duration": 0.1797
  },
  {
   "test": "tests/test_workspace.py::test_controls_map_to_paramdefs[sorbent]",
   "outcome": "passed",
-  "duration": 0.003
+  "duration": 0.0027
  },
  {
   "test": "tests/test_workspace.py::test_controls_map_to_paramdefs[photoreactor]",
   "outcome": "passed",
-  "duration": 0.0164
+  "duration": 0.0147
  },
  {
   "test": "tests/test_workspace.py::test_each_key_control_changes_an_output[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.2518
+  "duration": 0.243
  },
  {
   "test": "tests/test_workspace.py::test_each_key_control_changes_an_output[ampoule]",
   "outcome": "passed",
-  "duration": 0.0287
+  "duration": 0.0286
  },
  {
   "test": "tests/test_workspace.py::test_each_key_control_changes_an_output[flask]",
   "outcome": "passed",
-  "duration": 4.3127
+  "duration": 4.2615
  },
  {
   "test": "tests/test_workspace.py::test_each_key_control_changes_an_output[sorbent]",
   "outcome": "passed",
-  "duration": 13.1537
+  "duration": 13.0879
  },
  {
   "test": "tests/test_workspace.py::test_each_key_control_changes_an_output[photoreactor]",
   "outcome": "passed",
-  "duration": 0.2013
+  "duration": 0.2164
  },
  {
   "test": "tests/test_workspace.py::test_presets_valid_and_load[cvd_tube]",
   "outcome": "passed",
-  "duration": 0.0253
+  "duration": 0.0266
  },
  {
   "test": "tests/test_workspace.py::test_presets_valid_and_load[ampoule]",
   "outcome": "passed",
-  "duration": 0.0052
+  "duration": 0.0049
  },
  {
   "test": "tests/test_workspace.py::test_presets_valid_and_load[flask]",
   "outcome": "passed",
-  "duration": 0.3344
+  "duration": 0.3221
  },
  {
   "test": "tests/test_workspace.py::test_presets_valid_and_load[sorbent]",
   "outcome": "passed",
-  "duration": 1.2326
+  "duration": 1.2651
  },
  {
   "test": "tests/test_workspace.py::test_presets_valid_and_load[photoreactor]",
   "outcome": "passed",
-  "duration": 0.021
+  "duration": 0.0203
  },
  {
-  "test": "tests/test_workspace.py::test_page_renders[Tier 1 (live)-cvd_tube]",
+  "test": "tests/test_workspace.py::test_page_renders[Live model-cvd_tube]",
   "outcome": "passed",
-  "duration": 1.2297
+  "duration": 1.2993
  },
  {
-  "test": "tests/test_workspace.py::test_page_renders[Tier 1 (live)-ampoule]",
+  "test": "tests/test_workspace.py::test_page_renders[Live model-ampoule]",
   "outcome": "passed",
-  "duration": 0.2813
+  "duration": 0.3157
  },
  {
-  "test": "tests/test_workspace.py::test_page_renders[Tier 1 (live)-flask]",
+  "test": "tests/test_workspace.py::test_page_renders[Live model-flask]",
   "outcome": "passed",
-  "duration": 1.7492
+  "duration": 1.7897
  },
  {
-  "test": "tests/test_workspace.py::test_page_renders[Tier 1 (live)-sorbent]",
+  "test": "tests/test_workspace.py::test_page_renders[Live model-sorbent]",
   "outcome": "passed",
-  "duration": 0.8839
+  "duration": 0.8595
  },
  {
-  "test": "tests/test_workspace.py::test_page_renders[Tier 1 (live)-photoreactor]",
+  "test": "tests/test_workspace.py::test_page_renders[Live model-photoreactor]",
   "outcome": "passed",
-  "duration": 0.5714
+  "duration": 0.4463
  },
  {
   "test": "tests/test_workspace.py::test_page_renders[Stored CFD-cvd_tube]",
   "outcome": "passed",
-  "duration": 0.475
+  "duration": 0.6079
  },
  {
   "test": "tests/test_workspace.py::test_page_renders[Stored CFD-ampoule]",
   "outcome": "passed",
-  "duration": 0.281
+  "duration": 0.2848
  },
  {
   "test": "tests/test_workspace.py::test_page_renders[Stored CFD-flask]",
   "outcome": "passed",
-  "duration": 0.2493
+  "duration": 0.2585
  },
  {
   "test": "tests/test_workspace.py::test_page_renders[Stored CFD-sorbent]",
   "outcome": "passed",
-  "duration": 0.2894
+  "duration": 0.297
  },
  {
   "test": "tests/test_workspace.py::test_page_renders[Stored CFD-photoreactor]",
   "outcome": "passed",
-  "duration": 0.2552
+  "duration": 0.2542
  },
  {
   "test": "tests/test_workspace.py::test_widget_changes_results_and_preset_sets_controls",
   "outcome": "passed",
-  "duration": 0.6286
+  "duration": 0.472
+ },
+ {
+  "test": "tests/test_workspace.py::test_page_loads_like_streamlit_app_loader[cvd_tube]",
+  "outcome": "passed",
+  "duration": 0.3474
+ },
+ {
+  "test": "tests/test_workspace.py::test_page_loads_like_streamlit_app_loader[ampoule]",
+  "outcome": "passed",
+  "duration": 0.2392
+ },
+ {
+  "test": "tests/test_workspace.py::test_page_loads_like_streamlit_app_loader[flask]",
+  "outcome": "passed",
+  "duration": 0.2304
+ },
+ {
+  "test": "tests/test_workspace.py::test_page_loads_like_streamlit_app_loader[sorbent]",
+  "outcome": "passed",
+  "duration": 0.2495
+ },
+ {
+  "test": "tests/test_workspace.py::test_page_loads_like_streamlit_app_loader[photoreactor]",
+  "outcome": "passed",
+  "duration": 0.2244
+ },
+ {
+  "test": "tests/test_workspace.py::test_picker_click_switches_vessel_and_all_five_render",
+  "outcome": "passed",
+  "duration": 0.6311
+ },
+ {
+  "test": "tests/test_workspace.py::test_reset_dot_restores_preset_value",
+  "outcome": "passed",
+  "duration": 0.2927
+ },
+ {
+  "test": "tests/test_workspace.py::test_paste_reads_offline_and_fills_controls",
+  "outcome": "passed",
+  "duration": 4.34
  },
  {
   "test": "tests/test_wulff.py::test_wulff_limits_and_monotone",
@@ -2400,14 +2550,14 @@
  {
   "test": "tests/test_wulff.py::test_shape_map_responds_to_sulfur_boat_and_knobs",
   "outcome": "passed",
-  "duration": 0.0273,
+  "duration": 0.024,
   "check": "known_answer",
   "vessel": "cvd_tube"
  },
  {
   "test": "tests/test_wulff.py::test_knob_sensitivity_never_reports_edge_jumps",
   "outcome": "passed",
-  "duration": 0.0353,
+  "duration": 0.0316,
   "vessel": "cvd_tube"
  },
  {
@@ -2434,7 +2584,7 @@
  {
   "test": "tests/test_wulff_anchor.py::test_kink_closures_override",
   "outcome": "passed",
-  "duration": 0.0006,
+  "duration": 0.0004,
   "check": "known_answer",
   "vessel": "cvd_tube"
  },

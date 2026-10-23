@@ -22,7 +22,43 @@ def active():
     """Short label of what is configured, for captions: 'offline' or 'provider / model'."""
     _sync()
     s = st.session_state
+    if s.get("llm_provider", "rules") == "rules" and _demo_cfg():
+        return "hosted demo model (limited)"
     return "offline" if s.get("llm_provider", "rules") == "rules" else f"{s['llm_provider']} / {s.get('llm_model') or 'default model'}"
+
+
+def _demo_cfg():
+    """Hosted demo model from Streamlit secrets (section [vt_demo_llm]); None when not configured. The key stays in st.secrets only."""
+    try:
+        c = st.secrets.get("vt_demo_llm")
+        return dict(c) if c and c.get("api_key") else None
+    except Exception:  # no secrets file, or running locally
+        return None
+
+
+@st.cache_resource
+def _demo_total():
+    return {"n": 0}
+
+
+def demo_chat():
+    """Rate-limited chat on the site owner's model, for visitors who bring no key of their own: a per-session and a per-process cap on calls."""
+    cfg = _demo_cfg()
+    if not cfg:
+        return None
+    per_session, total = int(cfg.get("max_calls_per_session", 24)), int(cfg.get("max_calls_total", 400))
+    hdr = {"anthropic-workspace-id": cfg["workspace_id"]} if cfg.get("workspace_id") else None
+    real = make_chat(cfg.get("provider", "anthropic"), cfg.get("base_url") or None, cfg["api_key"], cfg.get("model") or None, hdr)
+
+    def chat(msgs):
+        ss, tot = st.session_state, _demo_total()
+        if ss.get("vt_demo_calls", 0) >= per_session or tot["n"] >= total:
+            raise LLMError("The hosted demo model's limit is reached for this session. Connect your own model under LLM settings, or replay a recorded run.")
+        ss["vt_demo_calls"] = ss.get("vt_demo_calls", 0) + 1
+        tot["n"] += 1
+        return real(msgs)
+    chat.model, chat.backend = real.model, f"{real.backend} (hosted demo, limited)"
+    return chat
 
 
 def get_chat():
@@ -31,7 +67,7 @@ def get_chat():
     s = st.session_state
     p = s.get("llm_provider", "rules")
     if p == "rules":
-        return None
+        return demo_chat()  # None unless the site owner configured a hosted demo model
     hdr = {s["llm_hdr_name"].strip(): s.get("llm_hdr_value", "")} if s.get("llm_hdr_name", "").strip() else None
     return make_chat(p, s.get("llm_base_url") or None, s.get("llm_api_key") or None, s.get("llm_model") or None, hdr)
 

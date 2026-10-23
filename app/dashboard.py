@@ -263,6 +263,9 @@ with tab_cred:
         st.warning("No cache/harness.json: run `make test`. Nothing is shown as passing without a test.")
     else:
         h = pd.DataFrame(json.loads(f.read_text()))
+        for _c, _v in (("vessel", "-"), ("check", "-"), ("test", "-"), ("duration", 0.0), ("outcome", "unknown")):  # a partial pytest run writes a thinner file
+            if _c not in h.columns:
+                h[_c] = _v
         h["check"] = h.get("check", pd.Series(dtype=str)).fillna("-")
         npass = int((h.outcome == "passed").sum())
         st.metric("Last `make test`", f"{npass} / {len(h)} passed", "all green" if npass == len(h) else f"{len(h) - npass} not passing", delta_color="off")
