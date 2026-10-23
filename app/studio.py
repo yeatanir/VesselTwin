@@ -171,6 +171,7 @@ def tab_agent():
     c = st.columns([3, 1])
     c[0].markdown("#### Paste a procedure, or ask a question " + theme.info_html("The agent picks one tool per turn: read the procedure, run the model, rank atomistic calculations, look up cached literature. Max 8 steps. Every number comes from a tool."), unsafe_allow_html=True)
     c[1].html(f'<span class="vs-hyp" style="background:#EEF4FC;color:#1F5FBF;border-color:#BCD3F2">{_e(chat.model) if chat else "no model connected"}</span>')
+    c[1].caption(llm_settings.demo_status())
     st.text_area("Procedure or question", key="studio_q", height=150, label_visibility="collapsed",
                  placeholder="Paste a synthesis procedure here, or try an example below.")
     cols = st.columns(len(EXAMPLES) + 1)

@@ -36,6 +36,19 @@ def _demo_cfg():
         return None
 
 
+def demo_status():
+    """One line for the UI: is the hosted demo model on, and if not, why (no key values are ever shown)."""
+    try:
+        sec = st.secrets.get("vt_demo_llm")
+    except Exception:  # noqa: BLE001
+        sec = None
+    if not sec:
+        return "Hosted demo model: off (no [vt_demo_llm] secret found)"
+    if not sec.get("api_key") or str(sec.get("api_key")).strip() in ("", "YOUR_KEY"):
+        return "Hosted demo model: off (api_key not set)"
+    return f"Hosted demo model: on ({sec.get('model', 'default model')}, {int(sec.get('max_calls_per_session', 24))} calls per session)"
+
+
 @st.cache_resource
 def _demo_total():
     return {"n": 0}
