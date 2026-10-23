@@ -6,3 +6,6 @@ cache/*
 tier2/foam/**/Make/darwin*/
 *.o
 *.dep
+
+# local-only submission material (write-ups, scripts, social posts)
+docs/submission/
