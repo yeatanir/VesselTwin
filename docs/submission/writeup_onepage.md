@@ -33,4 +33,4 @@ The contribution is the workflow and its honesty: a procedure goes in; a vessel 
 
 ## Method notes
 
-Reduced models: Hertz-Knudsen sources, laminar plug flow, wall condensation, Schafer transport, Villermaux-Dushman mixing, LDF/Langmuir columns, Beer-Lambert photoreactor. CFD: OpenFOAM v2512 (custom buoyant species solver for the ampoule). Atomistic inputs: MACE-MP-0 and DFT values from Rosen et al. 2018 and Cao et al. 2015, labelled by source. Literature: Edison Scientific and Valency, one credit per question, claims verified against opened sources. 425 automated tests.
+Reduced models: Hertz-Knudsen sources, laminar plug flow, wall condensation, Schafer transport, Villermaux-Dushman mixing, LDF/Langmuir columns, Beer-Lambert photoreactor. CFD: OpenFOAM v2512 (custom buoyant species solver for the ampoule). Atomistic inputs: MACE-MP-0 and DFT values from Rosen et al. 2018 and Cao et al. 2015, labelled by source. Literature: Edison Scientific and Valency, one credit per question, claims verified against opened sources. 424 automated tests.

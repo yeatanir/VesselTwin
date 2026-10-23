@@ -116,7 +116,7 @@ What the process caught: a 30-60x error in a sourced vapour-pressure constant, a
 git clone https://github.com/yeatanir/VesselTwin.git && cd VesselTwin
 python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
 streamlit run streamlit_app.py          # the web app (Home, Workspace, Studio, Evidence)
-make test                               # 425 tests; also writes cache/harness.json
+make test                               # 424 tests pass on a fresh install; also writes cache/harness.json
 make demo                               # default case through every stage, all vessels
 ```
 
