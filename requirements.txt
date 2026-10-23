@@ -11,6 +11,7 @@ matplotlib>=3.8
 pandas>=2.0
 scikit-learn>=1.4
 jsonschema>=4.0
+edison-client>=0.17; python_version < "3.14"   # optional live literature questions; skipped on Python 3.14 where it does not install
 # optional extras (not needed for make test / make demo):
 # anthropic       # LLM extractor backend (set ANTHROPIC_API_KEY)
 # mlx-lm          # local extractor backend (Apple silicon, untested)

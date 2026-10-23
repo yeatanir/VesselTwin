@@ -145,4 +145,4 @@ Copy `vessels/_template.py`, fill in a `ParamDef` list (unit, bounds, uncertaint
 
 ## Credits and licence
 
-By Anirban Phukan. Literature search supported by **Valency** (free API credits) and **Edison Scientific**. MIT licence, see `LICENSE`.
+By Anirban Phukan. Literature search supported by **Valency** and **Edison Scientific**. MIT licence, see `LICENSE`.

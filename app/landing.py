@@ -29,7 +29,7 @@ COPY = {
     "trust.title": "Why trust it",
     "trust.line": "Every number is labelled benchmarked, uncertain or hypothesis. Our failed tests are published.",
     "footer": "VesselTwin · Anirban Phukan · MIT License · github.com/yeatanir/VesselTwin",
-    "thanks": "Literature search supported by Valency (free API credits) and Edison Scientific.",
+    "thanks": "Literature search supported by Valency and Edison Scientific.",
     "proto": "Research prototype",
 }
 # (key, title, one line, target page, glyph path). Pages must exist in theme.PAGES (tests check this).
